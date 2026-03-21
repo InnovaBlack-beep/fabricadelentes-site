@@ -158,39 +158,6 @@ export default function Laboratorio() {
         </div>
       </section>
 
-      {/* Comparison */}
-      <section className="py-16 md:py-20 bg-[#FAF8F5]">
-        <div className="max-w-4xl mx-auto px-10">
-          <h2
-            className="text-2xl md:text-3xl text-[#111110] mb-10"
-            style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}
-          >
-            Nosotros vs. la competencia
-          </h2>
-
-          <div className="bg-[#F0EBE3] rounded-[10px] overflow-hidden">
-            <div className="grid grid-cols-3 text-[13px] font-semibold">
-              <div className="p-4 text-[#A09080]"></div>
-              <div className="p-4 bg-[#C8A040]/10 text-[#C8A040] text-center uppercase tracking-[0.05em]" style={{ fontFamily: "var(--font-sans)" }}>F&aacute;brica de Lentes</div>
-              <div className="p-4 text-[#A09080] text-center" style={{ fontFamily: "var(--font-sans)" }}>Cadenas grandes</div>
-            </div>
-            {[
-              { feature: "Fabricaci\u00f3n", us: "Propia en GDL", them: "Env\u00edan a otro estado" },
-              { feature: "Tiempo de entrega", us: "1 hora posible", them: "7-15 d\u00edas" },
-              { feature: "Control de calidad", us: "Directo", them: "Por terceros" },
-              { feature: "Precio", us: "Justo, sin sobreprecio", them: "Margen de cadena" },
-              { feature: "Atenci\u00f3n", us: "Personal", them: "Rotaci\u00f3n de vendedores" },
-            ].map((row, i) => (
-              <div key={i} className="grid grid-cols-3 text-[13px] border-t border-[#E8E0D8]">
-                <div className="p-4 font-medium text-[#111110]" style={{ fontFamily: "var(--font-sans)" }}>{row.feature}</div>
-                <div className="p-4 text-center text-[#111110] bg-[#C8A040]/5" style={{ fontFamily: "var(--font-sans)" }}>{row.us}</div>
-                <div className="p-4 text-center text-[#A09080]" style={{ fontFamily: "var(--font-sans)" }}>{row.them}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-16 md:py-20 bg-[#1A1818]">
         <div className="max-w-3xl mx-auto px-10 text-center">
