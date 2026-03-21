@@ -17,7 +17,7 @@ export function Newsletter() {
   return (
     <section className="py-16 md:py-24 px-5 md:px-10 bg-dark">
       <div className="max-w-[640px] mx-auto text-center">
-        <span className="inline-block w-8 h-1 bg-accent-secondary rounded-full mb-6" />
+        <span className="inline-block w-8 h-1 bg-white/20 rounded-full mb-6" />
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
           Ofertas exclusivas directo a tu inbox
         </h2>
@@ -31,11 +31,11 @@ export function Newsletter() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="tu@email.com"
-            className="flex-1 h-12 px-5 rounded-full bg-dark-deep border border-[#3a3a3a] text-white text-sm placeholder:text-[#6B7280] focus:outline-none focus:border-accent transition-colors"
+            className="flex-1 h-12 px-5 rounded-full bg-dark-deep border border-[#3a3a3a] text-white text-sm placeholder:text-[#6B7280] focus:outline-none focus:border-white/50 transition-colors"
           />
           <button
             type="submit"
-            className="h-12 px-8 rounded-full bg-accent text-dark text-sm font-semibold uppercase tracking-[0.1em] hover:brightness-95 transition-all whitespace-nowrap cursor-pointer"
+            className="h-12 px-8 rounded-full bg-white text-fg text-sm font-semibold uppercase tracking-[0.1em] hover:bg-white/90 transition-all whitespace-nowrap cursor-pointer"
           >
             Suscribirme
           </button>

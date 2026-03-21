@@ -2,10 +2,10 @@ export function AdvisorCTA() {
   return (
     <section className="py-16 md:py-24 px-5 md:px-10 bg-surface">
       <div className="max-w-[640px] mx-auto text-center">
-        {/* Mint accent icon */}
-        <div className="w-14 h-14 rounded-full bg-accent-secondary/15 flex items-center justify-center mx-auto mb-6">
+        {/* Icon */}
+        <div className="w-14 h-14 rounded-full bg-surface flex items-center justify-center mx-auto mb-6">
           <svg
-            className="w-7 h-7 text-accent-secondary"
+            className="w-7 h-7 text-fg"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -28,7 +28,7 @@ export function AdvisorCTA() {
           href="https://wa.me/523314257226?text=Hola%2C%20quiero%20asesor%C3%ADa%20para%20elegir%20mis%20lentes"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center h-12 px-8 rounded-full bg-accent text-dark text-sm font-semibold uppercase tracking-[0.1em] hover:brightness-95 transition-all"
+          className="inline-flex items-center justify-center h-12 px-8 rounded-full bg-fg text-white text-sm font-semibold uppercase tracking-[0.1em] hover:bg-fg/85 transition-all"
         >
           Recibir Asesoría Gratis
         </a>

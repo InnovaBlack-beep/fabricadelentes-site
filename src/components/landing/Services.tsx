@@ -53,7 +53,7 @@ export function Services() {
     <section className="py-20 md:py-32 px-5 md:px-10 bg-white">
       <div className="max-w-[1440px] mx-auto">
         <div className="text-center mb-14">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
             Servicios
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-fg mt-3">
@@ -68,7 +68,7 @@ export function Services() {
               href={service.href}
               className="group block p-6 md:p-8 rounded-lg border border-border hover:shadow-md transition-all"
             >
-              <div className="w-14 h-14 rounded-full bg-accent/15 flex items-center justify-center text-accent mb-5">
+              <div className="w-14 h-14 rounded-full bg-surface flex items-center justify-center text-fg mb-5">
                 {service.icon}
               </div>
               <h3 className="text-base font-bold text-fg mb-2">

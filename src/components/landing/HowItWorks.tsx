@@ -26,7 +26,7 @@ export function HowItWorks() {
     <section className="py-20 md:py-32 px-5 md:px-10 bg-surface">
       <div className="max-w-[1440px] mx-auto">
         <div className="text-center mb-14">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
             Proceso
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-fg mt-3">
@@ -41,7 +41,7 @@ export function HowItWorks() {
           <div className="grid md:grid-cols-4 gap-8 md:gap-6">
             {steps.map((step) => (
               <div key={step.number} className="flex flex-col items-center text-center">
-                <div className="relative z-10 w-16 h-16 rounded-full border-2 border-accent bg-white flex items-center justify-center mb-4">
+                <div className="relative z-10 w-16 h-16 rounded-full border-2 border-fg bg-white flex items-center justify-center mb-4">
                   <span className="text-lg font-bold text-fg">
                     {step.number}
                   </span>

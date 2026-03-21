@@ -36,7 +36,7 @@ export default function Laboratorio() {
         <div className="max-w-[1280px] mx-auto px-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-xs text-accent tracking-[0.16em] uppercase mb-4 font-semibold">
+              <p className="text-xs text-muted tracking-[0.16em] uppercase mb-4 font-semibold">
                 Nuestro Diferenciador
               </p>
               <h1 className="text-3xl md:text-4xl lg:text-5xl text-fg leading-tight mb-5 font-bold">
@@ -96,7 +96,7 @@ export default function Laboratorio() {
               { title: "Entrega", desc: "Verificamos calidad, montamos en tu armazón y te los entregamos listos." },
             ].map((s, i) => (
               <div key={s.title}>
-                <div className="w-10 h-10 rounded-full border border-accent text-accent flex items-center justify-center mb-4 text-sm font-medium">
+                <div className="w-10 h-10 rounded-full border border-fg text-fg flex items-center justify-center mb-4 text-sm font-medium">
                   {i + 1}
                 </div>
                 <h3 className="text-sm font-semibold text-fg uppercase tracking-[0.05em] mb-2">
@@ -114,7 +114,7 @@ export default function Laboratorio() {
         <div className="max-w-[1280px] mx-auto px-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-xs text-accent tracking-[0.16em] uppercase mb-4 font-semibold">
+              <p className="text-xs text-muted tracking-[0.16em] uppercase mb-4 font-semibold">
                 Capacidades
               </p>
               <h2 className="text-2xl md:text-3xl text-fg mb-8 leading-tight font-semibold">
@@ -126,7 +126,7 @@ export default function Laboratorio() {
                     key={cap}
                     className="flex items-center gap-3 bg-white rounded-lg p-4"
                   >
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5 shrink-0 text-accent">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5 shrink-0 text-fg">
                       <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span className="text-sm text-fg font-medium">{cap}</span>

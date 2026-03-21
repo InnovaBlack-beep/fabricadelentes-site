@@ -27,7 +27,7 @@ export function CategoryGrid() {
     <section className="py-20 md:py-32 px-5 md:px-10 bg-white">
       <div className="max-w-[1440px] mx-auto">
         <div className="text-center mb-12">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
             Catálogo
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-fg mt-3">
@@ -54,7 +54,7 @@ export function CategoryGrid() {
                   {cat.title}
                 </h3>
                 <p className="text-sm text-white/70 mb-4">{cat.desc}</p>
-                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-accent group-hover:gap-3 transition-all">
+                <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-white group-hover:gap-3 transition-all">
                   Ver Colección
                   <span>→</span>
                 </span>

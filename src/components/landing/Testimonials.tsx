@@ -5,7 +5,7 @@ const testimonials = [
     name: "María G.",
     location: "Zapopan",
     initials: "MG",
-    color: "bg-accent",
+    color: "bg-surface",
   },
   {
     quote:
@@ -13,7 +13,7 @@ const testimonials = [
     name: "Roberto L.",
     location: "Guadalajara",
     initials: "RL",
-    color: "bg-accent-secondary",
+    color: "bg-surface",
   },
   {
     quote:
@@ -21,7 +21,7 @@ const testimonials = [
     name: "Ana P.",
     location: "Recursos Humanos",
     initials: "AP",
-    color: "bg-dark",
+    color: "bg-surface",
   },
 ];
 
@@ -31,7 +31,7 @@ function Stars() {
       {[...Array(5)].map((_, i) => (
         <svg
           key={i}
-          className="w-4 h-4 text-accent"
+          className="w-4 h-4 text-fg"
           fill="currentColor"
           viewBox="0 0 20 20"
         >
@@ -61,7 +61,7 @@ export function Testimonials() {
               key={t.name}
               className="p-6 md:p-8 rounded-lg border border-border"
             >
-              <div className="text-accent-secondary text-3xl font-serif leading-none mb-2">
+              <div className="text-border text-3xl font-serif leading-none mb-2">
                 &ldquo;
               </div>
               <Stars />
@@ -70,9 +70,7 @@ export function Testimonials() {
               </p>
               <div className="flex items-center gap-3">
                 <div
-                  className={`w-10 h-10 rounded-full ${t.color} flex items-center justify-center text-xs font-bold ${
-                    t.color === "bg-dark" ? "text-white" : "text-dark"
-                  }`}
+                  className={`w-10 h-10 rounded-full ${t.color} flex items-center justify-center text-xs font-bold text-fg`}
                 >
                   {t.initials}
                 </div>

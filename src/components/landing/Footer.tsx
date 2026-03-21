@@ -40,7 +40,7 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <span className="text-lg font-bold text-white">
-              Fábrica de Lentes<span className="text-gold">®</span>
+              Fábrica de Lentes<span className="text-white/50">®</span>
             </span>
             <p className="text-xs text-white/38 mt-3 leading-relaxed max-w-[200px]">
               Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora.
@@ -51,7 +51,7 @@ export function Footer() {
                 href="https://instagram.com/fabricadelentesmex"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/38 hover:text-accent transition-colors"
+                className="text-white/38 hover:text-white transition-colors"
                 aria-label="Instagram"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
@@ -62,7 +62,7 @@ export function Footer() {
                 href="https://tiktok.com/@fabricadelentes"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/38 hover:text-accent transition-colors"
+                className="text-white/38 hover:text-white transition-colors"
                 aria-label="TikTok"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
@@ -73,7 +73,7 @@ export function Footer() {
                 href="https://facebook.com/fabricadelentesmex"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/38 hover:text-accent transition-colors"
+                className="text-white/38 hover:text-white transition-colors"
                 aria-label="Facebook"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
@@ -94,7 +94,7 @@ export function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="block text-xs text-white/38 hover:text-accent transition-colors leading-[2]"
+                      className="block text-xs text-white/38 hover:text-white transition-colors leading-[2]"
                     >
                       {link.label}
                     </Link>
@@ -117,7 +117,7 @@ export function Footer() {
                       href={info.href}
                       target={info.external ? "_blank" : undefined}
                       rel={info.external ? "noopener noreferrer" : undefined}
-                      className="block text-xs text-white/38 hover:text-accent transition-colors leading-[2]"
+                      className="block text-xs text-white/38 hover:text-white transition-colors leading-[2]"
                     >
                       {info.label}
                     </a>
@@ -140,13 +140,13 @@ export function Footer() {
           <div className="flex items-center gap-4">
             <a
               href="https://fabricadelentes.mx/PolíticadeGarantía"
-              className="text-xs text-white/30 hover:text-accent transition-colors"
+              className="text-xs text-white/30 hover:text-white transition-colors"
             >
               Garantías
             </a>
             <a
               href="https://fabricadelentes.mx/AvisodePrivacidad"
-              className="text-xs text-white/30 hover:text-accent transition-colors"
+              className="text-xs text-white/30 hover:text-white transition-colors"
             >
               Privacidad
             </a>
@@ -155,7 +155,7 @@ export function Footer() {
               href="https://innovablack.ai"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-white/30 hover:text-accent transition-colors"
+              className="text-xs text-white/30 hover:text-white transition-colors"
             >
               Hecho por InnovaBlack
             </a>

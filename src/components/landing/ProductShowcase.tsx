@@ -20,7 +20,7 @@ export function ProductShowcase() {
       <div className="max-w-[1440px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-6">
           <div>
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
               Productos
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-fg mt-3">

@@ -49,7 +49,7 @@ export function TrustStrip() {
             key={item.title}
             className="flex flex-col items-center text-center py-8 md:py-10 px-4"
           >
-            <div className="text-accent-secondary mb-3">{item.icon}</div>
+            <div className="text-fg mb-3">{item.icon}</div>
             <p className="text-sm font-semibold text-fg">{item.title}</p>
             <p className="text-xs text-muted mt-1">{item.desc}</p>
           </div>

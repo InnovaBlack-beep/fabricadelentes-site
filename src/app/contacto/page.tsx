@@ -57,7 +57,7 @@ export default function Contacto() {
                     required
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="w-full px-5 py-3.5 border border-[#C8C0B8] rounded-[10px] bg-[#FAF8F5] text-[#111110] text-sm placeholder:text-[#A09080] focus:outline-none focus:border-[#C8A040] transition-colors"
+                    className="w-full px-5 py-3.5 border border-[#C8C0B8] rounded-[10px] bg-[#FAF8F5] text-[#111110] text-sm placeholder:text-[#A09080] focus:outline-none focus:border-[#111110] transition-colors"
                     placeholder="Tu nombre"
                   />
                 </div>
@@ -74,7 +74,7 @@ export default function Contacto() {
                     required
                     value={form.phone}
                     onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                    className="w-full px-5 py-3.5 border border-[#C8C0B8] rounded-[10px] bg-[#FAF8F5] text-[#111110] text-sm placeholder:text-[#A09080] focus:outline-none focus:border-[#C8A040] transition-colors"
+                    className="w-full px-5 py-3.5 border border-[#C8C0B8] rounded-[10px] bg-[#FAF8F5] text-[#111110] text-sm placeholder:text-[#A09080] focus:outline-none focus:border-[#111110] transition-colors"
                     placeholder="33 1234 5678"
                   />
                 </div>
@@ -89,7 +89,7 @@ export default function Contacto() {
                     id="service"
                     value={form.service}
                     onChange={(e) => setForm({ ...form, service: e.target.value })}
-                    className="w-full px-5 py-3.5 border border-[#C8C0B8] rounded-[10px] bg-[#FAF8F5] text-[#111110] text-sm focus:outline-none focus:border-[#C8A040] transition-colors"
+                    className="w-full px-5 py-3.5 border border-[#C8C0B8] rounded-[10px] bg-[#FAF8F5] text-[#111110] text-sm focus:outline-none focus:border-[#111110] transition-colors"
                   >
                     <option value="">Selecciona una opción</option>
                     <option value="Lentes graduados">Lentes graduados</option>
@@ -112,13 +112,13 @@ export default function Contacto() {
                     rows={4}
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    className="w-full px-5 py-3.5 border border-[#C8C0B8] rounded-[10px] bg-[#FAF8F5] text-[#111110] text-sm placeholder:text-[#A09080] focus:outline-none focus:border-[#C8A040] transition-colors resize-none"
+                    className="w-full px-5 py-3.5 border border-[#C8C0B8] rounded-[10px] bg-[#FAF8F5] text-[#111110] text-sm placeholder:text-[#A09080] focus:outline-none focus:border-[#111110] transition-colors resize-none"
                     placeholder="Cuéntanos cómo podemos ayudarte..."
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-[#111110] text-[#F5F0EA] rounded-full px-6 py-3.5 text-xs uppercase tracking-[0.08em] font-bold hover:bg-[#C8A040] hover:text-[#1A1000] transition-colors"
+                  className="w-full bg-[#111110] text-[#F5F0EA] rounded-full px-6 py-3.5 text-xs uppercase tracking-[0.08em] font-bold hover:bg-[#333333] transition-colors"
                 >
                   Enviar por WhatsApp
                 </button>
@@ -136,7 +136,7 @@ export default function Contacto() {
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#C8A040" strokeWidth={1.5} className="w-5 h-5 mt-0.5 shrink-0">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#111110" strokeWidth={1.5} className="w-5 h-5 mt-0.5 shrink-0">
                       <path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                       <path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                     </svg>
@@ -147,7 +147,7 @@ export default function Contacto() {
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#C8A040" strokeWidth={1.5} className="w-5 h-5 mt-0.5 shrink-0">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#111110" strokeWidth={1.5} className="w-5 h-5 mt-0.5 shrink-0">
                       <path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <p className="text-sm text-[#111110] font-medium">
@@ -158,7 +158,7 @@ export default function Contacto() {
                     href="tel:+523314257226"
                     className="flex items-start gap-3 hover:opacity-80 transition-opacity"
                   >
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#C8A040" strokeWidth={1.5} className="w-5 h-5 mt-0.5 shrink-0">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#111110" strokeWidth={1.5} className="w-5 h-5 mt-0.5 shrink-0">
                       <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                     </svg>
                     <p className="text-sm text-[#111110] font-medium">
@@ -197,14 +197,14 @@ export default function Contacto() {
                 <div className="flex items-center gap-3 mb-3">
                   <div className="flex items-center gap-0.5">
                     {[1, 2, 3, 4].map((s) => (
-                      <svg key={s} viewBox="0 0 20 20" fill="#C8A040" className="w-4 h-4">
+                      <svg key={s} viewBox="0 0 20 20" fill="#111110" className="w-4 h-4">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
                     <svg viewBox="0 0 20 20" className="w-4 h-4">
                       <defs>
                         <linearGradient id="half">
-                          <stop offset="50%" stopColor="#C8A040" />
+                          <stop offset="50%" stopColor="#111110" />
                           <stop offset="50%" stopColor="#D8D0C8" />
                         </linearGradient>
                       </defs>

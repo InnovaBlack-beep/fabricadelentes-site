@@ -92,7 +92,7 @@ export function Hero() {
       {/* Content - positioned at bottom-left */}
       <div className="relative z-10 h-full max-w-[1440px] mx-auto px-6 md:px-10 flex items-end pb-20 md:pb-28">
         <div className="max-w-xl animate-fade-in-up">
-          <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-gold mb-4">
+          <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-white/60 mb-4">
             {slide.tagline}
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[1.05] mb-5 whitespace-pre-line">
@@ -145,7 +145,7 @@ export function Hero() {
             className="h-[3px] rounded-full transition-all duration-300"
             style={{
               width: i === current ? 32 : 10,
-              background: i === current ? "#F9DC4B" : "rgba(255,255,255,0.4)",
+              background: i === current ? "#FFFFFF" : "rgba(255,255,255,0.4)",
             }}
             aria-label={`Slide ${i + 1}`}
           />

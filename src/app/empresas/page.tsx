@@ -29,7 +29,7 @@ export default function Empresas() {
       {/* Hero */}
       <section className="pt-14 pb-16 md:pt-20 md:pb-24 bg-surface">
         <div className="max-w-[1280px] mx-auto px-10 text-center">
-          <p className="text-xs text-accent tracking-[0.16em] uppercase mb-4 font-semibold">
+          <p className="text-xs text-muted tracking-[0.16em] uppercase mb-4 font-semibold">
             Canal Empresarial
           </p>
           <h1 className="text-3xl md:text-4xl lg:text-5xl text-fg leading-tight mb-5 max-w-3xl mx-auto font-bold">
@@ -39,7 +39,7 @@ export default function Empresas() {
           <p className="text-muted text-sm max-w-2xl mx-auto mb-4">
             Más de 150 empleados atendidos en una sola empresa. Convenios corporativos con beneficios reales para tu equipo.
           </p>
-          <p className="text-xs text-accent tracking-[0.16em] uppercase mb-8 font-semibold">
+          <p className="text-xs text-muted tracking-[0.16em] uppercase mb-8 font-semibold">
             Experiencia probada con empresas en Guadalajara
           </p>
           <a
@@ -97,7 +97,7 @@ export default function Empresas() {
                 key={s.step}
                 className="flex gap-5 items-start bg-white rounded-lg p-6"
               >
-                <div className="w-10 h-10 rounded-full border border-accent text-accent flex items-center justify-center shrink-0 text-sm font-medium">
+                <div className="w-10 h-10 rounded-full border border-fg text-fg flex items-center justify-center shrink-0 text-sm font-medium">
                   {s.step}
                 </div>
                 <div>

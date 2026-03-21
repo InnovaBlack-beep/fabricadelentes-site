@@ -11,20 +11,9 @@ export type Product = {
   badge: BadgeType;
 };
 
-export function getBadgeColors(badge: BadgeType): { bg: string; text: string } {
-  switch (badge) {
-    case "Más vendido":
-    case "Más pedido":
-    case "Trending":
-      return { bg: "bg-accent", text: "text-fg" };
-    case "Exclusivo":
-    case "Premium":
-      return { bg: "bg-accent-secondary", text: "text-dark" };
-    case "Clásico":
-    case "Nuevo":
-    default:
-      return { bg: "bg-white", text: "text-dark" };
-  }
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export function getBadgeColors(_badge: BadgeType): { bg: string; text: string } {
+  return { bg: "bg-fg", text: "text-white" };
 }
 
 const brizzantDesc =

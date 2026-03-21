@@ -199,7 +199,7 @@ export default async function ProductPage({ params }: Props) {
                       className="flex items-center gap-2.5 text-sm text-[#374151]"
                     >
                       <svg
-                        className="w-4 h-4 text-[#31E7AB] flex-shrink-0"
+                        className="w-4 h-4 text-fg flex-shrink-0"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -229,7 +229,7 @@ export default async function ProductPage({ params }: Props) {
                 </a>
                 <Link
                   href="/contacto"
-                  className="flex items-center justify-center h-12 rounded-full border border-[#E5E7EB] text-[#242424] text-sm font-medium uppercase tracking-[0.1em] hover:border-[#242424] transition-colors"
+                  className="flex items-center justify-center h-12 rounded-full bg-fg text-white text-sm font-medium uppercase tracking-[0.1em] hover:bg-fg/85 transition-colors"
                 >
                   Agendar Examen Gratis
                 </Link>
