@@ -24,7 +24,7 @@ const categories = [
 
 export function CategoryGrid() {
   return (
-    <section className="py-0 px-5 md:px-10 bg-white">
+    <section className="pt-0 pb-16 md:pb-24 px-5 md:px-10 bg-white">
       <div className="max-w-[1440px] mx-auto">
         <div className="grid md:grid-cols-3 gap-2 md:gap-3">
           {categories.map((cat) => (

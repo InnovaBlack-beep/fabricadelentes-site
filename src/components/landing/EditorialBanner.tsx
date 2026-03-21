@@ -22,7 +22,7 @@ export function EditorialBanner() {
           Estrena.
         </h2>
         <p className="text-sm text-white/60 max-w-lg mx-auto leading-relaxed mb-8">
-          Vis&iacute;tanos en nuestra sucursal. Elige tu armaz&oacute;n, te hacemos el examen gratis, y en menos de una hora te llevas tus lentes nuevos.
+          Visítanos en nuestra sucursal. Elige tu armazón, te hacemos el examen gratis, y en menos de una hora te llevas tus lentes nuevos.
         </p>
         <a
           href="https://wa.me/523314257226?text=Hola%2C%20quiero%20agendar%20una%20visita"
@@ -31,7 +31,7 @@ export function EditorialBanner() {
           AGENDAR VISITA
         </a>
         <span className="text-xs text-white/40">
-          Zona Minerva &middot; Guadalajara &middot; Lun&ndash;S&aacute;b 10:00&ndash;20:00
+          Zona Minerva · Guadalajara · Lun–Sáb 10:00–20:00
         </span>
       </div>
     </section>
