@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useCallback } from "react";
 import Image from "next/image";
 
 type ProductGalleryProps = {
@@ -10,20 +10,41 @@ type ProductGalleryProps = {
 
 export function ProductGallery({ images, alt }: ProductGalleryProps) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isZoomed, setIsZoomed] = useState(false);
+  const [transformOrigin, setTransformOrigin] = useState("center center");
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const activeImage = images[activeIndex] ?? images[0];
+
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    setTransformOrigin(`${x}% ${y}%`);
+  }, []);
 
   if (!activeImage) return null;
 
   return (
     <div>
-      {/* Main image */}
-      <div className="relative aspect-square bg-white border border-[#F3F4F6] rounded-lg overflow-hidden mb-3">
+      {/* Main image with zoom */}
+      <div
+        ref={containerRef}
+        className="relative aspect-square bg-white border border-[#F3F4F6] rounded-lg overflow-hidden mb-3 cursor-zoom-in"
+        onMouseEnter={() => setIsZoomed(true)}
+        onMouseLeave={() => setIsZoomed(false)}
+        onMouseMove={handleMouseMove}
+      >
         <Image
           src={activeImage}
           alt={alt}
           fill
-          className="object-contain p-6"
+          className="object-contain p-6 transition-transform duration-300 ease-out"
+          style={{
+            transform: isZoomed ? "scale(2)" : "scale(1)",
+            transformOrigin,
+          }}
           sizes="(max-width: 1024px) 100vw, 60vw"
           priority
           unoptimized

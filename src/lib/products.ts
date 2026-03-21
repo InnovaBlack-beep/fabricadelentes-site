@@ -1,3 +1,5 @@
+export type BadgeType = "Más vendido" | "Nuevo" | "Exclusivo" | "Clásico" | "Premium" | "Trending" | "Más pedido";
+
 export type Product = {
   id: string;
   model: string;
@@ -6,7 +8,24 @@ export type Product = {
   description: string;
   category: "Graduados" | "Sol" | "Contacto";
   images: string[];
+  badge: BadgeType;
 };
+
+export function getBadgeColors(badge: BadgeType): { bg: string; text: string } {
+  switch (badge) {
+    case "Más vendido":
+    case "Más pedido":
+    case "Trending":
+      return { bg: "bg-accent", text: "text-fg" };
+    case "Exclusivo":
+    case "Premium":
+      return { bg: "bg-accent-secondary", text: "text-dark" };
+    case "Clásico":
+    case "Nuevo":
+    default:
+      return { bg: "bg-white", text: "text-dark" };
+  }
+}
 
 const brizzantDesc =
   "La montura metálica redonda hexagonal cuenta con perfiles acuñados delgados y lentes planas de cristal de oro clásico con patillas muy delgadas. Mezcla y combina opciones de colores básicos flash para crear la combinación perfecta.";
@@ -29,6 +48,7 @@ export const products: Product[] = [
     price: "$1,349",
     description: brizzantDesc,
     category: "Graduados",
+    badge: "Más vendido",
     images: [
       "https://fabricadelentes.mx/assets/bl6-02c24b24.jpg",
       "https://fabricadelentes.mx/assets/b6-1364916a.jpg",
@@ -41,6 +61,7 @@ export const products: Product[] = [
     price: "$1,349",
     description: brizzantDesc,
     category: "Graduados",
+    badge: "Nuevo",
     images: [
       "https://fabricadelentes.mx/assets/bl2-b52145f3.jpg",
       "https://fabricadelentes.mx/assets/b2-48c880d5.jpg",
@@ -53,6 +74,7 @@ export const products: Product[] = [
     price: "$1,349",
     description: brizzantDesc,
     category: "Graduados",
+    badge: "Nuevo",
     images: [
       "https://fabricadelentes.mx/assets/bl3-68dce26b.jpg",
       "https://fabricadelentes.mx/assets/b3-f148a9c7.jpg",
@@ -65,6 +87,7 @@ export const products: Product[] = [
     price: "$1,349",
     description: brizzantDesc,
     category: "Graduados",
+    badge: "Nuevo",
     images: [
       "https://fabricadelentes.mx/assets/bl1-80666f1f.jpg",
       "https://fabricadelentes.mx/assets/b1-1c21a102.jpg",
@@ -77,6 +100,7 @@ export const products: Product[] = [
     price: "$1,349",
     description: brizzantDesc,
     category: "Graduados",
+    badge: "Nuevo",
     images: [
       "https://fabricadelentes.mx/assets/bl4-29f105d4.jpg",
       "https://fabricadelentes.mx/assets/b4-7cb6be2f.jpg",
@@ -91,6 +115,7 @@ export const products: Product[] = [
     price: "$1,650",
     description: fridaGraduadosDesc,
     category: "Graduados",
+    badge: "Exclusivo",
     images: [
       "https://fabricadelentes.mx/assets/FKL1-e4cd1228.jpg",
       "https://fabricadelentes.mx/assets/FK1-03eeca18.jpg",
@@ -103,6 +128,7 @@ export const products: Product[] = [
     price: "$1,650",
     description: fridaGraduadosDesc,
     category: "Graduados",
+    badge: "Exclusivo",
     images: [
       "https://fabricadelentes.mx/assets/FKL2-ef116390.jpg",
       "https://fabricadelentes.mx/assets/FK2-some.jpg",
@@ -115,6 +141,7 @@ export const products: Product[] = [
     price: "$1,650",
     description: fridaGraduadosDesc,
     category: "Graduados",
+    badge: "Exclusivo",
     images: ["https://fabricadelentes.mx/assets/FKL5-1d2d0c30.jpg"],
   },
 
@@ -126,6 +153,7 @@ export const products: Product[] = [
     price: "$1,499",
     description: noblemanDesc,
     category: "Graduados",
+    badge: "Clásico",
     images: ["https://fabricadelentes.mx/assets/NOL1-541b9e74.jpg"],
   },
   {
@@ -135,6 +163,7 @@ export const products: Product[] = [
     price: "$1,499",
     description: noblemanDesc,
     category: "Graduados",
+    badge: "Clásico",
     images: ["https://fabricadelentes.mx/assets/NO2-5fecad74.jpg"],
   },
   {
@@ -144,6 +173,7 @@ export const products: Product[] = [
     price: "$1,499",
     description: noblemanDesc,
     category: "Graduados",
+    badge: "Clásico",
     images: ["https://fabricadelentes.mx/assets/NOL3-987ac48f.jpg"],
   },
 
@@ -155,6 +185,7 @@ export const products: Product[] = [
     price: "$1,549",
     description: massimoDesc,
     category: "Graduados",
+    badge: "Premium",
     images: ["https://fabricadelentes.mx/assets/MAL1-86309c0e.jpg"],
   },
   {
@@ -164,6 +195,7 @@ export const products: Product[] = [
     price: "$1,499",
     description: massimoDesc,
     category: "Graduados",
+    badge: "Premium",
     images: ["https://fabricadelentes.mx/assets/MAL2-547d5921.jpg"],
   },
   {
@@ -173,6 +205,7 @@ export const products: Product[] = [
     price: "$1,499",
     description: massimoDesc,
     category: "Graduados",
+    badge: "Premium",
     images: ["https://fabricadelentes.mx/assets/MAL3-43ce1ec8.jpg"],
   },
 
@@ -185,6 +218,7 @@ export const products: Product[] = [
     description:
       "La montura metálica redonda hexagonal cuenta con perfiles acuñados delgados y lentes planas de cristal de oro clásico con patillas muy delgadas.",
     category: "Sol",
+    badge: "Trending",
     images: [
       "https://fabricadelentes.mx/assets/FKSL1-5ea420bc.jpg",
       "https://fabricadelentes.mx/assets/FKS1-e6812fec.jpg",
@@ -198,6 +232,7 @@ export const products: Product[] = [
     description:
       "Modelo con tratamiento totalmente metalizado, forma Pantos con puente de ojo de cerradura inconfundible y patillas de metal súper delgadas.",
     category: "Sol",
+    badge: "Trending",
     images: [
       "https://fabricadelentes.mx/assets/FKSL2-975aa408.jpg",
       "https://fabricadelentes.mx/assets/FKS2-bc4658bf.jpg",
@@ -211,6 +246,7 @@ export const products: Product[] = [
     description:
       "Estilo retro y atemporal. Diseño inconfundible que ha sido históricamente la elección de los referentes intelectuales y culturales.",
     category: "Sol",
+    badge: "Nuevo",
     images: [
       "https://fabricadelentes.mx/assets/FKSL3-12125544.jpg",
       "https://fabricadelentes.mx/assets/FKS3-68ebaac2.jpg",
@@ -224,6 +260,7 @@ export const products: Product[] = [
     description:
       "Modelo icónico con lentes planas de cristal. La evolución de la forma redonda con cristal plano, manteniendo su esencia.",
     category: "Sol",
+    badge: "Nuevo",
     images: [
       "https://fabricadelentes.mx/assets/FKSL4-ce07cd8f.jpg",
       "https://fabricadelentes.mx/assets/FKS4-ea86d1ad.jpg",
@@ -237,6 +274,7 @@ export const products: Product[] = [
     description:
       "Lentes de sol con diseño novedoso y vanguardista de la colección Frida Kahlo.",
     category: "Sol",
+    badge: "Nuevo",
     images: [
       "https://fabricadelentes.mx/assets/FKSL5-9e669b02.jpg",
       "https://fabricadelentes.mx/assets/FKS5-819fa39c.jpg",
@@ -250,6 +288,7 @@ export const products: Product[] = [
     description:
       "Lentes de sol con diseño novedoso y vanguardista de la colección Frida Kahlo.",
     category: "Sol",
+    badge: "Nuevo",
     images: [
       "https://fabricadelentes.mx/assets/FKSL6-b1e0f8cb.jpg",
       "https://fabricadelentes.mx/assets/FKS6-f3f295e7.jpg",
@@ -265,6 +304,7 @@ export const products: Product[] = [
     description:
       "Los lentes de contacto AIR OPTIX\u2122 plus HydraGlyde\u2122 son perfectos para quienes buscan lentes reutilizables de reemplazo mensual, diseñados para ofrecer comodidad.",
     category: "Contacto",
+    badge: "Más pedido",
     images: ["https://fabricadelentes.mx/assets/lentes10-4ac1893a.png"],
   },
   {
@@ -275,6 +315,7 @@ export const products: Product[] = [
     description:
       "Lentes de contacto de uso frecuente con tecnología avanzada para máxima comodidad durante todo el día.",
     category: "Contacto",
+    badge: "Nuevo",
     images: ["https://fabricadelentes.mx/assets/lentes11-9434f124.webp"],
   },
   {
@@ -285,6 +326,7 @@ export const products: Product[] = [
     description:
       "Lentes de contacto de última generación con tecnología de gradiente acuoso para una comodidad excepcional.",
     category: "Contacto",
+    badge: "Nuevo",
     images: ["https://fabricadelentes.mx/assets/lentes12-7a23fd3e.webp"],
   },
 ];

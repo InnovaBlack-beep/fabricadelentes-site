@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { products as allProducts, type Product } from "@/lib/products";
+import { products as allProducts, getBadgeColors } from "@/lib/products";
 
 interface ProductCatalogProps {
   category: "Graduados" | "Sol" | "Contacto";
@@ -53,34 +53,51 @@ export function ProductCatalog({ category }: ProductCatalogProps) {
       {/* Product grid */}
       <div className="max-w-[1440px] mx-auto px-5 md:px-10 pb-20">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
-          {filtered.map((p) => (
-            <Link
-              key={p.id}
-              href={`/producto/${p.id}`}
-              className="group block bg-white hover:opacity-90 transition-opacity"
-            >
-              <div className="relative aspect-square bg-white">
-                <Image
-                  src={p.images[0]}
-                  alt={`${p.brand} ${p.model}`}
-                  fill
-                  className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
-                  unoptimized
-                />
-                <span className="absolute top-3 left-3 bg-accent text-fg text-[10px] font-semibold px-2.5 py-1 rounded-full">
-                  Nuevo
-                </span>
-              </div>
-              <div className="p-3">
-                <p className="text-[10px] uppercase tracking-widest text-muted">{p.brand}</p>
-                <p className="text-sm font-semibold text-fg truncate">{p.model}</p>
-                <p className="text-sm font-bold text-fg mt-1">
-                  {p.price}
-                  <span className="text-[10px] font-normal text-muted ml-1">MXN</span>
-                </p>
-              </div>
-            </Link>
-          ))}
+          {filtered.map((p) => {
+            const badgeColors = getBadgeColors(p.badge);
+            const hasSecondImage = p.images.length >= 2;
+            return (
+              <Link
+                key={p.id}
+                href={`/producto/${p.id}`}
+                className="group block bg-white hover:opacity-90 transition-opacity"
+              >
+                <div className="relative aspect-square bg-white overflow-hidden">
+                  <Image
+                    src={p.images[0]}
+                    alt={`${p.brand} ${p.model}`}
+                    fill
+                    className={`object-contain p-4 transition-all duration-500 ${
+                      hasSecondImage ? "group-hover:opacity-0" : "group-hover:scale-105"
+                    }`}
+                    unoptimized
+                  />
+                  {hasSecondImage && (
+                    <Image
+                      src={p.images[1]}
+                      alt={`${p.brand} ${p.model} - vista 2`}
+                      fill
+                      className="object-contain p-4 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-105"
+                      unoptimized
+                    />
+                  )}
+                  <span
+                    className={`absolute top-3 left-3 ${badgeColors.bg} ${badgeColors.text} text-[10px] font-semibold px-2.5 py-1 rounded-full border border-border/30`}
+                  >
+                    {p.badge}
+                  </span>
+                </div>
+                <div className="p-3">
+                  <p className="text-[10px] uppercase tracking-widest text-muted">{p.brand}</p>
+                  <p className="text-sm font-semibold text-fg truncate">{p.model}</p>
+                  <p className="text-sm font-bold text-fg mt-1">
+                    {p.price}
+                    <span className="text-[10px] font-normal text-muted ml-1">MXN</span>
+                  </p>
+                </div>
+              </Link>
+            );
+          })}
         </div>
 
         {filtered.length === 0 && (

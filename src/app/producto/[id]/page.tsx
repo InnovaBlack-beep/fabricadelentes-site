@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { products, getProductById } from "@/lib/products";
+import Image from "next/image";
+import { products, getProductById, getBadgeColors } from "@/lib/products";
 import { ProductGallery } from "./ProductGallery";
+import { StickyBuyBar } from "./StickyBuyBar";
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -70,6 +72,11 @@ export default async function ProductPage({ params }: Props) {
     label: product.category,
     href: "/",
   };
+
+  // Related products: same category, exclude current, take 4
+  const relatedProducts = products
+    .filter((p) => p.category === product.category && p.id !== product.id)
+    .slice(0, 4);
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -192,7 +199,7 @@ export default async function ProductPage({ params }: Props) {
                       className="flex items-center gap-2.5 text-sm text-[#374151]"
                     >
                       <svg
-                        className="w-4 h-4 text-[#F9DC4B] flex-shrink-0"
+                        className="w-4 h-4 text-[#31E7AB] flex-shrink-0"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -211,7 +218,7 @@ export default async function ProductPage({ params }: Props) {
               </div>
 
               {/* CTAs */}
-              <div className="flex flex-col gap-3 mb-6">
+              <div id="product-cta" className="flex flex-col gap-3 mb-6">
                 <a
                   href={`https://wa.me/523314257226?text=${whatsappMsg}`}
                   target="_blank"
@@ -235,7 +242,78 @@ export default async function ProductPage({ params }: Props) {
             </div>
           </div>
         </div>
+
+        {/* Related Products */}
+        {relatedProducts.length > 0 && (
+          <div className="border-t border-[#E5E7EB]">
+            <div className="max-w-[1280px] mx-auto px-5 md:px-10 py-14 md:py-20">
+              <h2 className="text-xl md:text-2xl font-bold text-fg mb-8">
+                También te puede gustar
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
+                {relatedProducts.map((rp) => {
+                  const badgeColors = getBadgeColors(rp.badge);
+                  const hasSecondImage = rp.images.length >= 2;
+                  return (
+                    <Link
+                      key={rp.id}
+                      href={`/producto/${rp.id}`}
+                      className="group block bg-white hover:opacity-90 transition-opacity"
+                    >
+                      <div className="relative aspect-square bg-white overflow-hidden">
+                        <Image
+                          src={rp.images[0]}
+                          alt={`${rp.brand} ${rp.model}`}
+                          fill
+                          className={`object-contain p-4 transition-all duration-500 ${
+                            hasSecondImage ? "group-hover:opacity-0" : "group-hover:scale-105"
+                          }`}
+                          unoptimized
+                        />
+                        {hasSecondImage && (
+                          <Image
+                            src={rp.images[1]}
+                            alt={`${rp.brand} ${rp.model} - vista 2`}
+                            fill
+                            className="object-contain p-4 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-105"
+                            unoptimized
+                          />
+                        )}
+                        <span
+                          className={`absolute top-3 left-3 ${badgeColors.bg} ${badgeColors.text} text-[10px] font-semibold px-2.5 py-1 rounded-full border border-border/30`}
+                        >
+                          {rp.badge}
+                        </span>
+                      </div>
+                      <div className="p-3">
+                        <p className="text-[10px] uppercase tracking-widest text-muted">
+                          {rp.brand}
+                        </p>
+                        <p className="text-sm font-semibold text-fg truncate">
+                          {rp.model}
+                        </p>
+                        <p className="text-sm font-bold text-fg mt-1">
+                          {rp.price}
+                          <span className="text-[10px] font-normal text-muted ml-1">
+                            MXN
+                          </span>
+                        </p>
+                      </div>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        )}
       </section>
+
+      {/* Sticky mobile buy bar */}
+      <StickyBuyBar
+        model={product.model}
+        price={product.price}
+        whatsappUrl={`https://wa.me/523314257226?text=${whatsappMsg}`}
+      />
     </>
   );
 }

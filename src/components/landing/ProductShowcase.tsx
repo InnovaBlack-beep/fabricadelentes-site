@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { products } from "@/lib/products";
+import { products, getBadgeColors } from "@/lib/products";
 
 const tabs = ["Todos", "Graduados", "Sol", "Contacto"];
 
@@ -16,7 +16,7 @@ export function ProductShowcase() {
       : products.filter((p) => p.category === activeTab);
 
   return (
-    <section className="py-16 md:py-24 px-5 md:px-10 bg-white">
+    <section id="productos" className="py-16 md:py-24 px-5 md:px-10 bg-white">
       <div className="max-w-[1440px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-6">
           <div>
@@ -45,40 +45,57 @@ export function ProductShowcase() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
-          {filtered.slice(0, 12).map((product) => (
-            <Link
-              key={product.id}
-              href={`/producto/${product.id}`}
-              className="group block overflow-hidden bg-white hover:opacity-90 transition-opacity"
-            >
-              <div className="relative aspect-square bg-white">
-                <Image
-                  src={product.images[0]}
-                  alt={`${product.brand} ${product.model}`}
-                  fill
-                  className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
-                  unoptimized
-                />
-                <span className="absolute top-3 left-3 bg-accent text-dark text-[10px] font-semibold px-2.5 py-1 rounded-full">
-                  Nuevo
-                </span>
-              </div>
-              <div className="p-4">
-                <p className="text-[10px] uppercase tracking-widest text-muted mb-1">
-                  {product.brand}
-                </p>
-                <p className="text-sm font-semibold text-fg truncate">
-                  {product.model}
-                </p>
-                <p className="text-sm font-bold text-fg mt-1">
-                  {product.price}
-                  <span className="text-[10px] font-normal text-muted ml-1">
-                    MXN
+          {filtered.slice(0, 12).map((product) => {
+            const badgeColors = getBadgeColors(product.badge);
+            const hasSecondImage = product.images.length >= 2;
+            return (
+              <Link
+                key={product.id}
+                href={`/producto/${product.id}`}
+                className="group block overflow-hidden bg-white hover:opacity-90 transition-opacity"
+              >
+                <div className="relative aspect-square bg-white overflow-hidden">
+                  <Image
+                    src={product.images[0]}
+                    alt={`${product.brand} ${product.model}`}
+                    fill
+                    className={`object-contain p-4 transition-all duration-500 ${
+                      hasSecondImage ? "group-hover:opacity-0" : "group-hover:scale-105"
+                    }`}
+                    unoptimized
+                  />
+                  {hasSecondImage && (
+                    <Image
+                      src={product.images[1]}
+                      alt={`${product.brand} ${product.model} - vista 2`}
+                      fill
+                      className="object-contain p-4 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-105"
+                      unoptimized
+                    />
+                  )}
+                  <span
+                    className={`absolute top-3 left-3 ${badgeColors.bg} ${badgeColors.text} text-[10px] font-semibold px-2.5 py-1 rounded-full border border-border/30`}
+                  >
+                    {product.badge}
                   </span>
-                </p>
-              </div>
-            </Link>
-          ))}
+                </div>
+                <div className="p-4">
+                  <p className="text-[10px] uppercase tracking-widest text-muted mb-1">
+                    {product.brand}
+                  </p>
+                  <p className="text-sm font-semibold text-fg truncate">
+                    {product.model}
+                  </p>
+                  <p className="text-sm font-bold text-fg mt-1">
+                    {product.price}
+                    <span className="text-[10px] font-normal text-muted ml-1">
+                      MXN
+                    </span>
+                  </p>
+                </div>
+              </Link>
+            );
+          })}
         </div>
 
         {filtered.length > 12 && (
