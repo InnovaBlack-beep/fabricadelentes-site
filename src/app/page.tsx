@@ -1,12 +1,9 @@
 import { Hero } from "@/components/landing/Hero";
 import { TrustStrip } from "@/components/landing/TrustStrip";
 import { CategoryGrid } from "@/components/landing/CategoryGrid";
-import { BrandMarquee } from "@/components/landing/BrandMarquee";
+import { EditorialBanner } from "@/components/landing/EditorialBanner";
 import { ProductShowcase } from "@/components/landing/ProductShowcase";
-import { AdvisorCTA } from "@/components/landing/AdvisorCTA";
-import { Services } from "@/components/landing/Services";
 import { Testimonials } from "@/components/landing/Testimonials";
-import { HowItWorks } from "@/components/landing/HowItWorks";
 import { Newsletter } from "@/components/landing/Newsletter";
 
 export default function Home() {
@@ -15,12 +12,9 @@ export default function Home() {
       <Hero />
       <TrustStrip />
       <CategoryGrid />
-      <BrandMarquee />
+      <EditorialBanner />
       <ProductShowcase />
-      <AdvisorCTA />
-      <Services />
       <Testimonials />
-      <HowItWorks />
       <Newsletter />
     </>
   );

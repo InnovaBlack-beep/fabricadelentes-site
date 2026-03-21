@@ -24,7 +24,7 @@ export function ProductShowcase() {
               Productos
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-fg mt-3">
-              Nuestros Lentes
+              Destacados
             </h2>
           </div>
           <div className="flex gap-1 bg-surface rounded-full p-1 border border-border">
@@ -45,7 +45,7 @@ export function ProductShowcase() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
-          {filtered.slice(0, 12).map((product) => {
+          {filtered.slice(0, 8).map((product) => {
             const badgeColors = getBadgeColors(product.badge);
             const hasSecondImage = product.images.length >= 2;
             return (
@@ -97,17 +97,6 @@ export function ProductShowcase() {
             );
           })}
         </div>
-
-        {filtered.length > 12 && (
-          <div className="text-center mt-10">
-            <a
-              href="https://wa.me/523314257226?text=Hola%2C%20quiero%20ver%20más%20modelos"
-              className="inline-flex items-center h-12 px-8 rounded-full border border-border text-sm font-medium text-fg hover:border-fg transition-colors"
-            >
-              Ver Todos los Modelos →
-            </a>
-          </div>
-        )}
       </div>
     </section>
   );

@@ -19,10 +19,10 @@ export function Newsletter() {
       <div className="max-w-[640px] mx-auto text-center">
         <span className="inline-block w-8 h-1 bg-white/20 rounded-full mb-6" />
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-          Ofertas exclusivas directo a tu inbox
+          Sé el primero en enterarte
         </h2>
         <p className="text-sm text-[#9CA3AF] leading-relaxed mb-8">
-          Promociones, nuevos modelos y tips para el cuidado de tu visión. Sin spam.
+          Nuevos modelos, promociones exclusivas y tips para tu visión.
         </p>
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 mb-6">
           <input

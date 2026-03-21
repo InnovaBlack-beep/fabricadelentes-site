@@ -9,8 +9,7 @@ const slides = [
     video: "/images/hero-video.mp4",
     tagline: "Laboratorio Propio",
     headline: "Aquí se fabrican\ntus lentes.",
-    description:
-      "Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora. Examen de la vista gratis.",
+    description: "Óptica con laboratorio propio en Guadalajara.",
     cta: "Agendar Examen Gratis",
     ctaHref:
       "https://wa.me/523314257226?text=Hola%2C%20quiero%20agendar%20un%20examen%20de%20la%20vista",
@@ -22,8 +21,7 @@ const slides = [
     video: "/images/hero-video-2.mp4",
     tagline: "Nueva Colección",
     headline: "Armazones\ncon Estilo",
-    description:
-      "Encuentra el armazón perfecto. Más de 500 modelos desde $590 MXN con garantía.",
+    description: "Más de 500 modelos con garantía.",
     cta: "Explorar Colección",
     ctaHref: "/lentes-graduados",
     secondary: "Lentes de Sol",
@@ -33,8 +31,7 @@ const slides = [
     image: "/images/hero-3.png",
     tagline: "Entrega Express",
     headline: "Lentes listos\nen 1 hora.",
-    description:
-      "Fabricamos tus lentes el mismo día. Sin esperas, sin intermediarios.",
+    description: "Fabricamos tus lentes el mismo día.",
     cta: "Cotizar por WhatsApp",
     ctaHref:
       "https://wa.me/523314257226?text=Hola%2C%20quiero%20cotizar%20mis%20lentes",
@@ -95,7 +92,7 @@ export function Hero() {
           <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-white/60 mb-4">
             {slide.tagline}
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[1.05] mb-5 whitespace-pre-line">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.05] mb-5 whitespace-pre-line">
             {slide.headline}
           </h1>
           <p className="text-sm md:text-base text-white/70 max-w-md mb-8 leading-relaxed">
@@ -126,14 +123,14 @@ export function Hero() {
         className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/15 flex items-center justify-center text-white hover:bg-white/25 transition-colors"
         aria-label="Anterior"
       >
-        ‹
+        &lsaquo;
       </button>
       <button
         onClick={() => setCurrent((c) => (c + 1) % slides.length)}
         className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white/15 flex items-center justify-center text-white hover:bg-white/25 transition-colors"
         aria-label="Siguiente"
       >
-        ›
+        &rsaquo;
       </button>
 
       {/* Dots */}

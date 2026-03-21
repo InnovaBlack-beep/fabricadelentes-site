@@ -47,10 +47,7 @@ export function Testimonials() {
     <section className="py-16 md:py-24 px-5 md:px-10 bg-white">
       <div className="max-w-[1440px] mx-auto">
         <div className="text-center mb-14">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
-            Opiniones
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-fg mt-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-fg">
             Lo que dicen nuestros clientes
           </h2>
         </div>

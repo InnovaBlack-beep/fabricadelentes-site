@@ -8,7 +8,6 @@ export function TrustStrip() {
         </svg>
       ),
       title: "Listos en 1 Hora",
-      desc: "Lentes graduados el mismo día",
     },
     {
       icon: (
@@ -18,7 +17,6 @@ export function TrustStrip() {
         </svg>
       ),
       title: "Examen Gratis",
-      desc: "Con optometristas certificados",
     },
     {
       icon: (
@@ -27,7 +25,6 @@ export function TrustStrip() {
         </svg>
       ),
       title: "Garantía Total",
-      desc: "En todos nuestros productos",
     },
     {
       icon: (
@@ -37,7 +34,6 @@ export function TrustStrip() {
         </svg>
       ),
       title: "Sucursal Minerva",
-      desc: "Guadalajara, Jalisco",
     },
   ];
 
@@ -47,11 +43,10 @@ export function TrustStrip() {
         {items.map((item) => (
           <div
             key={item.title}
-            className="flex flex-col items-center text-center py-8 md:py-10 px-4"
+            className="flex flex-col items-center text-center py-5 md:py-6 px-4"
           >
-            <div className="text-fg mb-3">{item.icon}</div>
+            <div className="text-fg mb-2">{item.icon}</div>
             <p className="text-sm font-semibold text-fg">{item.title}</p>
-            <p className="text-xs text-muted mt-1">{item.desc}</p>
           </div>
         ))}
       </div>
