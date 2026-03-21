@@ -1,22 +1,21 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Playfair_Display, Geist } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFAB } from "@/components/WhatsAppFAB";
 
-const cormorant = Cormorant_Garamond({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
-  variable: "--font-cormorant",
+  variable: "--font-playfair",
   display: "swap",
 });
 
-const inter = Inter({
+const geist = Geist({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-inter",
+  variable: "--font-geist",
   display: "swap",
 });
 
@@ -70,7 +69,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${cormorant.variable} ${inter.variable}`}>
+    <html lang="es" className={`${playfair.variable} ${geist.variable}`}>
       <head>
         <script
           type="application/ld+json"
