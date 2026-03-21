@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { WhatsAppFAB } from "@/components/WhatsAppFAB";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -15,25 +15,32 @@ const cormorant = Cormorant_Garamond({
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-inter",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Fábrica de Lentes® — Laboratorio Óptico · Venta Directa · Guadalajara",
+  title:
+    "Fábrica de Lentes® — Laboratorio Óptico · Venta Directa · Guadalajara",
   description:
-    "Lentes graduados, de contacto y de sol en Guadalajara. Laboratorio óptico propio con entrega el mismo día. Examen de la vista gratis. Cotiza por WhatsApp.",
-  keywords:
-    "óptica guadalajara, lentes de contacto guadalajara, lentes graduados guadalajara, laboratorio óptico guadalajara, examen de la vista guadalajara, lentes de sol guadalajara",
+    "Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora. Examen de la vista gratis. Armazones desde $590 MXN. Sucursal Minerva.",
   openGraph: {
-    title: "Fábrica de Lentes® — Laboratorio Óptico · Venta Directa · Guadalajara",
+    title:
+      "Fábrica de Lentes® — Laboratorio Óptico · Venta Directa · Guadalajara",
     description:
-      "Lentes graduados, de contacto y de sol. Laboratorio propio y entrega express el mismo día.",
+      "Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora. Examen de la vista gratis. Armazones desde $590 MXN. Sucursal Minerva.",
     url: "https://fabricadelentes.mx",
     siteName: "Fábrica de Lentes",
     locale: "es_MX",
     type: "website",
+    images: [
+      {
+        url: "https://fabricadelentes.mx/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://fabricadelentes.mx" },
@@ -44,7 +51,7 @@ const jsonLd = {
   "@type": "Optician",
   name: "Fábrica de Lentes",
   description:
-    "Óptica con laboratorio propio en Guadalajara. Lentes graduados, de contacto y de sol con entrega express.",
+    "Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora. Examen de la vista gratis. Armazones desde $590 MXN. Sucursal Minerva.",
   url: "https://fabricadelentes.mx",
   telephone: "+523314257226",
   priceRange: "$590-$1690 MXN",
@@ -74,7 +81,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
-        <WhatsAppButton />
+        <WhatsAppFAB />
       </body>
     </html>
   );

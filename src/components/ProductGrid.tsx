@@ -1,0 +1,275 @@
+"use client";
+
+import { useState } from "react";
+
+const tabs = ["Armazones", "Contactos", "Sol", "Empresas"];
+
+const products = [
+  {
+    brand: "Ray-Ban",
+    model: "RB2140 Classic",
+    variants: "4 colores",
+    price: "$1,250",
+    badges: ["Más vendido", "Entrega 1hr"],
+    svg: (
+      <svg width="88" height="50" viewBox="0 0 88 50" fill="none">
+        <path
+          d="M8 20C8 10 18 6 28 12C32 14 34 22 30 28C26 34 12 34 8 20Z"
+          stroke="#6A5A4A"
+          strokeWidth="1.4"
+          fill="none"
+        />
+        <path
+          d="M58 20C58 10 68 6 78 12C82 14 84 22 80 28C76 34 62 34 58 20Z"
+          stroke="#6A5A4A"
+          strokeWidth="1.4"
+          fill="none"
+        />
+        <path d="M30 20C36 17 52 17 58 20" stroke="#6A5A4A" strokeWidth="1.4" />
+        <path d="M8 18L2 16" stroke="#6A5A4A" strokeWidth="1.2" />
+        <path d="M80 18L86 16" stroke="#6A5A4A" strokeWidth="1.2" />
+      </svg>
+    ),
+  },
+  {
+    brand: "Armazón + Micas AR",
+    model: "Montura completa",
+    variants: "3 colores",
+    price: "$950",
+    badges: ["Entrega 1hr"],
+    svg: (
+      <svg width="88" height="50" viewBox="0 0 88 50" fill="none">
+        <rect
+          x="6"
+          y="12"
+          width="30"
+          height="22"
+          rx="4"
+          stroke="#6A5A4A"
+          strokeWidth="1.4"
+        />
+        <rect
+          x="52"
+          y="12"
+          width="30"
+          height="22"
+          rx="4"
+          stroke="#6A5A4A"
+          strokeWidth="1.4"
+        />
+        <path d="M36 22C40 19 48 19 52 22" stroke="#6A5A4A" strokeWidth="1.4" />
+        <path d="M6 20L1 18" stroke="#6A5A4A" strokeWidth="1.2" />
+        <path d="M82 20L87 18" stroke="#6A5A4A" strokeWidth="1.2" />
+      </svg>
+    ),
+  },
+  {
+    brand: "Micas AR UV+Azul",
+    model: "Protección total",
+    variants: "2 colores",
+    price: "$459",
+    badges: ["Nuevo", "Entrega 1hr"],
+    svg: (
+      <svg width="88" height="50" viewBox="0 0 88 50" fill="none">
+        <circle cx="24" cy="25" r="16" stroke="#6A5A4A" strokeWidth="1.4" />
+        <circle cx="64" cy="25" r="16" stroke="#6A5A4A" strokeWidth="1.4" />
+        <path d="M40 23C42 21 46 21 48 23" stroke="#6A5A4A" strokeWidth="1.4" />
+        <path d="M8 22L2 19" stroke="#6A5A4A" strokeWidth="1.2" />
+        <path d="M80 22L86 19" stroke="#6A5A4A" strokeWidth="1.2" />
+      </svg>
+    ),
+  },
+  {
+    brand: "Acuvue Oasys",
+    model: "Mensual",
+    variants: "6 colores",
+    price: "$590",
+    badges: ["Más pedido"],
+    svg: (
+      <svg width="88" height="50" viewBox="0 0 88 50" fill="none">
+        <ellipse
+          cx="44"
+          cy="25"
+          rx="30"
+          ry="18"
+          stroke="#6A5A4A"
+          strokeWidth="1.4"
+        />
+        <ellipse
+          cx="44"
+          cy="25"
+          rx="18"
+          ry="10"
+          stroke="#6A5A4A"
+          strokeWidth="1"
+          opacity="0.5"
+        />
+        <circle
+          cx="44"
+          cy="25"
+          r="4"
+          stroke="#6A5A4A"
+          strokeWidth="1"
+          opacity="0.4"
+        />
+      </svg>
+    ),
+  },
+];
+
+export function ProductGrid() {
+  const [activeTab, setActiveTab] = useState(0);
+
+  return (
+    <section
+      style={{
+        padding: "60px 48px",
+        background: "#FAF8F5",
+      }}
+    >
+      {/* Header */}
+      <div className="flex items-end justify-between mb-8">
+        <div>
+          <h2
+            style={{
+              fontFamily: "var(--font-serif)",
+              fontWeight: 600,
+              fontSize: 28,
+              color: "#111110",
+              marginBottom: 16,
+            }}
+          >
+            Lo más pedido
+          </h2>
+          <div className="flex items-center gap-6">
+            {tabs.map((tab, i) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(i)}
+                style={{
+                  fontFamily: "var(--font-sans)",
+                  fontWeight: activeTab === i ? 700 : 400,
+                  fontSize: 13,
+                  color: activeTab === i ? "#111110" : "#A09080",
+                  borderBottom:
+                    activeTab === i ? "1.5px solid #C8A040" : "1.5px solid transparent",
+                  paddingBottom: 6,
+                  background: "none",
+                  border: "none",
+                  borderBottomWidth: "1.5px",
+                  borderBottomStyle: "solid",
+                  borderBottomColor: activeTab === i ? "#C8A040" : "transparent",
+                  cursor: "pointer",
+                }}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
+        </div>
+        <a
+          href="/lentes-graduados"
+          className="transition-colors"
+          style={{
+            fontFamily: "var(--font-sans)",
+            fontSize: 12,
+            color: "#A09080",
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.color = "#C8A040")}
+          onMouseLeave={(e) => (e.currentTarget.style.color = "#A09080")}
+        >
+          Ver todo ›
+        </a>
+      </div>
+
+      {/* Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        {products.map((product) => (
+          <a
+            key={product.brand + product.model}
+            href={`https://wa.me/523314257226?text=Hola%2C%20me%20interesan%20los%20${encodeURIComponent(product.brand)}%20${encodeURIComponent(product.model)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block transition-all duration-[180ms]"
+            style={{
+              background: "#F0EBE3",
+              borderRadius: 10,
+              padding: "20px 16px 16px",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#E8E0D8";
+              e.currentTarget.style.transform = "translateY(-2px)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "#F0EBE3";
+              e.currentTarget.style.transform = "translateY(0)";
+            }}
+          >
+            {/* Badges */}
+            <div className="flex gap-1.5 mb-3">
+              {product.badges.map((badge) => (
+                <span
+                  key={badge}
+                  className="rounded-full"
+                  style={{
+                    background: "#C8A040",
+                    color: "#1A1000",
+                    fontFamily: "var(--font-sans)",
+                    fontWeight: 700,
+                    fontSize: 10,
+                    padding: "2px 10px",
+                  }}
+                >
+                  {badge}
+                </span>
+              ))}
+            </div>
+
+            {/* SVG illustration */}
+            <div
+              className="flex items-center justify-center"
+              style={{ height: 108 }}
+            >
+              {product.svg}
+            </div>
+
+            {/* Info */}
+            <div className="mt-3">
+              <p
+                style={{
+                  fontFamily: "var(--font-serif)",
+                  fontWeight: 600,
+                  fontSize: 14,
+                  color: "#111110",
+                }}
+              >
+                {product.brand}
+              </p>
+              <p
+                style={{
+                  fontFamily: "var(--font-sans)",
+                  fontSize: 12,
+                  color: "#6A5A4A",
+                  marginTop: 2,
+                }}
+              >
+                {product.model} · {product.variants}
+              </p>
+              <p
+                className="mt-2"
+                style={{
+                  fontFamily: "var(--font-serif)",
+                  fontWeight: 600,
+                  fontSize: 15,
+                  color: "#111110",
+                }}
+              >
+                {product.price}
+              </p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}
