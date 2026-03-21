@@ -1,70 +1,97 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Lentes de Sol en Guadalajara — Ray-Ban, Meta y Más | Fábrica de Lentes",
+  title: "Lentes de Sol en Guadalajara | Ray-Ban, Meta y Mas | Fabrica de Lentes",
   description:
-    "Lentes de sol originales en Guadalajara. Ray-Ban, Meta, Oakley y más. También graduados de sol. Visítanos o cotiza por WhatsApp.",
+    "Lentes de sol originales en Guadalajara. Ray-Ban, Meta, Oakley y mas. Tambien graduados de sol. Cotiza por WhatsApp.",
   alternates: { canonical: "https://fabricadelentes.mx/lentes-de-sol" },
 };
 
 const brands = [
-  { name: "Ray-Ban", desc: "El clásico por excelencia. Aviador, Wayfarer, Clubmaster y más.", tag: "Popular" },
-  { name: "Meta (Ray-Ban)", desc: "Lentes inteligentes con cámara y audio. Tecnología de punta.", tag: "Nuevo" },
-  { name: "Oakley", desc: "Diseño deportivo y protección UV extrema. Ideales para actividades al aire libre.", tag: "" },
-  { name: "Vogue Eyewear", desc: "Moda y estilo accesible. Diseños femeninos y modernos.", tag: "" },
-  { name: "Graduados de sol", desc: "Cualquier armazón solar con tu graduación. Fabricados en nuestro laboratorio.", tag: "Exclusivo" },
-  { name: "Más marcas", desc: "Consulta disponibilidad de otras marcas. Trabajamos con los principales distribuidores.", tag: "" },
+  { name: "Ray-Ban", desc: "El clasico por excelencia. Aviador, Wayfarer, Clubmaster y mas.", tag: "Popular" },
+  { name: "Meta (Ray-Ban)", desc: "Lentes inteligentes con camara y audio. Tecnologia de punta.", tag: "Nuevo" },
+  { name: "Oakley", desc: "Diseno deportivo y proteccion UV extrema. Ideales para aire libre.", tag: "" },
+  { name: "Vogue Eyewear", desc: "Moda y estilo accesible. Disenos femeninos y modernos.", tag: "" },
+  { name: "Graduados de sol", desc: "Cualquier armazon solar con tu graduacion. Fabricados en nuestro laboratorio.", tag: "Exclusivo" },
+  { name: "Mas marcas", desc: "Consulta disponibilidad de otras marcas. Trabajamos con los principales distribuidores.", tag: "" },
 ];
 
 export default function LentesDeSol() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-navy grain-overlay relative pt-32 pb-20 md:pt-40 md:pb-28">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-amber/10" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-          <span className="text-amber text-sm font-semibold tracking-wider uppercase">100% Originales</span>
-          <h1 className="font-[family-name:var(--font-display)] text-4xl md:text-6xl font-bold text-white mt-3 mb-5">
-            Lentes de sol en <span className="text-amber italic">Guadalajara</span>
-          </h1>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto mb-8">
-            Las mejores marcas con garantía de originalidad. También fabricamos lentes de sol con tu graduación en nuestro laboratorio.
-          </p>
-          <a
-            href="https://wa.me/523314257226?text=Hola%2C%20me%20interesan%20lentes%20de%20sol"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-7 py-4 bg-amber text-navy font-semibold rounded-full hover:bg-amber-light transition-all duration-300"
-          >
-            Ver disponibilidad por WhatsApp
-          </a>
+      <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 bg-off-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-gold font-semibold text-sm tracking-widest uppercase mb-4">
+                100% Originales
+              </p>
+              <h1 className="font-[family-name:var(--font-display)] text-5xl md:text-7xl text-foreground leading-[1.05] mb-5">
+                Lentes de sol en{" "}
+                <span className="text-gold italic">Guadalajara</span>
+              </h1>
+              <p className="text-muted text-lg max-w-lg mb-8 leading-relaxed">
+                Las mejores marcas con garantia de originalidad. Tambien fabricamos lentes de sol con tu graduacion en nuestro laboratorio.
+              </p>
+              <a
+                href="https://wa.me/523314257226?text=Hola%2C%20me%20interesan%20lentes%20de%20sol"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-8 py-4 bg-foreground text-white font-semibold rounded-full hover:bg-navy transition-all duration-300"
+              >
+                Ver disponibilidad por WhatsApp
+              </a>
+            </div>
+            <div className="hidden lg:block">
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/hero-3.png"
+                  alt="Mujer con lentes de sol"
+                  fill
+                  className="object-cover"
+                  sizes="50vw"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Brands grid */}
-      <section className="py-20 bg-warm-white">
+      <section className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-navy text-center mb-12">
-            Marcas <span className="text-amber italic">disponibles</span>
-          </h2>
+          <div className="text-center mb-14">
+            <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-foreground mb-4">
+              Marcas <span className="text-gold italic">disponibles</span>
+            </h2>
+          </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {brands.map((b) => (
               <a
                 key={b.name}
                 href={`https://wa.me/523314257226?text=Hola%2C%20me%20interesan%20lentes%20de%20sol%20${encodeURIComponent(b.name)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-white rounded-2xl p-6 border border-warm-gray hover:border-amber/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
+                className="group bg-off-white rounded-2xl p-7 border border-border hover:border-gold/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-gold/5 relative overflow-hidden"
               >
                 {b.tag && (
-                  <span className="absolute top-4 right-4 px-2.5 py-1 bg-amber/10 text-amber text-xs font-semibold rounded-full">
+                  <span className="absolute top-5 right-5 px-3 py-1 bg-gold/10 text-gold text-xs font-semibold rounded-full">
                     {b.tag}
                   </span>
                 )}
-                <h3 className="font-[family-name:var(--font-display)] text-xl font-semibold text-navy mb-2">{b.name}</h3>
-                <p className="text-sm text-text-muted leading-relaxed mb-3">{b.desc}</p>
-                <span className="text-sm font-medium text-amber group-hover:underline">Consultar →</span>
+                <h3 className="font-[family-name:var(--font-display)] text-xl text-foreground mb-2">
+                  {b.name}
+                </h3>
+                <p className="text-sm text-muted leading-relaxed mb-4">{b.desc}</p>
+                <span className="text-sm font-semibold text-gold group-hover:underline">
+                  Consultar
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-3.5 h-3.5 inline ml-1">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </span>
               </a>
             ))}
           </div>
@@ -72,23 +99,25 @@ export default function LentesDeSol() {
       </section>
 
       {/* Graduados de sol */}
-      <section className="py-20 bg-warm-gray/30">
+      <section className="py-20 md:py-28 bg-off-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-navy rounded-3xl p-10 md:p-16 text-center grain-overlay relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-amber/5 via-transparent to-amber/5" />
-            <div className="relative z-10">
-              <span className="text-amber text-sm font-semibold tracking-wider uppercase">Servicio exclusivo</span>
-              <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-white mt-3 mb-4">
-                Lentes de sol <span className="text-amber italic">con tu graduación</span>
+          <div className="bg-navy rounded-3xl overflow-hidden">
+            <div className="px-8 md:px-16 py-14 md:py-20 text-center">
+              <p className="text-gold font-semibold text-sm tracking-widest uppercase mb-3">
+                Servicio exclusivo
+              </p>
+              <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-5xl text-white mb-4 leading-tight">
+                Lentes de sol{" "}
+                <span className="text-gold italic">con tu graduacion</span>
               </h2>
-              <p className="text-white/50 max-w-xl mx-auto mb-8">
-                Elige el armazón solar que más te guste y nosotros le ponemos tu graduación. Fabricados en nuestro laboratorio en Guadalajara con entrega express.
+              <p className="text-white/50 max-w-xl mx-auto text-lg mb-10">
+                Elige el armazon solar que mas te guste y nosotros le ponemos tu graduacion. Fabricados en nuestro laboratorio con entrega express.
               </p>
               <a
                 href="https://wa.me/523314257226?text=Hola%2C%20quiero%20lentes%20de%20sol%20graduados"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-amber text-navy font-semibold rounded-full hover:bg-amber-light transition-all duration-300"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gold text-navy font-semibold rounded-full hover:bg-gold-light transition-all duration-300"
               >
                 Cotizar lentes de sol graduados
               </a>

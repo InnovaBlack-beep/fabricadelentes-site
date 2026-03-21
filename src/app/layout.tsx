@@ -5,17 +5,17 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Fábrica de Lentes — Óptica con Laboratorio Propio en Guadalajara",
+  title: "Fabrica de Lentes | Optica con Laboratorio Propio en Guadalajara",
   description:
-    "Lentes graduados, de contacto y de sol en Guadalajara. Laboratorio propio, entrega express el mismo día. Cotiza por WhatsApp.",
+    "Lentes graduados, de contacto y de sol en Guadalajara. Laboratorio propio con entrega el mismo dia. Cotiza por WhatsApp.",
   keywords:
-    "óptica guadalajara, lentes de contacto guadalajara, lentes graduados guadalajara, laboratorio óptico guadalajara, examen de la vista guadalajara",
+    "optica guadalajara, lentes de contacto guadalajara, lentes graduados guadalajara, laboratorio optico guadalajara, examen de la vista guadalajara, lentes de sol guadalajara",
   openGraph: {
-    title: "Fábrica de Lentes — Óptica con Laboratorio Propio en Guadalajara",
+    title: "Fabrica de Lentes | Optica con Laboratorio Propio en Guadalajara",
     description:
-      "Lentes graduados, de contacto y de sol. Laboratorio propio y entrega express.",
+      "Lentes graduados, de contacto y de sol. Laboratorio propio y entrega express el mismo dia.",
     url: "https://fabricadelentes.mx",
-    siteName: "Fábrica de Lentes",
+    siteName: "Fabrica de Lentes",
     locale: "es_MX",
     type: "website",
   },
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Fábrica de Lentes",
+  name: "Fabrica de Lentes",
   description:
-    "Óptica con laboratorio propio en Guadalajara. Lentes graduados, de contacto y de sol con entrega express.",
+    "Optica con laboratorio propio en Guadalajara. Lentes graduados, de contacto y de sol con entrega express.",
   url: "https://fabricadelentes.mx",
   telephone: "+523314257226",
   address: {
@@ -39,7 +39,14 @@ const jsonLd = {
   },
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    dayOfWeek: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ],
     opens: "10:00",
     closes: "19:00",
   },
