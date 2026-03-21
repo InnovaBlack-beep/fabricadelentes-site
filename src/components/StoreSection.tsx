@@ -4,88 +4,108 @@ import Image from "next/image";
 
 export function StoreSection() {
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2">
-      {/* Left — image */}
-      <div className="relative" style={{ minHeight: 340 }}>
-        <Image
-          src="/images/hero-1.png"
-          alt="Óptica Fábrica de Lentes en Guadalajara"
-          fill
-          className="object-cover"
-          sizes="(max-width: 1024px) 100vw, 50vw"
-        />
-        <div
-          className="absolute inset-0"
-          style={{ background: "rgba(15,14,13,0.20)" }}
-        />
-      </div>
-
-      {/* Right — content */}
+    <section className="relative overflow-hidden" style={{ minHeight: 520 }}>
+      {/* Full background image */}
+      <Image
+        src="/images/hero-3.png"
+        alt="Óptica Fábrica de Lentes en Guadalajara"
+        fill
+        className="object-cover"
+        sizes="100vw"
+      />
       <div
-        className="flex flex-col justify-center"
+        className="absolute inset-0"
         style={{
-          background: "#F0EBE3",
-          padding: "52px 48px",
+          background:
+            "linear-gradient(to right, rgba(15,14,13,0.85) 0%, rgba(15,14,13,0.6) 50%, rgba(15,14,13,0.3) 100%)",
         }}
-      >
-        <span
-          style={{
-            fontFamily: "var(--font-sans)",
-            fontWeight: 600,
-            fontSize: 10,
-            textTransform: "uppercase",
-            letterSpacing: "0.16em",
-            color: "#C8A040",
-            marginBottom: 16,
-          }}
-        >
-          NUESTRA ÓPTICA · GUADALAJARA
-        </span>
-        <h2
-          style={{
-            fontFamily: "var(--font-serif)",
-            fontSize: 30,
-            color: "#111110",
-            lineHeight: 1.25,
-          }}
-        >
-          <span style={{ fontWeight: 400 }}>Hecho en GDL.</span>
-          <br />
-          <span style={{ fontWeight: 600 }}>Entregado hoy.</span>
-        </h2>
-        <p
-          className="mt-4"
-          style={{
-            fontFamily: "var(--font-sans)",
-            fontSize: 13,
-            color: "#6A5A4A",
-            lineHeight: 1.75,
-            maxWidth: 420,
-          }}
-        >
-          Nuestro laboratorio óptico propio en Guadalajara nos permite
-          fabricar tus lentes el mismo día. Sin intermediarios, sin esperas.
-          Calidad garantizada con la mejor tecnología óptica.
-        </p>
-        <a
-          href="/laboratorio"
-          className="mt-6 transition-colors inline-block"
-          style={{
-            fontFamily: "var(--font-sans)",
-            fontWeight: 600,
-            fontSize: 12,
-            textTransform: "uppercase",
-            letterSpacing: "0.08em",
-            color: "#111110",
-            borderBottom: "1px solid #C8A040",
-            paddingBottom: 2,
-            width: "fit-content",
-          }}
-          onMouseEnter={(e) => (e.currentTarget.style.color = "#C8A040")}
-          onMouseLeave={(e) => (e.currentTarget.style.color = "#111110")}
-        >
-          CONOCER EL LABORATORIO →
-        </a>
+      />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-[1440px] mx-auto px-8 md:px-12 py-24 md:py-32">
+        <div className="max-w-xl">
+          <span
+            className="inline-block text-xs font-semibold tracking-[0.2em] uppercase mb-5"
+            style={{
+              color: "#C8A040",
+              fontFamily: "var(--font-sans)",
+            }}
+          >
+            Nuestra Óptica · Guadalajara
+          </span>
+          <h2
+            className="text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-6"
+            style={{
+              fontFamily: "var(--font-serif)",
+              color: "#F5F0EA",
+            }}
+          >
+            <span style={{ fontWeight: 400 }}>Hecho en GDL.</span>
+            <br />
+            <span style={{ fontWeight: 700 }}>Entregado hoy.</span>
+          </h2>
+          <p
+            className="text-base md:text-lg leading-relaxed mb-8 max-w-md"
+            style={{
+              color: "rgba(245,240,234,0.65)",
+              fontFamily: "var(--font-sans)",
+            }}
+          >
+            Nuestro laboratorio óptico propio nos permite fabricar tus lentes
+            el mismo día. Sin intermediarios, sin esperas. Calidad garantizada.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="/laboratorio"
+              className="inline-flex items-center justify-center transition-all duration-300"
+              style={{
+                height: 50,
+                padding: "0 32px",
+                background: "#C8A040",
+                color: "#1A1000",
+                fontFamily: "var(--font-sans)",
+                fontWeight: 700,
+                fontSize: 12,
+                textTransform: "uppercase",
+                letterSpacing: "0.08em",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#E8D090";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "#C8A040";
+              }}
+            >
+              Conocer el Laboratorio
+            </a>
+            <a
+              href="/contacto"
+              className="inline-flex items-center justify-center transition-all duration-300"
+              style={{
+                height: 50,
+                padding: "0 32px",
+                border: "1.5px solid rgba(245,240,234,0.3)",
+                color: "#F5F0EA",
+                fontFamily: "var(--font-sans)",
+                fontWeight: 600,
+                fontSize: 12,
+                textTransform: "uppercase",
+                letterSpacing: "0.08em",
+                background: "transparent",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = "#F5F0EA";
+                e.currentTarget.style.background = "rgba(245,240,234,0.08)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "rgba(245,240,234,0.3)";
+                e.currentTarget.style.background = "transparent";
+              }}
+            >
+              Visítanos
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -2,8 +2,8 @@ import { HeroCarousel } from "@/components/HeroCarousel";
 import { TrustStrip } from "@/components/TrustStrip";
 import { ShopByCategory } from "@/components/ShopByCategory";
 import { BrandShowcase } from "@/components/BrandShowcase";
-import { ProductGrid } from "@/components/ProductGrid";
 import { Services } from "@/components/Services";
+import { HowItWorks } from "@/components/HowItWorks";
 import { BookingSection } from "@/components/BookingSection";
 import { StoreSection } from "@/components/StoreSection";
 
@@ -14,8 +14,8 @@ export default function Home() {
       <TrustStrip />
       <ShopByCategory />
       <BrandShowcase />
-      <ProductGrid />
       <Services />
+      <HowItWorks />
       <BookingSection />
       <StoreSection />
     </>
