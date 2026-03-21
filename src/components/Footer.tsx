@@ -2,25 +2,92 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="bg-[#111111] text-white">
-      {/* Main footer */}
-      <div className="max-w-7xl mx-auto px-6 py-16 md:py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-        {/* Brand */}
-        <div className="lg:col-span-1">
-          <Link href="/" className="inline-block mb-5">
-            <span className="font-[family-name:var(--font-display)] text-2xl text-white">
-              Fabrica <span className="text-gold italic">de Lentes</span>
-            </span>
-          </Link>
-          <p className="text-white/40 text-sm leading-relaxed mb-6 max-w-xs">
-            La optica con laboratorio propio en Guadalajara. Tus lentes, listos hoy.
-          </p>
-          <div className="flex gap-3">
+    <footer className="bg-[#1a1a1a] text-white">
+      <div className="max-w-[1200px] mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        {/* Productos */}
+        <div>
+          <h4 className="text-white font-semibold text-sm mb-5">Productos</h4>
+          <ul className="space-y-3 text-sm text-white/50">
+            <li>
+              <Link href="/lentes-graduados" className="hover:text-white transition-colors">
+                Lentes Graduados
+              </Link>
+            </li>
+            <li>
+              <Link href="/lentes-de-contacto" className="hover:text-white transition-colors">
+                Lentes de Contacto
+              </Link>
+            </li>
+            <li>
+              <Link href="/lentes-de-sol" className="hover:text-white transition-colors">
+                Lentes de Sol
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Servicios */}
+        <div>
+          <h4 className="text-white font-semibold text-sm mb-5">Servicios</h4>
+          <ul className="space-y-3 text-sm text-white/50">
+            <li>
+              <Link href="/lentes-graduados" className="hover:text-white transition-colors">
+                Examen de la Vista
+              </Link>
+            </li>
+            <li>
+              <Link href="/laboratorio" className="hover:text-white transition-colors">
+                Laboratorio Optico
+              </Link>
+            </li>
+            <li>
+              <Link href="/empresas" className="hover:text-white transition-colors">
+                Convenios Empresariales
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Empresa */}
+        <div>
+          <h4 className="text-white font-semibold text-sm mb-5">Empresa</h4>
+          <ul className="space-y-3 text-sm text-white/50">
+            <li>
+              <Link href="/laboratorio" className="hover:text-white transition-colors">
+                Nuestro Laboratorio
+              </Link>
+            </li>
+            <li>
+              <Link href="/empresas" className="hover:text-white transition-colors">
+                Para Empresas
+              </Link>
+            </li>
+            <li>
+              <Link href="/contacto" className="hover:text-white transition-colors">
+                Contacto
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Contacto */}
+        <div>
+          <h4 className="text-white font-semibold text-sm mb-5">Contacto</h4>
+          <ul className="space-y-3 text-sm text-white/50">
+            <li>Guadalajara, Jalisco, Mexico</li>
+            <li>
+              <a href="tel:+523314257226" className="hover:text-white transition-colors">
+                331 425 7226
+              </a>
+            </li>
+            <li>Lun - Sab: 10:00 - 19:00</li>
+          </ul>
+          <div className="flex gap-3 mt-5">
             <a
               href="https://instagram.com/fabricadelentesmex"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 border border-white/10 flex items-center justify-center hover:border-gold hover:text-gold transition-colors"
+              className="w-9 h-9 border border-white/20 rounded-md flex items-center justify-center hover:border-[#0057FF] hover:text-[#0057FF] transition-colors"
               aria-label="Instagram"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
@@ -31,7 +98,7 @@ export function Footer() {
               href="https://tiktok.com/@fabricadelentes"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 border border-white/10 flex items-center justify-center hover:border-gold hover:text-gold transition-colors"
+              className="w-9 h-9 border border-white/20 rounded-md flex items-center justify-center hover:border-[#0057FF] hover:text-[#0057FF] transition-colors"
               aria-label="TikTok"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
@@ -40,80 +107,11 @@ export function Footer() {
             </a>
           </div>
         </div>
-
-        {/* Products */}
-        <div>
-          <h4 className="text-white font-medium text-xs uppercase tracking-[0.2em] mb-6">
-            Productos
-          </h4>
-          <ul className="space-y-3 text-sm text-white/40">
-            <li>
-              <Link href="/lentes-de-contacto" className="hover:text-white transition-colors">
-                Lentes de Contacto
-              </Link>
-            </li>
-            <li>
-              <Link href="/lentes-graduados" className="hover:text-white transition-colors">
-                Lentes Graduados
-              </Link>
-            </li>
-            <li>
-              <Link href="/lentes-de-sol" className="hover:text-white transition-colors">
-                Lentes de Sol
-              </Link>
-            </li>
-            <li>
-              <Link href="/laboratorio" className="hover:text-white transition-colors">
-                Laboratorio
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        {/* Services */}
-        <div>
-          <h4 className="text-white font-medium text-xs uppercase tracking-[0.2em] mb-6">
-            Servicios
-          </h4>
-          <ul className="space-y-3 text-sm text-white/40">
-            <li>
-              <Link href="/lentes-graduados" className="hover:text-white transition-colors">
-                Examen de la Vista
-              </Link>
-            </li>
-            <li>
-              <Link href="/empresas" className="hover:text-white transition-colors">
-                Convenios Empresariales
-              </Link>
-            </li>
-            <li>
-              <Link href="/contacto" className="hover:text-white transition-colors">
-                Agendar Cita
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        {/* Contact */}
-        <div>
-          <h4 className="text-white font-medium text-xs uppercase tracking-[0.2em] mb-6">
-            Contacto
-          </h4>
-          <ul className="space-y-4 text-sm text-white/40">
-            <li>Guadalajara, Jalisco, Mexico</li>
-            <li>
-              <a href="tel:+523314257226" className="hover:text-white transition-colors">
-                331 425 7226
-              </a>
-            </li>
-            <li>Lun - Sab: 10:00 - 19:00</li>
-          </ul>
-        </div>
       </div>
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-white/25">
+        <div className="max-w-[1200px] mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-white/30">
           <p>
             &copy; {new Date().getFullYear()} Fabrica de Lentes. Todos los
             derechos reservados.
@@ -124,7 +122,7 @@ export function Footer() {
               href="https://innovablack.ai"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/40 hover:text-white transition-colors"
+              className="text-white/50 hover:text-white transition-colors"
             >
               InnovaBlack
             </a>

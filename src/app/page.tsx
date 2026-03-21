@@ -4,9 +4,8 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      {/* ─── HERO ─── */}
-      <section className="relative h-screen min-h-[600px] flex items-center overflow-hidden">
-        {/* Background image */}
+      {/* ─── HERO BANNER ─── */}
+      <section className="relative h-[500px] md:h-[600px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/hero-2.png"
@@ -16,112 +15,86 @@ export default function Home() {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/30" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
-          <div className="max-w-3xl">
-            <h1 className="animate-fade-up font-[family-name:var(--font-display)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white leading-[1.02] mb-6 tracking-tight">
-              Tu optica con laboratorio propio en Guadalajara
+        <div className="relative z-10 max-w-[1200px] mx-auto px-6 w-full">
+          <div className="bg-white/95 backdrop-blur-sm p-8 md:p-12 max-w-md rounded-lg">
+            <h1 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] leading-tight tracking-[-0.02em] mb-3">
+              Tus lentes, listos hoy
             </h1>
-
-            <p className="animate-fade-up delay-100 text-lg md:text-xl text-white/70 max-w-lg leading-relaxed mb-10">
-              Fabricamos tus lentes aqui. Sin intermediarios, sin esperas. Entrega express el mismo dia.
+            <p className="text-[#333333] text-base mb-6 leading-relaxed">
+              Optica con laboratorio propio en Guadalajara. Fabricamos tus lentes sin intermediarios.
             </p>
-
-            <div className="animate-fade-up delay-200">
-              <a
-                href="https://wa.me/523314257226?text=Hola%2C%20quiero%20agendar%20una%20cita"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-white text-foreground text-sm font-semibold tracking-wide uppercase hover:bg-off-white transition-colors duration-300"
-              >
-                Agenda tu cita
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
+            <a
+              href="https://wa.me/523314257226?text=Hola%2C%20quiero%20agendar%20una%20cita"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 bg-[#0057FF] text-white text-sm font-semibold rounded-md hover:bg-[#0044cc] transition-colors"
+            >
+              Agendar Cita
+            </a>
           </div>
         </div>
       </section>
 
-      {/* ─── MARQUEE STRIP ─── */}
-      <section className="border-y border-border bg-white overflow-hidden">
-        <div className="py-4">
-          <div className="flex whitespace-nowrap" style={{ animation: "marquee 30s linear infinite" }}>
-            {[...Array(2)].map((_, i) => (
-              <div key={i} className="flex items-center shrink-0">
-                {[
-                  "Laboratorio propio",
-                  "Entrega express",
-                  "Marcas originales",
-                  "+2,000 clientes",
-                  "Laboratorio propio",
-                  "Entrega express",
-                  "Marcas originales",
-                  "+2,000 clientes",
-                ].map((text, j) => (
-                  <span key={j} className="flex items-center text-sm font-medium text-muted tracking-wide uppercase mx-8">
-                    <span className="w-1.5 h-1.5 bg-gold rounded-full mr-4" />
-                    {text}
-                  </span>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ─── CATEGORY GRID ─── */}
+      <section className="py-20 md:py-24 bg-white">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <h2 className="text-2xl md:text-3xl font-semibold text-[#1a1a1a] tracking-[-0.02em] text-center mb-12">
+            Nuestros Productos
+          </h2>
 
-      {/* ─── PRODUCTS ─── */}
-      <section className="py-20 md:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-16">
-            <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-6xl lg:text-7xl text-foreground leading-[1.05]">
-              Encuentra tus lentes <span className="text-gold italic">ideales</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-4 md:gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Lentes de Contacto",
-                href: "/lentes-de-contacto",
-                image: "/images/hero-1.png",
-              },
-              {
                 title: "Lentes Graduados",
+                desc: "Monofocales, progresivos, blue block y mas. Fabricacion propia.",
                 href: "/lentes-graduados",
                 image: "/images/hero-2.png",
               },
               {
+                title: "Lentes de Contacto",
+                desc: "Acuvue, Bausch & Lomb, CooperVision. Todas las marcas.",
+                href: "/lentes-de-contacto",
+                image: "/images/hero-1.png",
+              },
+              {
                 title: "Lentes de Sol",
+                desc: "Ray-Ban, Meta, Oakley. 100% originales con garantia.",
                 href: "/lentes-de-sol",
                 image: "/images/hero-3.png",
               },
-            ].map((product) => (
+              {
+                title: "Examen de la Vista",
+                desc: "Revision profesional completa. Sin costo al comprar tus lentes.",
+                href: "/lentes-graduados",
+                image: "/images/hero-1.png",
+              },
+            ].map((item) => (
               <Link
-                key={product.title}
-                href={product.href}
-                className="group relative aspect-[3/4] overflow-hidden"
+                key={item.title}
+                href={item.href}
+                className="group bg-white border border-[#e0e0e0] rounded-lg overflow-hidden hover:shadow-md transition-shadow"
               >
-                <Image
-                  src={product.image}
-                  alt={product.title}
-                  fill
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                  <h3 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl text-white mb-3">
-                    {product.title}
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-base font-semibold text-[#1a1a1a] mb-1">
+                    {item.title}
                   </h3>
-                  <span className="inline-flex items-center gap-2 text-sm font-medium text-white/80 tracking-wide uppercase group-hover:gap-3 transition-all duration-300">
-                    Explorar
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4">
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
+                  <p className="text-sm text-[#666666] mb-3 leading-relaxed">
+                    {item.desc}
+                  </p>
+                  <span className="text-sm font-semibold text-[#0057FF] group-hover:underline">
+                    Ver mas &rarr;
                   </span>
                 </div>
               </Link>
@@ -130,11 +103,64 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── ABOUT / LAB ─── */}
-      <section className="py-20 md:py-32 bg-off-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
-            <div className="relative aspect-[4/5] overflow-hidden">
+      {/* ─── WHY US ─── */}
+      <section className="py-20 md:py-24 bg-[#f5f5f5]">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <h2 className="text-2xl md:text-3xl font-semibold text-[#1a1a1a] tracking-[-0.02em] text-center mb-12">
+            Por que Fabrica de Lentes
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Laboratorio propio",
+                desc: "Fabricamos tus lentes aqui en Guadalajara. Control total de calidad sin intermediarios.",
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-8 h-8">
+                    <path d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714a2.25 2.25 0 00.659 1.591L19 14.5M14.25 3.104c.251.023.501.05.75.082M5 14.5l-1.455 1.455A2.25 2.25 0 003 17.318V18a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18v-.682a2.25 2.25 0 00-.545-1.363L19 14.5m-14 0h14" />
+                  </svg>
+                ),
+              },
+              {
+                title: "Entrega el mismo dia",
+                desc: "Tus lentes listos en horas, no semanas. Entrega express gracias a fabricacion local.",
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-8 h-8">
+                    <path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                ),
+              },
+              {
+                title: "Atencion personalizada",
+                desc: "Te asesoramos uno a uno para encontrar los lentes perfectos para ti.",
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-8 h-8">
+                    <path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                  </svg>
+                ),
+              },
+            ].map((item) => (
+              <div key={item.title} className="text-center">
+                <div className="w-16 h-16 bg-white border border-[#e0e0e0] rounded-lg flex items-center justify-center mx-auto mb-5 text-[#0057FF]">
+                  {item.icon}
+                </div>
+                <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-[#666666] leading-relaxed max-w-xs mx-auto">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── LAB SECTION ─── */}
+      <section className="py-20 md:py-24 bg-white">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
               <Image
                 src="/images/hero-1.png"
                 alt="Laboratorio optico Fabrica de Lentes"
@@ -144,144 +170,76 @@ export default function Home() {
               />
             </div>
             <div>
-              <p className="text-gold font-medium text-xs tracking-[0.2em] uppercase mb-6">
-                Nuestro laboratorio
-              </p>
-              <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl lg:text-6xl text-foreground mb-8 leading-[1.05]">
-                Donde cada lente <span className="text-gold italic">cobra vida</span>
+              <h2 className="text-2xl md:text-3xl font-semibold text-[#1a1a1a] tracking-[-0.02em] mb-4">
+                Nuestro Laboratorio
               </h2>
-              <div className="space-y-4 text-muted leading-relaxed mb-12">
-                <p>
-                  A diferencia de la mayoria de opticas que envian tus lentes a
-                  otro estado para fabricarlos, nosotros tenemos nuestro propio
-                  laboratorio aqui en Guadalajara.
-                </p>
-                <p>
-                  Controlamos cada paso del proceso: desde la graduacion hasta
-                  el acabado final. Lentes de mejor calidad, en menos tiempo
-                  y a un precio mas justo.
-                </p>
-              </div>
-
-              <div className="flex items-center gap-8 md:gap-12 mb-12 text-foreground">
-                <div>
-                  <p className="font-[family-name:var(--font-display)] text-3xl md:text-4xl">&lt; 24h</p>
-                  <p className="text-sm text-muted mt-1">entrega</p>
-                </div>
-                <div className="w-px h-12 bg-border" />
-                <div>
-                  <p className="font-[family-name:var(--font-display)] text-3xl md:text-4xl">100%</p>
-                  <p className="text-sm text-muted mt-1">calidad</p>
-                </div>
-                <div className="w-px h-12 bg-border" />
-                <div>
-                  <p className="font-[family-name:var(--font-display)] text-3xl md:text-4xl">+10 a.</p>
-                  <p className="text-sm text-muted mt-1">experiencia</p>
-                </div>
-              </div>
-
+              <p className="text-[#333333] leading-relaxed mb-4">
+                A diferencia de la mayoria de opticas que envian tus lentes a otro estado para fabricarlos, nosotros tenemos nuestro propio laboratorio aqui en Guadalajara.
+              </p>
+              <p className="text-[#333333] leading-relaxed mb-6">
+                Controlamos cada paso del proceso: desde la graduacion hasta el acabado final. Lentes de mejor calidad, en menos tiempo y a un precio mas justo.
+              </p>
               <Link
                 href="/laboratorio"
-                className="inline-flex items-center gap-3 text-sm font-semibold text-foreground tracking-wide uppercase border-b border-foreground pb-1 hover:text-gold hover:border-gold transition-colors duration-300"
+                className="text-[#0057FF] font-semibold text-sm hover:underline"
               >
-                Conoce el laboratorio
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
+                Conocer mas &rarr;
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ─── TESTIMONIALS ─── */}
-      <section className="py-20 md:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-16">
-            <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-6xl lg:text-7xl text-foreground leading-[1.05]">
-              Lo que dicen nuestros <span className="text-gold italic">clientes</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-            {[
-              {
-                name: "Maria Garcia",
-                text: "Llegue por urgencia porque se me rompieron mis lentes y me los hicieron el mismo dia. Excelente servicio y muy buen precio.",
-              },
-              {
-                name: "Roberto Medina",
-                text: "Llevamos el convenio de la empresa aqui desde hace 2 anos. Mas de 150 empleados atendidos y todos contentos. Super recomendados.",
-              },
-              {
-                name: "Ana Luisa Torres",
-                text: "Mis lentes de contacto siempre los pido aqui. Tienen todas las marcas y el precio es mejor que en las cadenas grandes.",
-              },
-            ].map((testimonial, i) => (
-              <div
-                key={i}
-                className="bg-off-white p-8 md:p-10"
-              >
-                <div className="font-[family-name:var(--font-display)] text-5xl text-gold/30 leading-none mb-4">
-                  &ldquo;
-                </div>
-                <p className="text-foreground/80 leading-relaxed mb-8 text-lg font-[family-name:var(--font-display)] italic">
-                  {testimonial.text}
-                </p>
-                <p className="text-sm font-semibold text-foreground tracking-wide">
-                  {testimonial.name}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ─── B2B ─── */}
-      <section className="py-20 md:py-32 bg-[#111111]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <p className="text-gold font-medium text-xs tracking-[0.2em] uppercase mb-6">
-              Para empresas
-            </p>
-            <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-6xl lg:text-7xl text-white mb-6 leading-[1.05]">
-              Lleva Fabrica de Lentes <span className="text-gold italic">a tu empresa</span>
+      <section className="py-20 md:py-24 bg-[#f5f5f5]">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#1a1a1a] tracking-[-0.02em] mb-4">
+              Convenios Empresariales
             </h2>
-            <p className="text-white/50 text-lg md:text-xl max-w-xl leading-relaxed mb-10">
-              Convenios corporativos con examen de la vista gratis, descuentos por volumen y servicio en tus instalaciones.
+            <p className="text-[#666666] leading-relaxed mb-8">
+              Llevamos el servicio optico a tu empresa. Examen de la vista gratis, descuentos por volumen y entrega directa en tus instalaciones.
             </p>
             <Link
               href="/empresas"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-white text-foreground text-sm font-semibold tracking-wide uppercase hover:bg-off-white transition-colors duration-300"
+              className="inline-block px-6 py-3 bg-[#0057FF] text-white text-sm font-semibold rounded-md hover:bg-[#0044cc] transition-colors"
             >
-              Solicitar convenio
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
+              Solicitar Convenio
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ─── FINAL CTA ─── */}
-      <section className="py-24 md:py-40 bg-off-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="font-[family-name:var(--font-display)] text-5xl md:text-7xl lg:text-8xl text-foreground mb-8 leading-[1.05]">
-            Listo para ver <span className="text-gold italic">mejor?</span>
+      {/* ─── BRANDS ─── */}
+      <section className="py-16 md:py-20 bg-white border-t border-[#e0e0e0]">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <h2 className="text-lg font-semibold text-[#1a1a1a] text-center mb-8">
+            Marcas que manejamos
           </h2>
-          <p className="text-muted text-lg md:text-xl mb-12 max-w-xl mx-auto leading-relaxed">
-            Cotiza tus lentes en menos de 2 minutos. Escribenos por WhatsApp o visitanos en Guadalajara.
+          <div className="flex flex-wrap justify-center gap-x-10 gap-y-4 text-sm text-[#666666] font-medium">
+            {["Acuvue", "Ray-Ban", "Bausch & Lomb", "CooperVision", "Alcon", "Oakley", "Vogue", "Meta"].map((brand) => (
+              <span key={brand}>{brand}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── CTA ─── */}
+      <section className="py-20 md:py-24 bg-[#0057FF]">
+        <div className="max-w-[1200px] mx-auto px-6 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-white tracking-[-0.02em] mb-3">
+            Necesitas lentes nuevos?
+          </h2>
+          <p className="text-white/80 text-base mb-8 max-w-md mx-auto">
+            Cotiza en minutos por WhatsApp. Te respondemos al instante.
           </p>
           <a
             href="https://wa.me/523314257226?text=Hola%2C%20quiero%20cotizar%20mis%20lentes"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-foreground text-white text-sm font-semibold tracking-wide uppercase hover:bg-dark transition-colors duration-300"
+            className="inline-block px-8 py-3.5 bg-white text-[#0057FF] text-sm font-semibold rounded-md hover:bg-gray-100 transition-colors"
           >
-            Escribenos por WhatsApp
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+            Cotizar por WhatsApp
           </a>
         </div>
       </section>

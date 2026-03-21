@@ -30,34 +30,30 @@ export default function LentesDeContacto() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-28 pb-20 md:pt-36 md:pb-28 bg-off-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="pt-12 pb-16 md:pt-16 md:pb-20 bg-[#f5f5f5]">
+        <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-gold font-medium text-xs tracking-[0.2em] uppercase mb-4">
+              <p className="text-[#0057FF] font-semibold text-sm mb-3">
                 Todas las marcas disponibles
               </p>
-              <h1 className="font-[family-name:var(--font-display)] text-5xl md:text-7xl text-foreground leading-[1.05] mb-5">
-                Lentes de contacto en{" "}
-                <span className="text-gold italic">Guadalajara</span>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1a1a1a] leading-tight tracking-[-0.02em] mb-4">
+                Lentes de contacto en Guadalajara
               </h1>
-              <p className="text-muted text-lg max-w-lg mb-8 leading-relaxed">
+              <p className="text-[#666666] text-base max-w-lg mb-8 leading-relaxed">
                 Tenemos todas las marcas y tipos de lentes de contacto. Cotiza en segundos por WhatsApp y recibe en tu domicilio o recoge en tienda.
               </p>
               <a
                 href="https://wa.me/523314257226?text=Hola%2C%20me%20interesan%20lentes%20de%20contacto"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-foreground text-white text-sm font-semibold tracking-wide uppercase hover:bg-dark transition-colors duration-300"
+                className="inline-block px-6 py-3 bg-[#0057FF] text-white text-sm font-semibold rounded-md hover:bg-[#0044cc] transition-colors"
               >
                 Pedir por WhatsApp
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
               </a>
             </div>
             <div className="hidden lg:block">
-              <div className="relative aspect-[4/5] overflow-hidden">
+              <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                 <Image
                   src="/images/hero-1.png"
                   alt="Lentes de contacto"
@@ -72,13 +68,13 @@ export default function LentesDeContacto() {
       </section>
 
       {/* Categories */}
-      <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-14">
-            <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-foreground mb-4">
-              Que tipo de lente <span className="text-gold italic">necesitas?</span>
+      <section className="py-20 md:py-24 bg-white">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="mb-12">
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#1a1a1a] tracking-[-0.02em] mb-3">
+              Que tipo de lente necesitas?
             </h2>
-            <p className="text-muted max-w-xl">
+            <p className="text-[#666666] max-w-xl">
               Si no estas seguro, no te preocupes. Escribenos con tu receta y te ayudamos a elegir.
             </p>
           </div>
@@ -90,22 +86,19 @@ export default function LentesDeContacto() {
                 href={`https://wa.me/523314257226?text=Hola%2C%20me%20interesan%20lentes%20de%20contacto%20${encodeURIComponent(cat.name.toLowerCase())}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-white p-7 border border-border hover:border-gold/40 transition-all duration-300"
+                className="group bg-white p-6 border border-[#e0e0e0] rounded-lg hover:border-[#0057FF]/40 transition-all"
               >
-                <span className="inline-block px-3 py-1 bg-off-white text-xs font-medium text-muted mb-4">
+                <span className="inline-block px-3 py-1 bg-[#f5f5f5] text-xs font-medium text-[#666666] rounded mb-3">
                   {cat.badge}
                 </span>
-                <h3 className="font-[family-name:var(--font-display)] text-xl text-foreground mb-2">
+                <h3 className="text-base font-semibold text-[#1a1a1a] mb-2">
                   {cat.name}
                 </h3>
-                <p className="text-sm text-muted leading-relaxed mb-4">
+                <p className="text-sm text-[#666666] leading-relaxed mb-3">
                   {cat.desc}
                 </p>
-                <span className="text-sm font-semibold text-gold group-hover:underline">
-                  Cotizar
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-3.5 h-3.5 inline ml-1">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
+                <span className="text-sm font-semibold text-[#0057FF] group-hover:underline">
+                  Cotizar &rarr;
                 </span>
               </a>
             ))}
@@ -114,13 +107,13 @@ export default function LentesDeContacto() {
       </section>
 
       {/* Brands */}
-      <section className="py-20 md:py-28 bg-off-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-14">
-            <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-foreground mb-4">
-              Marcas <span className="text-gold italic">disponibles</span>
+      <section className="py-20 md:py-24 bg-[#f5f5f5]">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="mb-12">
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#1a1a1a] tracking-[-0.02em] mb-3">
+              Marcas disponibles
             </h2>
-            <p className="text-muted max-w-xl">
+            <p className="text-[#666666] max-w-xl">
               Trabajamos directamente con los principales laboratorios del mundo.
             </p>
           </div>
@@ -129,10 +122,10 @@ export default function LentesDeContacto() {
             {brands.map((brand) => (
               <div
                 key={brand.name}
-                className="bg-white p-7 border border-border"
+                className="bg-white p-6 border border-[#e0e0e0] rounded-lg"
               >
-                <h3 className="font-semibold text-foreground mb-1.5">{brand.name}</h3>
-                <p className="text-sm text-muted">{brand.types}</p>
+                <h3 className="font-semibold text-[#1a1a1a] mb-1.5">{brand.name}</h3>
+                <p className="text-sm text-[#666666]">{brand.types}</p>
               </div>
             ))}
           </div>
@@ -140,10 +133,10 @@ export default function LentesDeContacto() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-24 bg-white">
         <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-foreground mb-12">
-            Preguntas <span className="text-gold italic">frecuentes</span>
+          <h2 className="text-2xl md:text-3xl font-semibold text-[#1a1a1a] tracking-[-0.02em] mb-10">
+            Preguntas frecuentes
           </h2>
 
           <div className="space-y-3">
@@ -156,15 +149,15 @@ export default function LentesDeContacto() {
             ].map((faq, i) => (
               <details
                 key={i}
-                className="group bg-off-white border border-border overflow-hidden"
+                className="group bg-[#f5f5f5] border border-[#e0e0e0] rounded-lg overflow-hidden"
               >
-                <summary className="flex items-center justify-between cursor-pointer p-6 font-medium text-foreground hover:text-gold transition-colors">
+                <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-[#1a1a1a] hover:text-[#0057FF] transition-colors">
                   {faq.q}
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5 text-muted group-open:rotate-180 transition-transform shrink-0 ml-4">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5 text-[#666666] group-open:rotate-180 transition-transform shrink-0 ml-4">
                     <path d="M6 9l6 6 6-6" />
                   </svg>
                 </summary>
-                <div className="px-6 pb-6 text-muted leading-relaxed">{faq.a}</div>
+                <div className="px-5 pb-5 text-[#666666] leading-relaxed">{faq.a}</div>
               </details>
             ))}
           </div>
@@ -172,20 +165,19 @@ export default function LentesDeContacto() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28 bg-[#111111]">
+      <section className="py-20 md:py-24 bg-[#0057FF]">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-white mb-4">
-            Listo para pedir tus{" "}
-            <span className="text-gold italic">lentes de contacto?</span>
+          <h2 className="text-2xl md:text-3xl font-bold text-white tracking-[-0.02em] mb-3">
+            Listo para pedir tus lentes de contacto?
           </h2>
-          <p className="text-white/50 text-lg mb-10">
+          <p className="text-white/80 text-base mb-8">
             Envanos tu receta o pregunta por disponibilidad. Respondemos en minutos.
           </p>
           <a
             href="https://wa.me/523314257226?text=Hola%2C%20quiero%20pedir%20lentes%20de%20contacto"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-white text-foreground text-sm font-semibold tracking-wide uppercase hover:bg-off-white transition-colors duration-300"
+            className="inline-block px-8 py-3.5 bg-white text-[#0057FF] text-sm font-semibold rounded-md hover:bg-gray-100 transition-colors"
           >
             Pedir por WhatsApp
           </a>
