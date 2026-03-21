@@ -54,26 +54,26 @@ export function ProductShowcase() {
       : products.filter((p) => p.category === activeTab);
 
   return (
-    <section className="py-16 md:py-24 px-5 md:px-10 bg-warm-white">
+    <section className="py-16 md:py-24 px-5 md:px-10 bg-white">
       <div className="max-w-[1440px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-6">
           <div>
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
               Productos
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-text-primary mt-3">
+            <h2 className="text-3xl md:text-4xl font-bold text-fg mt-3">
               Nuestros Lentes
             </h2>
           </div>
-          <div className="flex gap-1 bg-warm-cream rounded-full p-1">
+          <div className="flex gap-1 bg-surface rounded-full p-1 border border-border">
             {tabs.map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className="px-5 py-2 rounded-full text-xs font-medium tracking-wide transition-all"
                 style={{
-                  background: activeTab === tab ? "#1A1818" : "transparent",
-                  color: activeTab === tab ? "#F5F0EA" : "#6A5A4A",
+                  background: activeTab === tab ? "#242424" : "transparent",
+                  color: activeTab === tab ? "#FFFFFF" : "#9CA3AF",
                 }}
               >
                 {tab}
@@ -89,9 +89,9 @@ export function ProductShowcase() {
               href={`https://wa.me/523314257226?text=Hola%2C%20me%20interesa%20el%20modelo%20${encodeURIComponent(product.model)}%20${encodeURIComponent(product.brand)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block rounded-xl overflow-hidden bg-warm-cream hover:bg-warm-beige transition-colors"
+              className="group block rounded-lg overflow-hidden border border-border hover:border-fg/20 transition-colors bg-white"
             >
-              <div className="relative aspect-square bg-warm-cream">
+              <div className="relative aspect-square bg-surface">
                 <Image
                   src={product.image}
                   alt={`${product.brand} ${product.model}`}
@@ -99,20 +99,20 @@ export function ProductShowcase() {
                   className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
                   unoptimized
                 />
-                <span className="absolute top-3 left-3 bg-gold text-gold-dark text-[10px] font-semibold px-2.5 py-1 rounded-full">
+                <span className="absolute top-3 left-3 bg-accent text-dark text-[10px] font-semibold px-2.5 py-1 rounded-full">
                   Nuevo
                 </span>
               </div>
               <div className="p-4">
-                <p className="text-[10px] uppercase tracking-widest text-warm-stone mb-1">
+                <p className="text-[10px] uppercase tracking-widest text-muted mb-1">
                   {product.brand}
                 </p>
-                <p className="text-sm font-semibold text-text-primary truncate">
+                <p className="text-sm font-semibold text-fg truncate">
                   {product.model}
                 </p>
-                <p className="text-sm font-bold text-gold mt-1">
+                <p className="text-sm font-bold text-fg mt-1">
                   {product.price}
-                  <span className="text-[10px] font-normal text-warm-stone ml-1">
+                  <span className="text-[10px] font-normal text-muted ml-1">
                     MXN
                   </span>
                 </p>
@@ -125,7 +125,7 @@ export function ProductShowcase() {
           <div className="text-center mt-10">
             <a
               href="https://wa.me/523314257226?text=Hola%2C%20quiero%20ver%20más%20modelos"
-              className="inline-flex items-center h-12 px-8 rounded-full border border-border-mid text-sm font-medium text-text-primary hover:border-text-primary transition-colors"
+              className="inline-flex items-center h-12 px-8 rounded-full border border-border text-sm font-medium text-fg hover:border-fg transition-colors"
             >
               Ver Todos los Modelos →
             </a>

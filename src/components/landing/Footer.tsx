@@ -34,15 +34,15 @@ const contactInfo = [
 
 export function Footer() {
   return (
-    <footer className="bg-warm-graphite pt-16 pb-8 px-5 md:px-10">
+    <footer className="bg-dark-deep pt-16 pb-8 px-5 md:px-10">
       <div className="max-w-[1440px] mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-6">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <span className="font-serif text-lg font-semibold text-gold">
-              Fábrica de Lentes®
+            <span className="text-lg font-bold text-white">
+              Fábrica de Lentes<span className="text-accent">®</span>
             </span>
-            <p className="text-xs text-text-on-dark/38 mt-3 leading-relaxed max-w-[200px]">
+            <p className="text-xs text-white/38 mt-3 leading-relaxed max-w-[200px]">
               Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora.
             </p>
             {/* Social */}
@@ -51,7 +51,7 @@ export function Footer() {
                 href="https://instagram.com/fabricadelentesmex"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-text-on-dark/38 hover:text-gold transition-colors"
+                className="text-white/38 hover:text-accent transition-colors"
                 aria-label="Instagram"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
@@ -62,7 +62,7 @@ export function Footer() {
                 href="https://tiktok.com/@fabricadelentes"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-text-on-dark/38 hover:text-gold transition-colors"
+                className="text-white/38 hover:text-accent transition-colors"
                 aria-label="TikTok"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
@@ -73,7 +73,7 @@ export function Footer() {
                 href="https://facebook.com/fabricadelentesmex"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-text-on-dark/38 hover:text-gold transition-colors"
+                className="text-white/38 hover:text-accent transition-colors"
                 aria-label="Facebook"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
@@ -86,7 +86,7 @@ export function Footer() {
           {/* Link columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h4 className="text-xs font-semibold uppercase tracking-[0.14em] text-text-on-dark mb-4">
+              <h4 className="text-xs font-semibold uppercase tracking-[0.14em] text-white mb-4">
                 {category}
               </h4>
               <ul className="space-y-0">
@@ -94,7 +94,7 @@ export function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="block text-xs text-text-on-dark/38 hover:text-gold transition-colors leading-[2]"
+                      className="block text-xs text-white/38 hover:text-accent transition-colors leading-[2]"
                     >
                       {link.label}
                     </Link>
@@ -106,7 +106,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-[0.14em] text-text-on-dark mb-4">
+            <h4 className="text-xs font-semibold uppercase tracking-[0.14em] text-white mb-4">
               Contacto
             </h4>
             <ul className="space-y-0">
@@ -117,12 +117,12 @@ export function Footer() {
                       href={info.href}
                       target={info.external ? "_blank" : undefined}
                       rel={info.external ? "noopener noreferrer" : undefined}
-                      className="block text-xs text-text-on-dark/38 hover:text-gold transition-colors leading-[2]"
+                      className="block text-xs text-white/38 hover:text-accent transition-colors leading-[2]"
                     >
                       {info.label}
                     </a>
                   ) : (
-                    <span className="block text-xs text-text-on-dark/38 leading-[2]">
+                    <span className="block text-xs text-white/38 leading-[2]">
                       {info.label}
                     </span>
                   )}
@@ -133,29 +133,29 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-text-on-dark/7 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-text-on-dark/30">
+        <div className="border-t border-white/7 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs text-white/30">
             © 2026 Fábrica de Lentes® · Todos los derechos reservados
           </p>
           <div className="flex items-center gap-4">
             <a
               href="https://fabricadelentes.mx/PolíticadeGarantía"
-              className="text-xs text-text-on-dark/30 hover:text-gold transition-colors"
+              className="text-xs text-white/30 hover:text-accent transition-colors"
             >
               Garantías
             </a>
             <a
               href="https://fabricadelentes.mx/AvisodePrivacidad"
-              className="text-xs text-text-on-dark/30 hover:text-gold transition-colors"
+              className="text-xs text-white/30 hover:text-accent transition-colors"
             >
               Privacidad
             </a>
-            <span className="text-xs text-text-on-dark/20">·</span>
+            <span className="text-xs text-white/20">·</span>
             <a
               href="https://innovablack.ai"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-text-on-dark/30 hover:text-gold transition-colors"
+              className="text-xs text-white/30 hover:text-accent transition-colors"
             >
               Hecho por InnovaBlack
             </a>

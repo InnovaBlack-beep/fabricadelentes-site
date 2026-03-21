@@ -195,7 +195,7 @@ export function Footer() {
           <span
             className="text-sm font-semibold"
             style={{
-              fontFamily: "var(--font-serif)",
+              fontFamily: "var(--font-sans)",
               color: "#C8A040",
             }}
           >

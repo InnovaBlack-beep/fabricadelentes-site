@@ -23,7 +23,7 @@ export function FilterBar() {
       <span
         className="shrink-0 text-base font-semibold"
         style={{
-          fontFamily: "var(--font-serif)",
+          fontFamily: "var(--font-sans)",
           color: "#111110",
           borderRight: "2px solid #111110",
           paddingRight: 8,

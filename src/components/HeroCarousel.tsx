@@ -60,7 +60,7 @@ export function HeroCarousel() {
   const slide = slides[current];
 
   return (
-    <section className="relative w-full h-[500px] md:h-[600px] lg:h-[680px] overflow-hidden bg-warm-graphite">
+    <section className="relative w-full h-[500px] md:h-[600px] lg:h-[680px] overflow-hidden bg-dark">
       <h1 className="sr-only">Fábrica de Lentes — Óptica con Laboratorio Propio en Guadalajara</h1>
       {/* Slides */}
       {slides.map((s, i) => (
@@ -89,7 +89,7 @@ export function HeroCarousel() {
               priority={i === 0}
             />
           )}
-          <div className="absolute inset-0 bg-warm-graphite/40" />
+          <div className="absolute inset-0 bg-dark/40" />
         </div>
       ))}
 
@@ -102,7 +102,7 @@ export function HeroCarousel() {
         >
           <span
             className="inline-block text-sm font-medium tracking-widest uppercase mb-4"
-            style={{ color: "var(--color-gold)" }}
+            style={{ color: "var(--color-accent)" }}
           >
             {slide.tagline}
           </span>
@@ -112,8 +112,8 @@ export function HeroCarousel() {
             aria-level={2}
             className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight whitespace-pre-line mb-5"
             style={{
-              fontFamily: "var(--font-serif)",
-              color: "var(--color-text-on-dark)",
+              fontFamily: "var(--font-sans)",
+              color: "var(--color-white)",
             }}
           >
             {slide.headline}
@@ -137,8 +137,8 @@ export function HeroCarousel() {
               rel="noopener noreferrer"
               className="font-semibold px-8 py-3.5 text-sm tracking-wide transition-colors duration-300"
               style={{
-                background: "var(--color-gold)",
-                color: "var(--color-warm-graphite)",
+                background: "var(--color-accent)",
+                color: "var(--color-dark)",
               }}
             >
               {slide.cta}
@@ -146,8 +146,8 @@ export function HeroCarousel() {
             <button
               className="font-semibold px-8 py-3.5 text-sm tracking-wide transition-colors duration-300"
               style={{
-                border: "2px solid var(--color-text-on-dark)",
-                color: "var(--color-text-on-dark)",
+                border: "2px solid var(--color-white)",
+                color: "var(--color-white)",
                 background: "transparent",
               }}
             >
@@ -164,7 +164,7 @@ export function HeroCarousel() {
         style={{
           background: "rgba(255,255,255,0.15)",
           backdropFilter: "blur(4px)",
-          color: "var(--color-text-on-dark)",
+          color: "var(--color-white)",
         }}
         aria-label="Anterior"
       >
@@ -187,7 +187,7 @@ export function HeroCarousel() {
         style={{
           background: "rgba(255,255,255,0.15)",
           backdropFilter: "blur(4px)",
-          color: "var(--color-text-on-dark)",
+          color: "var(--color-white)",
         }}
         aria-label="Siguiente"
       >

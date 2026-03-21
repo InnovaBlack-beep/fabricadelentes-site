@@ -9,13 +9,13 @@ export function HowItWorks() {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-warm-cream">
+    <section className="py-20 md:py-28 bg-surface">
       <div className="max-w-[1440px] mx-auto px-8 md:px-12">
         <div className="text-center mb-16">
-          <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase mb-4 text-gold">
+          <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase mb-4 text-accent">
             Proceso
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-text-primary" style={{ fontFamily: "var(--font-serif)" }}>
+          <h2 className="text-3xl md:text-4xl font-bold text-fg" style={{ fontFamily: "var(--font-sans)" }}>
             Así de fácil es pedir tus lentes
           </h2>
         </div>
@@ -25,11 +25,11 @@ export function HowItWorks() {
 
           {steps.map((step) => (
             <div key={step.num} className="flex flex-col items-center text-center relative z-10">
-              <div className="flex items-center justify-center size-16 rounded-full bg-warm-white border-2 border-gold mb-5">
-                <span className="text-lg font-bold text-gold" style={{ fontFamily: "var(--font-serif)" }}>{step.num}</span>
+              <div className="flex items-center justify-center size-16 rounded-full bg-white border-2 border-accent mb-5">
+                <span className="text-lg font-bold text-accent" style={{ fontFamily: "var(--font-sans)" }}>{step.num}</span>
               </div>
-              <h3 className="text-sm font-bold text-text-primary mb-2">{step.title}</h3>
-              <p className="text-sm text-warm-brown leading-relaxed max-w-[200px]">{step.desc}</p>
+              <h3 className="text-sm font-bold text-fg mb-2">{step.title}</h3>
+              <p className="text-sm text-muted leading-relaxed max-w-[200px]">{step.desc}</p>
             </div>
           ))}
         </div>
@@ -48,7 +48,7 @@ export function HowItWorks() {
             href="https://wa.me/523314257226?text=Hola%2C%20quiero%20agendar%20un%20examen%20de%20la%20vista"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center h-12 px-8 text-xs font-bold uppercase tracking-widest border border-border-mid transition-all duration-300 hover:border-text-primary"
+            className="inline-flex items-center justify-center h-12 px-8 text-xs font-bold uppercase tracking-widest border border-border transition-all duration-300 hover:border-fg"
             style={{ color: "#111110" }}
           >
             Agendar Examen

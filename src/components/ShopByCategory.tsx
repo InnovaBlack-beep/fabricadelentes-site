@@ -29,10 +29,10 @@ export function ShopByCategory() {
     <section className="py-16 md:py-24">
       <div className="max-w-[1440px] mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-text-primary" style={{ fontFamily: "var(--font-serif)" }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-fg" style={{ fontFamily: "var(--font-sans)" }}>
             Explora por Categoría
           </h2>
-          <p className="text-base text-warm-stone">
+          <p className="text-base text-muted">
             Encuentra exactamente lo que necesitas
           </p>
         </div>
@@ -48,7 +48,7 @@ export function ShopByCategory() {
               <Image src={cat.image} alt={cat.alt} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white">
-                <h3 className="text-2xl md:text-3xl font-bold mb-2" style={{ fontFamily: "var(--font-serif)" }}>
+                <h3 className="text-2xl md:text-3xl font-bold mb-2" style={{ fontFamily: "var(--font-sans)" }}>
                   {cat.title}
                 </h3>
                 <p className="text-sm text-white/80 mb-4">{cat.description}</p>

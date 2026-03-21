@@ -10,10 +10,10 @@ export function StoreSection() {
 
       <div className="relative z-10 max-w-[1440px] mx-auto px-8 md:px-12 py-24 md:py-32">
         <div className="max-w-xl">
-          <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase mb-5 text-gold">
+          <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase mb-5 text-accent">
             Nuestra Óptica · Guadalajara
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-6 text-text-on-dark" style={{ fontFamily: "var(--font-serif)" }}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-6 text-white" style={{ fontFamily: "var(--font-sans)" }}>
             <span className="font-normal">Hecho en GDL.</span>
             <br />
             <span className="font-bold">Entregado hoy.</span>

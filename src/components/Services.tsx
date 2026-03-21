@@ -56,10 +56,10 @@ export function Services() {
     <section className="py-16 md:py-24">
       <div className="max-w-[1440px] mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-text-primary" style={{ fontFamily: "var(--font-serif)" }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-fg" style={{ fontFamily: "var(--font-sans)" }}>
             Nuestros Servicios
           </h2>
-          <p className="text-base text-warm-stone max-w-2xl mx-auto">
+          <p className="text-base text-muted max-w-2xl mx-auto">
             Más que una óptica — una experiencia completa de salud visual
           </p>
         </div>
@@ -71,14 +71,14 @@ export function Services() {
               href={s.href}
               target={s.href.startsWith("http") ? "_blank" : undefined}
               rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="group p-6 md:p-8 rounded-xl border border-border-light transition-all duration-300 hover:shadow-lg"
+              className="group p-6 md:p-8 rounded-xl border border-border transition-all duration-300 hover:shadow-lg"
             >
-              <div className="size-14 rounded-full flex items-center justify-center mb-5 bg-gold/10 text-gold">
+              <div className="size-14 rounded-full flex items-center justify-center mb-5 bg-accent/10 text-accent">
                 {s.icon}
               </div>
-              <h3 className="text-base font-bold text-text-primary mb-2">{s.title}</h3>
-              <p className="text-sm text-warm-stone leading-relaxed mb-4">{s.description}</p>
-              <span className="text-xs font-semibold tracking-widest uppercase text-gold">
+              <h3 className="text-base font-bold text-fg mb-2">{s.title}</h3>
+              <p className="text-sm text-muted leading-relaxed mb-4">{s.description}</p>
+              <span className="text-xs font-semibold tracking-widest uppercase text-accent">
                 {s.cta} →
               </span>
             </a>

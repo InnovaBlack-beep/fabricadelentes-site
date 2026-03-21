@@ -110,7 +110,7 @@ export default function LentesDeContacto() {
         <h1
           className="text-3xl md:text-4xl"
           style={{
-            fontFamily: "var(--font-serif)",
+            fontFamily: "var(--font-sans)",
             color: "#111110",
           }}
         >
@@ -187,7 +187,7 @@ export default function LentesDeContacto() {
           <h2
             className="text-2xl font-semibold"
             style={{
-              fontFamily: "var(--font-serif)",
+              fontFamily: "var(--font-sans)",
               color: "#F5F0EA",
               marginBottom: 8,
             }}
@@ -246,7 +246,7 @@ export default function LentesDeContacto() {
               <p
                 className="text-sm font-semibold"
                 style={{
-                  fontFamily: "var(--font-serif)",
+                  fontFamily: "var(--font-sans)",
                   color: "#111110",
                 }}
               >
@@ -264,7 +264,7 @@ export default function LentesDeContacto() {
               <p
                 className="mt-2 text-base font-semibold"
                 style={{
-                  fontFamily: "var(--font-serif)",
+                  fontFamily: "var(--font-sans)",
                   color: "#111110",
                 }}
               >

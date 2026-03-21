@@ -12,20 +12,20 @@ export function AnnouncementBar() {
   const [index, setIndex] = useState(0);
 
   return (
-    <div className="relative h-10 bg-warm-graphite flex items-center justify-center overflow-hidden">
+    <div className="relative h-10 bg-dark flex items-center justify-center overflow-hidden">
       <button
         onClick={() => setIndex((i) => (i - 1 + messages.length) % messages.length)}
-        className="absolute left-4 text-text-on-dark/50 hover:text-text-on-dark text-xs"
+        className="absolute left-4 text-white/50 hover:text-white text-xs"
         aria-label="Mensaje anterior"
       >
         ‹
       </button>
 
-      <p className="text-xs tracking-wide text-text-on-dark/80 text-center px-12">
+      <p className="text-xs tracking-wide text-white/80 text-center px-12">
         {messages[index]}
         <a
           href="https://wa.me/523314257226?text=Hola%2C%20quiero%20agendar%20un%20examen%20de%20la%20vista"
-          className="ml-3 text-gold hover:underline"
+          className="ml-3 text-accent hover:underline"
         >
           Agendar ahora →
         </a>
@@ -33,7 +33,7 @@ export function AnnouncementBar() {
 
       <button
         onClick={() => setIndex((i) => (i + 1) % messages.length)}
-        className="absolute right-4 text-text-on-dark/50 hover:text-text-on-dark text-xs"
+        className="absolute right-4 text-white/50 hover:text-white text-xs"
         aria-label="Siguiente mensaje"
       >
         ›

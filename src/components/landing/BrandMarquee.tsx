@@ -15,12 +15,12 @@ const brands = [
 
 export function BrandMarquee() {
   return (
-    <section className="py-10 border-y border-border-light bg-warm-cream overflow-hidden">
+    <section className="py-10 border-y border-border bg-surface overflow-hidden">
       <div className="flex animate-marquee whitespace-nowrap">
         {[...brands, ...brands].map((brand, i) => (
           <span
             key={i}
-            className="mx-8 md:mx-12 text-lg md:text-xl font-serif font-semibold text-warm-stone/60"
+            className="mx-8 md:mx-12 text-lg md:text-xl font-semibold text-muted/60"
           >
             {brand}
           </span>

@@ -133,7 +133,7 @@ export function ProductGrid() {
           <h2
             className="text-2xl font-semibold"
             style={{
-              fontFamily: "var(--font-serif)",
+              fontFamily: "var(--font-sans)",
               color: "#111110",
               marginBottom: 16,
             }}
@@ -228,7 +228,7 @@ export function ProductGrid() {
               <p
                 className="text-sm font-semibold"
                 style={{
-                  fontFamily: "var(--font-serif)",
+                  fontFamily: "var(--font-sans)",
                   color: "#111110",
                 }}
               >
@@ -246,7 +246,7 @@ export function ProductGrid() {
               <p
                 className="mt-2 text-base font-semibold"
                 style={{
-                  fontFamily: "var(--font-serif)",
+                  fontFamily: "var(--font-sans)",
                   color: "#111110",
                 }}
               >

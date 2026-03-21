@@ -25,7 +25,7 @@ export function HeroEditorial() {
         >
           <h1
             style={{
-              fontFamily: "var(--font-serif)",
+              fontFamily: "var(--font-sans)",
               fontWeight: 700,
               fontSize: "clamp(42px, 5vw, 60px)",
               lineHeight: 1.05,

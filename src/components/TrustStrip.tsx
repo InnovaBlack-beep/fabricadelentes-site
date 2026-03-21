@@ -42,14 +42,14 @@ export function TrustStrip() {
   ];
 
   return (
-    <section className="border-y border-border-light bg-warm-cream">
+    <section className="border-y border-border bg-surface">
       <div className="max-w-[1440px] mx-auto px-4">
-        <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-border-light">
+        <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-border">
           {items.map((item) => (
             <div key={item.title} className="flex flex-col items-center text-center py-8 md:py-10 px-4">
-              <div className="mb-3 text-gold">{item.icon}</div>
-              <h3 className="text-sm font-semibold text-text-primary mb-1">{item.title}</h3>
-              <p className="text-xs text-warm-stone">{item.description}</p>
+              <div className="mb-3 text-accent">{item.icon}</div>
+              <h3 className="text-sm font-semibold text-fg mb-1">{item.title}</h3>
+              <p className="text-xs text-muted">{item.description}</p>
             </div>
           ))}
         </div>

@@ -52,7 +52,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-full px-6 lg:px-12 max-w-[1440px] mx-auto">
           {/* Mobile hamburger */}
           <button
-            className="lg:hidden text-warm-brown"
+            className="lg:hidden text-muted"
             onClick={() => setMenuOpen(true)}
             aria-label="Abrir menú"
           >
@@ -74,7 +74,7 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-xs font-medium uppercase tracking-widest text-warm-brown hover:text-text-primary transition-colors"
+                className="text-xs font-medium uppercase tracking-widest text-muted hover:text-fg transition-colors"
               >
                 {item.label}
               </Link>
@@ -82,14 +82,14 @@ export function Navbar() {
           </nav>
 
           {/* Right icons */}
-          <div className="flex items-center gap-4 text-warm-brown">
-            <button aria-label="Buscar" className="hidden lg:block hover:text-text-primary transition-colors">
+          <div className="flex items-center gap-4 text-muted">
+            <button aria-label="Buscar" className="hidden lg:block hover:text-fg transition-colors">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="11" cy="11" r="8" />
                 <line x1="21" y1="21" x2="16.65" y2="16.65" />
               </svg>
             </button>
-            <a href="https://wa.me/523314257226" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="hover:text-text-primary transition-colors">
+            <a href="https://wa.me/523314257226" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="hover:text-fg transition-colors">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
               </svg>
@@ -104,7 +104,7 @@ export function Navbar() {
           <div className="absolute inset-0 bg-black/30" onClick={() => setMenuOpen(false)} />
           <div className="absolute top-0 right-0 h-full w-72 flex flex-col" style={{ background: "#FAF8F5" }}>
             <div className="flex items-center justify-end p-5">
-              <button onClick={() => setMenuOpen(false)} aria-label="Cerrar menú" className="text-warm-brown">
+              <button onClick={() => setMenuOpen(false)} aria-label="Cerrar menú" className="text-muted">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
                   <line x1="18" y1="6" x2="6" y2="18" />
                   <line x1="6" y1="6" x2="18" y2="18" />
@@ -117,7 +117,7 @@ export function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setMenuOpen(false)}
-                  className="py-3 text-sm font-medium uppercase tracking-widest text-warm-brown border-b border-border-light"
+                  className="py-3 text-sm font-medium uppercase tracking-widest text-muted border-b border-border"
                 >
                   {item.label}
                 </Link>

@@ -22,10 +22,10 @@ export function BookingSection() {
       <div className="max-w-[1440px] mx-auto px-8 md:px-12 py-20 md:py-28">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase mb-5 text-gold">
+            <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase mb-5 text-accent">
               Examen Gratuito
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-5 text-text-on-dark" style={{ fontFamily: "var(--font-serif)" }}>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-5 text-white" style={{ fontFamily: "var(--font-sans)" }}>
               Tu visión merece
               <br />lo mejor.
             </h2>
@@ -36,7 +36,7 @@ export function BookingSection() {
           </div>
 
           <div className="rounded-2xl p-8 md:p-10" style={{ background: "rgba(245,240,234,0.04)", border: "1px solid rgba(245,240,234,0.08)", backdropFilter: "blur(10px)" }}>
-            <p className="text-sm font-medium mb-6 text-text-on-dark">
+            <p className="text-sm font-medium mb-6 text-white">
               Déjanos tu nombre y te contactamos por WhatsApp
             </p>
             <div className="flex flex-col sm:flex-row gap-3">

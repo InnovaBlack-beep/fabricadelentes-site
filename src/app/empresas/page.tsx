@@ -34,7 +34,7 @@ export default function Empresas() {
           </p>
           <h1
             className="text-3xl md:text-4xl lg:text-5xl text-[#111110] leading-tight mb-5 max-w-3xl mx-auto font-bold"
-            style={{ fontFamily: "var(--font-serif)" }}
+            style={{ fontFamily: "var(--font-sans)" }}
           >
             Lleva F&aacute;brica de Lentes
             <br />a tu empresa
@@ -61,7 +61,7 @@ export default function Empresas() {
         <div className="max-w-[1280px] mx-auto px-10">
           <h2
             className="text-2xl md:text-3xl text-[#111110] mb-3 font-semibold"
-            style={{ fontFamily: "var(--font-serif)" }}
+            style={{ fontFamily: "var(--font-sans)" }}
           >
             Beneficios para tu empresa
           </h2>
@@ -90,7 +90,7 @@ export default function Empresas() {
         <div className="max-w-4xl mx-auto px-10">
           <h2
             className="text-2xl md:text-3xl text-[#111110] mb-10 font-semibold"
-            style={{ fontFamily: "var(--font-serif)" }}
+            style={{ fontFamily: "var(--font-sans)" }}
           >
             &iquest;C&oacute;mo funciona?
           </h2>
@@ -126,7 +126,7 @@ export default function Empresas() {
         <div className="max-w-3xl mx-auto px-10 text-center">
           <h2
             className="text-2xl md:text-3xl text-[#F5F0EA] mb-4 font-semibold"
-            style={{ fontFamily: "var(--font-serif)" }}
+            style={{ fontFamily: "var(--font-sans)" }}
           >
             &iquest;Interesado en un convenio?
           </h2>

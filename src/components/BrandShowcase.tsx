@@ -24,23 +24,23 @@ export function BrandShowcase() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-warm-cream">
+    <section className="py-16 md:py-24 bg-surface">
       <div className="max-w-[1440px] mx-auto px-4">
         <div className="flex items-end justify-between mb-10">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-3 text-text-primary" style={{ fontFamily: "var(--font-serif)" }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-3 text-fg" style={{ fontFamily: "var(--font-sans)" }}>
               Marcas Destacadas
             </h2>
-            <p className="text-base text-warm-stone">
+            <p className="text-base text-muted">
               Las marcas de lentes más reconocidas, en un solo lugar
             </p>
           </div>
 
           <div className="hidden md:flex gap-2">
-            <button onClick={() => scroll("left")} className="size-10 flex items-center justify-center rounded-full border border-border-mid text-warm-brown transition-colors hover:border-text-primary" aria-label="Scroll izquierda">
+            <button onClick={() => scroll("left")} className="size-10 flex items-center justify-center rounded-full border border-border text-muted transition-colors hover:border-fg" aria-label="Scroll izquierda">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6" /></svg>
             </button>
-            <button onClick={() => scroll("right")} className="size-10 flex items-center justify-center rounded-full border border-border-mid text-warm-brown transition-colors hover:border-text-primary" aria-label="Scroll derecha">
+            <button onClick={() => scroll("right")} className="size-10 flex items-center justify-center rounded-full border border-border text-muted transition-colors hover:border-fg" aria-label="Scroll derecha">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
             </button>
           </div>
@@ -52,7 +52,7 @@ export function BrandShowcase() {
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden mb-3">
                 <Image src={brand.image} alt={brand.alt} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
               </div>
-              <h3 className="text-center text-sm font-semibold text-text-primary">{brand.name}</h3>
+              <h3 className="text-center text-sm font-semibold text-fg">{brand.name}</h3>
             </a>
           ))}
         </div>

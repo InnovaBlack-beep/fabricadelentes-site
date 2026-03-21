@@ -1,22 +1,15 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Geist } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { AnnouncementBar } from "@/components/landing/AnnouncementBar";
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
 import { WhatsAppFAB } from "@/components/landing/WhatsAppFAB";
 
-const playfair = Playfair_Display({
+const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-playfair",
-  display: "swap",
-});
-
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist",
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -88,7 +81,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${playfair.variable} ${geist.variable}`}>
+    <html lang="es" className={inter.variable}>
       <head>
         <script
           type="application/ld+json"

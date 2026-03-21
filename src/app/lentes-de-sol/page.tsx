@@ -57,7 +57,7 @@ export default function LentesDeSol() {
       <div className="max-w-[1280px] mx-auto px-10 pb-4">
         <h1
           className="text-3xl md:text-4xl text-[#111110]"
-          style={{ fontFamily: "var(--font-serif)" }}
+          style={{ fontFamily: "var(--font-sans)" }}
         >
           Lentes de Sol
         </h1>
@@ -89,7 +89,7 @@ export default function LentesDeSol() {
           <p className="text-xs tracking-[0.12em] uppercase mb-1 text-[rgba(245,240,234,0.50)]">&mdash; Originales con garant&iacute;a &mdash;</p>
           <h2
             className="text-2xl md:text-3xl mb-2 text-[#F5F0EA] font-semibold"
-            style={{ fontFamily: "var(--font-serif)" }}
+            style={{ fontFamily: "var(--font-sans)" }}
           >
             Lentes de sol originales
           </h2>
@@ -132,9 +132,9 @@ export default function LentesDeSol() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
-              <p className="text-sm text-[#111110] font-semibold" style={{ fontFamily: "var(--font-serif)" }}>{p.brand}</p>
+              <p className="text-sm text-[#111110] font-semibold" style={{ fontFamily: "var(--font-sans)" }}>{p.brand}</p>
               <p className="text-xs text-[#6A5A4A]">{p.model}</p>
-              <p className="text-base font-semibold text-[#111110] mt-1" style={{ fontFamily: "var(--font-serif)" }}>{p.price}</p>
+              <p className="text-base font-semibold text-[#111110] mt-1" style={{ fontFamily: "var(--font-sans)" }}>{p.price}</p>
             </a>
           ))}
         </div>

@@ -1,37 +1,29 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-warm-white: #FAF8F5;
-  --color-warm-cream: #F0EBE3;
-  --color-warm-beige: #E0D8D0;
-  --color-warm-stone: #A09080;
-  --color-warm-brown: #6A5A4A;
-  --color-warm-graphite: #1A1818;
-  --color-warm-black: #0F0E0D;
-  --color-hero: #C4B0A8;
-  --color-gold: #C8A040;
-  --color-gold-light: #E8D090;
-  --color-gold-dark: #1A1000;
-  --color-text-primary: #111110;
-  --color-text-on-dark: #F5F0EA;
-  --color-border-light: #E8E0D8;
-  --color-border-mid: #C8C0B8;
-  --color-border-dark: rgba(245,240,234,0.07);
+  --color-bg: #FFFFFF;
+  --color-fg: #242424;
+  --color-accent: #F9DC4B;
+  --color-accent-secondary: #31E7AB;
+  --color-muted: #9CA3AF;
+  --color-border: #E5E7EB;
+  --color-surface: #F9FAFB;
+  --color-dark: #242424;
+  --color-dark-deep: #1a1a1a;
   --color-whatsapp: #25D366;
-  --font-serif: var(--font-playfair), Georgia, serif;
-  --font-sans: var(--font-geist), system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
 }
 
 body {
-  background: #FAF8F5;
-  color: #6A5A4A;
+  background: #FFFFFF;
+  color: #242424;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: #C8A040;
-  color: #1A1000;
+  background: #F9DC4B;
+  color: #242424;
 }
 
 html {

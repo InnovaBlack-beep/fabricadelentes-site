@@ -41,7 +41,7 @@ export default function Laboratorio() {
               </p>
               <h1
                 className="text-3xl md:text-4xl lg:text-5xl text-[#111110] leading-tight mb-5 font-bold"
-                style={{ fontFamily: "var(--font-serif)" }}
+                style={{ fontFamily: "var(--font-sans)" }}
               >
                 Laboratorio
                 <br />&Oacute;ptico Propio
@@ -51,17 +51,17 @@ export default function Laboratorio() {
               </p>
               <div className="flex items-center gap-8 text-[#111110]">
                 <div>
-                  <p className="text-2xl font-semibold" style={{ fontFamily: "var(--font-serif)" }}>&lt; 1h</p>
+                  <p className="text-2xl font-semibold" style={{ fontFamily: "var(--font-sans)" }}>&lt; 1h</p>
                   <p className="text-xs text-[#A09080] mt-0.5 tracking-wide uppercase">Entrega</p>
                 </div>
                 <div className="w-px h-10 bg-[#E8E0D8]" />
                 <div>
-                  <p className="text-2xl font-semibold" style={{ fontFamily: "var(--font-serif)" }}>100%</p>
+                  <p className="text-2xl font-semibold" style={{ fontFamily: "var(--font-sans)" }}>100%</p>
                   <p className="text-xs text-[#A09080] mt-0.5 tracking-wide uppercase">Calidad</p>
                 </div>
                 <div className="w-px h-10 bg-[#E8E0D8]" />
                 <div>
-                  <p className="text-2xl font-semibold" style={{ fontFamily: "var(--font-serif)" }}>+10</p>
+                  <p className="text-2xl font-semibold" style={{ fontFamily: "var(--font-sans)" }}>+10</p>
                   <p className="text-xs text-[#A09080] mt-0.5 tracking-wide uppercase">A&ntilde;os</p>
                 </div>
               </div>
@@ -86,7 +86,7 @@ export default function Laboratorio() {
         <div className="max-w-[1280px] mx-auto px-10">
           <h2
             className="text-2xl md:text-3xl text-[#111110] mb-3 font-semibold"
-            style={{ fontFamily: "var(--font-serif)" }}
+            style={{ fontFamily: "var(--font-sans)" }}
           >
             C&oacute;mo fabricamos tus lentes
           </h2>
@@ -125,7 +125,7 @@ export default function Laboratorio() {
               </p>
               <h2
                 className="text-2xl md:text-3xl text-[#111110] mb-8 leading-tight font-semibold"
-                style={{ fontFamily: "var(--font-serif)" }}
+                style={{ fontFamily: "var(--font-sans)" }}
               >
                 Todo lo que fabricamos
               </h2>
@@ -161,7 +161,7 @@ export default function Laboratorio() {
         <div className="max-w-3xl mx-auto px-10 text-center">
           <h2
             className="text-2xl md:text-3xl text-[#F5F0EA] mb-4 font-semibold"
-            style={{ fontFamily: "var(--font-serif)" }}
+            style={{ fontFamily: "var(--font-sans)" }}
           >
             Solicita tu lente personalizado
           </h2>

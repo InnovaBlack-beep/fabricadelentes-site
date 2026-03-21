@@ -50,13 +50,13 @@ const services = [
 
 export function Services() {
   return (
-    <section className="py-16 md:py-24 px-5 md:px-10 bg-warm-white">
+    <section className="py-16 md:py-24 px-5 md:px-10 bg-white">
       <div className="max-w-[1440px] mx-auto">
         <div className="text-center mb-14">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
             Servicios
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-text-primary mt-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-fg mt-3">
             Todo para tu visión
           </h2>
         </div>
@@ -66,18 +66,18 @@ export function Services() {
             <a
               key={service.title}
               href={service.href}
-              className="group block p-6 md:p-8 rounded-xl border border-border-light hover:border-gold/30 hover:shadow-lg transition-all"
+              className="group block p-6 md:p-8 rounded-lg border border-border hover:shadow-md transition-all"
             >
-              <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center text-gold mb-5">
+              <div className="w-14 h-14 rounded-full bg-accent/15 flex items-center justify-center text-accent mb-5">
                 {service.icon}
               </div>
-              <h3 className="text-base font-bold text-text-primary mb-2">
+              <h3 className="text-base font-bold text-fg mb-2">
                 {service.title}
               </h3>
-              <p className="text-sm text-warm-brown leading-relaxed mb-5">
+              <p className="text-sm text-muted leading-relaxed mb-5">
                 {service.description}
               </p>
-              <span className="text-xs font-semibold uppercase tracking-widest text-gold group-hover:tracking-[0.2em] transition-all">
+              <span className="text-xs font-semibold uppercase tracking-widest text-fg group-hover:tracking-[0.2em] transition-all">
                 {service.cta} →
               </span>
             </a>
