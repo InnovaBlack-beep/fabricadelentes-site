@@ -42,35 +42,14 @@ export function TrustStrip() {
   ];
 
   return (
-    <section
-      className="border-y"
-      style={{
-        borderColor: "var(--color-border-light)",
-        background: "var(--color-warm-cream)",
-      }}
-    >
+    <section className="border-y border-border-light bg-warm-cream">
       <div className="max-w-[1440px] mx-auto px-4">
         <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-border-light">
           {items.map((item) => (
-            <div
-              key={item.title}
-              className="flex flex-col items-center text-center py-8 md:py-10 px-4"
-            >
-              <div className="mb-3" style={{ color: "var(--color-gold)" }}>
-                {item.icon}
-              </div>
-              <h3
-                className="font-semibold text-sm md:text-base mb-1"
-                style={{ color: "var(--color-text-primary)" }}
-              >
-                {item.title}
-              </h3>
-              <p
-                className="text-xs md:text-sm"
-                style={{ color: "var(--color-warm-stone)" }}
-              >
-                {item.description}
-              </p>
+            <div key={item.title} className="flex flex-col items-center text-center py-8 md:py-10 px-4">
+              <div className="mb-3 text-gold">{item.icon}</div>
+              <h3 className="text-sm font-semibold text-text-primary mb-1">{item.title}</h3>
+              <p className="text-xs text-warm-stone">{item.description}</p>
             </div>
           ))}
         </div>

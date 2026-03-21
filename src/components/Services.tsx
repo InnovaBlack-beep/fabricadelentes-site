@@ -7,8 +7,7 @@ const services = [
       </svg>
     ),
     title: "Examen de la Vista",
-    description:
-      "Evaluación completa con optometristas certificados. Equipo de última generación. Sin cita previa.",
+    description: "Evaluación completa con optometristas certificados. Equipo de última generación. Sin cita previa.",
     cta: "Agendar Cita",
     href: "https://wa.me/523314257226?text=Hola%2C%20quiero%20agendar%20un%20examen%20de%20la%20vista",
   },
@@ -22,8 +21,7 @@ const services = [
       </svg>
     ),
     title: "Laboratorio Propio",
-    description:
-      "Fabricamos tus lentes en nuestro laboratorio. Sin intermediarios, sin esperas. Calidad garantizada.",
+    description: "Fabricamos tus lentes en nuestro laboratorio. Sin intermediarios, sin esperas. Calidad garantizada.",
     cta: "Conocer Lab",
     href: "/laboratorio",
   },
@@ -31,14 +29,11 @@ const services = [
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect width="20" height="14" x="2" y="5" rx="2" />
-        <path d="M12 12h.01" />
-        <path d="M17 12h.01" />
-        <path d="M7 12h.01" />
+        <path d="M12 12h.01" /><path d="M17 12h.01" /><path d="M7 12h.01" />
       </svg>
     ),
     title: "Empresas y Convenios",
-    description:
-      "Programas corporativos para tu equipo. Precios especiales, facturación y atención personalizada.",
+    description: "Programas corporativos para tu equipo. Precios especiales, facturación y atención personalizada.",
     cta: "Cotizar",
     href: "/empresas",
   },
@@ -50,8 +45,7 @@ const services = [
       </svg>
     ),
     title: "Entrega en 1 Hora",
-    description:
-      "Lentes monofocales listos el mismo día. Selecciona tu armazón, graduamos y entregas en una visita.",
+    description: "Lentes monofocales listos el mismo día. Selecciona tu armazón, graduamos y entregas en una visita.",
     cta: "Saber Más",
     href: "https://wa.me/523314257226?text=Hola%2C%20quiero%20info%20sobre%20entrega%20express",
   },
@@ -62,19 +56,10 @@ export function Services() {
     <section className="py-16 md:py-24">
       <div className="max-w-[1440px] mx-auto px-4">
         <div className="text-center mb-12">
-          <h2
-            className="text-3xl md:text-4xl font-bold mb-3"
-            style={{
-              fontFamily: "var(--font-serif)",
-              color: "var(--color-text-primary)",
-            }}
-          >
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-text-primary" style={{ fontFamily: "var(--font-serif)" }}>
             Nuestros Servicios
           </h2>
-          <p
-            className="text-lg max-w-2xl mx-auto"
-            style={{ color: "var(--color-warm-stone)" }}
-          >
+          <p className="text-base text-warm-stone max-w-2xl mx-auto">
             Más que una óptica — una experiencia completa de salud visual
           </p>
         </div>
@@ -86,36 +71,14 @@ export function Services() {
               href={s.href}
               target={s.href.startsWith("http") ? "_blank" : undefined}
               rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="group p-6 md:p-8 rounded-xl transition-all duration-300"
-              style={{
-                border: "1px solid var(--color-border-light)",
-              }}
+              className="group p-6 md:p-8 rounded-xl border border-border-light transition-all duration-300 hover:shadow-lg"
             >
-              <div
-                className="size-14 rounded-full flex items-center justify-center mb-5 transition-colors duration-300"
-                style={{
-                  background: "rgba(200,160,64,0.1)",
-                  color: "var(--color-gold)",
-                }}
-              >
+              <div className="size-14 rounded-full flex items-center justify-center mb-5 bg-gold/10 text-gold">
                 {s.icon}
               </div>
-              <h3
-                className="text-lg font-bold mb-2"
-                style={{ color: "var(--color-text-primary)" }}
-              >
-                {s.title}
-              </h3>
-              <p
-                className="text-sm leading-relaxed mb-4"
-                style={{ color: "var(--color-warm-stone)" }}
-              >
-                {s.description}
-              </p>
-              <span
-                className="font-semibold text-sm tracking-wide uppercase"
-                style={{ color: "var(--color-gold)" }}
-              >
+              <h3 className="text-base font-bold text-text-primary mb-2">{s.title}</h3>
+              <p className="text-sm text-warm-stone leading-relaxed mb-4">{s.description}</p>
+              <span className="text-xs font-semibold tracking-widest uppercase text-gold">
                 {s.cta} →
               </span>
             </a>

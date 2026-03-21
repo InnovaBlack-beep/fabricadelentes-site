@@ -25,137 +25,27 @@ export function UtilityBar() {
   return (
     <div
       className="hidden lg:block h-9"
-      style={{
-        background: "#FAF8F5",
-        borderBottom: "0.5px solid #E8E0D8",
-      }}
+      style={{ background: "#FAF8F5", borderBottom: "0.5px solid #E8E0D8" }}
     >
-      <div className="flex items-center justify-between h-full px-12 max-w-[1440px] mx-auto">
-        {/* Left */}
+      <div className="flex items-center justify-between h-full px-12 max-w-[1440px] mx-auto text-xs tracking-wide text-warm-brown">
         <div className="flex items-center gap-5">
-          <a
-            href="https://maps.google.com/?q=Zona+Minerva+Guadalajara"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors"
-            style={{
-              fontFamily: "var(--font-sans)",
-              fontSize: 11,
-              color: "#6A5A4A",
-            }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.color = "#111110")
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.color = "#6A5A4A")
-            }
-          >
+          <a href="https://maps.google.com/?q=Zona+Minerva+Guadalajara" target="_blank" rel="noopener noreferrer" className="hover:text-text-primary transition-colors">
             Visítanos en GDL
           </a>
-          <a
-            href="https://wa.me/523314257226"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors"
-            style={{
-              fontFamily: "var(--font-sans)",
-              fontSize: 11,
-              color: "#6A5A4A",
-            }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.color = "#111110")
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.color = "#6A5A4A")
-            }
-          >
+          <a href="https://wa.me/523314257226" target="_blank" rel="noopener noreferrer" className="hover:text-text-primary transition-colors">
             Atención al cliente
           </a>
         </div>
 
-        {/* Center carousel */}
         <div className="flex items-center gap-2">
-          <button
-            onClick={prev}
-            className="transition-colors"
-            style={{
-              fontFamily: "var(--font-sans)",
-              fontSize: 11,
-              color: "#6A5A4A",
-              background: "none",
-              border: "none",
-              cursor: "pointer",
-              padding: "0 2px",
-            }}
-            aria-label="Anterior"
-          >
-            ‹
-          </button>
-          <span
-            style={{
-              fontFamily: "var(--font-sans)",
-              fontSize: 11,
-              color: "#6A5A4A",
-              minWidth: 260,
-              textAlign: "center",
-            }}
-          >
-            {messages[idx]}
-          </span>
-          <button
-            onClick={next}
-            className="transition-colors"
-            style={{
-              fontFamily: "var(--font-sans)",
-              fontSize: 11,
-              color: "#6A5A4A",
-              background: "none",
-              border: "none",
-              cursor: "pointer",
-              padding: "0 2px",
-            }}
-            aria-label="Siguiente"
-          >
-            ›
-          </button>
+          <button onClick={prev} className="px-1 hover:text-text-primary transition-colors" aria-label="Anterior">‹</button>
+          <span className="min-w-[260px] text-center">{messages[idx]}</span>
+          <button onClick={next} className="px-1 hover:text-text-primary transition-colors" aria-label="Siguiente">›</button>
         </div>
 
-        {/* Right */}
         <div className="flex items-center gap-5">
-          <a
-            href="#"
-            className="transition-colors"
-            style={{
-              fontFamily: "var(--font-sans)",
-              fontSize: 11,
-              color: "#6A5A4A",
-            }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.color = "#111110")
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.color = "#6A5A4A")
-            }
-          >
-            Favoritos
-          </a>
-          <a
-            href="#"
-            className="transition-colors"
-            style={{
-              fontFamily: "var(--font-sans)",
-              fontSize: 11,
-              color: "#6A5A4A",
-            }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.color = "#111110")
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.color = "#6A5A4A")
-            }
-          >
-            Mi cuenta
-          </a>
+          <a href="/lentes-graduados" className="hover:text-text-primary transition-colors">Favoritos</a>
+          <a href="/contacto" className="hover:text-text-primary transition-colors">Mi cuenta</a>
         </div>
       </div>
     </div>

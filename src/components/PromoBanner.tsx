@@ -1,20 +1,10 @@
 export function PromoBanner() {
   return (
     <div
-      className="flex items-center justify-center gap-2"
-      style={{
-        height: 40,
-        background: "#1A1818",
-      }}
+      className="flex items-center justify-center gap-2 h-10 text-xs tracking-wide"
+      style={{ background: "#1A1818" }}
     >
-      <span
-        style={{
-          fontFamily: "var(--font-sans)",
-          fontSize: 11,
-          color: "rgba(245,240,234,0.80)",
-          letterSpacing: "0.06em",
-        }}
-      >
+      <span style={{ color: "rgba(245,240,234,0.80)" }}>
         Examen de la vista gratuito · Desde $590 MXN
       </span>
       <a
@@ -22,12 +12,7 @@ export function PromoBanner() {
         target="_blank"
         rel="noopener noreferrer"
         className="hover:underline"
-        style={{
-          fontFamily: "var(--font-sans)",
-          fontSize: 11,
-          color: "#C8A040",
-          letterSpacing: "0.06em",
-        }}
+        style={{ color: "#C8A040" }}
       >
         Agendar ahora →
       </a>
