@@ -2,46 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-
-type Product = {
-  model: string;
-  brand: string;
-  price: string;
-  image: string;
-  category: string;
-};
-
-const products: Product[] = [
-  // Oftálmicos - Brizzant
-  { model: "VINCENT", brand: "Brizzant", price: "$1,349", image: "https://fabricadelentes.mx/assets/bl6-02c24b24.jpg", category: "Graduados" },
-  { model: "SYDNEY", brand: "Brizzant", price: "$1,349", image: "https://fabricadelentes.mx/assets/bl2-b52145f3.jpg", category: "Graduados" },
-  { model: "ANDRE", brand: "Brizzant", price: "$1,349", image: "https://fabricadelentes.mx/assets/bl3-68dce26b.jpg", category: "Graduados" },
-  { model: "GIOVANNI", brand: "Brizzant", price: "$1,349", image: "https://fabricadelentes.mx/assets/bl1-80666f1f.jpg", category: "Graduados" },
-  { model: "DALI", brand: "Brizzant", price: "$1,349", image: "https://fabricadelentes.mx/assets/bl4-29f105d4.jpg", category: "Graduados" },
-  // Oftálmicos - Frida Kahlo
-  { model: "FK1001M-BL", brand: "Frida Kahlo", price: "$1,650", image: "https://fabricadelentes.mx/assets/FKL1-e4cd1228.jpg", category: "Graduados" },
-  { model: "FK1004A-BL", brand: "Frida Kahlo", price: "$1,650", image: "https://fabricadelentes.mx/assets/FKL2-ef116390.jpg", category: "Graduados" },
-  { model: "FK1005M-PU", brand: "Frida Kahlo", price: "$1,650", image: "https://fabricadelentes.mx/assets/FKL5-1d2d0c30.jpg", category: "Graduados" },
-  // Oftálmicos - Nobleman
-  { model: "HC04-08 C7", brand: "Nobleman", price: "$1,499", image: "https://fabricadelentes.mx/assets/NOL1-541b9e74.jpg", category: "Graduados" },
-  { model: "HC05-10 C2", brand: "Nobleman", price: "$1,499", image: "https://fabricadelentes.mx/assets/NO2-5fecad74.jpg", category: "Graduados" },
-  { model: "HC07-14 C5", brand: "Nobleman", price: "$1,499", image: "https://fabricadelentes.mx/assets/NOL3-987ac48f.jpg", category: "Graduados" },
-  // Oftálmicos - Massimo
-  { model: "MM4004 C2", brand: "Massimo", price: "$1,549", image: "https://fabricadelentes.mx/assets/MAL1-86309c0e.jpg", category: "Graduados" },
-  { model: "MM4004 C3", brand: "Massimo", price: "$1,499", image: "https://fabricadelentes.mx/assets/MAL2-547d5921.jpg", category: "Graduados" },
-  { model: "WD1167 C1", brand: "Massimo", price: "$1,499", image: "https://fabricadelentes.mx/assets/MAL3-43ce1ec8.jpg", category: "Graduados" },
-  // Solares - Frida Kahlo
-  { model: "FK 001 C19", brand: "Frida Kahlo", price: "$1,650", image: "https://fabricadelentes.mx/assets/FKSL1-5ea420bc.jpg", category: "Sol" },
-  { model: "FK 001 C13", brand: "Frida Kahlo", price: "$1,650", image: "https://fabricadelentes.mx/assets/FKSL2-975aa408.jpg", category: "Sol" },
-  { model: "FK 001 C11", brand: "Frida Kahlo", price: "$1,650", image: "https://fabricadelentes.mx/assets/FKSL3-12125544.jpg", category: "Sol" },
-  { model: "FK-003 C04", brand: "Frida Kahlo", price: "$1,650", image: "https://fabricadelentes.mx/assets/FKSL4-ce07cd8f.jpg", category: "Sol" },
-  { model: "FK-003 C09", brand: "Frida Kahlo", price: "$1,650", image: "https://fabricadelentes.mx/assets/FKSL5-9e669b02.jpg", category: "Sol" },
-  { model: "FK-003 C16", brand: "Frida Kahlo", price: "$1,650", image: "https://fabricadelentes.mx/assets/FKSL6-b1e0f8cb.jpg", category: "Sol" },
-  // Contacto
-  { model: "Hydraglyde", brand: "Air Optix", price: "$1,120", image: "https://fabricadelentes.mx/assets/lentes10-4ac1893a.png", category: "Contacto" },
-  { model: "ALCON", brand: "Frecuent", price: "$1,064", image: "https://fabricadelentes.mx/assets/lentes11-9434f124.webp", category: "Contacto" },
-  { model: "Total 1", brand: "Alcon", price: "$1,200", image: "https://fabricadelentes.mx/assets/lentes12-7a23fd3e.webp", category: "Contacto" },
-];
+import Link from "next/link";
+import { products } from "@/lib/products";
 
 const tabs = ["Todos", "Graduados", "Sol", "Contacto"];
 
@@ -83,17 +45,15 @@ export function ProductShowcase() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
-          {filtered.slice(0, 12).map((product, i) => (
-            <a
-              key={`${product.model}-${i}`}
-              href={`https://wa.me/523314257226?text=Hola%2C%20me%20interesa%20el%20modelo%20${encodeURIComponent(product.model)}%20${encodeURIComponent(product.brand)}`}
-              target="_blank"
-              rel="noopener noreferrer"
+          {filtered.slice(0, 12).map((product) => (
+            <Link
+              key={product.id}
+              href={`/producto/${product.id}`}
               className="group block overflow-hidden bg-white hover:opacity-90 transition-opacity"
             >
               <div className="relative aspect-square bg-white">
                 <Image
-                  src={product.image}
+                  src={product.images[0]}
                   alt={`${product.brand} ${product.model}`}
                   fill
                   className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
@@ -117,7 +77,7 @@ export function ProductShowcase() {
                   </span>
                 </p>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
 

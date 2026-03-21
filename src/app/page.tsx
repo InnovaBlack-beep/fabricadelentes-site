@@ -5,8 +5,6 @@ import { BrandMarquee } from "@/components/landing/BrandMarquee";
 import { ProductShowcase } from "@/components/landing/ProductShowcase";
 import { Services } from "@/components/landing/Services";
 import { HowItWorks } from "@/components/landing/HowItWorks";
-import { BookingSection } from "@/components/landing/BookingSection";
-import { StoreSection } from "@/components/landing/StoreSection";
 
 export default function Home() {
   return (
@@ -18,8 +16,6 @@ export default function Home() {
       <ProductShowcase />
       <Services />
       <HowItWorks />
-      <BookingSection />
-      <StoreSection />
     </>
   );
 }
