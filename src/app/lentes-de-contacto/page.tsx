@@ -14,46 +14,47 @@ const brands = [
   { name: "CooperVision", types: "Biofinity, clariti, MyDay" },
   { name: "Alcon (Air Optix)", types: "Air Optix, Dailies, Total30" },
   { name: "Lentes de color", types: "FreshLook, Air Optix Colors, Solotica" },
-  { name: "Lentes especializados", types: "Toricos, multifocales, queratocono" },
+  { name: "Lentes especializados", types: "Tóricos, multifocales, queratocono" },
 ];
 
 const categories = [
-  { name: "Diarios", desc: "Uso y desecha. Maxima higiene, ideales para uso ocasional.", badge: "1 dia" },
-  { name: "Mensuales", desc: "Reemplazo cada 30 dias. Mejor costo-beneficio para uso diario.", badge: "30 dias" },
-  { name: "Para astigmatismo", desc: "Lentes toricos que corrigen astigmatismo con estabilidad.", badge: "Toricos" },
-  { name: "Para miopia", desc: "Correccion esferica para vision de lejos clara y nitida.", badge: "Esfericos" },
-  { name: "Multifocales", desc: "Corrigen vista cansada. Ven de cerca y de lejos sin cambiar lentes.", badge: "Multi" },
-  { name: "De color", desc: "Cambia el color de tus ojos con o sin graduacion.", badge: "Cosmeticos" },
+  { name: "Diarios", desc: "Uso y desecha. Máxima higiene, ideales para uso ocasional.", badge: "1 DÍA" },
+  { name: "Mensuales", desc: "Reemplazo cada 30 días. Mejor costo-beneficio para uso diario.", badge: "30 DÍAS" },
+  { name: "Para astigmatismo", desc: "Lentes tóricos que corrigen astigmatismo con estabilidad.", badge: "TÓRICOS" },
+  { name: "Para miopía", desc: "Corrección esférica para visión de lejos clara y nítida.", badge: "ESFÉRICOS" },
+  { name: "Multifocales", desc: "Corrigen vista cansada. Ven de cerca y de lejos sin cambiar lentes.", badge: "MULTI" },
+  { name: "De color", desc: "Cambia el color de tus ojos con o sin graduación.", badge: "COSMÉTICOS" },
 ];
 
 export default function LentesDeContacto() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-12 pb-16 md:pt-16 md:pb-20 bg-[#f5f5f5]">
-        <div className="max-w-[1200px] mx-auto px-6">
+      <section className="pt-14 pb-16 md:pt-20 md:pb-24 bg-[#f7f7f7]">
+        <div className="max-w-[1280px] mx-auto px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-[#0057FF] font-semibold text-sm mb-3">
-                Todas las marcas disponibles
+              <p className="text-[12px] text-[#2d1b69] tracking-[0.2em] uppercase font-medium mb-4">
+                Todas las Marcas Disponibles
               </p>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1a1a1a] leading-tight tracking-[-0.02em] mb-4">
-                Lentes de contacto en Guadalajara
+              <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl uppercase tracking-[0.1em] text-[#1a1a1a] font-normal leading-tight mb-5">
+                Lentes de Contacto
+                <br />en Guadalajara
               </h1>
-              <p className="text-[#666666] text-base max-w-lg mb-8 leading-relaxed">
+              <p className="text-[#666] text-[15px] max-w-lg mb-8 leading-relaxed">
                 Tenemos todas las marcas y tipos de lentes de contacto. Cotiza en segundos por WhatsApp y recibe en tu domicilio o recoge en tienda.
               </p>
               <a
                 href="https://wa.me/523314257226?text=Hola%2C%20me%20interesan%20lentes%20de%20contacto"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-3 bg-[#0057FF] text-white text-sm font-semibold rounded-md hover:bg-[#0044cc] transition-colors"
+                className="px-8 py-3 bg-[#2d1b69] text-white text-[12px] tracking-[0.15em] uppercase font-medium hover:bg-[#1a0a3e] transition-all inline-block"
               >
                 Pedir por WhatsApp
               </a>
             </div>
             <div className="hidden lg:block">
-              <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+              <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src="/images/hero-1.png"
                   alt="Lentes de contacto"
@@ -68,16 +69,14 @@ export default function LentesDeContacto() {
       </section>
 
       {/* Categories */}
-      <section className="py-20 md:py-24 bg-white">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="mb-12">
-            <h2 className="text-2xl md:text-3xl font-semibold text-[#1a1a1a] tracking-[-0.02em] mb-3">
-              Que tipo de lente necesitas?
-            </h2>
-            <p className="text-[#666666] max-w-xl">
-              Si no estas seguro, no te preocupes. Escribenos con tu receta y te ayudamos a elegir.
-            </p>
-          </div>
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-[1280px] mx-auto px-8">
+          <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl uppercase tracking-[0.15em] text-[#1a1a1a] font-normal mb-3">
+            Qué Tipo de Lente Necesitas?
+          </h2>
+          <p className="text-[#666] text-[14px] max-w-xl mb-10">
+            Si no estás seguro, no te preocupes. Escríbenos con tu receta y te ayudamos a elegir.
+          </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {categories.map((cat) => (
@@ -86,19 +85,19 @@ export default function LentesDeContacto() {
                 href={`https://wa.me/523314257226?text=Hola%2C%20me%20interesan%20lentes%20de%20contacto%20${encodeURIComponent(cat.name.toLowerCase())}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-white p-6 border border-[#e0e0e0] rounded-lg hover:border-[#0057FF]/40 transition-all"
+                className="group bg-white p-6 border border-[#e5e5e5] hover:border-[#2d1b69]/30 transition-all"
               >
-                <span className="inline-block px-3 py-1 bg-[#f5f5f5] text-xs font-medium text-[#666666] rounded mb-3">
+                <span className="inline-block px-3 py-1 bg-[#f7f7f7] text-[10px] font-medium text-[#666] tracking-[0.1em] mb-3">
                   {cat.badge}
                 </span>
-                <h3 className="text-base font-semibold text-[#1a1a1a] mb-2">
+                <h3 className="text-[14px] font-semibold text-[#1a1a1a] uppercase tracking-[0.05em] mb-2">
                   {cat.name}
                 </h3>
-                <p className="text-sm text-[#666666] leading-relaxed mb-3">
+                <p className="text-[13px] text-[#666] leading-relaxed mb-3">
                   {cat.desc}
                 </p>
-                <span className="text-sm font-semibold text-[#0057FF] group-hover:underline">
-                  Cotizar &rarr;
+                <span className="text-[12px] text-[#2d1b69] font-medium tracking-[0.05em] uppercase group-hover:underline">
+                  Cotizar
                 </span>
               </a>
             ))}
@@ -107,25 +106,23 @@ export default function LentesDeContacto() {
       </section>
 
       {/* Brands */}
-      <section className="py-20 md:py-24 bg-[#f5f5f5]">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="mb-12">
-            <h2 className="text-2xl md:text-3xl font-semibold text-[#1a1a1a] tracking-[-0.02em] mb-3">
-              Marcas disponibles
-            </h2>
-            <p className="text-[#666666] max-w-xl">
-              Trabajamos directamente con los principales laboratorios del mundo.
-            </p>
-          </div>
+      <section className="py-16 md:py-20 bg-[#f7f7f7]">
+        <div className="max-w-[1280px] mx-auto px-8">
+          <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl uppercase tracking-[0.15em] text-[#1a1a1a] font-normal mb-3">
+            Marcas Disponibles
+          </h2>
+          <p className="text-[#666] text-[14px] max-w-xl mb-10">
+            Trabajamos directamente con los principales laboratorios del mundo.
+          </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {brands.map((brand) => (
               <div
                 key={brand.name}
-                className="bg-white p-6 border border-[#e0e0e0] rounded-lg"
+                className="bg-white p-6 border border-[#e5e5e5]"
               >
-                <h3 className="font-semibold text-[#1a1a1a] mb-1.5">{brand.name}</h3>
-                <p className="text-sm text-[#666666]">{brand.types}</p>
+                <h3 className="text-[14px] font-semibold text-[#1a1a1a] mb-1.5">{brand.name}</h3>
+                <p className="text-[13px] text-[#666]">{brand.types}</p>
               </div>
             ))}
           </div>
@@ -133,31 +130,31 @@ export default function LentesDeContacto() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 md:py-24 bg-white">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-semibold text-[#1a1a1a] tracking-[-0.02em] mb-10">
-            Preguntas frecuentes
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-3xl mx-auto px-8">
+          <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl uppercase tracking-[0.15em] text-[#1a1a1a] font-normal mb-10">
+            Preguntas Frecuentes
           </h2>
 
           <div className="space-y-3">
             {[
-              { q: "Como se que lente de contacto necesito?", a: "Si ya tienes receta de tu oftalmologo, envianosla por WhatsApp y te decimos que opciones tienes. Si no tienes receta, agenda un examen de la vista con nosotros." },
-              { q: "Cuanto tardan en llegar mis lentes?", a: "Si tenemos tu marca en inventario, los puedes recoger el mismo dia. Si es pedido especial, de 3 a 5 dias habiles." },
-              { q: "Puedo comprar sin receta?", a: "Para lentes graduados necesitas receta vigente. Lentes de color sin graduacion los puedes comprar directamente." },
-              { q: "Hacen envios?", a: "Si, enviamos a toda la zona metropolitana de Guadalajara. Para envios foraneos, consultanos." },
-              { q: "Tienen precio mayoreo?", a: "Si, si compras mas de 6 cajas te hacemos precio especial. Pregunta por nuestros paquetes." },
+              { q: "Cómo sé qué lente de contacto necesito?", a: "Si ya tienes receta de tu oftalmólogo, envíanosla por WhatsApp y te decimos qué opciones tienes. Si no tienes receta, agenda un examen de la vista con nosotros." },
+              { q: "Cuánto tardan en llegar mis lentes?", a: "Si tenemos tu marca en inventario, los puedes recoger el mismo día. Si es pedido especial, de 3 a 5 días hábiles." },
+              { q: "Puedo comprar sin receta?", a: "Para lentes graduados necesitas receta vigente. Lentes de color sin graduación los puedes comprar directamente." },
+              { q: "Hacen envíos?", a: "Sí, enviamos a toda la zona metropolitana de Guadalajara. Para envíos foráneos, consúltanos." },
+              { q: "Tienen precio mayoreo?", a: "Sí, si compras más de 6 cajas te hacemos precio especial. Pregunta por nuestros paquetes." },
             ].map((faq, i) => (
               <details
                 key={i}
-                className="group bg-[#f5f5f5] border border-[#e0e0e0] rounded-lg overflow-hidden"
+                className="group bg-[#f7f7f7] border border-[#e5e5e5] overflow-hidden"
               >
-                <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-[#1a1a1a] hover:text-[#0057FF] transition-colors">
+                <summary className="flex items-center justify-between cursor-pointer p-5 text-[14px] font-medium text-[#1a1a1a] hover:text-[#2d1b69] transition-colors">
                   {faq.q}
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5 text-[#666666] group-open:rotate-180 transition-transform shrink-0 ml-4">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5 text-[#666] group-open:rotate-180 transition-transform shrink-0 ml-4">
                     <path d="M6 9l6 6 6-6" />
                   </svg>
                 </summary>
-                <div className="px-5 pb-5 text-[#666666] leading-relaxed">{faq.a}</div>
+                <div className="px-5 pb-5 text-[13px] text-[#666] leading-relaxed">{faq.a}</div>
               </details>
             ))}
           </div>
@@ -165,19 +162,19 @@ export default function LentesDeContacto() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-24 bg-[#0057FF]">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-white tracking-[-0.02em] mb-3">
-            Listo para pedir tus lentes de contacto?
+      <section className="py-16 md:py-20 bg-[#2d1b69]">
+        <div className="max-w-3xl mx-auto px-8 text-center">
+          <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl uppercase tracking-[0.15em] text-white font-normal mb-4">
+            Listo Para Pedir Tus Lentes?
           </h2>
-          <p className="text-white/80 text-base mb-8">
-            Envanos tu receta o pregunta por disponibilidad. Respondemos en minutos.
+          <p className="text-white/70 text-[14px] mb-8">
+            Envíanos tu receta o pregunta por disponibilidad. Respondemos en minutos.
           </p>
           <a
             href="https://wa.me/523314257226?text=Hola%2C%20quiero%20pedir%20lentes%20de%20contacto"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-3.5 bg-white text-[#0057FF] text-sm font-semibold rounded-md hover:bg-gray-100 transition-colors"
+            className="inline-block px-8 py-3 border border-white text-white text-[12px] tracking-[0.2em] uppercase font-medium hover:bg-white hover:text-[#2d1b69] transition-all"
           >
             Pedir por WhatsApp
           </a>
