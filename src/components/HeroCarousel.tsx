@@ -5,6 +5,7 @@ import Image from "next/image";
 
 const slides = [
   {
+    video: "/images/hero-video.mp4",
     image: "/images/hero-1.png",
     alt: "Laboratorio óptico Fábrica de Lentes Guadalajara",
     tagline: "Laboratorio Propio",
@@ -67,13 +68,25 @@ export function HeroCarousel() {
             i === current ? "opacity-100" : "opacity-0"
           }`}
         >
-          <Image
-            src={s.image}
-            alt={s.alt}
-            fill
-            className="object-cover"
-            priority={i === 0}
-          />
+          {"video" in s && s.video ? (
+            <video
+              src={s.video}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
+              poster={s.image}
+            />
+          ) : (
+            <Image
+              src={s.image}
+              alt={s.alt}
+              fill
+              className="object-cover"
+              priority={i === 0}
+            />
+          )}
           <div className="absolute inset-0 bg-warm-graphite/40" />
         </div>
       ))}
