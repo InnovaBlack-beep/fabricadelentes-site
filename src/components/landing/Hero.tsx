@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const slides = [
   {
-    image: "/images/hero-1.png",
+    image: "/images/hero.jpg",
     video: "/images/hero-video.mp4",
     tagline: "Laboratorio Propio",
     headline: "Aquí se fabrican\ntus lentes.",

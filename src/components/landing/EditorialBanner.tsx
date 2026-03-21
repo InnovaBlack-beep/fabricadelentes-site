@@ -4,7 +4,7 @@ export function EditorialBanner() {
   return (
     <section className="relative h-[400px] md:h-[520px] overflow-hidden">
       <Image
-        src="/images/hero-3.png"
+        src="/images/editorial.jpg"
         alt=""
         fill
         className="object-cover"

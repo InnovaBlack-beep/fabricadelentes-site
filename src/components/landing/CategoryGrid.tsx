@@ -4,19 +4,19 @@ import Link from "next/link";
 const categories = [
   {
     title: "Lentes Graduados",
-    image: "/images/lifestyle-2.jpg",
+    image: "/images/cat-graduados.jpg",
     objectPosition: "center top",
     href: "/lentes-graduados",
   },
   {
-    title: "Laboratorio Propio",
-    image: "/images/lifestyle-1.jpg",
+    title: "Lentes de Sol",
+    image: "/images/cat-sol.jpg",
     objectPosition: "center center",
-    href: "/laboratorio",
+    href: "/lentes-de-sol",
   },
   {
     title: "Lentes de Contacto",
-    image: "/images/lifestyle-3.jpg",
+    image: "/images/cat-contactos.jpg",
     objectPosition: "center center",
     href: "/lentes-de-contacto",
   },
