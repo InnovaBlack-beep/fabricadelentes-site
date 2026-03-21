@@ -22,7 +22,7 @@ export default function Empresas() {
       {/* Hero */}
       <section className="pt-14 pb-16 md:pt-20 md:pb-24 bg-[#f7f7f7]">
         <div className="max-w-[1280px] mx-auto px-8 text-center">
-          <p className="text-[12px] text-[#2d1b69] tracking-[0.2em] uppercase font-medium mb-4">
+          <p className="text-[12px] text-[#004AAD] tracking-[0.2em] uppercase font-medium mb-4">
             Canal Empresarial
           </p>
           <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl uppercase tracking-[0.1em] text-[#1a1a1a] font-normal leading-tight mb-5 max-w-3xl mx-auto">
@@ -32,14 +32,14 @@ export default function Empresas() {
           <p className="text-[#666] text-[15px] max-w-2xl mx-auto mb-4">
             Más de 150 empleados atendidos en una sola empresa. Convenios corporativos con beneficios reales para tu equipo.
           </p>
-          <p className="text-[12px] text-[#2d1b69] font-medium tracking-[0.1em] uppercase mb-8">
+          <p className="text-[12px] text-[#004AAD] font-medium tracking-[0.1em] uppercase mb-8">
             Experiencia probada con empresas en Guadalajara
           </p>
           <a
             href="https://wa.me/523314257226?text=Hola%2C%20me%20interesa%20un%20convenio%20empresarial%20para%20lentes"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-3 bg-[#2d1b69] text-white text-[12px] tracking-[0.15em] uppercase font-medium hover:bg-[#1a0a3e] transition-all"
+            className="inline-block px-8 py-3 bg-[#004AAD] text-white text-[12px] tracking-[0.15em] uppercase font-medium hover:bg-[#003580] transition-all"
           >
             Solicitar Convenio
           </a>
@@ -60,7 +60,7 @@ export default function Empresas() {
             {benefits.map((b) => (
               <div
                 key={b.title}
-                className="bg-[#f7f7f7] p-6 border border-[#e5e5e5] hover:border-[#2d1b69]/30 transition-all"
+                className="bg-[#f7f7f7] p-6 border border-[#e5e5e5] hover:border-[#004AAD]/30 transition-all"
               >
                 <h3 className="text-[14px] font-semibold text-[#1a1a1a] uppercase tracking-[0.05em] mb-2">
                   {b.title}
@@ -90,7 +90,7 @@ export default function Empresas() {
                 key={s.step}
                 className="flex gap-5 items-start bg-white p-6 border border-[#e5e5e5]"
               >
-                <div className="w-10 h-10 border border-[#2d1b69] text-[#2d1b69] flex items-center justify-center shrink-0 text-sm font-medium">
+                <div className="w-10 h-10 border border-[#004AAD] text-[#004AAD] flex items-center justify-center shrink-0 text-sm font-medium">
                   {s.step}
                 </div>
                 <div>
@@ -106,7 +106,7 @@ export default function Empresas() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-20 bg-[#2d1b69]">
+      <section className="py-16 md:py-20 bg-[#004AAD]">
         <div className="max-w-3xl mx-auto px-8 text-center">
           <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl uppercase tracking-[0.15em] text-white font-normal mb-4">
             Interesado en un Convenio?
@@ -119,7 +119,7 @@ export default function Empresas() {
               href="https://wa.me/523314257226?text=Hola%2C%20soy%20de%20RR.HH.%20y%20me%20interesa%20un%20convenio%20%C3%B3ptico%20para%20nuestra%20empresa"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-3 border border-white text-white text-[12px] tracking-[0.2em] uppercase font-medium hover:bg-white hover:text-[#2d1b69] transition-all"
+              className="inline-block px-8 py-3 border border-white text-white text-[12px] tracking-[0.2em] uppercase font-medium hover:bg-white hover:text-[#004AAD] transition-all"
             >
               Escribir por WhatsApp
             </a>

@@ -29,7 +29,7 @@ export default function Laboratorio() {
         <div className="max-w-[1280px] mx-auto px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-[12px] text-[#2d1b69] tracking-[0.2em] uppercase font-medium mb-4">
+              <p className="text-[12px] text-[#004AAD] tracking-[0.2em] uppercase font-medium mb-4">
                 Nuestro Diferenciador
               </p>
               <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl uppercase tracking-[0.1em] text-[#1a1a1a] font-normal leading-tight mb-5">
@@ -89,7 +89,7 @@ export default function Laboratorio() {
               { title: "Entrega", desc: "Verificamos calidad, montamos en tu armazón y te los entregamos listos." },
             ].map((s, i) => (
               <div key={s.title}>
-                <div className="w-10 h-10 border border-[#2d1b69] text-[#2d1b69] flex items-center justify-center mb-4 text-sm font-medium">
+                <div className="w-10 h-10 border border-[#004AAD] text-[#004AAD] flex items-center justify-center mb-4 text-sm font-medium">
                   {i + 1}
                 </div>
                 <h3 className="text-[13px] font-semibold text-[#1a1a1a] uppercase tracking-[0.05em] mb-2">
@@ -107,7 +107,7 @@ export default function Laboratorio() {
         <div className="max-w-[1280px] mx-auto px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-[12px] text-[#2d1b69] tracking-[0.2em] uppercase font-medium mb-4">
+              <p className="text-[12px] text-[#004AAD] tracking-[0.2em] uppercase font-medium mb-4">
                 Capacidades
               </p>
               <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl uppercase tracking-[0.1em] text-[#1a1a1a] font-normal mb-8 leading-tight">
@@ -119,7 +119,7 @@ export default function Laboratorio() {
                     key={cap}
                     className="flex items-center gap-3 bg-white p-4 border border-[#e5e5e5]"
                   >
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5 text-[#2d1b69] shrink-0">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5 text-[#004AAD] shrink-0">
                       <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span className="text-[13px] text-[#1a1a1a] font-medium">{cap}</span>
@@ -150,7 +150,7 @@ export default function Laboratorio() {
           <div className="bg-[#f7f7f7] border border-[#e5e5e5] overflow-hidden">
             <div className="grid grid-cols-3 text-[13px] font-semibold">
               <div className="p-4 text-[#666]"></div>
-              <div className="p-4 bg-[#2d1b69]/10 text-[#2d1b69] text-center uppercase tracking-[0.05em]">Fábrica de Lentes</div>
+              <div className="p-4 bg-[#004AAD]/10 text-[#004AAD] text-center uppercase tracking-[0.05em]">Fábrica de Lentes</div>
               <div className="p-4 text-[#666] text-center">Cadenas grandes</div>
             </div>
             {[
@@ -162,7 +162,7 @@ export default function Laboratorio() {
             ].map((row, i) => (
               <div key={i} className="grid grid-cols-3 text-[13px] border-t border-[#e5e5e5]">
                 <div className="p-4 font-medium text-[#1a1a1a]">{row.feature}</div>
-                <div className="p-4 text-center text-[#1a1a1a] bg-[#2d1b69]/5">{row.us}</div>
+                <div className="p-4 text-center text-[#1a1a1a] bg-[#004AAD]/5">{row.us}</div>
                 <div className="p-4 text-center text-[#666]">{row.them}</div>
               </div>
             ))}
@@ -171,7 +171,7 @@ export default function Laboratorio() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-20 bg-[#2d1b69]">
+      <section className="py-16 md:py-20 bg-[#004AAD]">
         <div className="max-w-3xl mx-auto px-8 text-center">
           <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl uppercase tracking-[0.15em] text-white font-normal mb-4">
             Solicita Tu Lente Personalizado
@@ -183,7 +183,7 @@ export default function Laboratorio() {
             href="https://wa.me/523314257226?text=Hola%2C%20quiero%20cotizar%20lentes%20fabricados%20en%20su%20laboratorio"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-3 border border-white text-white text-[12px] tracking-[0.2em] uppercase font-medium hover:bg-white hover:text-[#2d1b69] transition-all"
+            className="inline-block px-8 py-3 border border-white text-white text-[12px] tracking-[0.2em] uppercase font-medium hover:bg-white hover:text-[#004AAD] transition-all"
           >
             Cotizar Ahora
           </a>

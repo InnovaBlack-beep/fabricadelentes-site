@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function Footer() {
@@ -13,11 +14,11 @@ export function Footer() {
             <input
               type="email"
               placeholder="Tu correo electrónico"
-              className="px-4 py-3 border border-[#e5e5e5] border-r-0 text-sm text-[#1a1a1a] placeholder:text-[#999] w-full md:w-72 focus:outline-none focus:border-[#2d1b69]"
+              className="px-4 py-3 border border-[#e5e5e5] border-r-0 text-sm text-[#1a1a1a] placeholder:text-[#999] w-full md:w-72 focus:outline-none focus:border-[#004AAD]"
             />
             <button
               type="submit"
-              className="px-6 py-3 bg-[#2d1b69] text-white text-[12px] tracking-[0.15em] uppercase font-medium hover:bg-[#1a0a3e] transition-colors whitespace-nowrap"
+              className="px-6 py-3 bg-[#004AAD] text-white text-[12px] tracking-[0.15em] uppercase font-medium hover:bg-[#003580] transition-colors whitespace-nowrap"
             >
               Registrar
             </button>
@@ -26,7 +27,7 @@ export function Footer() {
       </div>
 
       {/* ── Main footer ── */}
-      <div className="bg-[#1a1a2e] text-white">
+      <div className="bg-[#0a1628] text-white">
         <div className="max-w-[1280px] mx-auto px-8 py-14 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
           {/* Marcas */}
           <div>
@@ -156,9 +157,13 @@ export function Footer() {
         <div className="border-t border-white/10">
           <div className="max-w-[1280px] mx-auto px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-6">
-              <span className="font-[family-name:var(--font-playfair)] text-white/60 text-sm tracking-[0.15em] uppercase">
-                Fábrica de Lentes
-              </span>
+              <Image
+                src="/images/logo.png"
+                alt="Fábrica de Lentes"
+                width={120}
+                height={20}
+                className="h-5 w-auto brightness-0 invert"
+              />
               {/* Social icons */}
               <div className="flex items-center gap-3">
                 <a

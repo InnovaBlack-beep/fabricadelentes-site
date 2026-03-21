@@ -25,7 +25,7 @@ export default function LentesDeSol() {
         <div className="max-w-[1280px] mx-auto px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-[12px] text-[#2d1b69] tracking-[0.2em] uppercase font-medium mb-4">
+              <p className="text-[12px] text-[#004AAD] tracking-[0.2em] uppercase font-medium mb-4">
                 100% Originales
               </p>
               <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl uppercase tracking-[0.1em] text-[#1a1a1a] font-normal leading-tight mb-5">
@@ -39,7 +39,7 @@ export default function LentesDeSol() {
                 href="https://wa.me/523314257226?text=Hola%2C%20me%20interesan%20lentes%20de%20sol"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3 bg-[#2d1b69] text-white text-[12px] tracking-[0.15em] uppercase font-medium hover:bg-[#1a0a3e] transition-all inline-block"
+                className="px-8 py-3 bg-[#004AAD] text-white text-[12px] tracking-[0.15em] uppercase font-medium hover:bg-[#003580] transition-all inline-block"
               >
                 Ver Disponibilidad
               </a>
@@ -73,10 +73,10 @@ export default function LentesDeSol() {
                 href={`https://wa.me/523314257226?text=Hola%2C%20me%20interesan%20lentes%20de%20sol%20${encodeURIComponent(b.name)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-white p-6 border border-[#e5e5e5] hover:border-[#2d1b69]/30 transition-all relative overflow-hidden"
+                className="group bg-white p-6 border border-[#e5e5e5] hover:border-[#004AAD]/30 transition-all relative overflow-hidden"
               >
                 {b.tag && (
-                  <span className="absolute top-4 right-4 px-3 py-1 bg-[#2d1b69]/10 text-[#2d1b69] text-[10px] font-medium tracking-[0.1em]">
+                  <span className="absolute top-4 right-4 px-3 py-1 bg-[#004AAD]/10 text-[#004AAD] text-[10px] font-medium tracking-[0.1em]">
                     {b.tag}
                   </span>
                 )}
@@ -84,7 +84,7 @@ export default function LentesDeSol() {
                   {b.name}
                 </h3>
                 <p className="text-[13px] text-[#666] leading-relaxed mb-3">{b.desc}</p>
-                <span className="text-[12px] text-[#2d1b69] font-medium tracking-[0.05em] uppercase group-hover:underline">
+                <span className="text-[12px] text-[#004AAD] font-medium tracking-[0.05em] uppercase group-hover:underline">
                   Consultar
                 </span>
               </a>
@@ -96,9 +96,9 @@ export default function LentesDeSol() {
       {/* Graduados de sol */}
       <section className="py-16 md:py-20 bg-[#f7f7f7]">
         <div className="max-w-[1280px] mx-auto px-8">
-          <div className="bg-[#1a1a2e] overflow-hidden">
+          <div className="bg-[#0a1628] overflow-hidden">
             <div className="px-8 md:px-16 py-14 md:py-20 text-center">
-              <p className="text-[12px] text-[#4a2c8a] tracking-[0.2em] uppercase font-medium mb-4">
+              <p className="text-[12px] text-[#0055C8] tracking-[0.2em] uppercase font-medium mb-4">
                 Servicio Exclusivo
               </p>
               <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl uppercase tracking-[0.15em] text-white font-normal mb-5 leading-tight">
@@ -111,7 +111,7 @@ export default function LentesDeSol() {
                 href="https://wa.me/523314257226?text=Hola%2C%20quiero%20lentes%20de%20sol%20graduados"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-8 py-3 border border-white text-white text-[12px] tracking-[0.2em] uppercase font-medium hover:bg-white hover:text-[#1a1a2e] transition-all"
+                className="inline-block px-8 py-3 border border-white text-white text-[12px] tracking-[0.2em] uppercase font-medium hover:bg-white hover:text-[#0a1628] transition-all"
               >
                 Cotizar Lentes de Sol Graduados
               </a>

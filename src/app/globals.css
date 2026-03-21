@@ -3,15 +3,15 @@
 @theme inline {
   --color-background: #ffffff;
   --color-foreground: #1a1a1a;
-  --color-purple: #2d1b69;
-  --color-purple-dark: #1a0a3e;
-  --color-purple-promo: #4a2c8a;
+  --color-brand: #004AAD;
+  --color-brand-dark: #003580;
+  --color-brand-promo: #0055C8;
   --color-light-bg: #f7f7f7;
   --color-border: #e5e5e5;
   --color-muted: #666666;
   --color-body: #333333;
   --color-dark: #1a1a1a;
-  --color-footer-bg: #1a1a2e;
+  --color-footer-bg: #0a1628;
   --font-sans: var(--font-dm-sans), system-ui, sans-serif;
   --font-serif: var(--font-playfair), Georgia, serif;
 }
@@ -35,7 +35,7 @@ body {
 }
 
 ::selection {
-  background: var(--color-purple);
+  background: var(--color-brand);
   color: #ffffff;
 }
 

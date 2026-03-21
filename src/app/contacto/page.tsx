@@ -48,10 +48,10 @@ export default function Contacto() {
             {/* Phone */}
             <a
               href="tel:+523314257226"
-              className="group bg-white p-7 border border-[#e5e5e5] hover:border-[#2d1b69]/30 transition-all text-center"
+              className="group bg-white p-7 border border-[#e5e5e5] hover:border-[#004AAD]/30 transition-all text-center"
             >
-              <div className="w-14 h-14 bg-[#2d1b69]/10 flex items-center justify-center mx-auto mb-4">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 text-[#2d1b69]">
+              <div className="w-14 h-14 bg-[#004AAD]/10 flex items-center justify-center mx-auto mb-4">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 text-[#004AAD]">
                   <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                 </svg>
               </div>
@@ -59,7 +59,7 @@ export default function Contacto() {
                 Teléfono
               </h3>
               <p className="text-[#666] text-[13px] mb-2">Lun - Sáb: 10:00 - 19:00</p>
-              <span className="text-[#2d1b69] font-semibold text-[13px]">331 425 7226</span>
+              <span className="text-[#004AAD] font-semibold text-[13px]">331 425 7226</span>
             </a>
 
             {/* Visit */}
@@ -99,7 +99,7 @@ export default function Contacto() {
                     id="name"
                     name="name"
                     required
-                    className="w-full px-4 py-3 border border-[#e5e5e5] bg-white text-[#1a1a1a] text-[14px] placeholder:text-[#999] focus:outline-none focus:border-[#2d1b69] transition-colors"
+                    className="w-full px-4 py-3 border border-[#e5e5e5] bg-white text-[#1a1a1a] text-[14px] placeholder:text-[#999] focus:outline-none focus:border-[#004AAD] transition-colors"
                     placeholder="Tu nombre"
                   />
                 </div>
@@ -112,7 +112,7 @@ export default function Contacto() {
                     id="phone"
                     name="phone"
                     required
-                    className="w-full px-4 py-3 border border-[#e5e5e5] bg-white text-[#1a1a1a] text-[14px] placeholder:text-[#999] focus:outline-none focus:border-[#2d1b69] transition-colors"
+                    className="w-full px-4 py-3 border border-[#e5e5e5] bg-white text-[#1a1a1a] text-[14px] placeholder:text-[#999] focus:outline-none focus:border-[#004AAD] transition-colors"
                     placeholder="33 1234 5678"
                   />
                 </div>
@@ -123,7 +123,7 @@ export default function Contacto() {
                   <select
                     id="service"
                     name="service"
-                    className="w-full px-4 py-3 border border-[#e5e5e5] bg-white text-[#1a1a1a] text-[14px] focus:outline-none focus:border-[#2d1b69] transition-colors"
+                    className="w-full px-4 py-3 border border-[#e5e5e5] bg-white text-[#1a1a1a] text-[14px] focus:outline-none focus:border-[#004AAD] transition-colors"
                   >
                     <option value="">Selecciona una opción</option>
                     <option value="graduados">Lentes graduados</option>
@@ -142,13 +142,13 @@ export default function Contacto() {
                     id="message"
                     name="message"
                     rows={4}
-                    className="w-full px-4 py-3 border border-[#e5e5e5] bg-white text-[#1a1a1a] text-[14px] placeholder:text-[#999] focus:outline-none focus:border-[#2d1b69] transition-colors resize-none"
+                    className="w-full px-4 py-3 border border-[#e5e5e5] bg-white text-[#1a1a1a] text-[14px] placeholder:text-[#999] focus:outline-none focus:border-[#004AAD] transition-colors resize-none"
                     placeholder="Cuéntanos cómo podemos ayudarte..."
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-[#2d1b69] text-white text-[12px] tracking-[0.15em] uppercase font-medium hover:bg-[#1a0a3e] transition-colors"
+                  className="w-full px-6 py-3 bg-[#004AAD] text-white text-[12px] tracking-[0.15em] uppercase font-medium hover:bg-[#003580] transition-colors"
                 >
                   Enviar Mensaje
                 </button>
@@ -189,7 +189,7 @@ export default function Contacto() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 p-3 hover:bg-white transition-colors"
                   >
-                    <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#004AAD] to-[#0055C8] flex items-center justify-center">
                       <svg viewBox="0 0 24 24" fill="white" className="w-5 h-5">
                         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
                       </svg>
@@ -218,7 +218,7 @@ export default function Contacto() {
                 </div>
               </div>
 
-              <div className="bg-[#2d1b69]/5 p-7 border border-[#2d1b69]/20">
+              <div className="bg-[#004AAD]/5 p-7 border border-[#004AAD]/20">
                 <h3 className="font-semibold text-[#1a1a1a] text-[14px] uppercase tracking-[0.05em] mb-2">Prefieres WhatsApp?</h3>
                 <p className="text-[13px] text-[#666] mb-4">
                   Es la forma más rápida de contactarnos. Respondemos en minutos.
@@ -227,7 +227,7 @@ export default function Contacto() {
                   href="https://wa.me/523314257226?text=Hola%2C%20necesito%20informacion"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-6 py-2.5 bg-[#2d1b69] text-white text-[12px] tracking-[0.15em] uppercase font-medium hover:bg-[#1a0a3e] transition-colors"
+                  className="inline-block px-6 py-2.5 bg-[#004AAD] text-white text-[12px] tracking-[0.15em] uppercase font-medium hover:bg-[#003580] transition-colors"
                 >
                   Abrir WhatsApp
                 </a>

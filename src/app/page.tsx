@@ -15,7 +15,7 @@ export default function Home() {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1a0a3e]/70 via-[#2d1b69]/50 to-[#4a2c8a]/40" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#003580]/70 via-[#004AAD]/50 to-[#0055C8]/40" />
         </div>
 
         <div className="relative z-10 text-center text-white px-6 max-w-3xl mx-auto">
@@ -30,7 +30,7 @@ export default function Home() {
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <Link
               href="/lentes-graduados"
-              className="px-8 py-3 border border-white text-white text-[12px] tracking-[0.2em] uppercase font-medium hover:bg-white hover:text-[#1a0a3e] transition-all"
+              className="px-8 py-3 border border-white text-white text-[12px] tracking-[0.2em] uppercase font-medium hover:bg-white hover:text-[#003580] transition-all"
             >
               Ver Productos
             </Link>
@@ -38,7 +38,7 @@ export default function Home() {
               href="https://wa.me/523314257226?text=Hola%2C%20quiero%20agendar%20una%20cita"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 border border-white text-white text-[12px] tracking-[0.2em] uppercase font-medium hover:bg-white hover:text-[#1a0a3e] transition-all"
+              className="px-8 py-3 border border-white text-white text-[12px] tracking-[0.2em] uppercase font-medium hover:bg-white hover:text-[#003580] transition-all"
             >
               Agendar Cita
             </a>
@@ -112,7 +112,7 @@ export default function Home() {
                 key={tab}
                 className={`text-[12px] tracking-[0.1em] cursor-default pb-3 ${
                   i === 0
-                    ? "text-[#1a1a1a] border-b-2 border-[#2d1b69] font-medium -mb-[13px]"
+                    ? "text-[#1a1a1a] border-b-2 border-[#004AAD] font-medium -mb-[13px]"
                     : "text-[#666] -mb-[13px]"
                 }`}
               >
@@ -169,7 +169,7 @@ export default function Home() {
                 </div>
                 <p className="text-[13px] font-semibold text-[#1a1a1a] mb-0.5">{item.brand}</p>
                 <p className="text-[13px] text-[#666] mb-2">{item.desc}</p>
-                <span className="text-[12px] text-[#2d1b69] font-medium tracking-[0.05em] uppercase group-hover:underline">
+                <span className="text-[12px] text-[#004AAD] font-medium tracking-[0.05em] uppercase group-hover:underline">
                   Cotizar
                 </span>
               </Link>
@@ -179,7 +179,7 @@ export default function Home() {
           <div className="text-right mt-8">
             <Link
               href="/lentes-graduados"
-              className="text-[12px] text-[#2d1b69] tracking-[0.1em] uppercase font-medium hover:underline"
+              className="text-[12px] text-[#004AAD] tracking-[0.1em] uppercase font-medium hover:underline"
             >
               Ver todos &gt;
             </Link>
@@ -227,7 +227,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-[15px] font-semibold text-[#1a1a1a] mb-1">{card.title}</h3>
                 <p className="text-[13px] text-[#666] leading-relaxed mb-2">{card.desc}</p>
-                <span className="text-[12px] text-[#2d1b69] font-medium tracking-[0.05em] uppercase group-hover:underline">
+                <span className="text-[12px] text-[#004AAD] font-medium tracking-[0.05em] uppercase group-hover:underline">
                   Conocer más
                 </span>
               </Link>
@@ -253,7 +253,7 @@ export default function Home() {
               { num: "4", title: "Recibe", desc: "Entrega el mismo día o al siguiente. En tienda o a domicilio." },
             ].map((step) => (
               <div key={step.num} className="text-center">
-                <div className="w-12 h-12 border border-[#2d1b69] text-[#2d1b69] flex items-center justify-center mx-auto mb-4 text-sm font-medium">
+                <div className="w-12 h-12 border border-[#004AAD] text-[#004AAD] flex items-center justify-center mx-auto mb-4 text-sm font-medium">
                   {step.num}
                 </div>
                 <h3 className="text-[13px] font-semibold text-[#1a1a1a] uppercase tracking-[0.05em] mb-2">
@@ -269,7 +269,7 @@ export default function Home() {
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <Link
               href="/lentes-graduados"
-              className="px-8 py-3 border border-[#2d1b69] text-[#2d1b69] text-[12px] tracking-[0.2em] uppercase font-medium hover:bg-[#2d1b69] hover:text-white transition-all"
+              className="px-8 py-3 border border-[#004AAD] text-[#004AAD] text-[12px] tracking-[0.2em] uppercase font-medium hover:bg-[#004AAD] hover:text-white transition-all"
             >
               Ver Productos
             </Link>
@@ -277,7 +277,7 @@ export default function Home() {
               href="https://wa.me/523314257226?text=Hola%2C%20quiero%20cotizar%20mis%20lentes"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 bg-[#2d1b69] text-white text-[12px] tracking-[0.2em] uppercase font-medium hover:bg-[#1a0a3e] transition-all"
+              className="px-8 py-3 bg-[#004AAD] text-white text-[12px] tracking-[0.2em] uppercase font-medium hover:bg-[#003580] transition-all"
             >
               Cotizar Ahora
             </a>
@@ -300,7 +300,7 @@ export default function Home() {
       </section>
 
       {/* ─── CTA ─── */}
-      <section className="py-16 md:py-20 bg-[#2d1b69]">
+      <section className="py-16 md:py-20 bg-[#004AAD]">
         <div className="max-w-[1280px] mx-auto px-8 text-center">
           <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl uppercase tracking-[0.15em] text-white font-normal mb-4">
             Necesitas Lentes Nuevos?
@@ -312,7 +312,7 @@ export default function Home() {
             href="https://wa.me/523314257226?text=Hola%2C%20quiero%20cotizar%20mis%20lentes"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-3 border border-white text-white text-[12px] tracking-[0.2em] uppercase font-medium hover:bg-white hover:text-[#2d1b69] transition-all"
+            className="inline-block px-8 py-3 border border-white text-white text-[12px] tracking-[0.2em] uppercase font-medium hover:bg-white hover:text-[#004AAD] transition-all"
           >
             Cotizar por WhatsApp
           </a>

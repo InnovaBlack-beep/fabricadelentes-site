@@ -34,7 +34,7 @@ export default function LentesDeContacto() {
         <div className="max-w-[1280px] mx-auto px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-[12px] text-[#2d1b69] tracking-[0.2em] uppercase font-medium mb-4">
+              <p className="text-[12px] text-[#004AAD] tracking-[0.2em] uppercase font-medium mb-4">
                 Todas las Marcas Disponibles
               </p>
               <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl uppercase tracking-[0.1em] text-[#1a1a1a] font-normal leading-tight mb-5">
@@ -48,7 +48,7 @@ export default function LentesDeContacto() {
                 href="https://wa.me/523314257226?text=Hola%2C%20me%20interesan%20lentes%20de%20contacto"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3 bg-[#2d1b69] text-white text-[12px] tracking-[0.15em] uppercase font-medium hover:bg-[#1a0a3e] transition-all inline-block"
+                className="px-8 py-3 bg-[#004AAD] text-white text-[12px] tracking-[0.15em] uppercase font-medium hover:bg-[#003580] transition-all inline-block"
               >
                 Pedir por WhatsApp
               </a>
@@ -85,7 +85,7 @@ export default function LentesDeContacto() {
                 href={`https://wa.me/523314257226?text=Hola%2C%20me%20interesan%20lentes%20de%20contacto%20${encodeURIComponent(cat.name.toLowerCase())}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-white p-6 border border-[#e5e5e5] hover:border-[#2d1b69]/30 transition-all"
+                className="group bg-white p-6 border border-[#e5e5e5] hover:border-[#004AAD]/30 transition-all"
               >
                 <span className="inline-block px-3 py-1 bg-[#f7f7f7] text-[10px] font-medium text-[#666] tracking-[0.1em] mb-3">
                   {cat.badge}
@@ -96,7 +96,7 @@ export default function LentesDeContacto() {
                 <p className="text-[13px] text-[#666] leading-relaxed mb-3">
                   {cat.desc}
                 </p>
-                <span className="text-[12px] text-[#2d1b69] font-medium tracking-[0.05em] uppercase group-hover:underline">
+                <span className="text-[12px] text-[#004AAD] font-medium tracking-[0.05em] uppercase group-hover:underline">
                   Cotizar
                 </span>
               </a>
@@ -148,7 +148,7 @@ export default function LentesDeContacto() {
                 key={i}
                 className="group bg-[#f7f7f7] border border-[#e5e5e5] overflow-hidden"
               >
-                <summary className="flex items-center justify-between cursor-pointer p-5 text-[14px] font-medium text-[#1a1a1a] hover:text-[#2d1b69] transition-colors">
+                <summary className="flex items-center justify-between cursor-pointer p-5 text-[14px] font-medium text-[#1a1a1a] hover:text-[#004AAD] transition-colors">
                   {faq.q}
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5 text-[#666] group-open:rotate-180 transition-transform shrink-0 ml-4">
                     <path d="M6 9l6 6 6-6" />
@@ -162,7 +162,7 @@ export default function LentesDeContacto() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-20 bg-[#2d1b69]">
+      <section className="py-16 md:py-20 bg-[#004AAD]">
         <div className="max-w-3xl mx-auto px-8 text-center">
           <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl uppercase tracking-[0.15em] text-white font-normal mb-4">
             Listo Para Pedir Tus Lentes?
@@ -174,7 +174,7 @@ export default function LentesDeContacto() {
             href="https://wa.me/523314257226?text=Hola%2C%20quiero%20pedir%20lentes%20de%20contacto"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-3 border border-white text-white text-[12px] tracking-[0.2em] uppercase font-medium hover:bg-white hover:text-[#2d1b69] transition-all"
+            className="inline-block px-8 py-3 border border-white text-white text-[12px] tracking-[0.2em] uppercase font-medium hover:bg-white hover:text-[#004AAD] transition-all"
           >
             Pedir por WhatsApp
           </a>
