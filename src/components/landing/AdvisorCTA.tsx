@@ -28,7 +28,7 @@ export function AdvisorCTA() {
           href="https://wa.me/523314257226?text=Hola%2C%20quiero%20asesor%C3%ADa%20para%20elegir%20mis%20lentes"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center h-12 px-8 rounded-full bg-accent text-dark text-sm font-semibold hover:brightness-95 transition-all"
+          className="inline-flex items-center justify-center h-12 px-8 rounded-full bg-accent text-dark text-sm font-semibold uppercase tracking-[0.1em] hover:brightness-95 transition-all"
         >
           Recibir Asesoría Gratis
         </a>

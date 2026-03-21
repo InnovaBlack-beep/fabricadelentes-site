@@ -24,10 +24,10 @@ const categories = [
 
 export function CategoryGrid() {
   return (
-    <section className="py-16 md:py-24 px-5 md:px-10 bg-white">
+    <section className="py-20 md:py-32 px-5 md:px-10 bg-white">
       <div className="max-w-[1440px] mx-auto">
         <div className="text-center mb-12">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
             Catálogo
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-fg mt-3">

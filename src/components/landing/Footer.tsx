@@ -40,7 +40,7 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <span className="text-lg font-bold text-white">
-              Fábrica de Lentes<span className="text-accent">®</span>
+              Fábrica de Lentes<span className="text-gold">®</span>
             </span>
             <p className="text-xs text-white/38 mt-3 leading-relaxed max-w-[200px]">
               Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora.

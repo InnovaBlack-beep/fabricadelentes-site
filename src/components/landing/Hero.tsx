@@ -92,7 +92,7 @@ export function Hero() {
       {/* Content - positioned at bottom-left */}
       <div className="relative z-10 h-full max-w-[1440px] mx-auto px-6 md:px-10 flex items-end pb-20 md:pb-28">
         <div className="max-w-xl animate-fade-in-up">
-          <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-accent mb-4">
+          <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-gold mb-4">
             {slide.tagline}
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[1.05] mb-5 whitespace-pre-line">
@@ -104,13 +104,13 @@ export function Hero() {
           <div className="flex gap-3 flex-wrap">
             <a
               href={slide.ctaHref}
-              className="inline-flex items-center h-12 px-7 rounded-full bg-accent text-dark text-sm font-semibold tracking-wide hover:bg-accent/85 transition-colors"
+              className="inline-flex items-center h-12 px-7 rounded-full bg-accent text-dark text-sm font-semibold uppercase tracking-[0.1em] hover:bg-accent/85 transition-colors"
             >
               {slide.cta}
             </a>
             <a
               href={slide.secondaryHref}
-              className="inline-flex items-center h-12 px-7 rounded-full border border-white/30 text-white text-sm font-medium tracking-wide hover:bg-white/10 transition-colors"
+              className="inline-flex items-center h-12 px-7 rounded-full border border-white/30 text-white text-sm font-medium uppercase tracking-[0.1em] hover:bg-white/10 transition-colors"
             >
               {slide.secondary}
             </a>

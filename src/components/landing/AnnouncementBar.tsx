@@ -25,7 +25,7 @@ export function AnnouncementBar() {
         {messages[index]}
         <a
           href="https://wa.me/523314257226?text=Hola%2C%20quiero%20agendar%20un%20examen%20de%20la%20vista"
-          className="ml-3 text-accent hover:underline"
+          className="ml-3 text-gold hover:underline"
         >
           Agendar ahora →
         </a>

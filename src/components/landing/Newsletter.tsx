@@ -35,7 +35,7 @@ export function Newsletter() {
           />
           <button
             type="submit"
-            className="h-12 px-8 rounded-full bg-accent text-dark text-sm font-semibold hover:brightness-95 transition-all whitespace-nowrap cursor-pointer"
+            className="h-12 px-8 rounded-full bg-accent text-dark text-sm font-semibold uppercase tracking-[0.1em] hover:brightness-95 transition-all whitespace-nowrap cursor-pointer"
           >
             Suscribirme
           </button>

@@ -16,11 +16,11 @@ export function ProductShowcase() {
       : products.filter((p) => p.category === activeTab);
 
   return (
-    <section id="productos" className="py-16 md:py-24 px-5 md:px-10 bg-white">
+    <section id="productos" className="py-20 md:py-32 px-5 md:px-10 bg-white">
       <div className="max-w-[1440px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-6">
           <div>
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
               Productos
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-fg mt-3">
@@ -59,7 +59,7 @@ export function ProductShowcase() {
                     src={product.images[0]}
                     alt={`${product.brand} ${product.model}`}
                     fill
-                    className={`object-contain p-4 transition-all duration-500 ${
+                    className={`object-contain p-6 transition-all duration-500 ${
                       hasSecondImage ? "group-hover:opacity-0" : "group-hover:scale-105"
                     }`}
                     unoptimized
@@ -69,7 +69,7 @@ export function ProductShowcase() {
                       src={product.images[1]}
                       alt={`${product.brand} ${product.model} - vista 2`}
                       fill
-                      className="object-contain p-4 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-105"
+                      className="object-contain p-6 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-105"
                       unoptimized
                     />
                   )}

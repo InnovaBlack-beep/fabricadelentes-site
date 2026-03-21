@@ -67,7 +67,7 @@ export function ProductCatalog({ category }: ProductCatalogProps) {
                     src={p.images[0]}
                     alt={`${p.brand} ${p.model}`}
                     fill
-                    className={`object-contain p-4 transition-all duration-500 ${
+                    className={`object-contain p-6 transition-all duration-500 ${
                       hasSecondImage ? "group-hover:opacity-0" : "group-hover:scale-105"
                     }`}
                     unoptimized
@@ -77,7 +77,7 @@ export function ProductCatalog({ category }: ProductCatalogProps) {
                       src={p.images[1]}
                       alt={`${p.brand} ${p.model} - vista 2`}
                       fill
-                      className="object-contain p-4 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-105"
+                      className="object-contain p-6 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-105"
                       unoptimized
                     />
                   )}

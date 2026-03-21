@@ -53,7 +53,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-[13px] font-medium tracking-wide text-fg/70 hover:text-fg transition-colors"
+              className="text-[13px] font-medium uppercase tracking-wider text-fg/70 hover:text-fg transition-colors"
             >
               {item.label}
             </Link>
@@ -114,7 +114,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
-                className="block py-3 text-[15px] font-medium text-fg/70 hover:text-fg border-b border-border transition-colors"
+                className="block py-3 text-[15px] font-medium uppercase tracking-wider text-fg/70 hover:text-fg border-b border-border transition-colors"
               >
                 {item.label}
               </Link>

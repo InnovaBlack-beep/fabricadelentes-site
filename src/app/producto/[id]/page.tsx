@@ -157,7 +157,7 @@ export default async function ProductPage({ params }: Props) {
 
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
             {/* LEFT — Gallery */}
-            <div className="w-full lg:w-[60%]">
+            <div className="w-full lg:w-[60%] p-4 md:p-8">
               <ProductGallery images={product.images} alt={`${product.brand} ${product.model}`} />
             </div>
 
@@ -169,7 +169,7 @@ export default async function ProductPage({ params }: Props) {
               <h1 className="text-2xl md:text-3xl font-bold text-[#242424] mb-4">
                 {product.model}
               </h1>
-              <p className="text-xl font-bold text-[#242424] mb-6">
+              <p className="text-2xl md:text-3xl font-bold text-[#242424] mb-6">
                 {product.price}
                 <span className="text-sm font-normal text-[#9CA3AF] ml-2">
                   MXN
@@ -183,7 +183,7 @@ export default async function ProductPage({ params }: Props) {
               </p>
 
               {/* Incluye */}
-              <div className="mb-8">
+              <div className="mb-8 rounded-lg bg-surface p-5">
                 <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#242424] mb-3">
                   Incluye
                 </p>
@@ -223,13 +223,13 @@ export default async function ProductPage({ params }: Props) {
                   href={`https://wa.me/523314257226?text=${whatsappMsg}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center h-12 rounded-full bg-[#F9DC4B] text-[#242424] text-sm font-semibold hover:brightness-95 transition-all"
+                  className="flex items-center justify-center h-12 rounded-full bg-[#F9DC4B] text-[#242424] text-sm font-semibold uppercase tracking-[0.1em] hover:brightness-95 transition-all"
                 >
                   Comprar por WhatsApp
                 </a>
                 <Link
                   href="/contacto"
-                  className="flex items-center justify-center h-12 rounded-full border border-[#E5E7EB] text-[#242424] text-sm font-medium hover:border-[#242424] transition-colors"
+                  className="flex items-center justify-center h-12 rounded-full border border-[#E5E7EB] text-[#242424] text-sm font-medium uppercase tracking-[0.1em] hover:border-[#242424] transition-colors"
                 >
                   Agendar Examen Gratis
                 </Link>
@@ -265,7 +265,7 @@ export default async function ProductPage({ params }: Props) {
                           src={rp.images[0]}
                           alt={`${rp.brand} ${rp.model}`}
                           fill
-                          className={`object-contain p-4 transition-all duration-500 ${
+                          className={`object-contain p-6 transition-all duration-500 ${
                             hasSecondImage ? "group-hover:opacity-0" : "group-hover:scale-105"
                           }`}
                           unoptimized
@@ -275,7 +275,7 @@ export default async function ProductPage({ params }: Props) {
                             src={rp.images[1]}
                             alt={`${rp.brand} ${rp.model} - vista 2`}
                             fill
-                            className="object-contain p-4 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-105"
+                            className="object-contain p-6 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-105"
                             unoptimized
                           />
                         )}
