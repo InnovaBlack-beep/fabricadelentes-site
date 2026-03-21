@@ -17,6 +17,7 @@ const slides = [
     align: "left" as const,
   },
   {
+    video: "/images/hero-video-2.mp4",
     image: "/images/hero-2.png",
     alt: "Armazones de moda en Fábrica de Lentes",
     tagline: "Nueva Colección",
