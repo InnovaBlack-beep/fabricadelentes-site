@@ -115,7 +115,7 @@ export function Footer() {
             {[
               { label: "Nosotros", href: "/laboratorio" },
               { label: "Sucursales GDL", href: "/contacto" },
-              { label: "Blog óptico", href: "/" },
+              { label: "Laboratorio", href: "/laboratorio" },
               { label: "Trabaja con nosotros", href: "/contacto" },
             ].map((item) => (
               <li key={item.label}>

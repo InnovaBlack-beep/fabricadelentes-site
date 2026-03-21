@@ -3,10 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Lentes de Sol en Guadalajara | Ray-Ban, Meta, Oakley | Fábrica de Lentes",
+  title: "Lentes de Sol en GDL | Fábrica de Lentes",
   description:
     "Lentes de sol originales en Guadalajara. Ray-Ban, Meta, Oakley, Prada y más. También graduados de sol. Cotiza por WhatsApp.",
   alternates: { canonical: "https://fabricadelentes.mx/lentes-de-sol" },
+  openGraph: {
+    title: "Lentes de Sol | Fábrica de Lentes · GDL",
+    description: "Lentes de sol originales. Ray-Ban, Oakley, Prada y más. Graduados de sol disponibles.",
+    url: "https://fabricadelentes.mx/lentes-de-sol",
+    images: [{ url: "https://fabricadelentes.mx/images/hero-2.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 const filterPills = [

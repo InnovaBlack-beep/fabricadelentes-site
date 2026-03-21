@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Convenios \u00d3pticos para Empresas en Guadalajara | F\u00e1brica de Lentes",
+  title: "Convenios Ópticos Empresariales | Fábrica de Lentes",
   description:
-    "Convenios \u00f3pticos corporativos en Guadalajara. Examen de la vista gratis, descuentos por volumen, servicio en instalaciones. Solicita tu convenio.",
+    "Convenios ópticos corporativos en Guadalajara. Examen de la vista gratis, descuentos por volumen, servicio en instalaciones. Solicita tu convenio.",
   alternates: { canonical: "https://fabricadelentes.mx/empresas" },
+  openGraph: {
+    title: "Convenios Empresariales | Fábrica de Lentes · GDL",
+    description: "Convenios ópticos corporativos. Examen gratis, descuentos por volumen, servicio en instalaciones.",
+    url: "https://fabricadelentes.mx/empresas",
+    images: [{ url: "https://fabricadelentes.mx/images/hero-1.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 const benefits = [

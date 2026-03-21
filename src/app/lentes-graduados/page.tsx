@@ -3,10 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Lentes Graduados en Guadalajara | Fabricación Propia | Fábrica de Lentes",
+  title: "Lentes Graduados en GDL | Fábrica de Lentes",
   description:
     "Lentes graduados con fabricación propia en Guadalajara. Monofocales, bifocales, progresivos. Entrega el mismo día. Ray-Ban, Oakley, Prada y más marcas.",
   alternates: { canonical: "https://fabricadelentes.mx/lentes-graduados" },
+  openGraph: {
+    title: "Lentes Graduados | Fábrica de Lentes · GDL",
+    description: "Lentes graduados con fabricación propia. Monofocales, bifocales, progresivos. Entrega el mismo día.",
+    url: "https://fabricadelentes.mx/lentes-graduados",
+    images: [{ url: "https://fabricadelentes.mx/images/hero-1.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 const filterPills = [

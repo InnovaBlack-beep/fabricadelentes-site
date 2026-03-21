@@ -2,10 +2,17 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Laboratorio \u00d3ptico en Guadalajara | Fabricaci\u00f3n Propia | F\u00e1brica de Lentes",
+  title: "Laboratorio Óptico en GDL | Fábrica de Lentes",
   description:
-    "Laboratorio \u00f3ptico propio en Guadalajara. Fabricamos lentes graduados, progresivos, transici\u00f3n y m\u00e1s. Entrega express el mismo d\u00eda.",
+    "Laboratorio óptico propio en Guadalajara. Fabricamos lentes graduados, progresivos, transición y más. Entrega express el mismo día. Sin intermediarios.",
   alternates: { canonical: "https://fabricadelentes.mx/laboratorio" },
+  openGraph: {
+    title: "Laboratorio Óptico | Fábrica de Lentes · GDL",
+    description: "Laboratorio óptico propio en Guadalajara. Lentes graduados, progresivos, transición. Entrega express.",
+    url: "https://fabricadelentes.mx/laboratorio",
+    images: [{ url: "https://fabricadelentes.mx/images/hero-3.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 const capabilities = [

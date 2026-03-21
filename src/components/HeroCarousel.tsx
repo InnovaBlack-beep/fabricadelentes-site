@@ -60,6 +60,7 @@ export function HeroCarousel() {
 
   return (
     <section className="relative w-full h-[500px] md:h-[600px] lg:h-[680px] overflow-hidden bg-warm-graphite">
+      <h1 className="sr-only">Fábrica de Lentes — Óptica con Laboratorio Propio en Guadalajara</h1>
       {/* Slides */}
       {slides.map((s, i) => (
         <div
@@ -105,7 +106,9 @@ export function HeroCarousel() {
             {slide.tagline}
           </span>
 
-          <h1
+          <p
+            role="heading"
+            aria-level={2}
             className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight whitespace-pre-line mb-5"
             style={{
               fontFamily: "var(--font-serif)",
@@ -113,7 +116,7 @@ export function HeroCarousel() {
             }}
           >
             {slide.headline}
-          </h1>
+          </p>
 
           <p
             className="text-lg md:text-xl mb-8 max-w-md leading-relaxed"

@@ -2,11 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title:
-    "Lentes de Contacto en Guadalajara | Todas las Marcas | Fábrica de Lentes",
+  title: "Lentes de Contacto en GDL | Fábrica de Lentes",
   description:
     "Lentes de contacto en Guadalajara. Acuvue, Bausch & Lomb, CooperVision, Alcon. Diarios, mensuales, para astigmatismo. Entrega inmediata. Cotiza por WhatsApp.",
   alternates: { canonical: "https://fabricadelentes.mx/lentes-de-contacto" },
+  openGraph: {
+    title: "Lentes de Contacto | Fábrica de Lentes · GDL",
+    description: "Lentes de contacto: Acuvue, Bausch & Lomb, CooperVision. Diarios, mensuales, astigmatismo.",
+    url: "https://fabricadelentes.mx/lentes-de-contacto",
+    images: [{ url: "https://fabricadelentes.mx/images/hero-3.png", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 const filterPills = [

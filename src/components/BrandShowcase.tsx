@@ -144,7 +144,7 @@ export function BrandShowcase() {
           {brands.map((brand) => (
             <a
               key={brand.name}
-              href="#"
+              href="/lentes-graduados"
               className="group flex-shrink-0 w-[260px] md:w-[290px]"
             >
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden mb-3">
