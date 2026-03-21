@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { products } from "@/lib/products";
 import { ProductCatalog } from "@/components/landing/ProductCatalog";
 
 export const metadata: Metadata = {
   title: "Lentes de Contacto en GDL | Fábrica de Lentes",
   description:
-    "Lentes de contacto en Guadalajara. Air Optix, Alcon, Frecuent. Diarios, mensuales. Entrega inmediata.",
+    "Lentes de contacto en Guadalajara. Air Optix, Alcon, Frecuent. Entrega inmediata.",
   alternates: { canonical: "https://fabricadelentes.mx/lentes-de-contacto" },
   openGraph: {
     title: "Lentes de Contacto | Fábrica de Lentes · GDL",
@@ -16,9 +15,6 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image" },
 };
-
-const contacto = products.filter((p) => p.category === "Contacto");
-const brands = [...new Set(contacto.map((p) => p.brand))];
 
 export default function LentesDeContacto() {
   return (
@@ -36,11 +32,11 @@ export default function LentesDeContacto() {
           Lentes de Contacto
         </h1>
         <p className="text-sm text-muted mt-2">
-          {contacto.length} productos · Entrega inmediata
+          Entrega inmediata · Todas las marcas
         </p>
       </div>
 
-      <ProductCatalog products={contacto} brands={brands} />
+      <ProductCatalog category="Contacto" />
     </>
   );
 }

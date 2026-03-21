@@ -3,20 +3,21 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import type { Product } from "@/lib/products";
+import { products as allProducts, type Product } from "@/lib/products";
 
 interface ProductCatalogProps {
-  products: Product[];
-  brands: string[];
+  category: "Graduados" | "Sol" | "Contacto";
 }
 
-export function ProductCatalog({ products, brands }: ProductCatalogProps) {
+export function ProductCatalog({ category }: ProductCatalogProps) {
+  const categoryProducts = allProducts.filter((p) => p.category === category);
+  const brands = [...new Set(categoryProducts.map((p) => p.brand))];
   const [activeBrand, setActiveBrand] = useState("Todos");
 
   const filtered =
     activeBrand === "Todos"
-      ? products
-      : products.filter((p) => p.brand === activeBrand);
+      ? categoryProducts
+      : categoryProducts.filter((p) => p.brand === activeBrand);
 
   return (
     <>
@@ -28,12 +29,11 @@ export function ProductCatalog({ products, brands }: ProductCatalogProps) {
               <button
                 key={pill}
                 onClick={() => setActiveBrand(pill)}
-                className="text-xs font-medium rounded-full px-4 py-1.5 whitespace-nowrap transition-all"
-                style={{
-                  background: activeBrand === pill ? "#242424" : "transparent",
-                  color: activeBrand === pill ? "#FFFFFF" : "#9CA3AF",
-                  border: activeBrand === pill ? "1px solid #242424" : "1px solid #E5E7EB",
-                }}
+                className={`text-xs font-medium rounded-full px-4 py-1.5 whitespace-nowrap transition-all cursor-pointer ${
+                  activeBrand === pill
+                    ? "bg-fg text-white border border-fg"
+                    : "bg-transparent text-muted border border-border hover:border-fg hover:text-fg"
+                }`}
               >
                 {pill}
               </button>

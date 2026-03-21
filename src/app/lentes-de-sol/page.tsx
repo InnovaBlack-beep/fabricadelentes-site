@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { products } from "@/lib/products";
 import { ProductCatalog } from "@/components/landing/ProductCatalog";
 
 export const metadata: Metadata = {
   title: "Lentes de Sol en GDL | Fábrica de Lentes",
   description:
-    "Lentes de sol Frida Kahlo en Guadalajara. Diseños exclusivos con garantía. Cotiza por WhatsApp.",
+    "Lentes de sol Frida Kahlo en Guadalajara. Diseños exclusivos con garantía.",
   alternates: { canonical: "https://fabricadelentes.mx/lentes-de-sol" },
   openGraph: {
     title: "Lentes de Sol | Fábrica de Lentes · GDL",
@@ -16,9 +15,6 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image" },
 };
-
-const solares = products.filter((p) => p.category === "Sol");
-const brands = [...new Set(solares.map((p) => p.brand))];
 
 export default function LentesDeSol() {
   return (
@@ -36,11 +32,11 @@ export default function LentesDeSol() {
           Lentes de Sol
         </h1>
         <p className="text-sm text-muted mt-2">
-          {solares.length} modelos · Colección Frida Kahlo
+          Colección Frida Kahlo · Con garantía
         </p>
       </div>
 
-      <ProductCatalog products={solares} brands={brands} />
+      <ProductCatalog category="Sol" />
     </>
   );
 }
