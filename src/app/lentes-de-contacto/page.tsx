@@ -1,185 +1,153 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Lentes de Contacto en Guadalajara | Todas las Marcas | Fabrica de Lentes",
   description:
-    "Lentes de contacto en Guadalajara. Acuvue, Bausch & Lomb, CooperVision. Diarios, mensuales, para astigmatismo. Cotiza por WhatsApp.",
+    "Lentes de contacto en Guadalajara. Acuvue, Bausch & Lomb, CooperVision, Alcon. Diarios, mensuales, para astigmatismo. Entrega inmediata. Cotiza por WhatsApp.",
   alternates: { canonical: "https://fabricadelentes.mx/lentes-de-contacto" },
 };
 
-const brands = [
-  { name: "Acuvue (Johnson & Johnson)", types: "Diarios, mensuales, para astigmatismo, multifocales" },
-  { name: "Bausch & Lomb", types: "SofLens, Ultra, Biotrue ONEday" },
-  { name: "CooperVision", types: "Biofinity, clariti, MyDay" },
-  { name: "Alcon (Air Optix)", types: "Air Optix, Dailies, Total30" },
-  { name: "Lentes de color", types: "FreshLook, Air Optix Colors, Solotica" },
-  { name: "Lentes especializados", types: "T\u00f3ricos, multifocales, queratocono" },
+const tabs = [
+  "Todos",
+  "Diarios",
+  "Mensuales",
+  "Astigmatismo",
+  "Multifocales",
+  "Color",
 ];
 
-const categories = [
-  { name: "Diarios", desc: "Uso y desecha. M\u00e1xima higiene, ideales para uso ocasional.", badge: "1 D\u00cdA" },
-  { name: "Mensuales", desc: "Reemplazo cada 30 d\u00edas. Mejor costo-beneficio para uso diario.", badge: "30 D\u00cdAS" },
-  { name: "Para astigmatismo", desc: "Lentes t\u00f3ricos que corrigen astigmatismo con estabilidad.", badge: "T\u00d3RICOS" },
-  { name: "Para miop\u00eda", desc: "Correcci\u00f3n esf\u00e9rica para visi\u00f3n de lejos clara y n\u00edtida.", badge: "ESF\u00c9RICOS" },
-  { name: "Multifocales", desc: "Corrigen vista cansada. Ven de cerca y de lejos sin cambiar lentes.", badge: "MULTI" },
-  { name: "De color", desc: "Cambia el color de tus ojos con o sin graduaci\u00f3n.", badge: "COSM\u00c9TICOS" },
+const products = [
+  { brand: "Acuvue", model: "Oasys 1-Day", price: "$590/caja", badge: "Más vendido", image: "/images/hero-1.png" },
+  { brand: "Acuvue", model: "Moist 1-Day", price: "$490/caja", badge: "", image: "/images/hero-2.png" },
+  { brand: "Air Optix", model: "Night & Day Aqua", price: "$890/caja", badge: "", image: "/images/hero-3.png" },
+  { brand: "Bausch & Lomb", model: "Ultra Monthly", price: "$690/caja", badge: "Entrega hoy", image: "/images/hero-1.png" },
+  { brand: "CooperVision", model: "Biofinity Monthly", price: "$650/caja", badge: "", image: "/images/hero-2.png" },
+  { brand: "Dailies", model: "Total1 Daily", price: "$790/caja", badge: "Nuevo", image: "/images/hero-3.png" },
+  { brand: "Acuvue", model: "Oasys for Astigmatism", price: "$790/caja", badge: "", image: "/images/hero-1.png" },
+  { brand: "Air Optix", model: "Colors Monthly", price: "$550/caja", badge: "Popular", image: "/images/hero-2.png" },
+  { brand: "Acuvue", model: "Vita Monthly", price: "$590/caja", badge: "", image: "/images/hero-3.png" },
+  { brand: "CooperVision", model: "MyDay Daily", price: "$690/caja", badge: "", image: "/images/hero-1.png" },
+  { brand: "FreshLook", model: "ColorBlends", price: "$490/caja", badge: "Popular", image: "/images/hero-2.png" },
+  { brand: "Acuvue", model: "Multifocal 1-Day", price: "$890/caja", badge: "", image: "/images/hero-3.png" },
 ];
 
 export default function LentesDeContacto() {
   return (
     <>
-      {/* Hero */}
-      <section className="pt-14 pb-16 md:pt-20 md:pb-24 bg-[#F4F4F4]">
+      {/* Breadcrumb */}
+      <div className="max-w-[1280px] mx-auto px-10 pt-6 pb-2">
+        <p className="text-[12px] text-[#999]">
+          <Link href="/" className="hover:text-[#0057A8]">Inicio</Link>
+          <span className="mx-2">&rsaquo;</span>
+          <span className="text-[#444]">Lentes de Contacto</span>
+        </p>
+      </div>
+
+      {/* Title */}
+      <div className="max-w-[1280px] mx-auto px-10 pb-4">
+        <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl text-[#111] font-normal">
+          Lentes de Contacto
+        </h1>
+      </div>
+
+      {/* Filter tabs */}
+      <div className="border-b border-[#eee] mb-6">
         <div className="max-w-[1280px] mx-auto px-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-[12px] text-[#0057A8] tracking-[0.2em] uppercase font-medium mb-4">
-                Todas las Marcas Disponibles
-              </p>
-              <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl uppercase tracking-[0.1em] text-[#111] font-normal leading-tight mb-5">
-                Lentes de Contacto
-                <br />en Guadalajara
-              </h1>
-              <p className="text-[#777] text-[15px] max-w-lg mb-8 leading-relaxed">
-                Tenemos todas las marcas y tipos de lentes de contacto. Cotiza en segundos por WhatsApp y recibe en tu domicilio o recoge en tienda.
-              </p>
-              <a
-                href="https://wa.me/523314257226?text=Hola%2C%20me%20interesan%20lentes%20de%20contacto"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-[#0057A8] text-white rounded-full px-8 py-3.5 text-sm font-semibold hover:bg-[#003F7A] transition-colors"
+          <div className="flex items-center gap-6 overflow-x-auto py-3">
+            {tabs.map((tab, i) => (
+              <button
+                key={tab}
+                className={
+                  i === 0
+                    ? "text-[12px] font-semibold text-[#111] border-b-2 border-[#111] pb-3 -mb-[1px] whitespace-nowrap"
+                    : "text-[12px] text-[#888] pb-3 whitespace-nowrap hover:text-[#111] transition-colors"
+                }
               >
-                Pedir por WhatsApp
-              </a>
+                {tab}
+              </button>
+            ))}
+            <div className="ml-auto flex items-center gap-4 shrink-0">
+              <button className="text-[12px] text-[#444] flex items-center gap-1">
+                Filtros
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4">
+                  <path d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+                </svg>
+              </button>
+              <button className="text-[12px] text-[#444] flex items-center gap-1">
+                Ordenar
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4">
+                  <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+              </button>
             </div>
-            <div className="hidden lg:block">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-                <Image
-                  src="/images/hero-1.png"
-                  alt="Lentes de contacto"
-                  fill
-                  className="object-cover"
-                  sizes="50vw"
-                />
-              </div>
-            </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Categories */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="max-w-[1280px] mx-auto px-10">
-          <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl uppercase tracking-[0.12em] text-[#111] font-normal mb-3">
-            Qu&eacute; Tipo de Lente Necesitas?
+      {/* Promo banner */}
+      <div className="max-w-[1280px] mx-auto px-10 mb-8">
+        <div className="bg-[#0057A8] text-white text-center py-6 px-6 rounded-sm">
+          <p className="text-[11px] tracking-[0.12em] uppercase mb-1">&mdash; En tienda y en l&iacute;nea &mdash;</p>
+          <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl font-normal mb-2">
+            TODAS LAS MARCAS DISPONIBLES
           </h2>
-          <p className="text-[#777] text-[14px] max-w-xl mb-10">
-            Si no est&aacute;s seguro, no te preocupes. Escr&iacute;benos con tu receta y te ayudamos a elegir.
-          </p>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {categories.map((cat) => (
-              <a
-                key={cat.name}
-                href={`https://wa.me/523314257226?text=Hola%2C%20me%20interesan%20lentes%20de%20contacto%20${encodeURIComponent(cat.name.toLowerCase())}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group bg-[#F2F2F2] rounded-lg p-6 hover:bg-[#EAEAEA] transition-all"
-              >
-                <span className="inline-block px-3 py-1 bg-[#F4F4F4] rounded text-[10px] font-medium text-[#777] tracking-[0.1em] mb-3">
-                  {cat.badge}
-                </span>
-                <h3 className="text-[14px] font-semibold text-[#111] uppercase tracking-[0.05em] mb-2">
-                  {cat.name}
-                </h3>
-                <p className="text-[13px] text-[#777] leading-relaxed mb-3">
-                  {cat.desc}
-                </p>
-                <span className="text-[12px] text-[#0057A8] font-medium tracking-[0.05em] uppercase group-hover:underline">
-                  Cotizar
-                </span>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Brands */}
-      <section className="py-16 md:py-20 bg-[#F4F4F4]">
-        <div className="max-w-[1280px] mx-auto px-10">
-          <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl uppercase tracking-[0.12em] text-[#111] font-normal mb-3">
-            Marcas Disponibles
-          </h2>
-          <p className="text-[#777] text-[14px] max-w-xl mb-10">
-            Trabajamos directamente con los principales laboratorios del mundo.
-          </p>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {brands.map((brand) => (
-              <div
-                key={brand.name}
-                className="bg-white rounded-lg p-6"
-              >
-                <h3 className="text-[14px] font-semibold text-[#111] mb-1.5">{brand.name}</h3>
-                <p className="text-[13px] text-[#777]">{brand.types}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="max-w-3xl mx-auto px-10">
-          <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl uppercase tracking-[0.12em] text-[#111] font-normal mb-10">
-            Preguntas Frecuentes
-          </h2>
-
-          <div className="space-y-3">
-            {[
-              { q: "C\u00f3mo s\u00e9 qu\u00e9 lente de contacto necesito?", a: "Si ya tienes receta de tu oftalm\u00f3logo, env\u00edanosla por WhatsApp y te decimos qu\u00e9 opciones tienes. Si no tienes receta, agenda un examen de la vista con nosotros." },
-              { q: "Cu\u00e1nto tardan en llegar mis lentes?", a: "Si tenemos tu marca en inventario, los puedes recoger el mismo d\u00eda. Si es pedido especial, de 3 a 5 d\u00edas h\u00e1biles." },
-              { q: "Puedo comprar sin receta?", a: "Para lentes graduados necesitas receta vigente. Lentes de color sin graduaci\u00f3n los puedes comprar directamente." },
-              { q: "Hacen env\u00edos?", a: "S\u00ed, enviamos a toda la zona metropolitana de Guadalajara. Para env\u00edos for\u00e1neos, cons\u00faltanos." },
-              { q: "Tienen precio mayoreo?", a: "S\u00ed, si compras m\u00e1s de 6 cajas te hacemos precio especial. Pregunta por nuestros paquetes." },
-            ].map((faq, i) => (
-              <details
-                key={i}
-                className="group bg-[#F2F2F2] rounded-lg overflow-hidden"
-              >
-                <summary className="flex items-center justify-between cursor-pointer p-5 text-[14px] font-medium text-[#111] hover:text-[#0057A8] transition-colors">
-                  {faq.q}
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5 text-[#777] group-open:rotate-180 transition-transform shrink-0 ml-4">
-                    <path d="M6 9l6 6 6-6" />
-                  </svg>
-                </summary>
-                <div className="px-5 pb-5 text-[13px] text-[#777] leading-relaxed">{faq.a}</div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 md:py-20 bg-[#0057A8]">
-        <div className="max-w-3xl mx-auto px-10 text-center">
-          <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl uppercase tracking-[0.12em] text-white font-normal mb-4">
-            Listo Para Pedir Tus Lentes?
-          </h2>
-          <p className="text-white/70 text-[14px] mb-8">
-            Env&iacute;anos tu receta o pregunta por disponibilidad. Respondemos en minutos.
+          <p className="text-[12px] text-white/70 max-w-2xl mx-auto mb-2">
+            Acuvue, Bausch &amp; Lomb, CooperVision, Alcon. Entrega inmediata.
           </p>
           <a
-            href="https://wa.me/523314257226?text=Hola%2C%20quiero%20pedir%20lentes%20de%20contacto"
+            href="https://wa.me/523314257226?text=Hola%2C%20me%20interesan%20lentes%20de%20contacto"
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-white text-white bg-transparent rounded-full px-8 py-3 text-xs uppercase tracking-widest font-semibold hover:bg-white hover:text-gray-900 transition-colors"
+            className="text-[12px] underline"
           >
-            Pedir por WhatsApp
+            Pedir ahora
           </a>
         </div>
-      </section>
+      </div>
+
+      {/* Product grid */}
+      <div className="max-w-[1280px] mx-auto px-10 pb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {products.map((p) => (
+            <a
+              key={p.brand + p.model}
+              href={`https://wa.me/523314257226?text=${encodeURIComponent(`Hola, me interesa el modelo ${p.brand} ${p.model}`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-[#F8F8F8] rounded-sm p-5 hover:shadow-md transition-all relative"
+            >
+              {/* Badge */}
+              {p.badge && (
+                <span className="absolute top-4 left-4 bg-white text-[10px] font-semibold uppercase tracking-wider text-[#111] px-2 py-1 shadow-sm z-10">
+                  {p.badge}
+                </span>
+              )}
+              {/* Heart icon */}
+              <span className="absolute top-4 right-4 text-[#ccc] group-hover:text-[#0057A8] z-10 transition-colors">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5">
+                  <path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                </svg>
+              </span>
+              {/* Image */}
+              <div className="relative aspect-square overflow-hidden rounded-sm mb-4">
+                <Image
+                  src={p.image}
+                  alt={`${p.brand} ${p.model}`}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+              </div>
+              {/* Info */}
+              <p className="text-[13px] font-bold text-[#111]">{p.brand}</p>
+              <p className="text-[13px] text-[#666]">{p.model}</p>
+              <p className="text-[14px] font-semibold text-[#111] mt-1">{p.price}</p>
+            </a>
+          ))}
+        </div>
+      </div>
     </>
   );
 }

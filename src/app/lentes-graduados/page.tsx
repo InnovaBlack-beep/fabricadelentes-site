@@ -1,168 +1,154 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Lentes Graduados en Guadalajara | Fabricacion Propia | Fabrica de Lentes",
   description:
-    "Lentes graduados con fabricacion propia en Guadalajara. Monofocales, bifocales, progresivos. Entrega el mismo dia. Examen de la vista disponible.",
+    "Lentes graduados con fabricacion propia en Guadalajara. Monofocales, bifocales, progresivos. Entrega el mismo dia. Ray-Ban, Oakley, Prada y mas marcas.",
   alternates: { canonical: "https://fabricadelentes.mx/lentes-graduados" },
 };
 
-const types = [
-  { name: "Monofocales", desc: "Para miopía, hipermetropía o astigmatismo. El lente más común y accesible." },
-  { name: "Bifocales", desc: "Dos graduaciones en un solo lente: para ver de lejos y de cerca." },
-  { name: "Progresivos", desc: "Transición suave entre distancias. Sin línea divisoria visible." },
-  { name: "Transición", desc: "Se oscurecen con el sol y se aclaran en interiores. 2 en 1." },
-  { name: "Blue Block", desc: "Filtro de luz azul para pantallas. Reduce cansancio visual." },
-  { name: "Antirreflex", desc: "Tratamiento que elimina reflejos y mejora la claridad visual." },
+const tabs = [
+  "Todos",
+  "Monofocales",
+  "Progresivos",
+  "Bifocales",
+  "Blue Block",
+  "Antirreflex",
+  "Transición",
+];
+
+const products = [
+  { brand: "Ray-Ban", model: "RB5154 Clubmaster", price: "$2,890", badge: "Más vendido", image: "/images/hero-1.png" },
+  { brand: "Oakley", model: "OX8046 Airdrop", price: "$3,450", badge: "", image: "/images/hero-3.png" },
+  { brand: "Ray-Ban", model: "RB7047 Rectangular", price: "$2,190", badge: "Entrega hoy", image: "/images/hero-2.png" },
+  { brand: "Vogue", model: "VO5407 Cat Eye", price: "$1,890", badge: "", image: "/images/hero-1.png" },
+  { brand: "Arnette", model: "AN7189 Urban", price: "$1,590", badge: "Nuevo", image: "/images/hero-3.png" },
+  { brand: "Emporio Armani", model: "EA3099 Classic", price: "$3,290", badge: "", image: "/images/hero-2.png" },
+  { brand: "Ray-Ban", model: "RB5228 Wayfarer", price: "$2,690", badge: "Más vendido", image: "/images/hero-1.png" },
+  { brand: "Michael Kors", model: "MK4030 Vivianna", price: "$2,990", badge: "", image: "/images/hero-3.png" },
+  { brand: "Prada", model: "PR 17WV Conceptual", price: "$5,490", badge: "", image: "/images/hero-2.png" },
+  { brand: "Coach", model: "HC6065 Rectangle", price: "$3,190", badge: "Entrega hoy", image: "/images/hero-1.png" },
+  { brand: "Versace", model: "VE3328 Medusa", price: "$4,290", badge: "", image: "/images/hero-3.png" },
+  { brand: "Burberry", model: "BE2376 Square", price: "$3,890", badge: "Nuevo", image: "/images/hero-2.png" },
 ];
 
 export default function LentesGraduados() {
   return (
     <>
-      {/* Hero */}
-      <section className="pt-14 pb-16 md:pt-20 md:pb-24 bg-[#f7f7f7]">
-        <div className="max-w-[1280px] mx-auto px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-[12px] text-[#004AAD] tracking-[0.2em] uppercase font-medium mb-4">
-                Fabricación Propia
-              </p>
-              <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl lg:text-5xl uppercase tracking-[0.1em] text-[#1a1a1a] font-normal leading-tight mb-5">
-                Lentes Graduados
-                <br />El Mismo Día
-              </h1>
-              <p className="text-[#666] text-[15px] max-w-lg mb-8 leading-relaxed">
-                Fabricamos tus lentes en nuestro laboratorio en Guadalajara. Desde monofocales hasta progresivos de alta gama, sin esperar semanas.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <a
-                  href="https://wa.me/523314257226?text=Hola%2C%20quiero%20cotizar%20lentes%20graduados"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-8 py-3 bg-[#004AAD] text-white text-[12px] tracking-[0.15em] uppercase font-medium hover:bg-[#003580] transition-all"
-                >
-                  Cotizar Lentes
-                </a>
-                <a
-                  href="https://wa.me/523314257226?text=Hola%2C%20quiero%20agendar%20un%20examen%20de%20la%20vista"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-8 py-3 border border-[#004AAD] text-[#004AAD] text-[12px] tracking-[0.15em] uppercase font-medium hover:bg-[#004AAD] hover:text-white transition-all"
-                >
-                  Agendar Examen
-                </a>
-              </div>
-            </div>
-            <div className="hidden lg:block">
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <Image
-                  src="/images/hero-1.png"
-                  alt="Lentes graduados"
-                  fill
-                  className="object-cover"
-                  sizes="50vw"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Breadcrumb */}
+      <div className="max-w-[1280px] mx-auto px-10 pt-6 pb-2">
+        <p className="text-[12px] text-[#999]">
+          <Link href="/" className="hover:text-[#0057A8]">Inicio</Link>
+          <span className="mx-2">&rsaquo;</span>
+          <span className="text-[#444]">Lentes Graduados</span>
+        </p>
+      </div>
 
-      {/* Types */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="max-w-[1280px] mx-auto px-8">
-          <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl uppercase tracking-[0.15em] text-[#1a1a1a] font-normal mb-3">
-            Tipos de Lentes Graduados
-          </h2>
-          <p className="text-[#666] text-[14px] max-w-xl mb-10">
-            Fabricamos todos los tipos de lentes oftálmicos. Todos con tratamientos de calidad y garantía.
-          </p>
+      {/* Title */}
+      <div className="max-w-[1280px] mx-auto px-10 pb-4">
+        <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl text-[#111] font-normal">
+          Lentes Graduados
+        </h1>
+      </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {types.map((t) => (
-              <div
-                key={t.name}
-                className="bg-[#f7f7f7] p-6 border border-[#e5e5e5] hover:border-[#004AAD]/30 transition-all"
+      {/* Filter tabs */}
+      <div className="border-b border-[#eee] mb-6">
+        <div className="max-w-[1280px] mx-auto px-10">
+          <div className="flex items-center gap-6 overflow-x-auto py-3">
+            {tabs.map((tab, i) => (
+              <button
+                key={tab}
+                className={
+                  i === 0
+                    ? "text-[12px] font-semibold text-[#111] border-b-2 border-[#111] pb-3 -mb-[1px] whitespace-nowrap"
+                    : "text-[12px] text-[#888] pb-3 whitespace-nowrap hover:text-[#111] transition-colors"
+                }
               >
-                <h3 className="text-[14px] font-semibold text-[#1a1a1a] uppercase tracking-[0.05em] mb-2">
-                  {t.name}
-                </h3>
-                <p className="text-[13px] text-[#666] leading-relaxed">{t.desc}</p>
-              </div>
+                {tab}
+              </button>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Examen de la vista */}
-      <section className="py-16 md:py-20 bg-[#f7f7f7]">
-        <div className="max-w-[1280px] mx-auto px-8">
-          <div className="grid lg:grid-cols-2 gap-0 bg-white border border-[#e5e5e5] overflow-hidden">
-            <div className="p-8 md:p-12">
-              <p className="text-[12px] text-[#004AAD] tracking-[0.2em] uppercase font-medium mb-4">
-                Servicio Incluido
-              </p>
-              <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl uppercase tracking-[0.1em] text-[#1a1a1a] font-normal mb-6 leading-tight">
-                Examen de la Vista Profesional
-              </h2>
-              <ul className="space-y-3 mb-8">
-                {[
-                  "Revisión completa de agudeza visual",
-                  "Detección de miopía, hipermetropía y astigmatismo",
-                  "Evaluación para lentes progresivos",
-                  "Receta actualizada al momento",
-                  "Sin costo al comprar tus lentes con nosotros",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5 text-[#004AAD] shrink-0 mt-0.5">
-                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span className="text-[#333] text-[13px]">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="https://wa.me/523314257226?text=Hola%2C%20quiero%20agendar%20un%20examen%20de%20la%20vista"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-8 py-3 bg-[#004AAD] text-white text-[12px] tracking-[0.15em] uppercase font-medium hover:bg-[#003580] transition-all"
-              >
-                Agendar Examen
-              </a>
-            </div>
-            <div className="bg-[#f7f7f7] flex items-center justify-center p-10">
-              <div className="text-center text-[#1a1a1a]">
-                <div className="text-8xl font-bold text-[#004AAD]/20 mb-2">E</div>
-                <div className="text-6xl font-bold text-[#004AAD]/15 mb-2">F P</div>
-                <div className="text-4xl font-bold text-[#004AAD]/10 mb-2">T O Z</div>
-                <div className="text-2xl font-bold text-[#004AAD]/5">L P E D</div>
-                <p className="text-[12px] text-[#666] mt-8 tracking-wide">Examen profesional</p>
-              </div>
+            <div className="ml-auto flex items-center gap-4 shrink-0">
+              <button className="text-[12px] text-[#444] flex items-center gap-1">
+                Filtros
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4">
+                  <path d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+                </svg>
+              </button>
+              <button className="text-[12px] text-[#444] flex items-center gap-1">
+                Ordenar
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4">
+                  <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* CTA */}
-      <section className="py-16 md:py-20 bg-[#004AAD]">
-        <div className="max-w-3xl mx-auto px-8 text-center">
-          <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl uppercase tracking-[0.15em] text-white font-normal mb-4">
-            Cotiza Tus Lentes en Minutos
+      {/* Promo banner */}
+      <div className="max-w-[1280px] mx-auto px-10 mb-8">
+        <div className="bg-[#0057A8] text-white text-center py-6 px-6 rounded-sm">
+          <p className="text-[11px] tracking-[0.12em] uppercase mb-1">&mdash; En tienda y en l&iacute;nea &mdash;</p>
+          <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl font-normal mb-2">
+            LABORATORIO PROPIO EN GUADALAJARA
           </h2>
-          <p className="text-white/70 text-[14px] mb-8">
-            Envíanos tu receta por WhatsApp y te damos precio y tiempo de entrega al instante.
+          <p className="text-[12px] text-white/70 max-w-2xl mx-auto mb-2">
+            Fabricamos tus lentes el mismo d&iacute;a. Env&iacute;a tu receta por WhatsApp.
           </p>
           <a
-            href="https://wa.me/523314257226?text=Hola%2C%20quiero%20cotizar%20lentes%20graduados.%20Mi%20receta%20es%3A"
+            href="https://wa.me/523314257226?text=Hola%2C%20quiero%20cotizar%20lentes%20graduados"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-3 border border-white text-white text-[12px] tracking-[0.2em] uppercase font-medium hover:bg-white hover:text-[#004AAD] transition-all"
+            className="text-[12px] underline"
           >
-            Enviar Receta por WhatsApp
+            Cotizar ahora
           </a>
         </div>
-      </section>
+      </div>
+
+      {/* Product grid */}
+      <div className="max-w-[1280px] mx-auto px-10 pb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {products.map((p) => (
+            <a
+              key={p.brand + p.model}
+              href={`https://wa.me/523314257226?text=${encodeURIComponent(`Hola, me interesa el modelo ${p.brand} ${p.model}`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-[#F8F8F8] rounded-sm p-5 hover:shadow-md transition-all relative"
+            >
+              {/* Badge */}
+              {p.badge && (
+                <span className="absolute top-4 left-4 bg-white text-[10px] font-semibold uppercase tracking-wider text-[#111] px-2 py-1 shadow-sm z-10">
+                  {p.badge}
+                </span>
+              )}
+              {/* Heart icon */}
+              <span className="absolute top-4 right-4 text-[#ccc] group-hover:text-[#0057A8] z-10 transition-colors">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5">
+                  <path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                </svg>
+              </span>
+              {/* Image */}
+              <div className="relative aspect-square overflow-hidden rounded-sm mb-4">
+                <Image
+                  src={p.image}
+                  alt={`${p.brand} ${p.model}`}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+              </div>
+              {/* Info */}
+              <p className="text-[13px] font-bold text-[#111]">{p.brand}</p>
+              <p className="text-[13px] text-[#666]">{p.model}</p>
+              <p className="text-[14px] font-semibold text-[#111] mt-1">{p.price}</p>
+            </a>
+          ))}
+        </div>
+      </div>
     </>
   );
 }
