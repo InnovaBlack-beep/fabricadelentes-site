@@ -57,7 +57,7 @@ export function Hero() {
   const slide = slides[current];
 
   return (
-    <section className="relative h-screen min-h-[600px] max-h-[1000px] overflow-hidden bg-dark">
+    <section className="relative h-[320px] sm:h-[380px] md:h-[480px] overflow-hidden bg-dark">
       {/* Background */}
       {slides.map((s, i) => (
         <div
@@ -90,7 +90,7 @@ export function Hero() {
       ))}
 
       {/* Content - positioned at bottom-left */}
-      <div className="relative z-10 h-full max-w-[1440px] mx-auto px-6 md:px-10 flex items-end pb-20 md:pb-28">
+      <div className="relative z-10 h-full max-w-[1440px] mx-auto px-6 md:px-10 flex items-end pb-8 md:pb-12">
         <div className="max-w-xl animate-fade-in-up">
           <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-white/60 mb-4">
             {slide.tagline}
