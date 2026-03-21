@@ -4,17 +4,20 @@ import Link from "next/link";
 const categories = [
   {
     title: "Lentes Graduados",
-    image: "/images/hero-1.png",
+    image: "/images/lifestyle-2.jpg",
+    objectPosition: "center top",
     href: "/lentes-graduados",
   },
   {
-    title: "Lentes de Sol",
-    image: "/images/hero-2.png",
-    href: "/lentes-de-sol",
+    title: "Laboratorio Propio",
+    image: "/images/lifestyle-1.jpg",
+    objectPosition: "center center",
+    href: "/laboratorio",
   },
   {
     title: "Lentes de Contacto",
-    image: "/images/hero-3.png",
+    image: "/images/lifestyle-3.jpg",
+    objectPosition: "center center",
     href: "/lentes-de-contacto",
   },
 ];
@@ -35,6 +38,7 @@ export function CategoryGrid() {
                 alt={cat.title}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
+                style={{ objectPosition: cat.objectPosition }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
