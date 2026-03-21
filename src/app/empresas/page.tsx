@@ -29,34 +29,27 @@ export default function Empresas() {
       {/* Hero */}
       <section className="pt-14 pb-16 md:pt-20 md:pb-24 bg-[#F0EBE3]">
         <div className="max-w-[1280px] mx-auto px-10 text-center">
-          <p
-            className="text-[10px] text-[#C8A040] tracking-[0.16em] uppercase mb-4"
-            style={{ fontFamily: "var(--font-sans)", fontWeight: 600 }}
-          >
+          <p className="text-xs text-[#C8A040] tracking-[0.16em] uppercase mb-4 font-semibold">
             Canal Empresarial
           </p>
           <h1
-            className="text-3xl md:text-4xl lg:text-5xl text-[#111110] leading-tight mb-5 max-w-3xl mx-auto"
-            style={{ fontFamily: "var(--font-serif)", fontWeight: 700 }}
+            className="text-3xl md:text-4xl lg:text-5xl text-[#111110] leading-tight mb-5 max-w-3xl mx-auto font-bold"
+            style={{ fontFamily: "var(--font-serif)" }}
           >
             Lleva F&aacute;brica de Lentes
             <br />a tu empresa
           </h1>
-          <p className="text-[#6A5A4A] text-[13px] max-w-2xl mx-auto mb-4" style={{ fontFamily: "var(--font-sans)" }}>
+          <p className="text-[#6A5A4A] text-sm max-w-2xl mx-auto mb-4">
             M&aacute;s de 150 empleados atendidos en una sola empresa. Convenios corporativos con beneficios reales para tu equipo.
           </p>
-          <p
-            className="text-[10px] text-[#C8A040] tracking-[0.16em] uppercase mb-8"
-            style={{ fontFamily: "var(--font-sans)", fontWeight: 600 }}
-          >
+          <p className="text-xs text-[#C8A040] tracking-[0.16em] uppercase mb-8 font-semibold">
             Experiencia probada con empresas en Guadalajara
           </p>
           <a
             href="https://wa.me/523314257226?text=Hola%2C%20me%20interesa%20un%20convenio%20empresarial%20para%20lentes"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-[#111110] text-[#F5F0EA] rounded-full px-8 py-3.5 text-[11px] uppercase tracking-[0.07em] font-medium hover:bg-[#C8A040] hover:text-[#1A1000] transition-colors"
-            style={{ fontFamily: "var(--font-sans)", fontWeight: 500 }}
+            className="inline-block bg-[#111110] text-[#F5F0EA] rounded-full px-8 py-3.5 text-xs uppercase tracking-[0.07em] font-medium hover:bg-[#C8A040] hover:text-[#1A1000] transition-colors"
           >
             Solicitar Convenio
           </a>
@@ -67,12 +60,12 @@ export default function Empresas() {
       <section className="py-16 md:py-20 bg-[#FAF8F5]">
         <div className="max-w-[1280px] mx-auto px-10">
           <h2
-            className="text-2xl md:text-3xl text-[#111110] mb-3"
-            style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}
+            className="text-2xl md:text-3xl text-[#111110] mb-3 font-semibold"
+            style={{ fontFamily: "var(--font-serif)" }}
           >
             Beneficios para tu empresa
           </h2>
-          <p className="text-[#6A5A4A] text-[13px] max-w-xl mb-10" style={{ fontFamily: "var(--font-sans)" }}>
+          <p className="text-[#6A5A4A] text-sm max-w-xl mb-10">
             Un beneficio real para tu equipo que no cuesta nada implementar.
           </p>
 
@@ -82,13 +75,10 @@ export default function Empresas() {
                 key={b.title}
                 className="bg-[#F0EBE3] rounded-[10px] p-6 hover:bg-[#E8E0D8] transition-all"
               >
-                <h3
-                  className="text-[13px] font-semibold text-[#111110] uppercase tracking-[0.05em] mb-2"
-                  style={{ fontFamily: "var(--font-sans)", fontWeight: 600 }}
-                >
+                <h3 className="text-sm font-semibold text-[#111110] uppercase tracking-[0.05em] mb-2">
                   {b.title}
                 </h3>
-                <p className="text-[13px] text-[#6A5A4A] leading-relaxed" style={{ fontFamily: "var(--font-sans)" }}>{b.desc}</p>
+                <p className="text-sm text-[#6A5A4A] leading-relaxed">{b.desc}</p>
               </div>
             ))}
           </div>
@@ -99,8 +89,8 @@ export default function Empresas() {
       <section className="py-16 md:py-20 bg-[#F0EBE3]">
         <div className="max-w-4xl mx-auto px-10">
           <h2
-            className="text-2xl md:text-3xl text-[#111110] mb-10"
-            style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}
+            className="text-2xl md:text-3xl text-[#111110] mb-10 font-semibold"
+            style={{ fontFamily: "var(--font-serif)" }}
           >
             &iquest;C&oacute;mo funciona?
           </h2>
@@ -120,13 +110,10 @@ export default function Empresas() {
                   {s.step}
                 </div>
                 <div>
-                  <h3
-                    className="text-[13px] font-semibold text-[#111110] uppercase tracking-[0.05em] mb-1"
-                    style={{ fontFamily: "var(--font-sans)", fontWeight: 600 }}
-                  >
+                  <h3 className="text-sm font-semibold text-[#111110] uppercase tracking-[0.05em] mb-1">
                     {s.title}
                   </h3>
-                  <p className="text-[13px] text-[#6A5A4A] leading-relaxed" style={{ fontFamily: "var(--font-sans)" }}>{s.desc}</p>
+                  <p className="text-sm text-[#6A5A4A] leading-relaxed">{s.desc}</p>
                 </div>
               </div>
             ))}
@@ -138,12 +125,12 @@ export default function Empresas() {
       <section className="py-16 md:py-20 bg-[#1A1818]">
         <div className="max-w-3xl mx-auto px-10 text-center">
           <h2
-            className="text-2xl md:text-3xl text-[#F5F0EA] mb-4"
-            style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}
+            className="text-2xl md:text-3xl text-[#F5F0EA] mb-4 font-semibold"
+            style={{ fontFamily: "var(--font-serif)" }}
           >
             &iquest;Interesado en un convenio?
           </h2>
-          <p className="text-[rgba(245,240,234,0.60)] text-[13px] max-w-lg mx-auto mb-8" style={{ fontFamily: "var(--font-sans)" }}>
+          <p className="text-[rgba(245,240,234,0.60)] text-sm max-w-lg mx-auto mb-8">
             Cu&eacute;ntanos sobre tu empresa y te enviamos una propuesta personalizada sin compromiso.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
@@ -151,15 +138,13 @@ export default function Empresas() {
               href="https://wa.me/523314257226?text=Hola%2C%20soy%20de%20RR.HH.%20y%20me%20interesa%20un%20convenio%20%C3%B3ptico%20para%20nuestra%20empresa"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-[#C8A040] text-[#C8A040] bg-transparent rounded-full px-8 py-3 text-[11px] uppercase tracking-[0.07em] font-medium hover:bg-[#C8A040] hover:text-[#1A1000] transition-colors"
-              style={{ fontFamily: "var(--font-sans)", fontWeight: 500 }}
+              className="border border-[#C8A040] text-[#C8A040] bg-transparent rounded-full px-8 py-3 text-xs uppercase tracking-[0.07em] font-medium hover:bg-[#C8A040] hover:text-[#1A1000] transition-colors"
             >
               Escribir por WhatsApp
             </a>
             <a
               href="tel:+523314257226"
-              className="border border-[rgba(245,240,234,0.20)] text-[rgba(245,240,234,0.60)] bg-transparent rounded-full px-8 py-3 text-[11px] uppercase tracking-[0.07em] font-medium hover:border-[rgba(245,240,234,0.40)] hover:text-[#F5F0EA] transition-colors"
-              style={{ fontFamily: "var(--font-sans)", fontWeight: 500 }}
+              className="border border-[rgba(245,240,234,0.20)] text-[rgba(245,240,234,0.60)] bg-transparent rounded-full px-8 py-3 text-xs uppercase tracking-[0.07em] font-medium hover:border-[rgba(245,240,234,0.40)] hover:text-[#F5F0EA] transition-colors"
             >
               Llamar: 33 1425 7226
             </a>

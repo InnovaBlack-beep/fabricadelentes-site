@@ -92,13 +92,7 @@ export default function LentesDeContacto() {
     <>
       {/* Breadcrumb */}
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 pt-6 pb-2">
-        <p
-          style={{
-            fontFamily: "var(--font-sans)",
-            fontSize: 12,
-            color: "#A09080",
-          }}
-        >
+        <p className="text-xs" style={{ color: "#A09080" }}>
           <Link
             href="/"
             className="hover:text-[#C8A040] transition-colors"
@@ -106,7 +100,7 @@ export default function LentesDeContacto() {
           >
             Inicio
           </Link>
-          <span className="mx-2">›</span>
+          <span className="mx-2">&rsaquo;</span>
           <span style={{ color: "#6A5A4A" }}>Lentes de Contacto</span>
         </p>
       </div>
@@ -114,10 +108,9 @@ export default function LentesDeContacto() {
       {/* Title + filters */}
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 pb-4">
         <h1
+          className="text-3xl md:text-4xl"
           style={{
             fontFamily: "var(--font-serif)",
-            fontWeight: 400,
-            fontSize: "clamp(32px, 4vw, 40px)",
             color: "#111110",
           }}
         >
@@ -135,10 +128,8 @@ export default function LentesDeContacto() {
             {filterPills.map((pill) => (
               <button
                 key={pill}
-                className="shrink-0 rounded-full transition-colors"
+                className="shrink-0 rounded-full transition-colors text-xs"
                 style={{
-                  fontFamily: "var(--font-sans)",
-                  fontSize: 11,
                   color: "#6A5A4A",
                   border: "0.5px solid #C8C0B8",
                   padding: "7px 14px",
@@ -152,10 +143,8 @@ export default function LentesDeContacto() {
           </div>
           <div className="hidden md:flex items-center gap-4 shrink-0">
             <button
+              className="text-xs font-semibold"
               style={{
-                fontFamily: "var(--font-sans)",
-                fontWeight: 600,
-                fontSize: 12,
                 color: "#6A5A4A",
                 background: "none",
                 border: "none",
@@ -165,10 +154,8 @@ export default function LentesDeContacto() {
               Filtros ≡
             </button>
             <button
+              className="text-xs font-semibold"
               style={{
-                fontFamily: "var(--font-sans)",
-                fontWeight: 600,
-                fontSize: 12,
                 color: "#6A5A4A",
                 background: "none",
                 border: "none",
@@ -188,10 +175,8 @@ export default function LentesDeContacto() {
           style={{ background: "#1A1818", borderRadius: 10 }}
         >
           <p
+            className="text-xs uppercase"
             style={{
-              fontFamily: "var(--font-sans)",
-              fontSize: 10,
-              textTransform: "uppercase",
               letterSpacing: "0.12em",
               color: "rgba(245,240,234,0.55)",
               marginBottom: 4,
@@ -200,10 +185,9 @@ export default function LentesDeContacto() {
             — EN TIENDA —
           </p>
           <h2
+            className="text-2xl font-semibold"
             style={{
               fontFamily: "var(--font-serif)",
-              fontWeight: 600,
-              fontSize: 28,
               color: "#F5F0EA",
               marginBottom: 8,
             }}
@@ -211,10 +195,8 @@ export default function LentesDeContacto() {
             TODAS LAS MARCAS · LENTES LISTOS EN 1 HORA
           </h2>
           <p
+            className="text-xs uppercase"
             style={{
-              fontFamily: "var(--font-sans)",
-              fontSize: 10,
-              textTransform: "uppercase",
               letterSpacing: "0.06em",
               color: "rgba(245,240,234,0.45)",
             }}
@@ -242,16 +224,12 @@ export default function LentesDeContacto() {
             >
               {p.badge && (
                 <span
-                  className="rounded-full"
+                  className="rounded-full text-xs font-bold absolute"
                   style={{
-                    position: "absolute",
                     top: 16,
                     left: 16,
                     background: "#C8A040",
                     color: "#1A1000",
-                    fontFamily: "var(--font-sans)",
-                    fontWeight: 700,
-                    fontSize: 10,
                     padding: "2px 10px",
                     zIndex: 10,
                   }}
@@ -266,19 +244,17 @@ export default function LentesDeContacto() {
                 <ContactLensSVG variant={i} />
               </div>
               <p
+                className="text-sm font-semibold"
                 style={{
                   fontFamily: "var(--font-serif)",
-                  fontWeight: 600,
-                  fontSize: 14,
                   color: "#111110",
                 }}
               >
                 {p.brand}
               </p>
               <p
+                className="text-xs"
                 style={{
-                  fontFamily: "var(--font-sans)",
-                  fontSize: 12,
                   color: "#6A5A4A",
                   marginTop: 2,
                 }}
@@ -286,11 +262,9 @@ export default function LentesDeContacto() {
                 {p.model}
               </p>
               <p
-                className="mt-2"
+                className="mt-2 text-base font-semibold"
                 style={{
                   fontFamily: "var(--font-serif)",
-                  fontWeight: 600,
-                  fontSize: 15,
                   color: "#111110",
                 }}
               >

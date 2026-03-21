@@ -20,15 +20,12 @@ export default function Contacto() {
       <section className="pt-14 pb-8 md:pt-20 md:pb-12 bg-[#F0EBE3]">
         <div className="max-w-[1280px] mx-auto px-10 text-center">
           <h1
-            className="text-[36px] md:text-[48px] text-[#111110] mb-3"
-            style={{ fontFamily: "var(--font-serif)", fontWeight: 700 }}
+            className="text-3xl md:text-4xl text-[#111110] mb-3 font-bold"
+            style={{ fontFamily: "var(--font-serif)" }}
           >
             Contáctanos
           </h1>
-          <p
-            className="text-[13px] text-[#A09080]"
-            style={{ fontFamily: "var(--font-sans)", fontWeight: 400 }}
-          >
+          <p className="text-sm text-[#A09080]">
             Zona Minerva · Guadalajara · Lun–Sáb 10–20h
           </p>
         </div>
@@ -41,8 +38,8 @@ export default function Contacto() {
             {/* Left — Form */}
             <div className="bg-[#F0EBE3] rounded-[10px] p-8 md:p-10">
               <h2
-                className="text-[24px] text-[#111110] mb-6"
-                style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}
+                className="text-2xl text-[#111110] mb-6 font-semibold"
+                style={{ fontFamily: "var(--font-serif)" }}
               >
                 Agenda tu examen
               </h2>
@@ -50,8 +47,7 @@ export default function Contacto() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-[10px] font-semibold text-[#6A5A4A] mb-1.5 uppercase tracking-[0.10em]"
-                    style={{ fontFamily: "var(--font-sans)", fontWeight: 600 }}
+                    className="block text-xs font-semibold text-[#6A5A4A] mb-1.5 uppercase tracking-[0.10em]"
                   >
                     Nombre
                   </label>
@@ -61,16 +57,14 @@ export default function Contacto() {
                     required
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="w-full px-5 py-3.5 border border-[#C8C0B8] rounded-[10px] bg-[#FAF8F5] text-[#111110] text-[14px] placeholder:text-[#A09080] focus:outline-none focus:border-[#C8A040] transition-colors"
-                    style={{ fontFamily: "var(--font-sans)" }}
+                    className="w-full px-5 py-3.5 border border-[#C8C0B8] rounded-[10px] bg-[#FAF8F5] text-[#111110] text-sm placeholder:text-[#A09080] focus:outline-none focus:border-[#C8A040] transition-colors"
                     placeholder="Tu nombre"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="phone"
-                    className="block text-[10px] font-semibold text-[#6A5A4A] mb-1.5 uppercase tracking-[0.10em]"
-                    style={{ fontFamily: "var(--font-sans)", fontWeight: 600 }}
+                    className="block text-xs font-semibold text-[#6A5A4A] mb-1.5 uppercase tracking-[0.10em]"
                   >
                     Teléfono / WhatsApp
                   </label>
@@ -80,16 +74,14 @@ export default function Contacto() {
                     required
                     value={form.phone}
                     onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                    className="w-full px-5 py-3.5 border border-[#C8C0B8] rounded-[10px] bg-[#FAF8F5] text-[#111110] text-[14px] placeholder:text-[#A09080] focus:outline-none focus:border-[#C8A040] transition-colors"
-                    style={{ fontFamily: "var(--font-sans)" }}
+                    className="w-full px-5 py-3.5 border border-[#C8C0B8] rounded-[10px] bg-[#FAF8F5] text-[#111110] text-sm placeholder:text-[#A09080] focus:outline-none focus:border-[#C8A040] transition-colors"
                     placeholder="33 1234 5678"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="service"
-                    className="block text-[10px] font-semibold text-[#6A5A4A] mb-1.5 uppercase tracking-[0.10em]"
-                    style={{ fontFamily: "var(--font-sans)", fontWeight: 600 }}
+                    className="block text-xs font-semibold text-[#6A5A4A] mb-1.5 uppercase tracking-[0.10em]"
                   >
                     Tipo de lente
                   </label>
@@ -97,8 +89,7 @@ export default function Contacto() {
                     id="service"
                     value={form.service}
                     onChange={(e) => setForm({ ...form, service: e.target.value })}
-                    className="w-full px-5 py-3.5 border border-[#C8C0B8] rounded-[10px] bg-[#FAF8F5] text-[#111110] text-[14px] focus:outline-none focus:border-[#C8A040] transition-colors"
-                    style={{ fontFamily: "var(--font-sans)" }}
+                    className="w-full px-5 py-3.5 border border-[#C8C0B8] rounded-[10px] bg-[#FAF8F5] text-[#111110] text-sm focus:outline-none focus:border-[#C8A040] transition-colors"
                   >
                     <option value="">Selecciona una opción</option>
                     <option value="Lentes graduados">Lentes graduados</option>
@@ -112,8 +103,7 @@ export default function Contacto() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-[10px] font-semibold text-[#6A5A4A] mb-1.5 uppercase tracking-[0.10em]"
-                    style={{ fontFamily: "var(--font-sans)", fontWeight: 600 }}
+                    className="block text-xs font-semibold text-[#6A5A4A] mb-1.5 uppercase tracking-[0.10em]"
                   >
                     Mensaje
                   </label>
@@ -122,15 +112,13 @@ export default function Contacto() {
                     rows={4}
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    className="w-full px-5 py-3.5 border border-[#C8C0B8] rounded-[10px] bg-[#FAF8F5] text-[#111110] text-[14px] placeholder:text-[#A09080] focus:outline-none focus:border-[#C8A040] transition-colors resize-none"
-                    style={{ fontFamily: "var(--font-sans)" }}
+                    className="w-full px-5 py-3.5 border border-[#C8C0B8] rounded-[10px] bg-[#FAF8F5] text-[#111110] text-sm placeholder:text-[#A09080] focus:outline-none focus:border-[#C8A040] transition-colors resize-none"
                     placeholder="Cuéntanos cómo podemos ayudarte..."
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-[#111110] text-[#F5F0EA] rounded-full px-6 py-3.5 text-[11px] uppercase tracking-[0.08em] font-bold hover:bg-[#C8A040] hover:text-[#1A1000] transition-colors"
-                  style={{ fontFamily: "var(--font-sans)", fontWeight: 700 }}
+                  className="w-full bg-[#111110] text-[#F5F0EA] rounded-full px-6 py-3.5 text-xs uppercase tracking-[0.08em] font-bold hover:bg-[#C8A040] hover:text-[#1A1000] transition-colors"
                 >
                   Enviar por WhatsApp
                 </button>
@@ -142,8 +130,7 @@ export default function Contacto() {
               {/* Address & contact */}
               <div className="bg-[#F0EBE3] rounded-[10px] p-7">
                 <h3
-                  className="text-[10px] uppercase tracking-[0.14em] font-semibold text-[#6A5A4A] mb-5"
-                  style={{ fontFamily: "var(--font-sans)", fontWeight: 600 }}
+                  className="text-xs uppercase tracking-[0.14em] font-semibold text-[#6A5A4A] mb-5"
                 >
                   Información
                 </h3>
@@ -154,7 +141,7 @@ export default function Contacto() {
                       <path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                     </svg>
                     <div>
-                      <p className="text-[13px] text-[#111110] font-medium" style={{ fontFamily: "var(--font-sans)" }}>
+                      <p className="text-sm text-[#111110] font-medium">
                         Zona Minerva, Guadalajara, Jalisco
                       </p>
                     </div>
@@ -163,7 +150,7 @@ export default function Contacto() {
                     <svg viewBox="0 0 24 24" fill="none" stroke="#C8A040" strokeWidth={1.5} className="w-5 h-5 mt-0.5 shrink-0">
                       <path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <p className="text-[13px] text-[#111110] font-medium" style={{ fontFamily: "var(--font-sans)" }}>
+                    <p className="text-sm text-[#111110] font-medium">
                       Lunes a Sábado · 10:00–20:00
                     </p>
                   </div>
@@ -174,7 +161,7 @@ export default function Contacto() {
                     <svg viewBox="0 0 24 24" fill="none" stroke="#C8A040" strokeWidth={1.5} className="w-5 h-5 mt-0.5 shrink-0">
                       <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                     </svg>
-                    <p className="text-[13px] text-[#111110] font-medium" style={{ fontFamily: "var(--font-sans)" }}>
+                    <p className="text-sm text-[#111110] font-medium">
                       33 1425 7226
                     </p>
                   </a>
@@ -195,13 +182,10 @@ export default function Contacto() {
                     </svg>
                   </div>
                   <div>
-                    <p
-                      className="text-[14px] font-semibold text-[#F5F0EA] mb-0.5"
-                      style={{ fontFamily: "var(--font-sans)", fontWeight: 600 }}
-                    >
+                    <p className="text-sm font-semibold text-[#F5F0EA] mb-0.5">
                       ¿Prefieres WhatsApp?
                     </p>
-                    <p className="text-[12px] text-[rgba(245,240,234,0.55)]" style={{ fontFamily: "var(--font-sans)" }}>
+                    <p className="text-xs text-[rgba(245,240,234,0.55)]">
                       Respondemos en minutos · Toca para abrir
                     </p>
                   </div>
@@ -227,14 +211,11 @@ export default function Contacto() {
                       <path fill="url(#half)" d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   </div>
-                  <span
-                    className="text-[13px] text-[#111110] font-medium"
-                    style={{ fontFamily: "var(--font-sans)" }}
-                  >
+                  <span className="text-sm text-[#111110] font-medium">
                     4 estrellas en Google Maps
                   </span>
                 </div>
-                <p className="text-[12px] text-[#A09080]" style={{ fontFamily: "var(--font-sans)" }}>
+                <p className="text-xs text-[#A09080]">
                   Reseñas verificadas de nuestros clientes
                 </p>
               </div>

@@ -131,10 +131,9 @@ export function ProductGrid() {
       <div className="flex items-end justify-between mb-8">
         <div>
           <h2
+            className="text-2xl font-semibold"
             style={{
               fontFamily: "var(--font-serif)",
-              fontWeight: 600,
-              fontSize: 28,
               color: "#111110",
               marginBottom: 16,
             }}
@@ -146,13 +145,9 @@ export function ProductGrid() {
               <button
                 key={tab}
                 onClick={() => setActiveTab(i)}
+                className={`text-sm ${activeTab === i ? "font-bold" : ""}`}
                 style={{
-                  fontFamily: "var(--font-sans)",
-                  fontWeight: activeTab === i ? 700 : 400,
-                  fontSize: 13,
                   color: activeTab === i ? "#111110" : "#A09080",
-                  borderBottom:
-                    activeTab === i ? "1.5px solid #C8A040" : "1.5px solid transparent",
                   paddingBottom: 6,
                   background: "none",
                   border: "none",
@@ -169,10 +164,8 @@ export function ProductGrid() {
         </div>
         <a
           href="/lentes-graduados"
-          className="transition-colors"
+          className="transition-colors text-xs"
           style={{
-            fontFamily: "var(--font-sans)",
-            fontSize: 12,
             color: "#A09080",
           }}
           onMouseEnter={(e) => (e.currentTarget.style.color = "#C8A040")}
@@ -210,13 +203,10 @@ export function ProductGrid() {
               {product.badges.map((badge) => (
                 <span
                   key={badge}
-                  className="rounded-full"
+                  className="rounded-full text-xs font-bold"
                   style={{
                     background: "#C8A040",
                     color: "#1A1000",
-                    fontFamily: "var(--font-sans)",
-                    fontWeight: 700,
-                    fontSize: 10,
                     padding: "2px 10px",
                   }}
                 >
@@ -236,19 +226,17 @@ export function ProductGrid() {
             {/* Info */}
             <div className="mt-3">
               <p
+                className="text-sm font-semibold"
                 style={{
                   fontFamily: "var(--font-serif)",
-                  fontWeight: 600,
-                  fontSize: 14,
                   color: "#111110",
                 }}
               >
                 {product.brand}
               </p>
               <p
+                className="text-xs"
                 style={{
-                  fontFamily: "var(--font-sans)",
-                  fontSize: 12,
                   color: "#6A5A4A",
                   marginTop: 2,
                 }}
@@ -256,11 +244,9 @@ export function ProductGrid() {
                 {product.model} · {product.variants}
               </p>
               <p
-                className="mt-2"
+                className="mt-2 text-base font-semibold"
                 style={{
                   fontFamily: "var(--font-serif)",
-                  fontWeight: 600,
-                  fontSize: 15,
                   color: "#111110",
                 }}
               >

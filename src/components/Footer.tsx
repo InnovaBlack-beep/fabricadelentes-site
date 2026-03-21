@@ -9,11 +9,8 @@ export function Footer() {
         {/* Productos */}
         <div>
           <h4
+            className="text-xs font-semibold uppercase"
             style={{
-              fontFamily: "var(--font-sans)",
-              fontWeight: 600,
-              fontSize: 10,
-              textTransform: "uppercase",
               letterSpacing: "0.14em",
               color: "#F5F0EA",
               marginBottom: 16,
@@ -31,10 +28,8 @@ export function Footer() {
               <li key={item.label}>
                 <Link
                   href={item.href}
-                  className="transition-colors leading-[2]"
+                  className="transition-colors leading-[2] text-xs"
                   style={{
-                    fontFamily: "var(--font-sans)",
-                    fontSize: 12,
                     color: "rgba(245,240,234,0.38)",
                   }}
                   onMouseEnter={(e) =>
@@ -54,11 +49,8 @@ export function Footer() {
         {/* Servicios */}
         <div>
           <h4
+            className="text-xs font-semibold uppercase"
             style={{
-              fontFamily: "var(--font-sans)",
-              fontWeight: 600,
-              fontSize: 10,
-              textTransform: "uppercase",
               letterSpacing: "0.14em",
               color: "#F5F0EA",
               marginBottom: 16,
@@ -76,10 +68,8 @@ export function Footer() {
               <li key={item.label}>
                 <Link
                   href={item.href}
-                  className="transition-colors leading-[2]"
+                  className="transition-colors leading-[2] text-xs"
                   style={{
-                    fontFamily: "var(--font-sans)",
-                    fontSize: 12,
                     color: "rgba(245,240,234,0.38)",
                   }}
                   onMouseEnter={(e) =>
@@ -99,11 +89,8 @@ export function Footer() {
         {/* Empresa */}
         <div>
           <h4
+            className="text-xs font-semibold uppercase"
             style={{
-              fontFamily: "var(--font-sans)",
-              fontWeight: 600,
-              fontSize: 10,
-              textTransform: "uppercase",
               letterSpacing: "0.14em",
               color: "#F5F0EA",
               marginBottom: 16,
@@ -121,10 +108,8 @@ export function Footer() {
               <li key={item.label}>
                 <Link
                   href={item.href}
-                  className="transition-colors leading-[2]"
+                  className="transition-colors leading-[2] text-xs"
                   style={{
-                    fontFamily: "var(--font-sans)",
-                    fontSize: 12,
                     color: "rgba(245,240,234,0.38)",
                   }}
                   onMouseEnter={(e) =>
@@ -144,11 +129,8 @@ export function Footer() {
         {/* Contacto */}
         <div>
           <h4
+            className="text-xs font-semibold uppercase"
             style={{
-              fontFamily: "var(--font-sans)",
-              fontWeight: 600,
-              fontSize: 10,
-              textTransform: "uppercase",
               letterSpacing: "0.14em",
               color: "#F5F0EA",
               marginBottom: 16,
@@ -162,10 +144,8 @@ export function Footer() {
                 href="https://wa.me/523314257226"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors leading-[2]"
+                className="transition-colors leading-[2] text-xs"
                 style={{
-                  fontFamily: "var(--font-sans)",
-                  fontSize: 12,
                   color: "rgba(245,240,234,0.38)",
                 }}
                 onMouseEnter={(e) =>
@@ -179,30 +159,24 @@ export function Footer() {
               </a>
             </li>
             <li
-              className="leading-[2]"
+              className="leading-[2] text-xs"
               style={{
-                fontFamily: "var(--font-sans)",
-                fontSize: 12,
                 color: "rgba(245,240,234,0.38)",
               }}
             >
               Zona Minerva · GDL
             </li>
             <li
-              className="leading-[2]"
+              className="leading-[2] text-xs"
               style={{
-                fontFamily: "var(--font-sans)",
-                fontSize: 12,
                 color: "rgba(245,240,234,0.38)",
               }}
             >
               Lun–Sáb · 10:00–20:00
             </li>
             <li
-              className="leading-[2]"
+              className="leading-[2] text-xs"
               style={{
-                fontFamily: "var(--font-sans)",
-                fontSize: 12,
                 color: "rgba(245,240,234,0.38)",
               }}
             >
@@ -219,10 +193,9 @@ export function Footer() {
       >
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <span
+            className="text-sm font-semibold"
             style={{
               fontFamily: "var(--font-serif)",
-              fontWeight: 600,
-              fontSize: 14,
               color: "#C8A040",
             }}
           >
@@ -230,9 +203,8 @@ export function Footer() {
           </span>
 
           <p
+            className="text-xs"
             style={{
-              fontFamily: "var(--font-sans)",
-              fontSize: 12,
               color: "rgba(245,240,234,0.38)",
             }}
           >
@@ -287,9 +259,8 @@ export function Footer() {
           </div>
 
           <p
+            className="text-xs"
             style={{
-              fontFamily: "var(--font-sans)",
-              fontSize: 12,
               color: "rgba(245,240,234,0.38)",
             }}
           >

@@ -21,11 +21,9 @@ export function FilterBar() {
       }}
     >
       <span
-        className="shrink-0"
+        className="shrink-0 text-base font-semibold"
         style={{
           fontFamily: "var(--font-serif)",
-          fontWeight: 600,
-          fontSize: 15,
           color: "#111110",
           borderRight: "2px solid #111110",
           paddingRight: 8,
@@ -37,10 +35,8 @@ export function FilterBar() {
       {chips.map((chip) => (
         <button
           key={chip}
-          className="shrink-0 rounded-full transition-colors"
+          className="shrink-0 rounded-full transition-colors text-xs"
           style={{
-            fontFamily: "var(--font-sans)",
-            fontSize: 11,
             color: "#6A5A4A",
             border: "0.5px solid #C8C0B8",
             padding: "7px 14px",

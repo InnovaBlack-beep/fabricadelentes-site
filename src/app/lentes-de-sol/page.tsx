@@ -46,7 +46,7 @@ export default function LentesDeSol() {
     <>
       {/* Breadcrumb */}
       <div className="max-w-[1280px] mx-auto px-10 pt-6 pb-2">
-        <p className="text-[12px] text-[#A09080]">
+        <p className="text-xs text-[#A09080]">
           <Link href="/" className="hover:text-[#C8A040] transition-colors">Inicio</Link>
           <span className="mx-2">&rsaquo;</span>
           <span className="text-[#6A5A4A]">Lentes de Sol</span>
@@ -56,8 +56,8 @@ export default function LentesDeSol() {
       {/* Title */}
       <div className="max-w-[1280px] mx-auto px-10 pb-4">
         <h1
-          className="text-[32px] md:text-[40px] text-[#111110]"
-          style={{ fontFamily: "var(--font-serif)", fontWeight: 400 }}
+          className="text-3xl md:text-4xl text-[#111110]"
+          style={{ fontFamily: "var(--font-serif)" }}
         >
           Lentes de Sol
         </h1>
@@ -72,10 +72,9 @@ export default function LentesDeSol() {
                 key={pill}
                 className={
                   i === 0
-                    ? "text-[11px] font-medium text-[#111110] border border-[#111110] rounded-full px-3.5 py-1.5 whitespace-nowrap"
-                    : "text-[11px] text-[#6A5A4A] border border-[#C8C0B8] rounded-full px-3.5 py-1.5 whitespace-nowrap hover:border-[#111110] hover:text-[#111110] transition-colors"
+                    ? "text-xs font-medium text-[#111110] border border-[#111110] rounded-full px-3.5 py-1.5 whitespace-nowrap"
+                    : "text-xs text-[#6A5A4A] border border-[#C8C0B8] rounded-full px-3.5 py-1.5 whitespace-nowrap hover:border-[#111110] hover:text-[#111110] transition-colors"
                 }
-                style={{ fontFamily: "var(--font-sans)" }}
               >
                 {pill}
               </button>
@@ -87,21 +86,21 @@ export default function LentesDeSol() {
       {/* Dark promo banner */}
       <div className="max-w-[1280px] mx-auto px-10 mb-8">
         <div className="bg-[#1A1818] text-center py-6 px-6 rounded-[10px]">
-          <p className="text-[11px] tracking-[0.12em] uppercase mb-1 text-[rgba(245,240,234,0.50)]">&mdash; Originales con garant&iacute;a &mdash;</p>
+          <p className="text-xs tracking-[0.12em] uppercase mb-1 text-[rgba(245,240,234,0.50)]">&mdash; Originales con garant&iacute;a &mdash;</p>
           <h2
-            className="text-2xl md:text-3xl mb-2 text-[#F5F0EA]"
-            style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}
+            className="text-2xl md:text-3xl mb-2 text-[#F5F0EA] font-semibold"
+            style={{ fontFamily: "var(--font-serif)" }}
           >
             Lentes de sol originales
           </h2>
-          <p className="text-[12px] text-[rgba(245,240,234,0.60)] max-w-2xl mx-auto mb-2">
+          <p className="text-xs text-[rgba(245,240,234,0.60)] max-w-2xl mx-auto mb-2">
             100% aut&eacute;nticos con garant&iacute;a de marca. Tambi&eacute;n graduados de sol.
           </p>
           <a
             href="https://wa.me/523314257226?text=Hola%2C%20me%20interesan%20lentes%20de%20sol"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[12px] text-[#C8A040] hover:text-[#E8D090] transition-colors font-medium"
+            className="text-xs text-[#C8A040] hover:text-[#E8D090] transition-colors font-medium"
           >
             Ver disponibilidad &rarr;
           </a>
@@ -120,10 +119,7 @@ export default function LentesDeSol() {
               className="group bg-[#F0EBE3] rounded-[10px] p-5 hover:bg-[#E8E0D8] hover:-translate-y-0.5 transition-all relative"
             >
               {p.badge && (
-                <span
-                  className="absolute top-4 left-4 bg-[#C8A040] text-[#1A1000] text-[10px] font-bold uppercase tracking-[0.07em] px-2.5 py-0.5 rounded-full z-10"
-                  style={{ fontFamily: "var(--font-sans)", fontWeight: 700 }}
-                >
+                <span className="absolute top-4 left-4 bg-[#C8A040] text-[#1A1000] text-xs font-bold uppercase tracking-[0.07em] px-2.5 py-0.5 rounded-full z-10">
                   {p.badge}
                 </span>
               )}
@@ -136,9 +132,9 @@ export default function LentesDeSol() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
-              <p className="text-[14px] text-[#111110]" style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}>{p.brand}</p>
-              <p className="text-[12px] text-[#6A5A4A]" style={{ fontFamily: "var(--font-sans)" }}>{p.model}</p>
-              <p className="text-[15px] text-[#111110] mt-1" style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}>{p.price}</p>
+              <p className="text-sm text-[#111110] font-semibold" style={{ fontFamily: "var(--font-serif)" }}>{p.brand}</p>
+              <p className="text-xs text-[#6A5A4A]">{p.model}</p>
+              <p className="text-base font-semibold text-[#111110] mt-1" style={{ fontFamily: "var(--font-serif)" }}>{p.price}</p>
             </a>
           ))}
         </div>

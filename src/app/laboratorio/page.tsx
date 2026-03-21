@@ -36,36 +36,33 @@ export default function Laboratorio() {
         <div className="max-w-[1280px] mx-auto px-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p
-                className="text-[10px] text-[#C8A040] tracking-[0.16em] uppercase mb-4"
-                style={{ fontFamily: "var(--font-sans)", fontWeight: 600 }}
-              >
+              <p className="text-xs text-[#C8A040] tracking-[0.16em] uppercase mb-4 font-semibold">
                 Nuestro Diferenciador
               </p>
               <h1
-                className="text-3xl md:text-4xl lg:text-5xl text-[#111110] leading-tight mb-5"
-                style={{ fontFamily: "var(--font-serif)", fontWeight: 700 }}
+                className="text-3xl md:text-4xl lg:text-5xl text-[#111110] leading-tight mb-5 font-bold"
+                style={{ fontFamily: "var(--font-serif)" }}
               >
                 Laboratorio
                 <br />&Oacute;ptico Propio
               </h1>
-              <p className="text-[#6A5A4A] text-[13px] max-w-lg mb-8 leading-relaxed" style={{ fontFamily: "var(--font-sans)", fontWeight: 400 }}>
+              <p className="text-[#6A5A4A] text-sm max-w-lg mb-8 leading-relaxed">
                 No somos intermediarios. Fabricamos tus lentes aqu&iacute; en Guadalajara, con control total de calidad y tiempos de entrega que nadie m&aacute;s puede ofrecer.
               </p>
               <div className="flex items-center gap-8 text-[#111110]">
                 <div>
-                  <p className="text-2xl" style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}>&lt; 1h</p>
-                  <p className="text-[11px] text-[#A09080] mt-0.5 tracking-wide uppercase" style={{ fontFamily: "var(--font-sans)" }}>Entrega</p>
+                  <p className="text-2xl font-semibold" style={{ fontFamily: "var(--font-serif)" }}>&lt; 1h</p>
+                  <p className="text-xs text-[#A09080] mt-0.5 tracking-wide uppercase">Entrega</p>
                 </div>
                 <div className="w-px h-10 bg-[#E8E0D8]" />
                 <div>
-                  <p className="text-2xl" style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}>100%</p>
-                  <p className="text-[11px] text-[#A09080] mt-0.5 tracking-wide uppercase" style={{ fontFamily: "var(--font-sans)" }}>Calidad</p>
+                  <p className="text-2xl font-semibold" style={{ fontFamily: "var(--font-serif)" }}>100%</p>
+                  <p className="text-xs text-[#A09080] mt-0.5 tracking-wide uppercase">Calidad</p>
                 </div>
                 <div className="w-px h-10 bg-[#E8E0D8]" />
                 <div>
-                  <p className="text-2xl" style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}>+10</p>
-                  <p className="text-[11px] text-[#A09080] mt-0.5 tracking-wide uppercase" style={{ fontFamily: "var(--font-sans)" }}>A&ntilde;os</p>
+                  <p className="text-2xl font-semibold" style={{ fontFamily: "var(--font-serif)" }}>+10</p>
+                  <p className="text-xs text-[#A09080] mt-0.5 tracking-wide uppercase">A&ntilde;os</p>
                 </div>
               </div>
             </div>
@@ -88,12 +85,12 @@ export default function Laboratorio() {
       <section className="py-16 md:py-20 bg-[#FAF8F5]">
         <div className="max-w-[1280px] mx-auto px-10">
           <h2
-            className="text-2xl md:text-3xl text-[#111110] mb-3"
-            style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}
+            className="text-2xl md:text-3xl text-[#111110] mb-3 font-semibold"
+            style={{ fontFamily: "var(--font-serif)" }}
           >
             C&oacute;mo fabricamos tus lentes
           </h2>
-          <p className="text-[#6A5A4A] text-[13px] max-w-xl mb-12" style={{ fontFamily: "var(--font-sans)" }}>
+          <p className="text-[#6A5A4A] text-sm max-w-xl mb-12">
             Un proceso controlado de principio a fin, sin intermediarios ni retrasos.
           </p>
 
@@ -108,13 +105,10 @@ export default function Laboratorio() {
                 <div className="w-10 h-10 rounded-full border border-[#C8A040] text-[#C8A040] flex items-center justify-center mb-4 text-sm font-medium">
                   {i + 1}
                 </div>
-                <h3
-                  className="text-[13px] font-semibold text-[#111110] uppercase tracking-[0.05em] mb-2"
-                  style={{ fontFamily: "var(--font-sans)", fontWeight: 600 }}
-                >
+                <h3 className="text-sm font-semibold text-[#111110] uppercase tracking-[0.05em] mb-2">
                   {s.title}
                 </h3>
-                <p className="text-[13px] text-[#6A5A4A] leading-relaxed" style={{ fontFamily: "var(--font-sans)" }}>{s.desc}</p>
+                <p className="text-sm text-[#6A5A4A] leading-relaxed">{s.desc}</p>
               </div>
             ))}
           </div>
@@ -126,15 +120,12 @@ export default function Laboratorio() {
         <div className="max-w-[1280px] mx-auto px-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p
-                className="text-[10px] text-[#C8A040] tracking-[0.16em] uppercase mb-4"
-                style={{ fontFamily: "var(--font-sans)", fontWeight: 600 }}
-              >
+              <p className="text-xs text-[#C8A040] tracking-[0.16em] uppercase mb-4 font-semibold">
                 Capacidades
               </p>
               <h2
-                className="text-2xl md:text-3xl text-[#111110] mb-8 leading-tight"
-                style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}
+                className="text-2xl md:text-3xl text-[#111110] mb-8 leading-tight font-semibold"
+                style={{ fontFamily: "var(--font-serif)" }}
               >
                 Todo lo que fabricamos
               </h2>
@@ -147,7 +138,7 @@ export default function Laboratorio() {
                     <svg viewBox="0 0 24 24" fill="none" stroke="#C8A040" strokeWidth={1.5} className="w-5 h-5 shrink-0">
                       <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="text-[13px] text-[#111110] font-medium" style={{ fontFamily: "var(--font-sans)" }}>{cap}</span>
+                    <span className="text-sm text-[#111110] font-medium">{cap}</span>
                   </div>
                 ))}
               </div>
@@ -169,20 +160,19 @@ export default function Laboratorio() {
       <section className="py-16 md:py-20 bg-[#1A1818]">
         <div className="max-w-3xl mx-auto px-10 text-center">
           <h2
-            className="text-2xl md:text-3xl text-[#F5F0EA] mb-4"
-            style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}
+            className="text-2xl md:text-3xl text-[#F5F0EA] mb-4 font-semibold"
+            style={{ fontFamily: "var(--font-serif)" }}
           >
             Solicita tu lente personalizado
           </h2>
-          <p className="text-[rgba(245,240,234,0.60)] text-[13px] mb-8" style={{ fontFamily: "var(--font-sans)" }}>
+          <p className="text-[rgba(245,240,234,0.60)] text-sm mb-8">
             Fabricaci&oacute;n propia, calidad garantizada, entrega express.
           </p>
           <a
             href="https://wa.me/523314257226?text=Hola%2C%20quiero%20cotizar%20lentes%20fabricados%20en%20su%20laboratorio"
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-[#C8A040] text-[#C8A040] bg-transparent rounded-full px-8 py-3 text-[11px] uppercase tracking-[0.07em] font-medium hover:bg-[#C8A040] hover:text-[#1A1000] transition-colors"
-            style={{ fontFamily: "var(--font-sans)", fontWeight: 500 }}
+            className="border border-[#C8A040] text-[#C8A040] bg-transparent rounded-full px-8 py-3 text-xs uppercase tracking-[0.07em] font-medium hover:bg-[#C8A040] hover:text-[#1A1000] transition-colors"
           >
             Cotizar Ahora
           </a>
