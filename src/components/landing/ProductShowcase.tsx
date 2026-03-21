@@ -89,9 +89,9 @@ export function ProductShowcase() {
               href={`https://wa.me/523314257226?text=Hola%2C%20me%20interesa%20el%20modelo%20${encodeURIComponent(product.model)}%20${encodeURIComponent(product.brand)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block rounded-lg overflow-hidden border border-border hover:border-fg/20 transition-colors bg-white"
+              className="group block overflow-hidden bg-white hover:opacity-90 transition-opacity"
             >
-              <div className="relative aspect-square bg-surface">
+              <div className="relative aspect-square bg-white">
                 <Image
                   src={product.image}
                   alt={`${product.brand} ${product.model}`}
