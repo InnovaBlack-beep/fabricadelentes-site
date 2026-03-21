@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Geist } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { WhatsAppFAB } from "@/components/WhatsAppFAB";
+import { AnnouncementBar } from "@/components/landing/AnnouncementBar";
+import { Header } from "@/components/landing/Header";
+import { Footer } from "@/components/landing/Footer";
+import { WhatsAppFAB } from "@/components/landing/WhatsAppFAB";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -95,7 +96,8 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        <Navbar />
+        <AnnouncementBar />
+        <Header />
         <main>{children}</main>
         <Footer />
         <WhatsAppFAB />

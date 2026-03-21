@@ -1,19 +1,21 @@
-import { HeroCarousel } from "@/components/HeroCarousel";
-import { TrustStrip } from "@/components/TrustStrip";
-import { ShopByCategory } from "@/components/ShopByCategory";
-import { BrandShowcase } from "@/components/BrandShowcase";
-import { Services } from "@/components/Services";
-import { HowItWorks } from "@/components/HowItWorks";
-import { BookingSection } from "@/components/BookingSection";
-import { StoreSection } from "@/components/StoreSection";
+import { Hero } from "@/components/landing/Hero";
+import { TrustStrip } from "@/components/landing/TrustStrip";
+import { CategoryGrid } from "@/components/landing/CategoryGrid";
+import { BrandMarquee } from "@/components/landing/BrandMarquee";
+import { ProductShowcase } from "@/components/landing/ProductShowcase";
+import { Services } from "@/components/landing/Services";
+import { HowItWorks } from "@/components/landing/HowItWorks";
+import { BookingSection } from "@/components/landing/BookingSection";
+import { StoreSection } from "@/components/landing/StoreSection";
 
 export default function Home() {
   return (
     <>
-      <HeroCarousel />
+      <Hero />
       <TrustStrip />
-      <ShopByCategory />
-      <BrandShowcase />
+      <CategoryGrid />
+      <BrandMarquee />
+      <ProductShowcase />
       <Services />
       <HowItWorks />
       <BookingSection />
