@@ -1,36 +1,37 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
+
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600"],
   variable: "--font-inter",
   display: "swap",
 });
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-playfair",
-  display: "swap",
-});
-
 export const metadata: Metadata = {
-  title: "Fabrica de Lentes | Optica con Laboratorio Propio en Guadalajara",
+  title: "Fábrica de Lentes® — Laboratorio Óptico · Venta Directa · Guadalajara",
   description:
-    "Lentes graduados, de contacto y de sol en Guadalajara. Laboratorio propio con entrega el mismo dia. Cotiza por WhatsApp.",
+    "Lentes graduados, de contacto y de sol en Guadalajara. Laboratorio óptico propio con entrega el mismo día. Examen de la vista gratis. Cotiza por WhatsApp.",
   keywords:
-    "optica guadalajara, lentes de contacto guadalajara, lentes graduados guadalajara, laboratorio optico guadalajara, examen de la vista guadalajara, lentes de sol guadalajara",
+    "óptica guadalajara, lentes de contacto guadalajara, lentes graduados guadalajara, laboratorio óptico guadalajara, examen de la vista guadalajara, lentes de sol guadalajara",
   openGraph: {
-    title: "Fabrica de Lentes | Optica con Laboratorio Propio en Guadalajara",
+    title: "Fábrica de Lentes® — Laboratorio Óptico · Venta Directa · Guadalajara",
     description:
-      "Lentes graduados, de contacto y de sol. Laboratorio propio y entrega express el mismo dia.",
+      "Lentes graduados, de contacto y de sol. Laboratorio propio y entrega express el mismo día.",
     url: "https://fabricadelentes.mx",
-    siteName: "Fabrica de Lentes",
+    siteName: "Fábrica de Lentes",
     locale: "es_MX",
     type: "website",
   },
@@ -40,31 +41,20 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "Fabrica de Lentes",
+  "@type": "Optician",
+  name: "Fábrica de Lentes",
   description:
-    "Optica con laboratorio propio en Guadalajara. Lentes graduados, de contacto y de sol con entrega express.",
+    "Óptica con laboratorio propio en Guadalajara. Lentes graduados, de contacto y de sol con entrega express.",
   url: "https://fabricadelentes.mx",
   telephone: "+523314257226",
+  priceRange: "$590-$1690 MXN",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Guadalajara",
     addressRegion: "Jalisco",
     addressCountry: "MX",
   },
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ],
-    opens: "10:00",
-    closes: "19:00",
-  },
+  openingHours: "Mo-Sa 10:00-20:00",
 };
 
 export default function RootLayout({
@@ -73,7 +63,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="es" className={`${cormorant.variable} ${inter.variable}`}>
       <head>
         <script
           type="application/ld+json"

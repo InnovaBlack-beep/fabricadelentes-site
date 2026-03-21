@@ -3,35 +3,35 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Lentes Graduados en Guadalajara | Fabricacion Propia | Fabrica de Lentes",
+  title: "Lentes Graduados en Guadalajara | Fabricación Propia | Fábrica de Lentes",
   description:
-    "Lentes graduados con fabricacion propia en Guadalajara. Monofocales, bifocales, progresivos. Entrega el mismo dia. Ray-Ban, Oakley, Prada y mas marcas.",
+    "Lentes graduados con fabricación propia en Guadalajara. Monofocales, bifocales, progresivos. Entrega el mismo día. Ray-Ban, Oakley, Prada y más marcas.",
   alternates: { canonical: "https://fabricadelentes.mx/lentes-graduados" },
 };
 
-const tabs = [
+const filterPills = [
   "Todos",
   "Monofocales",
   "Progresivos",
   "Bifocales",
   "Blue Block",
   "Antirreflex",
-  "Transición",
+  "Transici\u00f3n",
 ];
 
 const products = [
-  { brand: "Ray-Ban", model: "RB5154 Clubmaster", price: "$2,890", badge: "Más vendido", image: "/images/hero-1.png" },
-  { brand: "Oakley", model: "OX8046 Airdrop", price: "$3,450", badge: "", image: "/images/hero-3.png" },
-  { brand: "Ray-Ban", model: "RB7047 Rectangular", price: "$2,190", badge: "Entrega hoy", image: "/images/hero-2.png" },
-  { brand: "Vogue", model: "VO5407 Cat Eye", price: "$1,890", badge: "", image: "/images/hero-1.png" },
-  { brand: "Arnette", model: "AN7189 Urban", price: "$1,590", badge: "Nuevo", image: "/images/hero-3.png" },
-  { brand: "Emporio Armani", model: "EA3099 Classic", price: "$3,290", badge: "", image: "/images/hero-2.png" },
-  { brand: "Ray-Ban", model: "RB5228 Wayfarer", price: "$2,690", badge: "Más vendido", image: "/images/hero-1.png" },
-  { brand: "Michael Kors", model: "MK4030 Vivianna", price: "$2,990", badge: "", image: "/images/hero-3.png" },
-  { brand: "Prada", model: "PR 17WV Conceptual", price: "$5,490", badge: "", image: "/images/hero-2.png" },
-  { brand: "Coach", model: "HC6065 Rectangle", price: "$3,190", badge: "Entrega hoy", image: "/images/hero-1.png" },
-  { brand: "Versace", model: "VE3328 Medusa", price: "$4,290", badge: "", image: "/images/hero-3.png" },
-  { brand: "Burberry", model: "BE2376 Square", price: "$3,890", badge: "Nuevo", image: "/images/hero-2.png" },
+  { brand: "Ray-Ban", model: "RB5154 Clubmaster", price: "$1,490", badge: "M\u00e1s vendido", image: "/images/hero-1.png" },
+  { brand: "Oakley", model: "OX8046 Airdrop", price: "$1,690", badge: "", image: "/images/hero-3.png" },
+  { brand: "Ray-Ban", model: "RB7047 Rectangular", price: "$1,190", badge: "Entrega 1hr", image: "/images/hero-2.png" },
+  { brand: "Vogue", model: "VO5407 Cat Eye", price: "$990", badge: "", image: "/images/hero-1.png" },
+  { brand: "Arnette", model: "AN7189 Urban", price: "$890", badge: "Nuevo", image: "/images/hero-3.png" },
+  { brand: "Emporio Armani", model: "EA3099 Classic", price: "$1,590", badge: "", image: "/images/hero-2.png" },
+  { brand: "Ray-Ban", model: "RB5228 Wayfarer", price: "$1,350", badge: "M\u00e1s vendido", image: "/images/hero-1.png" },
+  { brand: "Michael Kors", model: "MK4030 Vivianna", price: "$1,490", badge: "", image: "/images/hero-3.png" },
+  { brand: "Prada", model: "PR 17WV Conceptual", price: "$1,690", badge: "", image: "/images/hero-2.png" },
+  { brand: "Coach", model: "HC6065 Rectangle", price: "$1,390", badge: "Entrega 1hr", image: "/images/hero-1.png" },
+  { brand: "Versace", model: "VE3328 Medusa", price: "$1,590", badge: "", image: "/images/hero-3.png" },
+  { brand: "Burberry", model: "BE2376 Square", price: "$1,490", badge: "Nuevo", image: "/images/hero-2.png" },
 ];
 
 export default function LentesGraduados() {
@@ -39,71 +39,64 @@ export default function LentesGraduados() {
     <>
       {/* Breadcrumb */}
       <div className="max-w-[1280px] mx-auto px-10 pt-6 pb-2">
-        <p className="text-[12px] text-[#999]">
-          <Link href="/" className="hover:text-[#0057A8]">Inicio</Link>
+        <p className="text-[12px] text-[#A09080]">
+          <Link href="/" className="hover:text-[#C8A040] transition-colors">Inicio</Link>
           <span className="mx-2">&rsaquo;</span>
-          <span className="text-[#444]">Lentes Graduados</span>
+          <span className="text-[#6A5A4A]">Lentes Graduados</span>
         </p>
       </div>
 
       {/* Title */}
       <div className="max-w-[1280px] mx-auto px-10 pb-4">
-        <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl text-[#111] font-normal">
+        <h1
+          className="text-[32px] md:text-[40px] text-[#111110]"
+          style={{ fontFamily: "var(--font-serif)", fontWeight: 400 }}
+        >
           Lentes Graduados
         </h1>
       </div>
 
-      {/* Filter tabs */}
-      <div className="border-b border-[#eee] mb-6">
+      {/* Filter pills */}
+      <div className="border-b border-[#E8E0D8] mb-6">
         <div className="max-w-[1280px] mx-auto px-10">
-          <div className="flex items-center gap-6 overflow-x-auto py-3">
-            {tabs.map((tab, i) => (
+          <div className="flex items-center gap-3 overflow-x-auto py-3">
+            {filterPills.map((pill, i) => (
               <button
-                key={tab}
+                key={pill}
                 className={
                   i === 0
-                    ? "text-[12px] font-semibold text-[#111] border-b-2 border-[#111] pb-3 -mb-[1px] whitespace-nowrap"
-                    : "text-[12px] text-[#888] pb-3 whitespace-nowrap hover:text-[#111] transition-colors"
+                    ? "text-[11px] font-medium text-[#111110] border border-[#111110] rounded-full px-3.5 py-1.5 whitespace-nowrap"
+                    : "text-[11px] text-[#6A5A4A] border border-[#C8C0B8] rounded-full px-3.5 py-1.5 whitespace-nowrap hover:border-[#111110] hover:text-[#111110] transition-colors"
                 }
+                style={{ fontFamily: "var(--font-sans)" }}
               >
-                {tab}
+                {pill}
               </button>
             ))}
-            <div className="ml-auto flex items-center gap-4 shrink-0">
-              <button className="text-[12px] text-[#444] flex items-center gap-1">
-                Filtros
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4">
-                  <path d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
-                </svg>
-              </button>
-              <button className="text-[12px] text-[#444] flex items-center gap-1">
-                Ordenar
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4">
-                  <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                </svg>
-              </button>
-            </div>
           </div>
         </div>
       </div>
 
-      {/* Promo banner */}
+      {/* Dark promo banner */}
       <div className="max-w-[1280px] mx-auto px-10 mb-8">
-        <div className="bg-[#0057A8] text-white text-center py-6 px-6 rounded-sm">
-          <p className="text-[11px] tracking-[0.12em] uppercase mb-1">&mdash; En tienda y en l&iacute;nea &mdash;</p>
-          <h2 className="font-[family-name:var(--font-playfair)] text-2xl md:text-3xl font-normal mb-2">
-            LABORATORIO PROPIO EN GUADALAJARA
+        <div className="bg-[#1A1818] text-center py-6 px-6 rounded-[10px]">
+          <p className="text-[11px] tracking-[0.12em] uppercase mb-1 text-[rgba(245,240,234,0.50)]">&mdash; Laboratorio propio &mdash;</p>
+          <h2
+            className="text-2xl md:text-3xl mb-2 text-[#F5F0EA]"
+            style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}
+          >
+            Fabricamos tus lentes en Guadalajara
           </h2>
-          <p className="text-[12px] text-white/70 max-w-2xl mx-auto mb-2">
-            Fabricamos tus lentes el mismo d&iacute;a. Env&iacute;a tu receta por WhatsApp.
+          <p className="text-[12px] text-[rgba(245,240,234,0.60)] max-w-2xl mx-auto mb-2">
+            Env&iacute;a tu receta por WhatsApp. Entrega el mismo d&iacute;a.
           </p>
           <a
             href="https://wa.me/523314257226?text=Hola%2C%20quiero%20cotizar%20lentes%20graduados"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[12px] underline"
+            className="text-[12px] text-[#C8A040] hover:text-[#E8D090] transition-colors font-medium"
           >
-            Cotizar ahora
+            Cotizar ahora &rarr;
           </a>
         </div>
       </div>
@@ -117,22 +110,17 @@ export default function LentesGraduados() {
               href={`https://wa.me/523314257226?text=${encodeURIComponent(`Hola, me interesa el modelo ${p.brand} ${p.model}`)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-[#F8F8F8] rounded-sm p-5 hover:shadow-md transition-all relative"
+              className="group bg-[#F0EBE3] rounded-[10px] p-5 hover:bg-[#E8E0D8] hover:-translate-y-0.5 transition-all relative"
             >
-              {/* Badge */}
               {p.badge && (
-                <span className="absolute top-4 left-4 bg-white text-[10px] font-semibold uppercase tracking-wider text-[#111] px-2 py-1 shadow-sm z-10">
+                <span
+                  className="absolute top-4 left-4 bg-[#C8A040] text-[#1A1000] text-[10px] font-bold uppercase tracking-[0.07em] px-2.5 py-0.5 rounded-full z-10"
+                  style={{ fontFamily: "var(--font-sans)", fontWeight: 700 }}
+                >
                   {p.badge}
                 </span>
               )}
-              {/* Heart icon */}
-              <span className="absolute top-4 right-4 text-[#ccc] group-hover:text-[#0057A8] z-10 transition-colors">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5">
-                  <path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                </svg>
-              </span>
-              {/* Image */}
-              <div className="relative aspect-square overflow-hidden rounded-sm mb-4">
+              <div className="relative aspect-square overflow-hidden rounded mb-4 mt-2">
                 <Image
                   src={p.image}
                   alt={`${p.brand} ${p.model}`}
@@ -141,10 +129,9 @@ export default function LentesGraduados() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
-              {/* Info */}
-              <p className="text-[13px] font-bold text-[#111]">{p.brand}</p>
-              <p className="text-[13px] text-[#666]">{p.model}</p>
-              <p className="text-[14px] font-semibold text-[#111] mt-1">{p.price}</p>
+              <p className="text-[14px] text-[#111110]" style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}>{p.brand}</p>
+              <p className="text-[12px] text-[#6A5A4A]" style={{ fontFamily: "var(--font-sans)" }}>{p.model}</p>
+              <p className="text-[15px] text-[#111110] mt-1" style={{ fontFamily: "var(--font-serif)", fontWeight: 600 }}>{p.price}</p>
             </a>
           ))}
         </div>

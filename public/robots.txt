@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fabricadelentes.mx/sitemap.xml

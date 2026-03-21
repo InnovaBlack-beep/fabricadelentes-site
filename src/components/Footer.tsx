@@ -2,48 +2,27 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer>
-      {/* ── Subscribe section ── */}
-      <div className="bg-white border-t border-b border-[#eee]">
-        <div className="max-w-[1280px] mx-auto px-10 py-14 flex flex-col md:flex-row items-center justify-between gap-8">
-          <h3 className="font-[family-name:var(--font-playfair)] text-[#111] text-4xl font-normal">
-            Recibe ofertas exclusivas
-          </h3>
-          <form className="flex w-full md:w-auto" action="#" method="POST">
-            <input
-              type="email"
-              placeholder="Tu correo electr&oacute;nico"
-              className="px-5 py-3 border border-[#ddd] border-r-0 rounded-l-full text-sm text-[#222] placeholder:text-[#999] w-full md:w-72 focus:outline-none focus:border-[#0057A8]"
-            />
-            <button
-              type="submit"
-              className="px-6 py-3 bg-[#0057A8] text-white text-[12px] tracking-[0.12em] uppercase font-semibold rounded-r-full hover:bg-[#003F7A] transition-colors whitespace-nowrap"
-            >
-              Suscribirme
-            </button>
-          </form>
-        </div>
-      </div>
-
+    <footer className="bg-[#1A1818]">
       {/* ── Main footer ── */}
-      <div className="bg-[#3D4F5C] py-14">
-        <div className="max-w-[1280px] mx-auto px-10 grid grid-cols-2 md:grid-cols-4 gap-10">
+      <div className="py-[52px] px-12">
+        <div className="max-w-[1280px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-10">
           {/* Productos */}
           <div>
-            <h4 className="text-[11px] uppercase tracking-[0.1em] font-bold text-white mb-4">
+            <h4 className="text-[10px] uppercase tracking-[0.14em] font-semibold text-[#F5F0EA] mb-4" style={{ fontFamily: "var(--font-sans)", fontWeight: 600 }}>
               Productos
             </h4>
             <ul className="space-y-0">
               {[
                 { label: "Lentes de contacto", href: "/lentes-de-contacto" },
-                { label: "Lentes graduados", href: "/lentes-graduados" },
+                { label: "Armazones graduados", href: "/lentes-graduados" },
                 { label: "Lentes de sol", href: "/lentes-de-sol" },
-                { label: "Armazones", href: "/lentes-graduados" },
+                { label: "Micas antirreflectantes", href: "/lentes-graduados" },
               ].map((item) => (
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-[13px] text-[#A8B8C4] hover:text-white transition-colors leading-[2]"
+                    className="text-[12px] text-[rgba(245,240,234,0.38)] hover:text-[#C8A040] transition-colors leading-[2]"
+                    style={{ fontFamily: "var(--font-sans)" }}
                   >
                     {item.label}
                   </Link>
@@ -54,20 +33,21 @@ export function Footer() {
 
           {/* Servicios */}
           <div>
-            <h4 className="text-[11px] uppercase tracking-[0.1em] font-bold text-white mb-4">
+            <h4 className="text-[10px] uppercase tracking-[0.14em] font-semibold text-[#F5F0EA] mb-4" style={{ fontFamily: "var(--font-sans)", fontWeight: 600 }}>
               Servicios
             </h4>
             <ul className="space-y-0">
               {[
-                { label: "Examen de la vista", href: "/lentes-graduados" },
-                { label: "Asesor\u00eda", href: "/contacto" },
+                { label: "Examen gratis", href: "/contacto" },
+                { label: "Laboratorio propio", href: "/laboratorio" },
                 { label: "Convenios empresariales", href: "/empresas" },
                 { label: "Reparaciones", href: "/contacto" },
               ].map((item) => (
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-[13px] text-[#A8B8C4] hover:text-white transition-colors leading-[2]"
+                    className="text-[12px] text-[rgba(245,240,234,0.38)] hover:text-[#C8A040] transition-colors leading-[2]"
+                    style={{ fontFamily: "var(--font-sans)" }}
                   >
                     {item.label}
                   </Link>
@@ -78,20 +58,21 @@ export function Footer() {
 
           {/* Empresa */}
           <div>
-            <h4 className="text-[11px] uppercase tracking-[0.1em] font-bold text-white mb-4">
+            <h4 className="text-[10px] uppercase tracking-[0.14em] font-semibold text-[#F5F0EA] mb-4" style={{ fontFamily: "var(--font-sans)", fontWeight: 600 }}>
               Empresa
             </h4>
             <ul className="space-y-0">
               {[
                 { label: "Nosotros", href: "/laboratorio" },
-                { label: "Laboratorio propio", href: "/laboratorio" },
-                { label: "Blog", href: "/" },
+                { label: "Sucursales GDL", href: "/contacto" },
+                { label: "Blog \u00f3ptico", href: "/" },
                 { label: "Trabaja con nosotros", href: "/contacto" },
               ].map((item) => (
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-[13px] text-[#A8B8C4] hover:text-white transition-colors leading-[2]"
+                    className="text-[12px] text-[rgba(245,240,234,0.38)] hover:text-[#C8A040] transition-colors leading-[2]"
+                    style={{ fontFamily: "var(--font-sans)" }}
                   >
                     {item.label}
                   </Link>
@@ -102,7 +83,7 @@ export function Footer() {
 
           {/* Contacto */}
           <div>
-            <h4 className="text-[11px] uppercase tracking-[0.1em] font-bold text-white mb-4">
+            <h4 className="text-[10px] uppercase tracking-[0.14em] font-semibold text-[#F5F0EA] mb-4" style={{ fontFamily: "var(--font-sans)", fontWeight: 600 }}>
               Contacto
             </h4>
             <ul className="space-y-0">
@@ -111,32 +92,33 @@ export function Footer() {
                   href="https://wa.me/523314257226"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[13px] text-[#A8B8C4] hover:text-white transition-colors leading-[2]"
+                  className="text-[12px] text-[rgba(245,240,234,0.38)] hover:text-[#C8A040] transition-colors leading-[2]"
+                  style={{ fontFamily: "var(--font-sans)" }}
                 >
-                  WhatsApp 331 425 7226
+                  WhatsApp 33 1425 7226
                 </a>
               </li>
-              <li>
-                <a
-                  href="tel:+523314257226"
-                  className="text-[13px] text-[#A8B8C4] hover:text-white transition-colors leading-[2]"
-                >
-                  Tel: 331 425 7226
-                </a>
+              <li className="text-[12px] text-[rgba(245,240,234,0.38)] leading-[2]" style={{ fontFamily: "var(--font-sans)" }}>
+                Zona Minerva &middot; GDL
               </li>
-              <li className="text-[13px] text-[#A8B8C4] leading-[2]">
-                Guadalajara, Jalisco
+              <li className="text-[12px] text-[rgba(245,240,234,0.38)] leading-[2]" style={{ fontFamily: "var(--font-sans)" }}>
+                Lun-S&aacute;b &middot; 10:00-20:00
               </li>
-              <li className="text-[13px] text-[#A8B8C4] leading-[2]">
-                Lun-S&aacute;b 10-19h
+              <li className="text-[12px] text-[rgba(245,240,234,0.38)] leading-[2]" style={{ fontFamily: "var(--font-sans)" }}>
+                fabricadelentes.mx
               </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="max-w-[1280px] mx-auto px-10 border-t border-white/10 pt-6 mt-10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-[12px] text-[#7A8A96]">
+        <div className="max-w-[1280px] mx-auto border-t border-[rgba(245,240,234,0.07)] pt-6 mt-10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-[12px] text-[rgba(245,240,234,0.38)]">
+            {/* Logo text */}
+            <span className="text-[14px] text-[#C8A040] font-semibold" style={{ fontFamily: "var(--font-serif)" }}>
+              F&aacute;brica de Lentes&reg;
+            </span>
+
             <p>&copy; 2026 F&aacute;brica de Lentes&reg; &middot; Todos los derechos reservados</p>
 
             {/* Social icons */}
@@ -145,7 +127,7 @@ export function Footer() {
                 href="https://instagram.com/fabricadelentesmex"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#7A8A96] hover:text-white transition-colors"
+                className="text-[rgba(245,240,234,0.38)] hover:text-[#C8A040] transition-colors"
                 aria-label="Instagram"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
@@ -156,7 +138,7 @@ export function Footer() {
                 href="https://tiktok.com/@fabricadelentes"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#7A8A96] hover:text-white transition-colors"
+                className="text-[rgba(245,240,234,0.38)] hover:text-[#C8A040] transition-colors"
                 aria-label="TikTok"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
@@ -171,7 +153,7 @@ export function Footer() {
                 href="https://innovablack.ai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
+                className="hover:text-[#C8A040] transition-colors"
               >
                 InnovaBlack
               </a>
