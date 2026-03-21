@@ -34,9 +34,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: product.images[0]
         ? [{ url: product.images[0], width: 800, height: 800, alt: `${product.brand} ${product.model}` }]
         : [],
-      type: "website",
       locale: "es_MX",
       siteName: "Fábrica de Lentes",
+    },
+    other: {
+      "og:type": "product",
     },
     twitter: {
       card: "summary_large_image",
@@ -67,6 +69,31 @@ export default async function ProductPage({ params }: Props) {
   const cat = categoryMap[product.category] ?? {
     label: product.category,
     href: "/",
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Inicio",
+        item: "https://fabricadelentes.mx",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: cat.label,
+        item: `https://fabricadelentes.mx${cat.href}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: `${product.brand} ${product.model}`,
+        item: `https://fabricadelentes.mx/producto/${product.id}`,
+      },
+    ],
   };
 
   const whatsappMsg = encodeURIComponent(
@@ -100,6 +127,10 @@ export default async function ProductPage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       <section className="bg-white min-h-screen">

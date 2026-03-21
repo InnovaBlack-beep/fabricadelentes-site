@@ -86,9 +86,9 @@ export function Footer() {
           {/* Link columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h4 className="text-xs font-semibold uppercase tracking-[0.14em] text-white mb-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white mb-4">
                 {category}
-              </h4>
+              </p>
               <ul className="space-y-0">
                 {links.map((link) => (
                   <li key={link.label}>
@@ -106,9 +106,9 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-[0.14em] text-white mb-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white mb-4">
               Contacto
-            </h4>
+            </p>
             <ul className="space-y-0">
               {contactInfo.map((info) => (
                 <li key={info.label}>

@@ -16,7 +16,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Fábrica de Lentes® — Óptica con Lab Propio · GDL",
   description:
-    "Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora. Examen de la vista gratis. Armazones desde $590 MXN. Sucursal Minerva.",
+    "Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora. Examen de la vista gratis. Armazones desde $590 MXN.",
   openGraph: {
     title: "Fábrica de Lentes® — Óptica con Lab Propio · GDL",
     description:
@@ -50,7 +50,7 @@ const jsonLd = {
   "@type": "Optician",
   name: "Fábrica de Lentes",
   description:
-    "Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora. Examen de la vista gratis. Armazones desde $590 MXN. Sucursal Minerva.",
+    "Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora. Examen de la vista gratis. Armazones desde $590 MXN.",
   url: "https://fabricadelentes.mx",
   telephone: "+523314257226",
   priceRange: "$590-$1690 MXN",
