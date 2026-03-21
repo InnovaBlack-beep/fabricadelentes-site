@@ -25,7 +25,7 @@ export default function LentesGraduados() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-gold font-semibold text-sm tracking-widest uppercase mb-4">
+              <p className="text-gold font-medium text-xs tracking-[0.2em] uppercase mb-4">
                 Fabricacion propia
               </p>
               <h1 className="font-[family-name:var(--font-display)] text-5xl md:text-7xl text-foreground leading-[1.05] mb-5">
@@ -40,7 +40,7 @@ export default function LentesGraduados() {
                   href="https://wa.me/523314257226?text=Hola%2C%20quiero%20cotizar%20lentes%20graduados"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-foreground text-white font-semibold rounded-full hover:bg-navy transition-all duration-300"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-foreground text-white text-sm font-semibold tracking-wide uppercase hover:bg-dark transition-colors duration-300"
                 >
                   Cotizar lentes graduados
                 </a>
@@ -48,14 +48,14 @@ export default function LentesGraduados() {
                   href="https://wa.me/523314257226?text=Hola%2C%20quiero%20agendar%20un%20examen%20de%20la%20vista"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-4 border border-border text-foreground font-medium rounded-full hover:border-foreground transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-8 py-4 border border-border text-foreground font-medium hover:border-foreground transition-all duration-300"
                 >
                   Agendar examen de la vista
                 </a>
               </div>
             </div>
             <div className="hidden lg:block">
-              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+              <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
                   src="/images/hero-1.png"
                   alt="Lentes graduados"
@@ -72,11 +72,11 @@ export default function LentesGraduados() {
       {/* Types */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-14">
+          <div className="mb-14">
             <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-foreground mb-4">
               Tipos de lentes <span className="text-gold italic">graduados</span>
             </h2>
-            <p className="text-muted max-w-xl mx-auto">
+            <p className="text-muted max-w-xl">
               Fabricamos todos los tipos de lentes oftalmicos. Todos con tratamientos de calidad y garantia.
             </p>
           </div>
@@ -85,7 +85,7 @@ export default function LentesGraduados() {
             {types.map((t) => (
               <div
                 key={t.name}
-                className="bg-off-white rounded-2xl p-7 border border-border hover:border-gold/40 transition-all duration-300"
+                className="bg-off-white p-7 border border-border hover:border-gold/40 transition-all duration-300"
               >
                 <h3 className="font-[family-name:var(--font-display)] text-xl text-foreground mb-2">
                   {t.name}
@@ -100,9 +100,9 @@ export default function LentesGraduados() {
       {/* Examen de la vista */}
       <section className="py-20 md:py-28 bg-off-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-0 bg-white rounded-3xl border border-border overflow-hidden">
+          <div className="grid lg:grid-cols-2 gap-0 bg-white border border-border overflow-hidden">
             <div className="p-10 md:p-14">
-              <p className="text-gold font-semibold text-sm tracking-widest uppercase mb-4">
+              <p className="text-gold font-medium text-xs tracking-[0.2em] uppercase mb-4">
                 Servicio incluido
               </p>
               <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl text-foreground mb-6 leading-tight">
@@ -129,7 +129,7 @@ export default function LentesGraduados() {
                 href="https://wa.me/523314257226?text=Hola%2C%20quiero%20agendar%20un%20examen%20de%20la%20vista"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-foreground text-white font-semibold rounded-full hover:bg-navy transition-colors"
+                className="inline-flex items-center gap-3 px-7 py-3.5 bg-foreground text-white text-sm font-semibold tracking-wide uppercase hover:bg-dark transition-colors"
               >
                 Agendar examen de la vista
               </a>
@@ -148,7 +148,7 @@ export default function LentesGraduados() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28 bg-navy">
+      <section className="py-20 md:py-28 bg-[#111111]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-white mb-4">
             Cotiza tus lentes <span className="text-gold italic">en minutos</span>
@@ -160,7 +160,7 @@ export default function LentesGraduados() {
             href="https://wa.me/523314257226?text=Hola%2C%20quiero%20cotizar%20lentes%20graduados.%20Mi%20receta%20es%3A"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gold text-navy font-semibold rounded-full hover:bg-gold-light transition-all duration-300"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-white text-foreground text-sm font-semibold tracking-wide uppercase hover:bg-off-white transition-colors duration-300"
           >
             Enviar receta por WhatsApp
           </a>

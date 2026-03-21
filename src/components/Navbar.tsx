@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const links = [
-  { href: "/lentes-de-contacto", label: "Contacto" },
+  { href: "/lentes-de-contacto", label: "De Contacto" },
   { href: "/lentes-graduados", label: "Graduados" },
-  { href: "/lentes-de-sol", label: "Sol" },
+  { href: "/lentes-de-sol", label: "De Sol" },
   { href: "/laboratorio", label: "Laboratorio" },
   { href: "/empresas", label: "Empresas" },
   { href: "/contacto", label: "Contacto" },
@@ -32,7 +32,7 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5">
+        <Link href="/" className="flex items-center">
           <span className="font-[family-name:var(--font-display)] text-xl md:text-2xl text-foreground tracking-tight">
             Fabrica <span className="text-gold italic">de Lentes</span>
           </span>
@@ -44,7 +44,7 @@ export function Navbar() {
             <Link
               key={l.href}
               href={l.href}
-              className="px-4 py-2 text-sm text-muted hover:text-foreground transition-colors duration-200 font-medium"
+              className="px-3.5 py-2 text-[13px] text-muted hover:text-foreground transition-colors duration-200 font-medium tracking-wide uppercase"
             >
               {l.label}
             </Link>
@@ -53,9 +53,9 @@ export function Navbar() {
             href="https://wa.me/523314257226?text=Hola%2C%20quiero%20cotizar%20mis%20lentes"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-4 px-6 py-2.5 bg-foreground text-white text-sm font-semibold rounded-full hover:bg-navy transition-colors duration-200"
+            className="ml-6 px-6 py-2.5 bg-foreground text-white text-sm font-medium tracking-wide hover:bg-dark transition-colors duration-200"
           >
-            Cotizar ahora
+            Cotizar
           </a>
         </div>
 
@@ -99,9 +99,9 @@ export function Navbar() {
               href="https://wa.me/523314257226?text=Hola%2C%20quiero%20cotizar%20mis%20lentes"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 px-6 py-3.5 bg-foreground text-white text-center font-semibold rounded-full"
+              className="mt-4 px-6 py-3.5 bg-foreground text-white text-center font-medium"
             >
-              Cotizar ahora
+              Cotizar
             </a>
           </div>
         </div>

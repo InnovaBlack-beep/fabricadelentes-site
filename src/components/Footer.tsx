@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-white">
+    <footer className="bg-[#111111] text-white">
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-6 py-16 md:py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         {/* Brand */}
@@ -12,15 +12,15 @@ export function Footer() {
               Fabrica <span className="text-gold italic">de Lentes</span>
             </span>
           </Link>
-          <p className="text-white/50 text-sm leading-relaxed mb-6 max-w-xs">
-            La optica con laboratorio propio que te entrega hoy, no en una semana.
+          <p className="text-white/40 text-sm leading-relaxed mb-6 max-w-xs">
+            La optica con laboratorio propio en Guadalajara. Tus lentes, listos hoy.
           </p>
           <div className="flex gap-3">
             <a
               href="https://instagram.com/fabricadelentesmex"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-gold hover:text-gold transition-colors"
+              className="w-10 h-10 border border-white/10 flex items-center justify-center hover:border-gold hover:text-gold transition-colors"
               aria-label="Instagram"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
@@ -31,7 +31,7 @@ export function Footer() {
               href="https://tiktok.com/@fabricadelentes"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-gold hover:text-gold transition-colors"
+              className="w-10 h-10 border border-white/10 flex items-center justify-center hover:border-gold hover:text-gold transition-colors"
               aria-label="TikTok"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
@@ -43,39 +43,27 @@ export function Footer() {
 
         {/* Products */}
         <div>
-          <h4 className="text-white font-semibold text-sm uppercase tracking-widest mb-5">
+          <h4 className="text-white font-medium text-xs uppercase tracking-[0.2em] mb-6">
             Productos
           </h4>
-          <ul className="space-y-3 text-sm text-white/50">
+          <ul className="space-y-3 text-sm text-white/40">
             <li>
-              <Link
-                href="/lentes-de-contacto"
-                className="hover:text-gold transition-colors"
-              >
+              <Link href="/lentes-de-contacto" className="hover:text-white transition-colors">
                 Lentes de Contacto
               </Link>
             </li>
             <li>
-              <Link
-                href="/lentes-graduados"
-                className="hover:text-gold transition-colors"
-              >
+              <Link href="/lentes-graduados" className="hover:text-white transition-colors">
                 Lentes Graduados
               </Link>
             </li>
             <li>
-              <Link
-                href="/lentes-de-sol"
-                className="hover:text-gold transition-colors"
-              >
+              <Link href="/lentes-de-sol" className="hover:text-white transition-colors">
                 Lentes de Sol
               </Link>
             </li>
             <li>
-              <Link
-                href="/laboratorio"
-                className="hover:text-gold transition-colors"
-              >
+              <Link href="/laboratorio" className="hover:text-white transition-colors">
                 Laboratorio
               </Link>
             </li>
@@ -84,31 +72,22 @@ export function Footer() {
 
         {/* Services */}
         <div>
-          <h4 className="text-white font-semibold text-sm uppercase tracking-widest mb-5">
+          <h4 className="text-white font-medium text-xs uppercase tracking-[0.2em] mb-6">
             Servicios
           </h4>
-          <ul className="space-y-3 text-sm text-white/50">
+          <ul className="space-y-3 text-sm text-white/40">
             <li>
-              <Link
-                href="/lentes-graduados"
-                className="hover:text-gold transition-colors"
-              >
+              <Link href="/lentes-graduados" className="hover:text-white transition-colors">
                 Examen de la Vista
               </Link>
             </li>
             <li>
-              <Link
-                href="/empresas"
-                className="hover:text-gold transition-colors"
-              >
+              <Link href="/empresas" className="hover:text-white transition-colors">
                 Convenios Empresariales
               </Link>
             </li>
             <li>
-              <Link
-                href="/contacto"
-                className="hover:text-gold transition-colors"
-              >
+              <Link href="/contacto" className="hover:text-white transition-colors">
                 Agendar Cita
               </Link>
             </li>
@@ -117,60 +96,24 @@ export function Footer() {
 
         {/* Contact */}
         <div>
-          <h4 className="text-white font-semibold text-sm uppercase tracking-widest mb-5">
+          <h4 className="text-white font-medium text-xs uppercase tracking-[0.2em] mb-6">
             Contacto
           </h4>
-          <ul className="space-y-4 text-sm text-white/50">
-            <li className="flex items-start gap-3">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={1.5}
-                className="w-4 h-4 mt-0.5 text-gold shrink-0"
-              >
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-              Guadalajara, Jalisco, Mexico
-            </li>
-            <li className="flex items-center gap-3">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={1.5}
-                className="w-4 h-4 text-gold shrink-0"
-              >
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
-              </svg>
-              <a
-                href="tel:+523314257226"
-                className="hover:text-gold transition-colors"
-              >
+          <ul className="space-y-4 text-sm text-white/40">
+            <li>Guadalajara, Jalisco, Mexico</li>
+            <li>
+              <a href="tel:+523314257226" className="hover:text-white transition-colors">
                 331 425 7226
               </a>
             </li>
-            <li className="flex items-center gap-3">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={1.5}
-                className="w-4 h-4 text-gold shrink-0"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 6v6l4 2" />
-              </svg>
-              Lun - Sab: 10:00 - 19:00
-            </li>
+            <li>Lun - Sab: 10:00 - 19:00</li>
           </ul>
         </div>
       </div>
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-white/30">
+        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-white/25">
           <p>
             &copy; {new Date().getFullYear()} Fabrica de Lentes. Todos los
             derechos reservados.
@@ -181,7 +124,7 @@ export function Footer() {
               href="https://innovablack.ai"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gold/50 hover:text-gold transition-colors"
+              className="text-white/40 hover:text-white transition-colors"
             >
               InnovaBlack
             </a>

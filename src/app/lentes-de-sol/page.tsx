@@ -25,7 +25,7 @@ export default function LentesDeSol() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-gold font-semibold text-sm tracking-widest uppercase mb-4">
+              <p className="text-gold font-medium text-xs tracking-[0.2em] uppercase mb-4">
                 100% Originales
               </p>
               <h1 className="font-[family-name:var(--font-display)] text-5xl md:text-7xl text-foreground leading-[1.05] mb-5">
@@ -39,13 +39,13 @@ export default function LentesDeSol() {
                 href="https://wa.me/523314257226?text=Hola%2C%20me%20interesan%20lentes%20de%20sol"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 px-8 py-4 bg-foreground text-white font-semibold rounded-full hover:bg-navy transition-all duration-300"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-foreground text-white text-sm font-semibold tracking-wide uppercase hover:bg-dark transition-colors duration-300"
               >
                 Ver disponibilidad por WhatsApp
               </a>
             </div>
             <div className="hidden lg:block">
-              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+              <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
                   src="/images/hero-3.png"
                   alt="Mujer con lentes de sol"
@@ -62,7 +62,7 @@ export default function LentesDeSol() {
       {/* Brands grid */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-14">
+          <div className="mb-14">
             <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-foreground mb-4">
               Marcas <span className="text-gold italic">disponibles</span>
             </h2>
@@ -75,10 +75,10 @@ export default function LentesDeSol() {
                 href={`https://wa.me/523314257226?text=Hola%2C%20me%20interesan%20lentes%20de%20sol%20${encodeURIComponent(b.name)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-off-white rounded-2xl p-7 border border-border hover:border-gold/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-gold/5 relative overflow-hidden"
+                className="group bg-off-white p-7 border border-border hover:border-gold/40 transition-all duration-300 relative overflow-hidden"
               >
                 {b.tag && (
-                  <span className="absolute top-5 right-5 px-3 py-1 bg-gold/10 text-gold text-xs font-semibold rounded-full">
+                  <span className="absolute top-5 right-5 px-3 py-1 bg-gold/10 text-gold text-xs font-medium">
                     {b.tag}
                   </span>
                 )}
@@ -101,9 +101,9 @@ export default function LentesDeSol() {
       {/* Graduados de sol */}
       <section className="py-20 md:py-28 bg-off-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-navy rounded-3xl overflow-hidden">
+          <div className="bg-[#111111] overflow-hidden">
             <div className="px-8 md:px-16 py-14 md:py-20 text-center">
-              <p className="text-gold font-semibold text-sm tracking-widest uppercase mb-3">
+              <p className="text-gold font-medium text-xs tracking-[0.2em] uppercase mb-4">
                 Servicio exclusivo
               </p>
               <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-5xl text-white mb-4 leading-tight">
@@ -117,7 +117,7 @@ export default function LentesDeSol() {
                 href="https://wa.me/523314257226?text=Hola%2C%20quiero%20lentes%20de%20sol%20graduados"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gold text-navy font-semibold rounded-full hover:bg-gold-light transition-all duration-300"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-white text-foreground text-sm font-semibold tracking-wide uppercase hover:bg-off-white transition-colors duration-300"
               >
                 Cotizar lentes de sol graduados
               </a>

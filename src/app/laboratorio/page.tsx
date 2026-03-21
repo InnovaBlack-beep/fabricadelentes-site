@@ -29,7 +29,7 @@ export default function Laboratorio() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-gold font-semibold text-sm tracking-widest uppercase mb-4">
+              <p className="text-gold font-medium text-xs tracking-[0.2em] uppercase mb-4">
                 Nuestro diferenciador
               </p>
               <h1 className="font-[family-name:var(--font-display)] text-5xl md:text-7xl text-foreground leading-[1.05] mb-5">
@@ -39,23 +39,25 @@ export default function Laboratorio() {
               <p className="text-muted text-lg max-w-lg mb-10 leading-relaxed">
                 No somos intermediarios. Fabricamos tus lentes aqui en Guadalajara, con control total de calidad y tiempos de entrega que nadie mas puede ofrecer.
               </p>
-              <div className="grid grid-cols-3 gap-6 max-w-sm">
-                {[
-                  { value: "< 24h", label: "Entrega" },
-                  { value: "100%", label: "Calidad" },
-                  { value: "+10", label: "Anos" },
-                ].map((s) => (
-                  <div key={s.label} className="border-l-2 border-gold/30 pl-3">
-                    <p className="font-[family-name:var(--font-display)] text-2xl text-foreground">
-                      {s.value}
-                    </p>
-                    <p className="text-xs text-muted mt-0.5">{s.label}</p>
-                  </div>
-                ))}
+              <div className="flex items-center gap-8 md:gap-12 text-foreground">
+                <div>
+                  <p className="font-[family-name:var(--font-display)] text-3xl">&lt; 24h</p>
+                  <p className="text-xs text-muted mt-0.5">Entrega</p>
+                </div>
+                <div className="w-px h-10 bg-border" />
+                <div>
+                  <p className="font-[family-name:var(--font-display)] text-3xl">100%</p>
+                  <p className="text-xs text-muted mt-0.5">Calidad</p>
+                </div>
+                <div className="w-px h-10 bg-border" />
+                <div>
+                  <p className="font-[family-name:var(--font-display)] text-3xl">+10</p>
+                  <p className="text-xs text-muted mt-0.5">Anos</p>
+                </div>
               </div>
             </div>
             <div className="hidden lg:block">
-              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+              <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
                   src="/images/hero-1.png"
                   alt="Laboratorio optico"
@@ -72,26 +74,26 @@ export default function Laboratorio() {
       {/* Process */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="mb-16">
             <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-foreground mb-4">
               Como <span className="text-gold italic">fabricamos</span> tus lentes
             </h2>
-            <p className="text-muted max-w-xl mx-auto">
+            <p className="text-muted max-w-xl">
               Un proceso controlado de principio a fin, sin intermediarios ni retrasos.
             </p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { step: "01", title: "Receta", desc: "Recibes tu graduacion con examen profesional o nos envias tu receta vigente." },
-              { step: "02", title: "Seleccion", desc: "Eliges armazon y tipo de lente. Te asesoramos segun tu estilo y necesidad." },
-              { step: "03", title: "Fabricacion", desc: "Cortamos, graduamos y tratamos tus lentes en nuestro laboratorio en Guadalajara." },
-              { step: "04", title: "Entrega", desc: "Verificamos calidad, montamos en tu armazon y te los entregamos listos." },
-            ].map((s) => (
-              <div key={s.step} className="relative">
-                <span className="font-[family-name:var(--font-display)] text-6xl text-gold/10 block mb-2">
-                  {s.step}
-                </span>
+              { title: "Receta", desc: "Recibes tu graduacion con examen profesional o nos envias tu receta vigente." },
+              { title: "Seleccion", desc: "Eliges armazon y tipo de lente. Te asesoramos segun tu estilo y necesidad." },
+              { title: "Fabricacion", desc: "Cortamos, graduamos y tratamos tus lentes en nuestro laboratorio en Guadalajara." },
+              { title: "Entrega", desc: "Verificamos calidad, montamos en tu armazon y te los entregamos listos." },
+            ].map((s, i) => (
+              <div key={s.title} className="relative">
+                <div className="w-8 h-8 border border-gold/30 flex items-center justify-center mb-4">
+                  <span className="text-sm font-medium text-gold">{i + 1}</span>
+                </div>
                 <h3 className="font-[family-name:var(--font-display)] text-xl text-foreground mb-2">
                   {s.title}
                 </h3>
@@ -107,7 +109,7 @@ export default function Laboratorio() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
             <div>
-              <p className="text-gold font-semibold text-sm tracking-widest uppercase mb-4">
+              <p className="text-gold font-medium text-xs tracking-[0.2em] uppercase mb-4">
                 Capacidades
               </p>
               <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-foreground mb-8 leading-tight">
@@ -118,7 +120,7 @@ export default function Laboratorio() {
                 {capabilities.map((cap) => (
                   <div
                     key={cap}
-                    className="flex items-center gap-3 bg-white rounded-xl p-4 border border-border"
+                    className="flex items-center gap-3 bg-white p-4 border border-border"
                   >
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-5 h-5 text-gold shrink-0">
                       <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -128,7 +130,7 @@ export default function Laboratorio() {
                 ))}
               </div>
             </div>
-            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+            <div className="relative aspect-[4/5] overflow-hidden">
               <Image
                 src="/images/hero-3.png"
                 alt="Lentes fabricados"
@@ -144,11 +146,11 @@ export default function Laboratorio() {
       {/* Comparison */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-foreground text-center mb-12">
+          <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-foreground mb-12">
             Nosotros vs. <span className="text-gold italic">la competencia</span>
           </h2>
 
-          <div className="bg-off-white rounded-2xl border border-border overflow-hidden">
+          <div className="bg-off-white border border-border overflow-hidden">
             <div className="grid grid-cols-3 text-sm font-semibold">
               <div className="p-5 text-muted"></div>
               <div className="p-5 bg-gold/10 text-gold text-center">Fabrica de Lentes</div>
@@ -172,7 +174,7 @@ export default function Laboratorio() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-28 bg-navy">
+      <section className="py-20 md:py-28 bg-[#111111]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-white mb-4">
             Solicita tu lente <span className="text-gold italic">personalizado</span>
@@ -184,7 +186,7 @@ export default function Laboratorio() {
             href="https://wa.me/523314257226?text=Hola%2C%20quiero%20cotizar%20lentes%20fabricados%20en%20su%20laboratorio"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gold text-navy font-semibold rounded-full hover:bg-gold-light transition-all duration-300"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-white text-foreground text-sm font-semibold tracking-wide uppercase hover:bg-off-white transition-colors duration-300"
           >
             Cotizar ahora
           </a>
