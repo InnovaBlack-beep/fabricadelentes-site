@@ -96,7 +96,7 @@ export default function LentesDeContacto() {
               href={`https://wa.me/523314257226?text=${encodeURIComponent(`Hola, me interesa ${p.brand} ${p.model}`)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-[#F0EBE3] rounded-[10px] p-5 hover:bg-[#E8E0D8] hover:-translate-y-0.5 transition-all relative"
+              className="group bg-white border border-[#F0F0F0] rounded-[10px] p-5 hover:bg-[#FAFAFA] hover:-translate-y-0.5 transition-all relative"
             >
               <div className="relative aspect-square overflow-hidden rounded mb-4 mt-2 bg-white">
                 <Image

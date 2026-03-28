@@ -185,16 +185,16 @@ export function ProductGrid() {
             rel="noopener noreferrer"
             className="group block transition-all duration-[180ms]"
             style={{
-              background: "#F0EBE3",
+              background: "white",
               borderRadius: 10,
               padding: "20px 16px 16px",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = "#E8E0D8";
+              e.currentTarget.style.background = "#FAFAFA";
               e.currentTarget.style.transform = "translateY(-2px)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = "#F0EBE3";
+              e.currentTarget.style.background = "white";
               e.currentTarget.style.transform = "translateY(0)";
             }}
           >
