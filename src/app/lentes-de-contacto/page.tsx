@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { contacto, brands } from "@/data/products";
+import { contacto, brands, getDetailUrl } from "@/data/products";
 
 export const metadata: Metadata = {
   title: "Lentes de Contacto en GDL | Fábrica de Lentes",
@@ -91,11 +91,9 @@ export default function LentesDeContacto() {
       <div className="max-w-[1280px] mx-auto px-4 md:px-10 pb-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((p) => (
-            <a
+            <Link
               key={p.id}
-              href={`https://wa.me/523314257226?text=${encodeURIComponent(`Hola, me interesa ${p.brand} ${p.model}`)}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={getDetailUrl(p.id)}
               className="group bg-white border border-[#F0F0F0] rounded-[10px] p-5 hover:shadow-lg hover:-translate-y-1 transition-all relative"
             >
               <div className="relative aspect-square overflow-hidden rounded mb-4 mt-2 bg-white">
@@ -114,7 +112,8 @@ export default function LentesDeContacto() {
                 <p className="text-xs text-[#A09080] mt-1 line-clamp-2">{p.description}</p>
               )}
               <p className="text-base font-semibold text-[#111110] mt-2" style={{ fontFamily: "var(--font-serif)" }}>{p.priceFormatted}</p>
-            </a>
+              <span className="inline-block mt-3 text-xs text-[#B5956E] font-medium group-hover:underline">Ver detalle &rarr;</span>
+            </Link>
           ))}
         </div>
       </div>

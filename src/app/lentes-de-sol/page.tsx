@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { solares, brands } from "@/data/products";
+import { solares, brands, getDetailUrl } from "@/data/products";
 
 export const metadata: Metadata = {
   title: "Lentes de Sol en GDL | Fábrica de Lentes",
@@ -91,11 +91,9 @@ export default function LentesDeSol() {
       <div className="max-w-[1280px] mx-auto px-4 md:px-10 pb-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((p) => (
-            <a
+            <Link
               key={p.id}
-              href={`https://wa.me/523314257226?text=${encodeURIComponent(`Hola, me interesa el modelo ${p.brand} ${p.model}`)}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={getDetailUrl(p.id)}
               className="group bg-white border border-[#F0F0F0] rounded-[10px] p-5 hover:shadow-lg hover:-translate-y-1 transition-all relative"
             >
               <span className="absolute top-4 left-4 bg-[#B5956E] text-[#2A1F14] text-xs font-bold uppercase tracking-[0.07em] px-2.5 py-0.5 rounded-full z-10">
@@ -114,7 +112,8 @@ export default function LentesDeSol() {
               <p className="text-sm text-[#111110] font-semibold" style={{ fontFamily: "var(--font-serif)" }}>{p.brand}</p>
               <p className="text-xs text-[#6A5A4A]">{p.model}</p>
               <p className="text-base font-semibold text-[#111110] mt-1" style={{ fontFamily: "var(--font-serif)" }}>{p.priceFormatted}</p>
-            </a>
+              <span className="inline-block mt-3 text-xs text-[#B5956E] font-medium group-hover:underline">Ver detalle &rarr;</span>
+            </Link>
           ))}
         </div>
       </div>
