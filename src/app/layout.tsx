@@ -3,7 +3,7 @@ import { Playfair_Display, Geist } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { WhatsAppFAB } from "@/components/WhatsAppFAB";
+import { ChatBot } from "@/components/ChatBot";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -98,7 +98,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
-        <WhatsAppFAB />
+        <ChatBot />
       </body>
     </html>
   );
