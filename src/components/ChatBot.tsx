@@ -404,46 +404,39 @@ export function ChatBot() {
         </div>
       )}
 
-      {/* Toggle button */}
-      <button
-        onClick={() => { if (open) setOpen(false); else handleOpen(); }}
-        className="fixed bottom-6 right-6 z-50 flex items-center justify-center transition-all duration-300 hover:scale-105"
-        style={{
-          width: 56,
-          height: 56,
-          borderRadius: "50%",
-          background: "#1A1818",
-          boxShadow: "0 4px 20px rgba(0,0,0,0.15)",
-        }}
-        aria-label={open ? "Cerrar chat" : "Hablar con Ana, asesora óptica"}
-      >
-        {open ? (
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
-        ) : (
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
-        )}
-        {!open && !hasOpened && (
-          <span className="absolute -top-0.5 -right-0.5 flex h-3.5 w-3.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
-            <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-red-500" />
-          </span>
-        )}
-      </button>
+      {/* Toggle button — hidden on mobile when chat is open (fullscreen) */}
+      {(!open || true) && (
+        <button
+          onClick={() => { if (open) setOpen(false); else handleOpen(); }}
+          className={`fixed bottom-6 right-6 z-50 flex items-center justify-center transition-all duration-300 hover:scale-105 ${open ? "hidden md:flex" : "flex"}`}
+          style={{
+            width: 56,
+            height: 56,
+            borderRadius: "50%",
+            background: "#1A1818",
+            boxShadow: "0 4px 20px rgba(0,0,0,0.15)",
+          }}
+          aria-label={open ? "Cerrar chat" : "Hablar con Ana, asesora óptica"}
+        >
+          {open ? (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
+          ) : (
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          )}
+          {!open && !hasOpened && (
+            <span className="absolute -top-0.5 -right-0.5 flex h-3.5 w-3.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-red-500" />
+            </span>
+          )}
+        </button>
+      )}
 
       {/* Chat window */}
       {open && (
         <div
-          className="fixed z-50 flex flex-col animate-scale-in"
-          style={{
-            bottom: 80,
-            right: 24,
-            width: "min(400px, calc(100vw - 32px))",
-            height: "min(560px, calc(100dvh - 120px))",
-            borderRadius: 16,
-            background: "#fff",
-            boxShadow: "0 12px 48px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.04)",
-            overflow: "hidden",
-          }}
+          className="fixed z-50 flex flex-col animate-scale-in inset-0 md:inset-auto md:bottom-[80px] md:right-6 md:w-[400px] md:h-[560px] md:rounded-2xl bg-white overflow-hidden"
+          style={{ boxShadow: "0 12px 48px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.04)" }}
         >
           {/* Header */}
           <div className="flex items-center gap-3 flex-shrink-0" style={{ padding: "16px 20px", borderBottom: "1px solid #F0F0F0" }}>
@@ -455,8 +448,8 @@ export function ChatBot() {
               <p style={{ fontSize: 14, fontWeight: 600, color: "#1A1818" }}>Ana</p>
               <p style={{ fontSize: 11, color: "#22C55E" }}>En línea ahora</p>
             </div>
-            <button onClick={() => setOpen(false)} className="p-1.5 rounded-full hover:bg-gray-100 transition-colors">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" strokeWidth="2" strokeLinecap="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
+            <button onClick={() => setOpen(false)} className="p-2 -mr-1 rounded-full hover:bg-gray-100 transition-colors" aria-label="Cerrar chat">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B7280" strokeWidth="2" strokeLinecap="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
             </button>
           </div>
 
@@ -549,7 +542,7 @@ export function ChatBot() {
           </div>
 
           {/* Input */}
-          <div className="flex-shrink-0" style={{ padding: "10px 14px 14px", borderTop: "1px solid #F0F0F0" }}>
+          <div className="flex-shrink-0" style={{ padding: "10px 14px calc(14px + env(safe-area-inset-bottom, 0px))", borderTop: "1px solid #F0F0F0" }}>
             <div className="flex items-center gap-2" style={{ background: "#F3F4F6", borderRadius: 24, padding: "4px 4px 4px 16px" }}>
               <input
                 ref={inputRef}
