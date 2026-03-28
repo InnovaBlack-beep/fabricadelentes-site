@@ -15,7 +15,7 @@ const brands = [
 
 export function BrandMarquee() {
   return (
-    <section className="py-10 border-y border-border bg-surface overflow-hidden">
+    <section className="py-10 border-y border-border bg-white overflow-hidden">
       <div className="flex animate-marquee whitespace-nowrap">
         {[...brands, ...brands].map((brand, i) => (
           <span

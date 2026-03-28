@@ -44,7 +44,7 @@ export default function LentesDeContacto() {
       </div>
 
       {/* Filter pills */}
-      <div className="border-b border-[#E8E0D8] mb-6">
+      <div className="border-b border-[#F0F0F0] mb-6">
         <div className="max-w-[1280px] mx-auto px-10">
           <div className="flex items-center gap-3 overflow-x-auto py-3">
             {filterPills.map((pill, i) => (
@@ -53,7 +53,7 @@ export default function LentesDeContacto() {
                 className={
                   i === 0
                     ? "text-xs font-medium text-[#111110] border border-[#111110] rounded-full px-3.5 py-1.5 whitespace-nowrap"
-                    : "text-xs text-[#6A5A4A] border border-[#C8C0B8] rounded-full px-3.5 py-1.5 whitespace-nowrap hover:border-[#111110] hover:text-[#111110] transition-colors"
+                    : "text-xs text-[#6A5A4A] border border-[#E5E5E5] rounded-full px-3.5 py-1.5 whitespace-nowrap hover:border-[#111110] hover:text-[#111110] transition-colors"
                 }
               >
                 {pill}

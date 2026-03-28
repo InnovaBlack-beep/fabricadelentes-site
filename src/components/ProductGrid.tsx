@@ -124,7 +124,7 @@ export function ProductGrid() {
     <section
       style={{
         padding: "60px 48px",
-        background: "#FAF8F5",
+        background: "#FFFFFF",
       }}
     >
       {/* Header */}

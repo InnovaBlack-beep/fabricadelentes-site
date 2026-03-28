@@ -23,7 +23,7 @@ export function BrandShowcase() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-warm-cream">
+    <section className="py-16 md:py-24 bg-white">
       <div className="max-w-[1440px] mx-auto px-4">
         <div className="flex items-end justify-between mb-10">
           <div>

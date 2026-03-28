@@ -15,8 +15,8 @@ export function FilterBar() {
       className="flex items-center gap-3 overflow-x-auto scrollbar-hide"
       style={{
         height: 52,
-        background: "#FAF8F5",
-        borderBottom: "0.5px solid #E8E0D8",
+        background: "#FFFFFF",
+        borderBottom: "0.5px solid #F0F0F0",
         padding: "0 48px",
       }}
     >
@@ -38,9 +38,9 @@ export function FilterBar() {
           className="shrink-0 rounded-full transition-colors text-xs"
           style={{
             color: "#6A5A4A",
-            border: "0.5px solid #C8C0B8",
+            border: "0.5px solid #E5E5E5",
             padding: "7px 14px",
-            background: "#FAF8F5",
+            background: "#FFFFFF",
             cursor: "pointer",
           }}
           onMouseEnter={(e) => {
@@ -48,7 +48,7 @@ export function FilterBar() {
             e.currentTarget.style.color = "#111110";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.borderColor = "#C8C0B8";
+            e.currentTarget.style.borderColor = "#E5E5E5";
             e.currentTarget.style.color = "#6A5A4A";
           }}
         >

@@ -5,7 +5,7 @@ const testimonials = [
     name: "María G.",
     location: "Zapopan",
     initials: "MG",
-    color: "bg-surface",
+    color: "bg-white",
   },
   {
     quote:
@@ -13,7 +13,7 @@ const testimonials = [
     name: "Roberto L.",
     location: "Guadalajara",
     initials: "RL",
-    color: "bg-surface",
+    color: "bg-white",
   },
   {
     quote:
@@ -21,7 +21,7 @@ const testimonials = [
     name: "Ana P.",
     location: "Recursos Humanos",
     initials: "AP",
-    color: "bg-surface",
+    color: "bg-white",
   },
 ];
 

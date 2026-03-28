@@ -32,7 +32,7 @@ export default function Laboratorio() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-14 pb-16 md:pt-20 md:pb-24 bg-[#F0EBE3]">
+      <section className="pt-14 pb-16 md:pt-20 md:pb-24 bg-[#FFFFFF]">
         <div className="max-w-[1280px] mx-auto px-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -54,12 +54,12 @@ export default function Laboratorio() {
                   <p className="text-2xl font-semibold" style={{ fontFamily: "var(--font-serif)" }}>&lt; 1h</p>
                   <p className="text-xs text-[#A09080] mt-0.5 tracking-wide uppercase">Entrega</p>
                 </div>
-                <div className="w-px h-10 bg-[#E8E0D8]" />
+                <div className="w-px h-10 bg-[#F0F0F0]" />
                 <div>
                   <p className="text-2xl font-semibold" style={{ fontFamily: "var(--font-serif)" }}>100%</p>
                   <p className="text-xs text-[#A09080] mt-0.5 tracking-wide uppercase">Calidad</p>
                 </div>
-                <div className="w-px h-10 bg-[#E8E0D8]" />
+                <div className="w-px h-10 bg-[#F0F0F0]" />
                 <div>
                   <p className="text-2xl font-semibold" style={{ fontFamily: "var(--font-serif)" }}>+10</p>
                   <p className="text-xs text-[#A09080] mt-0.5 tracking-wide uppercase">A&ntilde;os</p>
@@ -82,7 +82,7 @@ export default function Laboratorio() {
       </section>
 
       {/* Process */}
-      <section className="py-16 md:py-20 bg-[#FAF8F5]">
+      <section className="py-16 md:py-20 bg-[#FFFFFF]">
         <div className="max-w-[1280px] mx-auto px-10">
           <h2
             className="text-2xl md:text-3xl text-[#111110] mb-3 font-semibold"
@@ -116,7 +116,7 @@ export default function Laboratorio() {
       </section>
 
       {/* Capabilities */}
-      <section className="py-16 md:py-20 bg-[#F0EBE3]">
+      <section className="py-16 md:py-20 bg-[#FFFFFF]">
         <div className="max-w-[1280px] mx-auto px-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -133,7 +133,7 @@ export default function Laboratorio() {
                 {capabilities.map((cap) => (
                   <div
                     key={cap}
-                    className="flex items-center gap-3 bg-[#FAF8F5] rounded-[10px] p-4"
+                    className="flex items-center gap-3 bg-[#FFFFFF] rounded-[10px] p-4"
                   >
                     <svg viewBox="0 0 24 24" fill="none" stroke="#B5956E" strokeWidth={1.5} className="w-5 h-5 shrink-0">
                       <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />

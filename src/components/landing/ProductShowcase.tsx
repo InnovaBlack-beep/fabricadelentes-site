@@ -27,7 +27,7 @@ export function ProductShowcase() {
               Destacados
             </h2>
           </div>
-          <div className="flex gap-1 bg-surface rounded-full p-1 border border-border">
+          <div className="flex gap-1 bg-white rounded-full p-1 border border-border">
             {tabs.map((tab) => (
               <button
                 key={tab}

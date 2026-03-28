@@ -9,7 +9,7 @@ export function HowItWorks() {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-surface">
+    <section className="py-20 md:py-28 bg-white">
       <div className="max-w-[1440px] mx-auto px-8 md:px-12">
         <div className="text-center mb-16">
           <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase mb-4 text-accent">

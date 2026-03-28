@@ -42,7 +42,7 @@ export function TrustStrip() {
   ];
 
   return (
-    <section className="border-y border-border bg-surface">
+    <section className="border-y border-border bg-white">
       <div className="max-w-[1440px] mx-auto px-4">
         <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-border">
           {items.map((item) => (

@@ -68,7 +68,7 @@ export function Services() {
               href={service.href}
               className="group block p-6 md:p-8 rounded-lg border border-border hover:shadow-md transition-all"
             >
-              <div className="w-14 h-14 rounded-full bg-surface flex items-center justify-center text-fg mb-5">
+              <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center text-fg mb-5">
                 {service.icon}
               </div>
               <h3 className="text-base font-bold text-fg mb-2">

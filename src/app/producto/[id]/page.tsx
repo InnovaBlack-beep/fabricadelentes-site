@@ -183,7 +183,7 @@ export default async function ProductPage({ params }: Props) {
               </p>
 
               {/* Incluye */}
-              <div className="mb-8 rounded-lg bg-surface p-5">
+              <div className="mb-8 rounded-lg bg-white p-5">
                 <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#242424] mb-3">
                   Incluye
                 </p>

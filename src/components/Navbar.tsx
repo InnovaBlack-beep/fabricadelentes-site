@@ -44,8 +44,8 @@ export function Navbar() {
         className="sticky top-0 z-50 transition-shadow duration-200"
         style={{
           height: 64,
-          background: "#FAF8F5",
-          borderBottom: "0.5px solid #E8E0D8",
+          background: "#FFFFFF",
+          borderBottom: "1px solid #F0F0F0",
           boxShadow: scrolled ? "0 1px 8px rgba(0,0,0,0.06)" : "none",
         }}
       >
@@ -102,7 +102,7 @@ export function Navbar() {
       {menuOpen && (
         <div className="fixed inset-0 z-[60] lg:hidden">
           <div className="absolute inset-0 bg-black/30" onClick={() => setMenuOpen(false)} />
-          <div className="absolute top-0 right-0 h-full w-72 flex flex-col" style={{ background: "#FAF8F5" }}>
+          <div className="absolute top-0 right-0 h-full w-72 flex flex-col" style={{ background: "#FFFFFF" }}>
             <div className="flex items-center justify-end p-5">
               <button onClick={() => setMenuOpen(false)} aria-label="Cerrar menú" className="text-muted">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">

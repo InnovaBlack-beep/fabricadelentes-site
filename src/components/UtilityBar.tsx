@@ -25,7 +25,7 @@ export function UtilityBar() {
   return (
     <div
       className="hidden lg:block h-9"
-      style={{ background: "#FAF8F5", borderBottom: "0.5px solid #E8E0D8" }}
+      style={{ background: "#FFFFFF", borderBottom: "0.5px solid #F0F0F0" }}
     >
       <div className="flex items-center justify-between h-full px-12 max-w-[1440px] mx-auto text-xs tracking-wide text-warm-brown">
         <div className="flex items-center gap-5">

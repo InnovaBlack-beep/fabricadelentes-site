@@ -1,9 +1,9 @@
 export function AdvisorCTA() {
   return (
-    <section className="py-16 md:py-24 px-5 md:px-10 bg-surface">
+    <section className="py-16 md:py-24 px-5 md:px-10 bg-white">
       <div className="max-w-[640px] mx-auto text-center">
         {/* Icon */}
-        <div className="w-14 h-14 rounded-full bg-surface flex items-center justify-center mx-auto mb-6">
+        <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center mx-auto mb-6">
           <svg
             className="w-7 h-7 text-fg"
             fill="none"

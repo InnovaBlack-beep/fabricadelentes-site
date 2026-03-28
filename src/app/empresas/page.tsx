@@ -27,7 +27,7 @@ export default function Empresas() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-14 pb-16 md:pt-20 md:pb-24 bg-surface">
+      <section className="pt-14 pb-16 md:pt-20 md:pb-24 bg-white">
         <div className="max-w-[1280px] mx-auto px-10 text-center">
           <p className="text-xs text-muted tracking-[0.16em] uppercase mb-4 font-semibold">
             Canal Empresarial
@@ -67,7 +67,7 @@ export default function Empresas() {
             {benefits.map((b) => (
               <div
                 key={b.title}
-                className="bg-surface rounded-lg p-6 hover:shadow-md transition-all"
+                className="bg-white rounded-lg p-6 hover:shadow-md transition-all"
               >
                 <h3 className="text-sm font-semibold text-fg uppercase tracking-[0.05em] mb-2">
                   {b.title}
@@ -80,7 +80,7 @@ export default function Empresas() {
       </section>
 
       {/* How it works */}
-      <section className="py-16 md:py-20 bg-surface">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-10">
           <h2 className="text-2xl md:text-3xl text-fg mb-10 font-semibold">
             ¿Cómo funciona?
