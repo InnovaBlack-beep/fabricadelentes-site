@@ -4,13 +4,23 @@ import Link from "next/link";
 import { solares, brands, getDetailUrl } from "@/data/products";
 
 export const metadata: Metadata = {
-  title: "Lentes de Sol en GDL | Fábrica de Lentes",
+  title: "Lentes de Sol en Guadalajara | Colección Frida Kahlo desde $1,650 | Fábrica de Lentes®",
   description:
-    "Lentes de sol Frida Kahlo en Guadalajara. Originales con garantía. También graduados de sol. Cotiza por WhatsApp.",
+    "Lentes de sol Frida Kahlo originales en Guadalajara. 21 modelos con protección UV 400. Polarizados disponibles. También graduados de sol. Garantía de 1 año. La mejor colección de lentes de sol en GDL. Sucursal Zona Minerva.",
+  keywords: [
+    "lentes de sol guadalajara", "lentes de sol frida kahlo", "lentes de sol polarizados guadalajara",
+    "lentes de sol graduados guadalajara", "lentes de sol con protección uv guadalajara",
+    "comprar lentes de sol guadalajara", "lentes de sol baratos guadalajara",
+    "lentes de sol originales guadalajara", "gafas de sol guadalajara",
+    "lentes de sol para mujer guadalajara", "lentes de sol para hombre guadalajara",
+    "lentes de sol zona minerva", "óptica con lentes de sol guadalajara",
+    "lentes solares guadalajara", "protección uv 400 lentes",
+    "donde comprar lentes de sol guadalajara", "mejor óptica lentes de sol",
+  ],
   alternates: { canonical: "https://fabricadelentes.mx/lentes-de-sol" },
   openGraph: {
-    title: "Lentes de Sol | Fábrica de Lentes · GDL",
-    description: "Lentes de sol Frida Kahlo originales con garantía. Graduados de sol disponibles.",
+    title: "Lentes de Sol Frida Kahlo en Guadalajara | Fábrica de Lentes®",
+    description: "21 modelos Frida Kahlo con UV 400. Polarizados y graduados disponibles. Desde $1,650. Zona Minerva, GDL.",
     url: "https://fabricadelentes.mx/lentes-de-sol",
     images: [{ url: "https://fabricadelentes.mx/products/solares/FKSL1-5ea420bc.jpg", width: 1200, height: 630 }],
   },

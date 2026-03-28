@@ -20,13 +20,32 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Fábrica de Lentes® — Óptica con Lab Propio · GDL",
+  title: "Fábrica de Lentes® — Óptica con Laboratorio Propio en Guadalajara | Lentes Graduados, Sol y Contacto",
   description:
-    "Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora. Examen de la vista gratis. Armazones desde $1,349 MXN. Sucursal Minerva.",
+    "Óptica con laboratorio propio en Guadalajara. Lentes graduados listos en 1 hora. Examen de la vista gratis. Lentes de contacto, lentes de sol, armazones Brizzant, Frida Kahlo, Nobleman y Massimo desde $1,349 MXN. Sucursal Zona Minerva. La mejor óptica de GDL.",
+  keywords: [
+    "óptica guadalajara", "lentes guadalajara", "fábrica de lentes", "lentes graduados guadalajara",
+    "lentes de contacto guadalajara", "lentes de sol guadalajara", "examen de la vista guadalajara",
+    "examen de la vista gratis guadalajara", "óptica con laboratorio propio", "lentes en 1 hora guadalajara",
+    "óptica express guadalajara", "lentes económicos guadalajara", "óptica zona minerva",
+    "armazones guadalajara", "micas antirreflejante guadalajara", "lentes progresivos guadalajara",
+    "lentes bifocales guadalajara", "lentes fotocromáticos guadalajara", "lentes transitions guadalajara",
+    "lentes blue guadalajara", "lentes luz azul guadalajara", "lentes para computadora guadalajara",
+    "lentes brizzant", "lentes frida kahlo", "lentes nobleman", "lentes massimo",
+    "air optix guadalajara", "lentes de contacto air optix", "alcon guadalajara",
+    "óptica cerca de mí", "mejor óptica guadalajara", "óptica barata guadalajara",
+    "lentes baratos guadalajara", "donde comprar lentes guadalajara",
+    "óptica zapopan", "óptica tlaquepaque", "óptica jalisco",
+    "laboratorio óptico guadalajara", "fabricar lentes guadalajara",
+    "lentes graduados mismo día", "entrega express lentes",
+    "convenio óptico empresarial guadalajara", "lentes para empresas guadalajara",
+    "lentes de contacto para astigmatismo", "lentes de contacto mensuales",
+    "lentes de sol polarizados guadalajara", "lentes de sol graduados guadalajara",
+  ],
   openGraph: {
-    title: "Fábrica de Lentes® — Óptica con Lab Propio · GDL",
+    title: "Fábrica de Lentes® — La Mejor Óptica en Guadalajara con Laboratorio Propio",
     description:
-      "Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora. Examen gratis. Armazones desde $1,349 MXN.",
+      "Óptica con laboratorio propio en Guadalajara. Lentes graduados en 1 hora, examen gratis, lentes de contacto y de sol. Armazones desde $1,349 MXN. Zona Minerva.",
     url: "https://fabricadelentes.mx",
     siteName: "Fábrica de Lentes",
     locale: "es_MX",
@@ -36,15 +55,15 @@ export const metadata: Metadata = {
         url: "https://fabricadelentes.mx/images/hero-1.jpg",
         width: 1200,
         height: 630,
-        alt: "Fábrica de Lentes — Óptica en Guadalajara",
+        alt: "Fábrica de Lentes — Óptica con laboratorio propio en Guadalajara, Jalisco",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fábrica de Lentes® — Óptica con Lab Propio · GDL",
+    title: "Fábrica de Lentes® — Óptica con Lab Propio en Guadalajara",
     description:
-      "Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora. Examen gratis.",
+      "Lentes graduados en 1 hora. Examen gratis. Laboratorio propio. La mejor óptica de Guadalajara. Zona Minerva.",
     images: ["https://fabricadelentes.mx/images/hero-1.jpg"],
   },
   robots: { index: true, follow: true },
@@ -53,14 +72,40 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Optician",
+  "@type": ["Optician", "LocalBusiness", "Store"],
   name: "Fábrica de Lentes",
+  alternateName: "Fábrica de Lentes Guadalajara",
   description:
-    "Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora. Examen de la vista gratis. Armazones desde $1,349 MXN. Sucursal Minerva.",
+    "Óptica con laboratorio propio en Guadalajara, Jalisco. Fabricamos lentes graduados en 1 hora. Examen de la vista gratis. Lentes de contacto Air Optix, Alcon. Armazones Brizzant, Frida Kahlo, Nobleman, Massimo desde $1,349 MXN. Lentes de sol. Sucursal Zona Minerva.",
   url: "https://fabricadelentes.mx",
   telephone: "+523314257226",
-  priceRange: "$1,064-$1,650 MXN",
+  priceRange: "$1,064 - $1,650 MXN",
+  currenciesAccepted: "MXN",
+  paymentAccepted: "Cash, Credit Card, Debit Card, Bank Transfer",
   image: "https://fabricadelentes.mx/images/hero-1.jpg",
+  logo: "https://fabricadelentes.mx/images/logo-black.png",
+  areaServed: [
+    { "@type": "City", name: "Guadalajara" },
+    { "@type": "City", name: "Zapopan" },
+    { "@type": "City", name: "Tlaquepaque" },
+    { "@type": "State", name: "Jalisco" },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Catálogo de lentes",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Product", name: "Lentes Graduados", description: "Armazones con micas graduadas. Entrega en 1 hora." } },
+      { "@type": "Offer", itemOffered: { "@type": "Product", name: "Lentes de Sol", description: "Colección Frida Kahlo Solar con protección UV 400." } },
+      { "@type": "Offer", itemOffered: { "@type": "Product", name: "Lentes de Contacto", description: "Air Optix, Alcon Dailies Total 1, Frecuent." } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Examen de la Vista Gratis", description: "Revisión optométrica sin costo ni compromiso." } },
+    ],
+  },
+  knowsAbout: [
+    "Optometría", "Lentes graduados", "Lentes de contacto", "Lentes de sol",
+    "Miopía", "Astigmatismo", "Hipermetropía", "Presbicia", "Lentes progresivos",
+    "Lentes bifocales", "Micas antirreflejante", "Lentes fotocromáticos",
+    "Lentes Transitions", "Protección luz azul", "Laboratorio óptico",
+  ],
   address: {
     "@type": "PostalAddress",
     streetAddress: "Zona Minerva",

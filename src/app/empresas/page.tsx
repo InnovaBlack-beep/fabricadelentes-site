@@ -1,13 +1,21 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Convenios Ópticos Empresariales | Fábrica de Lentes",
+  title: "Convenios Ópticos para Empresas en Guadalajara | Lentes Corporativos | Fábrica de Lentes®",
   description:
-    "Convenios ópticos corporativos en Guadalajara. Examen de la vista gratis, descuentos por volumen, servicio en instalaciones. Solicita tu convenio.",
+    "Convenios ópticos corporativos en Guadalajara para tu empresa. Examen de la vista gratis para empleados, descuentos por volumen, servicio en instalaciones, facilidades de pago. Más de 150 empleados atendidos en una sola cuenta. Solicita tu convenio empresarial.",
+  keywords: [
+    "convenio óptico empresarial guadalajara", "lentes para empresas guadalajara",
+    "óptica corporativa guadalajara", "examen de la vista empresas guadalajara",
+    "lentes descuento empresas", "convenio óptico para empleados",
+    "servicio óptico en empresa guadalajara", "lentes corporativos jalisco",
+    "salud visual empresarial guadalajara", "prestaciones ópticas para empleados",
+    "óptica recursos humanos guadalajara", "convenio lentes guadalajara",
+  ],
   alternates: { canonical: "https://fabricadelentes.mx/empresas" },
   openGraph: {
-    title: "Convenios Empresariales | Fábrica de Lentes · GDL",
-    description: "Convenios ópticos corporativos. Examen gratis, descuentos por volumen, servicio en instalaciones.",
+    title: "Convenios Ópticos Empresariales en Guadalajara | Fábrica de Lentes®",
+    description: "Examen gratis para empleados, descuentos por volumen, servicio en instalaciones. Solicita tu convenio.",
     url: "https://fabricadelentes.mx/empresas",
     images: [{ url: "https://fabricadelentes.mx/images/hero-1.jpg", width: 1200, height: 630 }],
   },

@@ -4,13 +4,25 @@ import Link from "next/link";
 import { contacto, brands, getDetailUrl } from "@/data/products";
 
 export const metadata: Metadata = {
-  title: "Lentes de Contacto en GDL | Fábrica de Lentes",
+  title: "Lentes de Contacto en Guadalajara | Air Optix, Alcon desde $1,064 | Fábrica de Lentes®",
   description:
-    "Lentes de contacto en Guadalajara. Air Optix, Alcon, Frecuent. Entrega inmediata. Cotiza por WhatsApp.",
+    "Compra lentes de contacto en Guadalajara. Air Optix HydraGlyde, Alcon Dailies Total 1, Frecuent. Para miopía, astigmatismo e hipermetropía. Mensuales y diarios. Adaptación incluida. Entrega inmediata en sucursal Zona Minerva. La mejor óptica para lentes de contacto en GDL.",
+  keywords: [
+    "lentes de contacto guadalajara", "pupilentes guadalajara", "comprar lentes de contacto guadalajara",
+    "air optix guadalajara", "air optix hydraglyde precio", "alcon guadalajara",
+    "dailies total 1 guadalajara", "lentes de contacto mensuales guadalajara",
+    "lentes de contacto diarios guadalajara", "lentes de contacto para astigmatismo guadalajara",
+    "lentes de contacto para miopía guadalajara", "lentes de contacto baratos guadalajara",
+    "lentes de contacto económicos guadalajara", "donde comprar lentes de contacto guadalajara",
+    "adaptación lentes de contacto guadalajara", "lentes de contacto sin receta guadalajara",
+    "pupilentes baratos guadalajara", "lentes de contacto freshlook guadalajara",
+    "lentes de contacto color guadalajara", "óptica lentes de contacto guadalajara",
+    "lentes de contacto zona minerva", "mejor óptica lentes de contacto",
+  ],
   alternates: { canonical: "https://fabricadelentes.mx/lentes-de-contacto" },
   openGraph: {
-    title: "Lentes de Contacto | Fábrica de Lentes · GDL",
-    description: "Lentes de contacto: Air Optix, Alcon, Frecuent. Entrega inmediata.",
+    title: "Lentes de Contacto en Guadalajara | Air Optix, Alcon | Fábrica de Lentes®",
+    description: "Air Optix, Alcon Dailies Total 1 y Frecuent. Desde $1,064. Adaptación incluida. Zona Minerva, GDL.",
     url: "https://fabricadelentes.mx/lentes-de-contacto",
     images: [{ url: "https://fabricadelentes.mx/products/contacto/lentes10-4ac1893a.png", width: 1200, height: 630 }],
   },

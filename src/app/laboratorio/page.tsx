@@ -2,13 +2,23 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Laboratorio Óptico en GDL | Fábrica de Lentes",
+  title: "Laboratorio Óptico Propio en Guadalajara | Lentes en 1 Hora | Fábrica de Lentes®",
   description:
-    "Laboratorio óptico propio en Guadalajara. Fabricamos lentes graduados, progresivos, transición y más. Entrega express el mismo día. Sin intermediarios.",
+    "Laboratorio óptico propio en Guadalajara. Fabricamos lentes graduados en 1 hora. Micas monofocales, progresivas, bifocales, fotocromáticas, antirreflejante y blue. Sin intermediarios, precio directo de fábrica. El único laboratorio óptico express en Zona Minerva, GDL.",
+  keywords: [
+    "laboratorio óptico guadalajara", "fabricar lentes guadalajara", "lentes en 1 hora guadalajara",
+    "laboratorio de lentes guadalajara", "micas graduadas guadalajara", "óptica express guadalajara",
+    "lentes mismo día guadalajara", "laboratorio óptico propio", "fabricación de micas guadalajara",
+    "lentes progresivos guadalajara", "micas antirreflejante guadalajara",
+    "micas fotocromáticas guadalajara", "micas transitions guadalajara",
+    "lentes alto índice guadalajara", "reparación de lentes guadalajara",
+    "cambio de micas guadalajara", "graduar lentes guadalajara",
+    "laboratorio óptico zapopan", "laboratorio óptico jalisco",
+  ],
   alternates: { canonical: "https://fabricadelentes.mx/laboratorio" },
   openGraph: {
-    title: "Laboratorio Óptico | Fábrica de Lentes · GDL",
-    description: "Laboratorio óptico propio en Guadalajara. Lentes graduados, progresivos, transición. Entrega express.",
+    title: "Laboratorio Óptico Propio en Guadalajara | Fábrica de Lentes®",
+    description: "Fabricamos lentes graduados en 1 hora. Progresivos, fotocromáticos, antirreflejante. Sin intermediarios. Zona Minerva.",
     url: "https://fabricadelentes.mx/laboratorio",
     images: [{ url: "https://fabricadelentes.mx/images/hero-3.jpg", width: 1200, height: 630 }],
   },
