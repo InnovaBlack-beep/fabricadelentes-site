@@ -17,7 +17,7 @@ export function FilterBar() {
         height: 52,
         background: "#FFFFFF",
         borderBottom: "0.5px solid #F0F0F0",
-        padding: "0 48px",
+        padding: "0 16px",
       }}
     >
       <span

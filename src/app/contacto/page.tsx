@@ -18,7 +18,7 @@ export default function Contacto() {
     <>
       {/* Hero */}
       <section className="pt-14 pb-8 md:pt-20 md:pb-12 bg-[#FFFFFF]">
-        <div className="max-w-[1280px] mx-auto px-10 text-center">
+        <div className="max-w-[1280px] mx-auto px-4 md:px-10 text-center">
           <h1
             className="text-3xl md:text-4xl text-[#111110] mb-3 font-bold"
             style={{ fontFamily: "var(--font-sans)" }}
@@ -33,7 +33,7 @@ export default function Contacto() {
 
       {/* Content: Form + Info */}
       <section className="py-14 md:py-20 bg-[#FFFFFF]">
-        <div className="max-w-[1280px] mx-auto px-10">
+        <div className="max-w-[1280px] mx-auto px-4 md:px-10">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Left — Form */}
             <div className="bg-[#FFFFFF] rounded-[10px] p-8 md:p-10">

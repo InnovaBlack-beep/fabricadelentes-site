@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer style={{ background: "#1A1818", padding: "52px 48px 28px" }}>
+    <footer style={{ background: "#1A1818", padding: "52px 20px 28px" }}>
       <div className="max-w-[1440px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
         {/* Productos */}
         <div>
@@ -212,7 +212,7 @@ export function Footer() {
             © 2026 Fábrica de Lentes® · Todos los derechos reservados
           </p>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-5">
             <a
               href="https://instagram.com/fabricadelentesmex"
               target="_blank"

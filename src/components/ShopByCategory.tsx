@@ -42,8 +42,7 @@ export function ShopByCategory() {
             <a
               key={cat.title}
               href={cat.href}
-              className="group relative overflow-hidden rounded-lg"
-              style={{ aspectRatio: "4/5" }}
+              className="group relative overflow-hidden rounded-lg aspect-video md:aspect-[4/5]"
             >
               <Image src={cat.image} alt={cat.alt} fill quality={90} sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />

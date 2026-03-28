@@ -25,7 +25,7 @@ export default function LentesGraduados() {
   return (
     <>
       {/* Breadcrumb */}
-      <div className="max-w-[1280px] mx-auto px-10 pt-6 pb-2">
+      <div className="max-w-[1280px] mx-auto px-4 md:px-10 pt-6 pb-2">
         <p className="text-xs text-[#A09080]">
           <Link href="/" className="hover:text-[#B5956E] transition-colors">Inicio</Link>
           <span className="mx-2">&rsaquo;</span>
@@ -34,7 +34,7 @@ export default function LentesGraduados() {
       </div>
 
       {/* Title */}
-      <div className="max-w-[1280px] mx-auto px-10 pb-4">
+      <div className="max-w-[1280px] mx-auto px-4 md:px-10 pb-4">
         <h1
           className="text-3xl md:text-4xl text-[#111110]"
           style={{ fontFamily: "var(--font-serif)" }}
@@ -45,7 +45,7 @@ export default function LentesGraduados() {
 
       {/* Filter pills */}
       <div className="border-b border-[#F0F0F0] mb-6">
-        <div className="max-w-[1280px] mx-auto px-10">
+        <div className="max-w-[1280px] mx-auto px-4 md:px-10">
           <div className="flex items-center gap-3 overflow-x-auto py-3">
             {filterPills.map((pill, i) => (
               <button
@@ -64,7 +64,7 @@ export default function LentesGraduados() {
       </div>
 
       {/* Dark promo banner */}
-      <div className="max-w-[1280px] mx-auto px-10 mb-8">
+      <div className="max-w-[1280px] mx-auto px-4 md:px-10 mb-8">
         <div className="bg-[#1A1818] text-center py-6 px-6 rounded-[10px]">
           <p className="text-xs tracking-[0.12em] uppercase mb-1 text-[rgba(245,240,234,0.50)]">&mdash; Laboratorio propio &mdash;</p>
           <h2
@@ -88,7 +88,7 @@ export default function LentesGraduados() {
       </div>
 
       {/* Product grid */}
-      <div className="max-w-[1280px] mx-auto px-10 pb-20">
+      <div className="max-w-[1280px] mx-auto px-4 md:px-10 pb-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((p) => (
             <a

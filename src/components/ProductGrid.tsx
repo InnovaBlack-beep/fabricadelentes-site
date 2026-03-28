@@ -123,12 +123,12 @@ export function ProductGrid() {
   return (
     <section
       style={{
-        padding: "60px 48px",
+        padding: "40px 16px",
         background: "#FFFFFF",
       }}
     >
       {/* Header */}
-      <div className="flex items-end justify-between mb-8">
+      <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
         <div>
           <h2
             className="text-2xl font-semibold"
@@ -140,7 +140,7 @@ export function ProductGrid() {
           >
             Lo más pedido
           </h2>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4 overflow-x-auto whitespace-nowrap">
             {tabs.map((tab, i) => (
               <button
                 key={tab}

@@ -62,7 +62,7 @@ export function ProductShowcase() {
                     className={`object-contain p-6 transition-all duration-500 ${
                       hasSecondImage ? "group-hover:opacity-0" : "group-hover:scale-105"
                     }`}
-                    unoptimized
+                    quality={90} sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   />
                   {hasSecondImage && (
                     <Image
@@ -70,7 +70,7 @@ export function ProductShowcase() {
                       alt={`${product.brand} ${product.model} - vista 2`}
                       fill
                       className="object-contain p-6 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-105"
-                      unoptimized
+                      quality={90} sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     />
                   )}
                   <span

@@ -33,7 +33,7 @@ export default function Laboratorio() {
     <>
       {/* Hero */}
       <section className="pt-14 pb-16 md:pt-20 md:pb-24 bg-[#FFFFFF]">
-        <div className="max-w-[1280px] mx-auto px-10">
+        <div className="max-w-[1280px] mx-auto px-4 md:px-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-xs text-[#B5956E] tracking-[0.16em] uppercase mb-4 font-semibold">
@@ -83,7 +83,7 @@ export default function Laboratorio() {
 
       {/* Process */}
       <section className="py-16 md:py-20 bg-[#FFFFFF]">
-        <div className="max-w-[1280px] mx-auto px-10">
+        <div className="max-w-[1280px] mx-auto px-4 md:px-10">
           <h2
             className="text-2xl md:text-3xl text-[#111110] mb-3 font-semibold"
             style={{ fontFamily: "var(--font-serif)" }}
@@ -117,7 +117,7 @@ export default function Laboratorio() {
 
       {/* Capabilities */}
       <section className="py-16 md:py-20 bg-[#FFFFFF]">
-        <div className="max-w-[1280px] mx-auto px-10">
+        <div className="max-w-[1280px] mx-auto px-4 md:px-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-xs text-[#B5956E] tracking-[0.16em] uppercase mb-4 font-semibold">
@@ -158,7 +158,7 @@ export default function Laboratorio() {
 
       {/* CTA */}
       <section className="py-16 md:py-20 bg-[#1A1818]">
-        <div className="max-w-3xl mx-auto px-10 text-center">
+        <div className="max-w-3xl mx-auto px-4 md:px-10 text-center">
           <h2
             className="text-2xl md:text-3xl text-[#F5F0EA] mb-4 font-semibold"
             style={{ fontFamily: "var(--font-serif)" }}

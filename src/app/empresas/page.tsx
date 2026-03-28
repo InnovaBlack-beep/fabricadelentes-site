@@ -28,7 +28,7 @@ export default function Empresas() {
     <>
       {/* Hero */}
       <section className="pt-14 pb-16 md:pt-20 md:pb-24 bg-white">
-        <div className="max-w-[1280px] mx-auto px-10 text-center">
+        <div className="max-w-[1280px] mx-auto px-4 md:px-10 text-center">
           <p className="text-xs text-muted tracking-[0.16em] uppercase mb-4 font-semibold">
             Canal Empresarial
           </p>
@@ -55,7 +55,7 @@ export default function Empresas() {
 
       {/* Benefits */}
       <section className="py-16 md:py-20 bg-white">
-        <div className="max-w-[1280px] mx-auto px-10">
+        <div className="max-w-[1280px] mx-auto px-4 md:px-10">
           <h2 className="text-2xl md:text-3xl text-fg mb-3 font-semibold">
             Beneficios para tu empresa
           </h2>
@@ -81,7 +81,7 @@ export default function Empresas() {
 
       {/* How it works */}
       <section className="py-16 md:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-10">
+        <div className="max-w-4xl mx-auto px-4 md:px-10">
           <h2 className="text-2xl md:text-3xl text-fg mb-10 font-semibold">
             ¿Cómo funciona?
           </h2>
@@ -114,7 +114,7 @@ export default function Empresas() {
 
       {/* CTA */}
       <section className="py-16 md:py-20 bg-dark">
-        <div className="max-w-3xl mx-auto px-10 text-center">
+        <div className="max-w-3xl mx-auto px-4 md:px-10 text-center">
           <h2 className="text-2xl md:text-3xl text-white mb-4 font-semibold">
             ¿Interesado en un convenio?
           </h2>

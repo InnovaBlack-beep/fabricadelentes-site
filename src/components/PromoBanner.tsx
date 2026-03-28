@@ -1,7 +1,7 @@
 export function PromoBanner() {
   return (
     <div
-      className="flex items-center justify-center gap-2 h-10 text-xs tracking-wide"
+      className="flex items-center justify-center gap-2 flex-wrap h-10 text-xs tracking-wide"
       style={{ background: "#1A1818" }}
     >
       <span style={{ color: "rgba(245,240,234,0.80)" }}>
