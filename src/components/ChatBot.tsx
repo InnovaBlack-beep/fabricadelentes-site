@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import { addLead } from "@/lib/admin-store";
 
 // ═══════════════════════════════════════════════════════════════
 // ASESOR ÓPTICO — FÁBRICA DE LENTES
@@ -297,6 +298,8 @@ export function ChatBot() {
       const digits = trimmed.replace(/\D/g, "");
       if (digits.length >= 10) {
         setUserPhone(digits);
+        // Save lead to admin store
+        try { addLead({ name: userName || "", phone: digits, messages: messages.filter((m) => m.role === "user").map((m) => m.text), source: "chatbot" }); } catch {}
         setTimeout(() => {
           setMessages((prev) => [...prev, { role: "bot", text: `¡Perfecto, ${userName || ""}! Ya tengo tu número. Ahora sí, cuéntame: ¿en qué te puedo ayudar hoy? 😊` }]);
           setTyping(false);
