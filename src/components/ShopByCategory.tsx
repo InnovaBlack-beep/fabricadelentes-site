@@ -45,7 +45,7 @@ export function ShopByCategory() {
               className="group relative overflow-hidden rounded-lg"
               style={{ aspectRatio: "4/5" }}
             >
-              <Image src={cat.image} alt={cat.alt} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
+              <Image src={cat.image} alt={cat.alt} fill quality={90} sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white">
                 <h3 className="text-2xl md:text-3xl font-bold mb-2" style={{ fontFamily: "var(--font-sans)" }}>

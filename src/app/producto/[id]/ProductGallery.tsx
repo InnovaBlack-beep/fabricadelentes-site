@@ -40,6 +40,7 @@ export function ProductGallery({ images, alt }: ProductGalleryProps) {
           src={activeImage}
           alt={alt}
           fill
+          quality={95}
           className="object-contain p-6 transition-transform duration-300 ease-out"
           style={{
             transform: isZoomed ? "scale(2)" : "scale(1)",
@@ -47,7 +48,6 @@ export function ProductGallery({ images, alt }: ProductGalleryProps) {
           }}
           sizes="(max-width: 1024px) 100vw, 60vw"
           priority
-          unoptimized
         />
       </div>
 
@@ -67,8 +67,9 @@ export function ProductGallery({ images, alt }: ProductGalleryProps) {
                 src={img}
                 alt={`${alt} - vista ${i + 1}`}
                 fill
+                quality={85}
+                sizes="80px"
                 className="object-contain p-1"
-                unoptimized
               />
             </button>
           ))}

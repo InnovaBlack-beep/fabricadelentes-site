@@ -49,7 +49,7 @@ export function BrandShowcase() {
           {brands.map((brand) => (
             <a key={brand.name} href={brand.href} className="group flex-shrink-0 w-[260px] md:w-[290px]">
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden mb-3 bg-white">
-                <Image src={brand.image} alt={brand.alt} fill className="object-contain p-6 transition-transform duration-500 group-hover:scale-105" />
+                <Image src={brand.image} alt={brand.alt} fill quality={90} sizes="290px" className="object-contain p-6 transition-transform duration-500 group-hover:scale-105" />
               </div>
               <h3 className="text-center text-sm font-semibold text-text-primary">{brand.name}</h3>
             </a>

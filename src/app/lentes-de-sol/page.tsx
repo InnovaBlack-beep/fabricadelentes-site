@@ -104,10 +104,11 @@ export default function LentesDeSol() {
               <div className="relative aspect-square overflow-hidden rounded mb-4 mt-2 bg-white">
                 <Image
                   src={p.image}
-                  alt={`${p.brand} ${p.model}`}
+                  alt={`Lentes de sol ${p.brand} modelo ${p.model} — Fábrica de Lentes GDL`}
                   fill
+                  quality={90}
                   className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
                 />
               </div>
               <p className="text-sm text-[#111110] font-semibold" style={{ fontFamily: "var(--font-serif)" }}>{p.brand}</p>

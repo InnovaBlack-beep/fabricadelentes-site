@@ -90,6 +90,8 @@ export function HeroCarousel() {
               fill
               className="object-cover"
               priority={i === 0}
+              quality={90}
+              sizes="100vw"
             />
           )}
           <div className="absolute inset-0 bg-warm-graphite/40" />

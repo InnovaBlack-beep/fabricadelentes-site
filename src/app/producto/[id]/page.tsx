@@ -265,18 +265,20 @@ export default async function ProductPage({ params }: Props) {
                           src={rp.images[0]}
                           alt={`${rp.brand} ${rp.model}`}
                           fill
+                          quality={90}
+                          sizes="(max-width: 640px) 50vw, 25vw"
                           className={`object-contain p-6 transition-all duration-500 ${
                             hasSecondImage ? "group-hover:opacity-0" : "group-hover:scale-105"
                           }`}
-                          unoptimized
                         />
                         {hasSecondImage && (
                           <Image
                             src={rp.images[1]}
                             alt={`${rp.brand} ${rp.model} - vista 2`}
                             fill
+                            quality={90}
+                            sizes="(max-width: 640px) 50vw, 25vw"
                             className="object-contain p-6 opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:scale-105"
-                            unoptimized
                           />
                         )}
                         <span
