@@ -33,7 +33,7 @@ export function Footer() {
                     color: "rgba(245,240,234,0.38)",
                   }}
                   onMouseEnter={(e) =>
-                    (e.currentTarget.style.color = "#C8A040")
+                    (e.currentTarget.style.color = "#B5956E")
                   }
                   onMouseLeave={(e) =>
                     (e.currentTarget.style.color = "rgba(245,240,234,0.38)")
@@ -73,7 +73,7 @@ export function Footer() {
                     color: "rgba(245,240,234,0.38)",
                   }}
                   onMouseEnter={(e) =>
-                    (e.currentTarget.style.color = "#C8A040")
+                    (e.currentTarget.style.color = "#B5956E")
                   }
                   onMouseLeave={(e) =>
                     (e.currentTarget.style.color = "rgba(245,240,234,0.38)")
@@ -114,7 +114,7 @@ export function Footer() {
                     color: "rgba(245,240,234,0.38)",
                   }}
                   onMouseEnter={(e) =>
-                    (e.currentTarget.style.color = "#C8A040")
+                    (e.currentTarget.style.color = "#B5956E")
                   }
                   onMouseLeave={(e) =>
                     (e.currentTarget.style.color = "rgba(245,240,234,0.38)")
@@ -150,7 +150,7 @@ export function Footer() {
                   color: "rgba(245,240,234,0.38)",
                 }}
                 onMouseEnter={(e) =>
-                  (e.currentTarget.style.color = "#C8A040")
+                  (e.currentTarget.style.color = "#B5956E")
                 }
                 onMouseLeave={(e) =>
                   (e.currentTarget.style.color = "rgba(245,240,234,0.38)")
@@ -197,7 +197,7 @@ export function Footer() {
             className="text-sm font-semibold"
             style={{
               fontFamily: "var(--font-sans)",
-              color: "#C8A040",
+              color: "#B5956E",
             }}
           >
             Fábrica de Lentes®
@@ -220,7 +220,7 @@ export function Footer() {
               className="transition-colors"
               style={{ color: "rgba(245,240,234,0.38)" }}
               onMouseEnter={(e) =>
-                (e.currentTarget.style.color = "#C8A040")
+                (e.currentTarget.style.color = "#B5956E")
               }
               onMouseLeave={(e) =>
                 (e.currentTarget.style.color = "rgba(245,240,234,0.38)")
@@ -242,7 +242,7 @@ export function Footer() {
               className="transition-colors"
               style={{ color: "rgba(245,240,234,0.38)" }}
               onMouseEnter={(e) =>
-                (e.currentTarget.style.color = "#C8A040")
+                (e.currentTarget.style.color = "#B5956E")
               }
               onMouseLeave={(e) =>
                 (e.currentTarget.style.color = "rgba(245,240,234,0.38)")
@@ -270,7 +270,7 @@ export function Footer() {
               href="https://innovablack.ai"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors hover:text-[#C8A040]"
+              className="transition-colors hover:text-[#B5956E]"
             >
               InnovaBlack
             </a>

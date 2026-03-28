@@ -12,7 +12,7 @@ export function PromoBanner() {
         target="_blank"
         rel="noopener noreferrer"
         className="hover:underline"
-        style={{ color: "#C8A040" }}
+        style={{ color: "#B5956E" }}
       >
         Agendar ahora →
       </a>

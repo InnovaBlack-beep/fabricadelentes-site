@@ -153,7 +153,7 @@ export function ProductGrid() {
                   border: "none",
                   borderBottomWidth: "1.5px",
                   borderBottomStyle: "solid",
-                  borderBottomColor: activeTab === i ? "#C8A040" : "transparent",
+                  borderBottomColor: activeTab === i ? "#B5956E" : "transparent",
                   cursor: "pointer",
                 }}
               >
@@ -168,7 +168,7 @@ export function ProductGrid() {
           style={{
             color: "#A09080",
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.color = "#C8A040")}
+          onMouseEnter={(e) => (e.currentTarget.style.color = "#B5956E")}
           onMouseLeave={(e) => (e.currentTarget.style.color = "#A09080")}
         >
           Ver todo ›
@@ -205,8 +205,8 @@ export function ProductGrid() {
                   key={badge}
                   className="rounded-full text-xs font-bold"
                   style={{
-                    background: "#C8A040",
-                    color: "#1A1000",
+                    background: "#B5956E",
+                    color: "#2A1F14",
                     padding: "2px 10px",
                   }}
                 >

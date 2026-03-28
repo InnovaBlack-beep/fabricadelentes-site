@@ -38,7 +38,7 @@ export function StickyBuyBar({ model, price, whatsappUrl }: StickyBuyBarProps) {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-shrink-0 flex items-center justify-center h-10 px-6 rounded-full bg-[#F9DC4B] text-[#242424] text-sm font-semibold hover:brightness-95 transition-all"
+          className="flex-shrink-0 flex items-center justify-center h-10 px-6 rounded-full bg-[#B5956E] text-[#242424] text-sm font-semibold hover:brightness-95 transition-all"
         >
           Comprar
         </a>

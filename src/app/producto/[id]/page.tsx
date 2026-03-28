@@ -223,7 +223,7 @@ export default async function ProductPage({ params }: Props) {
                   href={`https://wa.me/523314257226?text=${whatsappMsg}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center h-12 rounded-full bg-[#F9DC4B] text-[#242424] text-sm font-semibold uppercase tracking-[0.1em] hover:brightness-95 transition-all"
+                  className="flex items-center justify-center h-12 rounded-full bg-[#B5956E] text-[#242424] text-sm font-semibold uppercase tracking-[0.1em] hover:brightness-95 transition-all"
                 >
                   Comprar por WhatsApp
                 </a>

@@ -27,7 +27,7 @@ export default function LentesGraduados() {
       {/* Breadcrumb */}
       <div className="max-w-[1280px] mx-auto px-10 pt-6 pb-2">
         <p className="text-xs text-[#A09080]">
-          <Link href="/" className="hover:text-[#C8A040] transition-colors">Inicio</Link>
+          <Link href="/" className="hover:text-[#B5956E] transition-colors">Inicio</Link>
           <span className="mx-2">&rsaquo;</span>
           <span className="text-[#6A5A4A]">Lentes Graduados</span>
         </p>
@@ -80,7 +80,7 @@ export default function LentesGraduados() {
             href="https://wa.me/523314257226?text=Hola%2C%20quiero%20cotizar%20lentes%20graduados"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs text-[#C8A040] hover:text-[#E8D090] transition-colors font-medium"
+            className="text-xs text-[#B5956E] hover:text-[#D4C0A0] transition-colors font-medium"
           >
             Cotizar ahora &rarr;
           </a>
@@ -98,7 +98,7 @@ export default function LentesGraduados() {
               rel="noopener noreferrer"
               className="group bg-[#F0EBE3] rounded-[10px] p-5 hover:bg-[#E8E0D8] hover:-translate-y-0.5 transition-all relative"
             >
-              <span className="absolute top-4 left-4 bg-[#C8A040] text-[#1A1000] text-xs font-bold uppercase tracking-[0.07em] px-2.5 py-0.5 rounded-full z-10">
+              <span className="absolute top-4 left-4 bg-[#B5956E] text-[#2A1F14] text-xs font-bold uppercase tracking-[0.07em] px-2.5 py-0.5 rounded-full z-10">
                 Nuevo
               </span>
               <div className="relative aspect-square overflow-hidden rounded mb-4 mt-2 bg-white">

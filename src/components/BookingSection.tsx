@@ -17,7 +17,7 @@ export function BookingSection() {
 
   return (
     <section className="relative overflow-hidden" style={{ background: "#1A1818" }}>
-      <div className="absolute top-0 left-0 w-full h-[1px]" style={{ background: "linear-gradient(to right, transparent, #C8A040, transparent)" }} />
+      <div className="absolute top-0 left-0 w-full h-[1px]" style={{ background: "linear-gradient(to right, transparent, #B5956E, transparent)" }} />
 
       <div className="max-w-[1440px] mx-auto px-8 md:px-12 py-20 md:py-28">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -47,15 +47,15 @@ export function BookingSection() {
                 onChange={(e) => setValue(e.target.value)}
                 className="flex-1 outline-none rounded-lg h-[52px] px-5 text-sm"
                 style={{ border: "1px solid rgba(245,240,234,0.12)", color: "#F5F0EA", background: "rgba(245,240,234,0.06)" }}
-                onFocus={(e) => (e.currentTarget.style.borderColor = "#C8A040")}
+                onFocus={(e) => (e.currentTarget.style.borderColor = "#B5956E")}
                 onBlur={(e) => (e.currentTarget.style.borderColor = "rgba(245,240,234,0.12)")}
               />
               <button
                 onClick={handleSubmit}
                 className="shrink-0 rounded-lg h-[52px] px-8 text-xs font-bold uppercase tracking-widest transition-all duration-300 cursor-pointer"
-                style={{ background: "#C8A040", color: "#1A1000" }}
-                onMouseEnter={(e) => { e.currentTarget.style.background = "#E8D090"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.background = "#C8A040"; }}
+                style={{ background: "#B5956E", color: "#2A1F14" }}
+                onMouseEnter={(e) => { e.currentTarget.style.background = "#D4C0A0"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.background = "#B5956E"; }}
               >
                 Agendar Ahora
               </button>

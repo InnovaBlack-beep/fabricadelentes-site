@@ -36,7 +36,7 @@ export default function Laboratorio() {
         <div className="max-w-[1280px] mx-auto px-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-xs text-[#C8A040] tracking-[0.16em] uppercase mb-4 font-semibold">
+              <p className="text-xs text-[#B5956E] tracking-[0.16em] uppercase mb-4 font-semibold">
                 Nuestro Diferenciador
               </p>
               <h1
@@ -102,7 +102,7 @@ export default function Laboratorio() {
               { title: "Entrega", desc: "Verificamos calidad, montamos en tu armaz\u00f3n y te los entregamos listos." },
             ].map((s, i) => (
               <div key={s.title}>
-                <div className="w-10 h-10 rounded-full border border-[#C8A040] text-[#C8A040] flex items-center justify-center mb-4 text-sm font-medium">
+                <div className="w-10 h-10 rounded-full border border-[#B5956E] text-[#B5956E] flex items-center justify-center mb-4 text-sm font-medium">
                   {i + 1}
                 </div>
                 <h3 className="text-sm font-semibold text-[#111110] uppercase tracking-[0.05em] mb-2">
@@ -120,7 +120,7 @@ export default function Laboratorio() {
         <div className="max-w-[1280px] mx-auto px-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-xs text-[#C8A040] tracking-[0.16em] uppercase mb-4 font-semibold">
+              <p className="text-xs text-[#B5956E] tracking-[0.16em] uppercase mb-4 font-semibold">
                 Capacidades
               </p>
               <h2
@@ -135,7 +135,7 @@ export default function Laboratorio() {
                     key={cap}
                     className="flex items-center gap-3 bg-[#FAF8F5] rounded-[10px] p-4"
                   >
-                    <svg viewBox="0 0 24 24" fill="none" stroke="#C8A040" strokeWidth={1.5} className="w-5 h-5 shrink-0">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#B5956E" strokeWidth={1.5} className="w-5 h-5 shrink-0">
                       <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span className="text-sm text-[#111110] font-medium">{cap}</span>
@@ -172,7 +172,7 @@ export default function Laboratorio() {
             href="https://wa.me/523314257226?text=Hola%2C%20quiero%20cotizar%20lentes%20fabricados%20en%20su%20laboratorio"
             target="_blank"
             rel="noopener noreferrer"
-            className="border border-[#C8A040] text-[#C8A040] bg-transparent rounded-full px-8 py-3 text-xs uppercase tracking-[0.07em] font-medium hover:bg-[#C8A040] hover:text-[#1A1000] transition-colors"
+            className="border border-[#B5956E] text-[#B5956E] bg-transparent rounded-full px-8 py-3 text-xs uppercase tracking-[0.07em] font-medium hover:bg-[#B5956E] hover:text-[#2A1F14] transition-colors"
           >
             Cotizar Ahora
           </a>

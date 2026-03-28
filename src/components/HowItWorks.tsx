@@ -21,7 +21,7 @@ export function HowItWorks() {
         </div>
 
         <div className="relative grid md:grid-cols-4 gap-8 md:gap-6">
-          <div className="hidden md:block absolute" style={{ top: 32, left: "15%", right: "15%", height: 0, borderTop: "1px solid #C8A040", opacity: 0.3 }} />
+          <div className="hidden md:block absolute" style={{ top: 32, left: "15%", right: "15%", height: 0, borderTop: "1px solid #B5956E", opacity: 0.3 }} />
 
           {steps.map((step) => (
             <div key={step.num} className="flex flex-col items-center text-center relative z-10">
@@ -39,7 +39,7 @@ export function HowItWorks() {
             href="/lentes-graduados"
             className="inline-flex items-center justify-center h-12 px-8 text-xs font-bold uppercase tracking-widest transition-all duration-300"
             style={{ background: "#111110", color: "#F5F0EA" }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = "#C8A040"; e.currentTarget.style.color = "#1A1000"; }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = "#B5956E"; e.currentTarget.style.color = "#2A1F14"; }}
             onMouseLeave={(e) => { e.currentTarget.style.background = "#111110"; e.currentTarget.style.color = "#F5F0EA"; }}
           >
             Ver Productos

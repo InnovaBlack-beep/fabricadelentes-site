@@ -27,7 +27,7 @@ export default function LentesDeContacto() {
       {/* Breadcrumb */}
       <div className="max-w-[1280px] mx-auto px-10 pt-6 pb-2">
         <p className="text-xs text-[#A09080]">
-          <Link href="/" className="hover:text-[#C8A040] transition-colors">Inicio</Link>
+          <Link href="/" className="hover:text-[#B5956E] transition-colors">Inicio</Link>
           <span className="mx-2">&rsaquo;</span>
           <span className="text-[#6A5A4A]">Lentes de Contacto</span>
         </p>
@@ -80,7 +80,7 @@ export default function LentesDeContacto() {
             href="https://wa.me/523314257226?text=Hola%2C%20quiero%20cotizar%20lentes%20de%20contacto"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs text-[#C8A040] hover:text-[#E8D090] transition-colors font-medium"
+            className="text-xs text-[#B5956E] hover:text-[#D4C0A0] transition-colors font-medium"
           >
             Cotizar ahora &rarr;
           </a>

@@ -26,9 +26,9 @@ export function StoreSection() {
             <a
               href="/laboratorio"
               className="inline-flex items-center justify-center h-12 px-8 text-xs font-bold uppercase tracking-widest transition-all duration-300"
-              style={{ background: "#C8A040", color: "#1A1000" }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = "#E8D090"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = "#C8A040"; }}
+              style={{ background: "#B5956E", color: "#2A1F14" }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "#D4C0A0"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = "#B5956E"; }}
             >
               Conocer el Laboratorio
             </a>
