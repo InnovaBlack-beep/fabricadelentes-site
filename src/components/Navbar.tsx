@@ -65,7 +65,7 @@ export function Navbar() {
 
           {/* Logo */}
           <Link href="/" className="lg:flex-shrink-0">
-            <Image src="/images/logo.png" alt="Fábrica de Lentes" width={180} height={40} className="h-auto" style={{ width: 180 }} priority />
+            <Image src="/images/logo-black.png" alt="Fábrica de Lentes" width={180} height={40} className="h-auto" style={{ width: 180 }} priority />
           </Link>
 
           {/* Desktop nav */}
