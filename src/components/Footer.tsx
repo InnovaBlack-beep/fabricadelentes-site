@@ -259,22 +259,6 @@ export function Footer() {
             </a>
           </div>
 
-          <p
-            className="text-xs"
-            style={{
-              color: "rgba(245,240,234,0.38)",
-            }}
-          >
-            Hecho por{" "}
-            <a
-              href="https://innovablack.ai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-colors hover:text-[#B5956E]"
-            >
-              InnovaBlack
-            </a>
-          </p>
         </div>
       </div>
     </footer>
