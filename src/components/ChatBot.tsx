@@ -438,11 +438,11 @@ export function ChatBot() {
       {/* Chat window */}
       {open && (
         <div
-          className="fixed z-50 flex flex-col animate-scale-in inset-0 md:inset-auto md:bottom-[80px] md:right-6 md:w-[400px] md:h-[560px] md:rounded-2xl bg-white overflow-hidden"
-          style={{ boxShadow: "0 12px 48px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.04)" }}
+          className="fixed z-50 flex flex-col bg-white overflow-hidden top-0 left-0 right-0 bottom-0 md:top-auto md:left-auto md:right-6 md:bottom-[80px] md:w-[400px] md:h-[560px] md:rounded-2xl"
+          style={{ boxShadow: "0 12px 48px rgba(0,0,0,0.12)" }}
         >
           {/* Header */}
-          <div className="flex items-center gap-3 flex-shrink-0" style={{ padding: "16px 20px", borderBottom: "1px solid #F0F0F0" }}>
+          <div className="flex items-center gap-3 flex-shrink-0" style={{ padding: "calc(16px + env(safe-area-inset-top, 0px)) 20px 16px", borderBottom: "1px solid #F0F0F0" }}>
             <div className="relative flex-shrink-0">
               <div className="flex items-center justify-center" style={{ width: 40, height: 40, borderRadius: "50%", background: "#1A1818", color: "#fff", fontSize: 14, fontWeight: 600 }}>A</div>
               <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-500 rounded-full border-2 border-white" />
