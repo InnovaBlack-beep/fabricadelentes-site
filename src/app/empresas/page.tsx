@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "Convenios Empresariales | Fábrica de Lentes · GDL",
     description: "Convenios ópticos corporativos. Examen gratis, descuentos por volumen, servicio en instalaciones.",
     url: "https://fabricadelentes.mx/empresas",
-    images: [{ url: "https://fabricadelentes.mx/images/hero-1.png", width: 1200, height: 630 }],
+    images: [{ url: "https://fabricadelentes.mx/images/hero-1.jpg", width: 1200, height: 630 }],
   },
   twitter: { card: "summary_large_image" },
 };

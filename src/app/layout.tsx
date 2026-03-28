@@ -1,33 +1,39 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Playfair_Display, Geist } from "next/font/google";
 import "./globals.css";
-import { AnnouncementBar } from "@/components/landing/AnnouncementBar";
-import { Header } from "@/components/landing/Header";
-import { Footer } from "@/components/landing/Footer";
-import { WhatsAppFAB } from "@/components/landing/WhatsAppFAB";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { WhatsAppFAB } from "@/components/WhatsAppFAB";
 
-const inter = Inter({
+const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-inter",
+  style: ["normal", "italic"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "Fábrica de Lentes® — Óptica con Lab Propio · GDL",
   description:
-    "Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora. Examen de la vista gratis. Armazones desde $590 MXN.",
+    "Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora. Examen de la vista gratis. Armazones desde $1,349 MXN. Sucursal Minerva.",
   openGraph: {
     title: "Fábrica de Lentes® — Óptica con Lab Propio · GDL",
     description:
-      "Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora. Examen gratis. Armazones desde $590 MXN.",
+      "Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora. Examen gratis. Armazones desde $1,349 MXN.",
     url: "https://fabricadelentes.mx",
     siteName: "Fábrica de Lentes",
     locale: "es_MX",
     type: "website",
     images: [
       {
-        url: "https://fabricadelentes.mx/images/hero-1.png",
+        url: "https://fabricadelentes.mx/images/hero-1.jpg",
         width: 1200,
         height: 630,
         alt: "Fábrica de Lentes — Óptica en Guadalajara",
@@ -39,7 +45,7 @@ export const metadata: Metadata = {
     title: "Fábrica de Lentes® — Óptica con Lab Propio · GDL",
     description:
       "Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora. Examen gratis.",
-    images: ["https://fabricadelentes.mx/images/hero-1.png"],
+    images: ["https://fabricadelentes.mx/images/hero-1.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://fabricadelentes.mx" },
@@ -50,11 +56,11 @@ const jsonLd = {
   "@type": "Optician",
   name: "Fábrica de Lentes",
   description:
-    "Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora. Examen de la vista gratis. Armazones desde $590 MXN.",
+    "Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora. Examen de la vista gratis. Armazones desde $1,349 MXN. Sucursal Minerva.",
   url: "https://fabricadelentes.mx",
   telephone: "+523314257226",
-  priceRange: "$590-$1690 MXN",
-  image: "https://fabricadelentes.mx/images/hero-1.png",
+  priceRange: "$1,064-$1,650 MXN",
+  image: "https://fabricadelentes.mx/images/hero-1.jpg",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Zona Minerva",
@@ -81,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={inter.variable}>
+    <html lang="es" className={`${playfair.variable} ${geist.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -89,8 +95,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        <AnnouncementBar />
-        <Header />
+        <Navbar />
         <main>{children}</main>
         <Footer />
         <WhatsAppFAB />

@@ -6,7 +6,7 @@ import Image from "next/image";
 const slides = [
   {
     video: "/images/hero-video.mp4",
-    image: "/images/hero-1.png",
+    image: "/images/hero-1.jpg",
     alt: "Laboratorio óptico Fábrica de Lentes Guadalajara",
     tagline: "Laboratorio Propio",
     headline: "Aquí se fabrican\ntus lentes.",
@@ -14,22 +14,24 @@ const slides = [
       "Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora. Examen de la vista gratis.",
     cta: "Agendar Examen Gratis",
     ctaSecondary: "Ver Armazones",
+    ctaSecondaryHref: "/lentes-graduados",
     align: "left" as const,
   },
   {
     video: "/images/hero-video-2.mp4",
-    image: "/images/hero-2.png",
+    image: "/images/hero-2.jpg",
     alt: "Armazones de moda en Fábrica de Lentes",
     tagline: "Nueva Colección",
     headline: "Armazones\ncon Estilo",
     description:
-      "Encuentra el armazón perfecto. Más de 500 modelos desde $590 MXN con garantía.",
+      "Encuentra el armazón perfecto. Brizzant, Frida Kahlo, Nobleman, Massimo y más.",
     cta: "Explorar Colección",
     ctaSecondary: "Lentes de Sol",
+    ctaSecondaryHref: "/lentes-de-sol",
     align: "right" as const,
   },
   {
-    image: "/images/hero-3.png",
+    image: "/images/hero-3.jpg",
     alt: "Entrega express de lentes en 1 hora",
     tagline: "Entrega Express",
     headline: "Lentes listos\nen 1 hora.",
@@ -37,6 +39,7 @@ const slides = [
       "Fabricamos tus lentes el mismo día. Sin esperas, sin intermediarios.",
     cta: "Cotizar por WhatsApp",
     ctaSecondary: "Conoce el Lab",
+    ctaSecondaryHref: "/laboratorio",
     align: "left" as const,
   },
 ];
@@ -60,7 +63,7 @@ export function HeroCarousel() {
   const slide = slides[current];
 
   return (
-    <section className="relative w-full h-[500px] md:h-[600px] lg:h-[680px] overflow-hidden bg-dark">
+    <section className="relative w-full h-[75vh] min-h-[380px] max-h-[600px] overflow-hidden bg-warm-graphite">
       <h1 className="sr-only">Fábrica de Lentes — Óptica con Laboratorio Propio en Guadalajara</h1>
       {/* Slides */}
       {slides.map((s, i) => (
@@ -89,7 +92,7 @@ export function HeroCarousel() {
               priority={i === 0}
             />
           )}
-          <div className="absolute inset-0 bg-dark/40" />
+          <div className="absolute inset-0 bg-warm-graphite/40" />
         </div>
       ))}
 
@@ -102,7 +105,7 @@ export function HeroCarousel() {
         >
           <span
             className="inline-block text-sm font-medium tracking-widest uppercase mb-4"
-            style={{ color: "var(--color-accent)" }}
+            style={{ color: "var(--color-gold)" }}
           >
             {slide.tagline}
           </span>
@@ -112,8 +115,8 @@ export function HeroCarousel() {
             aria-level={2}
             className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight whitespace-pre-line mb-5"
             style={{
-              fontFamily: "var(--font-sans)",
-              color: "var(--color-white)",
+              fontFamily: "var(--font-serif)",
+              color: "var(--color-text-on-dark)",
             }}
           >
             {slide.headline}
@@ -137,22 +140,23 @@ export function HeroCarousel() {
               rel="noopener noreferrer"
               className="font-semibold px-8 py-3.5 text-sm tracking-wide transition-colors duration-300"
               style={{
-                background: "var(--color-accent)",
-                color: "var(--color-dark)",
+                background: "var(--color-gold)",
+                color: "var(--color-warm-graphite)",
               }}
             >
               {slide.cta}
             </a>
-            <button
-              className="font-semibold px-8 py-3.5 text-sm tracking-wide transition-colors duration-300"
+            <a
+              href={slide.ctaSecondaryHref}
+              className="font-semibold px-8 py-3.5 text-sm tracking-wide transition-colors duration-300 inline-block"
               style={{
-                border: "2px solid var(--color-white)",
-                color: "var(--color-white)",
+                border: "2px solid var(--color-text-on-dark)",
+                color: "var(--color-text-on-dark)",
                 background: "transparent",
               }}
             >
               {slide.ctaSecondary}
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -164,7 +168,7 @@ export function HeroCarousel() {
         style={{
           background: "rgba(255,255,255,0.15)",
           backdropFilter: "blur(4px)",
-          color: "var(--color-white)",
+          color: "var(--color-text-on-dark)",
         }}
         aria-label="Anterior"
       >
@@ -187,7 +191,7 @@ export function HeroCarousel() {
         style={{
           background: "rgba(255,255,255,0.15)",
           backdropFilter: "blur(4px)",
-          color: "var(--color-white)",
+          color: "var(--color-text-on-dark)",
         }}
         aria-label="Siguiente"
       >

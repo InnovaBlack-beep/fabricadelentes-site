@@ -1,42 +1,122 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { ProductCatalog } from "@/components/landing/ProductCatalog";
+import { contacto, brands } from "@/data/products";
 
 export const metadata: Metadata = {
   title: "Lentes de Contacto en GDL | Fábrica de Lentes",
   description:
-    "Lentes de contacto en Guadalajara. Air Optix, Alcon, Frecuent. Entrega inmediata.",
+    "Lentes de contacto en Guadalajara. Air Optix, Alcon, Frecuent. Entrega inmediata. Cotiza por WhatsApp.",
   alternates: { canonical: "https://fabricadelentes.mx/lentes-de-contacto" },
   openGraph: {
     title: "Lentes de Contacto | Fábrica de Lentes · GDL",
-    description: "Lentes de contacto: Air Optix, Alcon. Diarios, mensuales.",
+    description: "Lentes de contacto: Air Optix, Alcon, Frecuent. Entrega inmediata.",
     url: "https://fabricadelentes.mx/lentes-de-contacto",
-    images: [{ url: "https://fabricadelentes.mx/images/hero-3.png", width: 1200, height: 630 }],
+    images: [{ url: "https://fabricadelentes.mx/products/contacto/lentes10-4ac1893a.png", width: 1200, height: 630 }],
   },
   twitter: { card: "summary_large_image" },
 };
 
+const filterPills = ["Todos", ...brands.contacto];
+
+const products = contacto;
+
 export default function LentesDeContacto() {
   return (
     <>
-      <div className="max-w-[1440px] mx-auto px-5 md:px-10 pt-6 pb-2">
-        <p className="text-xs text-muted">
-          <Link href="/" className="hover:text-fg transition-colors">Inicio</Link>
-          <span className="mx-2">›</span>
-          <span className="text-fg">Lentes de Contacto</span>
+      {/* Breadcrumb */}
+      <div className="max-w-[1280px] mx-auto px-10 pt-6 pb-2">
+        <p className="text-xs text-[#A09080]">
+          <Link href="/" className="hover:text-[#C8A040] transition-colors">Inicio</Link>
+          <span className="mx-2">&rsaquo;</span>
+          <span className="text-[#6A5A4A]">Lentes de Contacto</span>
         </p>
       </div>
 
-      <div className="max-w-[1440px] mx-auto px-5 md:px-10 pb-4">
-        <h1 className="text-3xl md:text-4xl font-bold text-fg">
+      {/* Title */}
+      <div className="max-w-[1280px] mx-auto px-10 pb-4">
+        <h1
+          className="text-3xl md:text-4xl text-[#111110]"
+          style={{ fontFamily: "var(--font-serif)" }}
+        >
           Lentes de Contacto
         </h1>
-        <p className="text-sm text-muted mt-2">
-          Entrega inmediata · Todas las marcas
-        </p>
       </div>
 
-      <ProductCatalog category="Contacto" />
+      {/* Filter pills */}
+      <div className="border-b border-[#E8E0D8] mb-6">
+        <div className="max-w-[1280px] mx-auto px-10">
+          <div className="flex items-center gap-3 overflow-x-auto py-3">
+            {filterPills.map((pill, i) => (
+              <button
+                key={pill}
+                className={
+                  i === 0
+                    ? "text-xs font-medium text-[#111110] border border-[#111110] rounded-full px-3.5 py-1.5 whitespace-nowrap"
+                    : "text-xs text-[#6A5A4A] border border-[#C8C0B8] rounded-full px-3.5 py-1.5 whitespace-nowrap hover:border-[#111110] hover:text-[#111110] transition-colors"
+                }
+              >
+                {pill}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Dark promo banner */}
+      <div className="max-w-[1280px] mx-auto px-10 mb-8">
+        <div className="bg-[#1A1818] text-center py-6 px-6 rounded-[10px]">
+          <p className="text-xs tracking-[0.12em] uppercase mb-1 text-[rgba(245,240,234,0.50)]">&mdash; En tienda &mdash;</p>
+          <h2
+            className="text-2xl md:text-3xl mb-2 text-[#F5F0EA] font-semibold"
+            style={{ fontFamily: "var(--font-serif)" }}
+          >
+            Todas las marcas · Entrega inmediata
+          </h2>
+          <p className="text-xs text-[rgba(245,240,234,0.60)] max-w-2xl mx-auto mb-2">
+            Consulta disponibilidad en tienda o pide por WhatsApp.
+          </p>
+          <a
+            href="https://wa.me/523314257226?text=Hola%2C%20quiero%20cotizar%20lentes%20de%20contacto"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-[#C8A040] hover:text-[#E8D090] transition-colors font-medium"
+          >
+            Cotizar ahora &rarr;
+          </a>
+        </div>
+      </div>
+
+      {/* Product grid */}
+      <div className="max-w-[1280px] mx-auto px-10 pb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {products.map((p) => (
+            <a
+              key={p.id}
+              href={`https://wa.me/523314257226?text=${encodeURIComponent(`Hola, me interesa ${p.brand} ${p.model}`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-[#F0EBE3] rounded-[10px] p-5 hover:bg-[#E8E0D8] hover:-translate-y-0.5 transition-all relative"
+            >
+              <div className="relative aspect-square overflow-hidden rounded mb-4 mt-2 bg-white">
+                <Image
+                  src={p.image}
+                  alt={`${p.brand} ${p.model}`}
+                  fill
+                  className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+              </div>
+              <p className="text-sm text-[#111110] font-semibold" style={{ fontFamily: "var(--font-serif)" }}>{p.brand}</p>
+              <p className="text-xs text-[#6A5A4A]">{p.model}</p>
+              {p.description && (
+                <p className="text-xs text-[#A09080] mt-1 line-clamp-2">{p.description}</p>
+              )}
+              <p className="text-base font-semibold text-[#111110] mt-2" style={{ fontFamily: "var(--font-serif)" }}>{p.priceFormatted}</p>
+            </a>
+          ))}
+        </div>
+      </div>
     </>
   );
 }

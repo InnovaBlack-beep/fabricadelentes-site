@@ -3,22 +3,22 @@ import Image from "next/image";
 const categories = [
   {
     title: "Lentes Graduados",
-    description: "Más de 500 armazones desde $590 MXN",
-    image: "/images/hero-1.png",
+    description: "Brizzant, Frida Kahlo, Nobleman, Massimo y más",
+    image: "/images/hero-1.jpg",
     alt: "Colección de lentes graduados",
     href: "/lentes-graduados",
   },
   {
     title: "Lentes de Sol",
     description: "Protección UV con estilo para cada rostro",
-    image: "/images/hero-2.png",
+    image: "/images/hero-2.jpg",
     alt: "Colección de lentes de sol",
     href: "/lentes-de-sol",
   },
   {
     title: "Lentes de Contacto",
     description: "Diarios, mensuales y de color",
-    image: "/images/hero-3.png",
+    image: "/images/hero-3.jpg",
     alt: "Lentes de contacto",
     href: "/lentes-de-contacto",
   },

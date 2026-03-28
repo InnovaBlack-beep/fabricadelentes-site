@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "Contacto | Fábrica de Lentes · Guadalajara",
     description: "Agenda tu examen de la vista gratis. WhatsApp, teléfono o visítanos en Zona Minerva, Guadalajara.",
     url: "https://fabricadelentes.mx/contacto",
-    images: [{ url: "https://fabricadelentes.mx/images/hero-1.png", width: 1200, height: 630 }],
+    images: [{ url: "https://fabricadelentes.mx/images/hero-1.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",

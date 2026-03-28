@@ -5,7 +5,7 @@ import Image from "next/image";
 export function StoreSection() {
   return (
     <section className="relative overflow-hidden" style={{ minHeight: 520 }}>
-      <Image src="/images/hero-3.png" alt="Óptica Fábrica de Lentes en Guadalajara" fill className="object-cover" sizes="100vw" />
+      <Image src="/images/hero-3.jpg" alt="Óptica Fábrica de Lentes en Guadalajara" fill className="object-cover" sizes="100vw" />
       <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(15,14,13,0.85) 0%, rgba(15,14,13,0.6) 50%, rgba(15,14,13,0.3) 100%)" }} />
 
       <div className="relative z-10 max-w-[1440px] mx-auto px-8 md:px-12 py-24 md:py-32">

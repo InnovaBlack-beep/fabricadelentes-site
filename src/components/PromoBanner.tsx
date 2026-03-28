@@ -5,7 +5,7 @@ export function PromoBanner() {
       style={{ background: "#1A1818" }}
     >
       <span style={{ color: "rgba(245,240,234,0.80)" }}>
-        Examen de la vista gratuito · Desde $590 MXN
+        Examen de la vista gratuito · Lentes listos en 1 hora
       </span>
       <a
         href="https://wa.me/523314257226?text=Hola%2C%20quiero%20agendar%20un%20examen%20de%20la%20vista"
