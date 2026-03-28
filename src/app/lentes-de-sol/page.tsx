@@ -96,7 +96,7 @@ export default function LentesDeSol() {
               href={`https://wa.me/523314257226?text=${encodeURIComponent(`Hola, me interesa el modelo ${p.brand} ${p.model}`)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-white border border-[#F0F0F0] rounded-[10px] p-5 hover:bg-[#FAFAFA] hover:-translate-y-0.5 transition-all relative"
+              className="group bg-white border border-[#F0F0F0] rounded-[10px] p-5 hover:shadow-lg hover:-translate-y-1 transition-all relative"
             >
               <span className="absolute top-4 left-4 bg-[#B5956E] text-[#2A1F14] text-xs font-bold uppercase tracking-[0.07em] px-2.5 py-0.5 rounded-full z-10">
                 Nuevo

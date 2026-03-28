@@ -190,11 +190,11 @@ export function ProductGrid() {
               padding: "20px 16px 16px",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = "#FAFAFA";
+              e.currentTarget.style.boxShadow = "0 8px 24px rgba(0,0,0,0.08)";
               e.currentTarget.style.transform = "translateY(-2px)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = "white";
+              e.currentTarget.style.boxShadow = "none";
               e.currentTarget.style.transform = "translateY(0)";
             }}
           >
