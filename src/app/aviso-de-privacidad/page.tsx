@@ -5,6 +5,12 @@ export const metadata: Metadata = {
   description:
     "Aviso de privacidad de Fábrica de Lentes. Conoce cómo protegemos tus datos personales conforme a la LFPDPPP.",
   robots: { index: true, follow: true },
+  alternates: { canonical: "https://fabricadelentes.mx/aviso-de-privacidad" },
+  openGraph: {
+    title: "Aviso de Privacidad — Fábrica de Lentes®",
+    description: "Conoce cómo protegemos tus datos personales conforme a la LFPDPPP.",
+    url: "https://fabricadelentes.mx/aviso-de-privacidad",
+  },
 };
 
 export default function AvisoDePrivacidad() {

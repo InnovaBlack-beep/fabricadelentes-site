@@ -5,6 +5,12 @@ export const metadata: Metadata = {
   description:
     "Conoce nuestras políticas de garantía, devoluciones y cancelaciones en Fábrica de Lentes. Tu satisfacción es nuestra prioridad.",
   robots: { index: true, follow: true },
+  alternates: { canonical: "https://fabricadelentes.mx/politica-de-garantia" },
+  openGraph: {
+    title: "Política de Garantía y Cancelación — Fábrica de Lentes®",
+    description: "Políticas de garantía, devoluciones y cancelaciones en Fábrica de Lentes.",
+    url: "https://fabricadelentes.mx/politica-de-garantia",
+  },
 };
 
 export default function PoliticaDeGarantia() {
