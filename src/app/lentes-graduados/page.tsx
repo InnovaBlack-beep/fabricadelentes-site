@@ -121,7 +121,7 @@ export default function LentesGraduados() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
                 />
               </div>
-              <p className="text-base text-[#111110] font-semibold" style={{ fontFamily: "var(--font-serif)" }}>{p.brand}</p>
+              <p className="text-base text-[#111110] font-semibold" style={{ fontFamily: "var(--font-serif)" }}>{p.brand}{p.name !== p.model ? ` — ${p.name}` : ""}</p>
               <p className="text-sm text-[#6A5A4A]">{p.model}</p>
               <p className="text-lg font-bold text-[#111110] mt-1" style={{ fontFamily: "var(--font-serif)" }}>{p.priceFormatted}</p>
               <p className="text-xs text-[#B5956E] mt-1">Incluye graduación + antirreflejante + blue cut</p>
