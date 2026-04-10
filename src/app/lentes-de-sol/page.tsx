@@ -4,7 +4,7 @@ import Link from "next/link";
 import { solares, brands, getDetailUrl } from "@/data/products";
 
 export const metadata: Metadata = {
-  title: "Lentes de Sol en Guadalajara | Colección Frida Kahlo desde $1,650 | Fábrica de Lentes®",
+  title: "Lentes de Sol en Guadalajara | Colección Frida Kahlo desde $1,649 | Fábrica de Lentes®",
   description:
     "Lentes de sol Frida Kahlo originales en Guadalajara. 21 modelos con protección UV 400. Polarizados disponibles. También graduados de sol. Garantía de 1 año. La mejor colección de lentes de sol en GDL. Sucursal Zona Minerva.",
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://fabricadelentes.mx/lentes-de-sol" },
   openGraph: {
     title: "Lentes de Sol Frida Kahlo en Guadalajara | Fábrica de Lentes®",
-    description: "21 modelos Frida Kahlo con UV 400. Polarizados y graduados disponibles. Desde $1,650. Zona Minerva, GDL.",
+    description: "21 modelos Frida Kahlo con UV 400. Polarizados y graduados disponibles. Desde $1,649. Zona Minerva, GDL.",
     url: "https://fabricadelentes.mx/lentes-de-sol",
     images: [{ url: "https://fabricadelentes.mx/products/solares/FKSL1-5ea420bc.jpg", width: 1200, height: 630 }],
   },
