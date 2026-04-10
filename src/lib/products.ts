@@ -17,16 +17,16 @@ export function getBadgeColors(_badge: BadgeType): { bg: string; text: string } 
 }
 
 const brizzantDesc =
-  "La montura metálica redonda hexagonal cuenta con perfiles acuñados delgados y lentes planas de cristal de oro clásico con patillas muy delgadas. Mezcla y combina opciones de colores básicos flash para crear la combinación perfecta.";
+  "La montura metálica redonda hexagonal cuenta con perfiles acuñados delgados y lentes planas de cristal de oro clásico con patillas muy delgadas. Mezcla y combina opciones de colores básicos flash para crear la combinación perfecta. Incluye graduación + antirreflejante + blue cut.";
 
 const fridaGraduadosDesc =
-  "La línea FRIDA KAHLO se caracteriza por su nivel de elegancia y sofisticación. Poseen gran durabilidad con un bonito estilo. Diseño inspirado en su arte y espíritu creativo.";
+  "La línea FRIDA KAHLO se caracteriza por su nivel de elegancia y sofisticación. Poseen gran durabilidad con un bonito estilo. Diseño inspirado en su arte y espíritu creativo. Incluye graduación + antirreflejante + blue cut.";
 
 const noblemanDesc =
-  "Colección Nobleman con diseño clásico y elegante. Armazones de alta calidad con acabados premium para un look sofisticado.";
+  "Colección Nobleman con diseño clásico y elegante. Armazones de alta calidad con acabados premium para un look sofisticado. Incluye graduación + antirreflejante + blue cut.";
 
 const massimoDesc =
-  "Colección Massimo con líneas modernas y materiales de primera calidad. Diseño contemporáneo para quienes buscan estilo y comodidad.";
+  "Colección Massimo con líneas modernas y materiales de primera calidad. Diseño contemporáneo para quienes buscan estilo y comodidad. Incluye graduación + antirreflejante + blue cut.";
 
 export const products: Product[] = [
   // Graduados - Brizzant
@@ -34,7 +34,7 @@ export const products: Product[] = [
     id: "vincent-brizzant",
     model: "VINCENT",
     brand: "Brizzant",
-    price: "$1,349",
+    price: "$1,949",
     description: brizzantDesc,
     category: "Graduados",
     badge: "Más vendido",
@@ -47,7 +47,7 @@ export const products: Product[] = [
     id: "sydney-brizzant",
     model: "SYDNEY",
     brand: "Brizzant",
-    price: "$1,349",
+    price: "$1,949",
     description: brizzantDesc,
     category: "Graduados",
     badge: "Nuevo",
@@ -60,7 +60,7 @@ export const products: Product[] = [
     id: "andre-azul-brizzant",
     model: "ANDRE AZUL",
     brand: "Brizzant",
-    price: "$1,349",
+    price: "$1,949",
     description: brizzantDesc,
     category: "Graduados",
     badge: "Nuevo",
@@ -73,7 +73,7 @@ export const products: Product[] = [
     id: "giovanni-brizzant",
     model: "GIOVANNI",
     brand: "Brizzant",
-    price: "$1,349",
+    price: "$1,949",
     description: brizzantDesc,
     category: "Graduados",
     badge: "Nuevo",
@@ -86,7 +86,7 @@ export const products: Product[] = [
     id: "dali-brizzant",
     model: "DALI",
     brand: "Brizzant",
-    price: "$1,349",
+    price: "$1,949",
     description: brizzantDesc,
     category: "Graduados",
     badge: "Nuevo",
@@ -101,7 +101,7 @@ export const products: Product[] = [
     id: "fk1001m-bl-frida-kahlo",
     model: "FK1001M-BL",
     brand: "Frida Kahlo",
-    price: "$1,650",
+    price: "$1,949",
     description: fridaGraduadosDesc,
     category: "Graduados",
     badge: "Exclusivo",
@@ -114,7 +114,7 @@ export const products: Product[] = [
     id: "fk1004a-bl-frida-kahlo",
     model: "FK1004A-BL",
     brand: "Frida Kahlo",
-    price: "$1,650",
+    price: "$1,949",
     description: fridaGraduadosDesc,
     category: "Graduados",
     badge: "Exclusivo",
@@ -127,7 +127,7 @@ export const products: Product[] = [
     id: "fk1005m-pu-frida-kahlo",
     model: "FK1005M-PU",
     brand: "Frida Kahlo",
-    price: "$1,650",
+    price: "$1,949",
     description: fridaGraduadosDesc,
     category: "Graduados",
     badge: "Exclusivo",
@@ -139,7 +139,7 @@ export const products: Product[] = [
     id: "hc04-08-c7-nobleman",
     model: "HC04-08 C7",
     brand: "Nobleman",
-    price: "$1,499",
+    price: "$1,949",
     description: noblemanDesc,
     category: "Graduados",
     badge: "Clásico",
@@ -149,7 +149,7 @@ export const products: Product[] = [
     id: "hc05-10-c2-nobleman",
     model: "HC05-10 C2",
     brand: "Nobleman",
-    price: "$1,499",
+    price: "$1,949",
     description: noblemanDesc,
     category: "Graduados",
     badge: "Clásico",
@@ -159,7 +159,7 @@ export const products: Product[] = [
     id: "hc07-14-c5-nobleman",
     model: "HC07-14 C5",
     brand: "Nobleman",
-    price: "$1,499",
+    price: "$1,949",
     description: noblemanDesc,
     category: "Graduados",
     badge: "Clásico",
@@ -171,7 +171,7 @@ export const products: Product[] = [
     id: "mm4004-c2-massimo",
     model: "MM4004 C2",
     brand: "Massimo",
-    price: "$1,549",
+    price: "$1,949",
     description: massimoDesc,
     category: "Graduados",
     badge: "Premium",
@@ -181,7 +181,7 @@ export const products: Product[] = [
     id: "mm4004-c3-massimo",
     model: "MM4004 C3",
     brand: "Massimo",
-    price: "$1,499",
+    price: "$1,949",
     description: massimoDesc,
     category: "Graduados",
     badge: "Premium",
@@ -191,7 +191,7 @@ export const products: Product[] = [
     id: "wd1167-c1-massimo",
     model: "WD1167 C1",
     brand: "Massimo",
-    price: "$1,499",
+    price: "$1,949",
     description: massimoDesc,
     category: "Graduados",
     badge: "Premium",

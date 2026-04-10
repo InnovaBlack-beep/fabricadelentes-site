@@ -83,14 +83,14 @@ const KB: KBEntry[] = [
   {
     keys: ["marca","marcas","brizzant","frida kahlo","nobleman","massimo","catalogo","catálogo","coleccion","colección"],
     replies: [
-      "Tenemos 4 marcas exclusivas, cada una con su personalidad:\n\n✦ Brizzant ($1,349) — Moderno, ligero, metálico. Para quien busca algo discreto pero con estilo.\n\n✦ Frida Kahlo ($1,650) — Nuestra joya. Diseño mexicano, elegante, artístico. La más pedida.\n\n✦ Nobleman ($1,499) — Clásico atemporal. Si te gustan los looks sobrios y premium.\n\n✦ Massimo ($1,499) — Inspiración italiana. Líneas contemporáneas.\n\n¿Alguna te llamó la atención? Te puedo contar más de cualquiera 😊",
+      "Tenemos 4 marcas exclusivas, todas a $1,949 con graduación + antirreflejante + blue cut incluido:\n\n✦ Brizzant — Moderno, ligero, metálico. Para quien busca algo discreto pero con estilo.\n\n✦ Frida Kahlo — Nuestra joya. Diseño mexicano, elegante, artístico. La más pedida.\n\n✦ Nobleman — Clásico atemporal. Si te gustan los looks sobrios y premium.\n\n✦ Massimo — Inspiración italiana. Líneas contemporáneas.\n\n¿Alguna te llamó la atención? Te puedo contar más de cualquiera 😊",
     ],
     followUp: "¿Buscas algo para uso diario, para la oficina, o para una ocasión especial?",
   },
   {
     keys: ["precio","precios","cuanto cuesta","cuánto cuesta","costo","costos","cuanto vale","cuánto vale","barato","económico","economico","presupuesto","rango"],
     replies: [
-      "Te doy los rangos para que te des una idea:\n\n🏷 Solo armazón:\n• Brizzant: $1,349\n• Nobleman / Massimo: $1,499\n• Frida Kahlo: $1,650\n\n📦 Paquete completo (armazón + micas):\n• Con AR básicas: desde $1,849\n• Con blue (luz azul): desde $2,149\n• Con fotocromáticas: desde $2,649\n• Progresivos: desde $2,500\n\nTodo incluye examen gratis + estuche + garantía.\n\n¿Tienes un presupuesto en mente? Te puedo armar opciones que se ajusten.",
+      "Todos nuestros lentes graduados están a $1,949 e incluyen:\n\n✅ Armazón (Brizzant, Frida Kahlo, Nobleman o Massimo)\n✅ Graduación\n✅ Antirreflejante\n✅ Blue cut (protección luz azul)\n✅ Examen de la vista gratis\n✅ Estuche + garantía\n\n📦 Upgrades opcionales:\n• Fotocromáticas: +$500\n• Progresivos: desde $2,500\n\n¿Tienes un presupuesto en mente? Te puedo armar opciones que se ajusten.",
     ],
     followUp: "¿Necesitas micas graduadas o solo el armazón?",
   },

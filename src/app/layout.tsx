@@ -22,7 +22,7 @@ const geist = Geist({
 export const metadata: Metadata = {
   title: "Fábrica de Lentes® — Óptica con Laboratorio Propio en Guadalajara | Lentes Graduados, Sol y Contacto",
   description:
-    "Óptica con laboratorio propio en Guadalajara. Lentes graduados listos en 1 hora. Examen de la vista gratis. Lentes de contacto, lentes de sol, armazones Brizzant, Frida Kahlo, Nobleman y Massimo desde $1,349 MXN. Sucursal Zona Minerva. La mejor óptica de GDL.",
+    "Óptica con laboratorio propio en Guadalajara. Lentes graduados listos en 1 hora. Examen de la vista gratis. Lentes de contacto, lentes de sol, armazones Brizzant, Frida Kahlo, Nobleman y Massimo desde $1,949 MXN. Sucursal Zona Minerva. La mejor óptica de GDL.",
   keywords: [
     "óptica guadalajara", "lentes guadalajara", "fábrica de lentes", "lentes graduados guadalajara",
     "lentes de contacto guadalajara", "lentes de sol guadalajara", "examen de la vista guadalajara",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Fábrica de Lentes® — La Mejor Óptica en Guadalajara con Laboratorio Propio",
     description:
-      "Óptica con laboratorio propio en Guadalajara. Lentes graduados en 1 hora, examen gratis, lentes de contacto y de sol. Armazones desde $1,349 MXN. Zona Minerva.",
+      "Óptica con laboratorio propio en Guadalajara. Lentes graduados en 1 hora, examen gratis, lentes de contacto y de sol. Armazones desde $1,949 MXN. Zona Minerva.",
     url: "https://fabricadelentes.mx",
     siteName: "Fábrica de Lentes",
     locale: "es_MX",
@@ -76,10 +76,10 @@ const jsonLd = {
   name: "Fábrica de Lentes",
   alternateName: "Fábrica de Lentes Guadalajara",
   description:
-    "Óptica con laboratorio propio en Guadalajara, Jalisco. Fabricamos lentes graduados en 1 hora. Examen de la vista gratis. Lentes de contacto Air Optix, Alcon. Armazones Brizzant, Frida Kahlo, Nobleman, Massimo desde $1,349 MXN. Lentes de sol. Sucursal Zona Minerva.",
+    "Óptica con laboratorio propio en Guadalajara, Jalisco. Fabricamos lentes graduados en 1 hora. Examen de la vista gratis. Lentes de contacto Air Optix, Alcon. Armazones Brizzant, Frida Kahlo, Nobleman, Massimo desde $1,949 MXN. Lentes de sol. Sucursal Zona Minerva.",
   url: "https://fabricadelentes.mx",
   telephone: "+523314257226",
-  priceRange: "$1,064 - $1,650 MXN",
+  priceRange: "$1,064 - $1,949 MXN",
   currenciesAccepted: "MXN",
   paymentAccepted: "Cash, Credit Card, Debit Card, Bank Transfer",
   image: "https://fabricadelentes.mx/images/hero-1.jpg",

@@ -4,9 +4,9 @@ import Link from "next/link";
 import { oftalmicos, brands, getDetailUrl } from "@/data/products";
 
 export const metadata: Metadata = {
-  title: "Lentes Graduados en Guadalajara | Armazones desde $1,349 | Fábrica de Lentes®",
+  title: "Lentes Graduados en Guadalajara | Armazones desde $1,949 | Fábrica de Lentes®",
   description:
-    "Compra lentes graduados en Guadalajara con fabricación propia. Listos en 1 hora. Armazones Brizzant, Frida Kahlo, Nobleman, Massimo desde $1,349. Micas antirreflejante, blue, fotocromáticas, progresivos. Examen de la vista gratis. La mejor óptica de GDL.",
+    "Compra lentes graduados en Guadalajara con fabricación propia. Listos en 1 hora. Armazones Brizzant, Frida Kahlo, Nobleman, Massimo desde $1,949. Micas antirreflejante, blue, fotocromáticas, progresivos. Examen de la vista gratis. La mejor óptica de GDL.",
   keywords: [
     "lentes graduados guadalajara", "armazones guadalajara", "comprar lentes guadalajara",
     "lentes para miopía guadalajara", "lentes para astigmatismo guadalajara",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://fabricadelentes.mx/lentes-graduados" },
   openGraph: {
-    title: "Lentes Graduados en Guadalajara desde $1,349 | Fábrica de Lentes®",
+    title: "Lentes Graduados en Guadalajara desde $1,949 | Fábrica de Lentes®",
     description: "Lentes graduados con fabricación propia en 1 hora. Brizzant, Frida Kahlo, Nobleman, Massimo. Examen gratis. Zona Minerva, GDL.",
     url: "https://fabricadelentes.mx/lentes-graduados",
     images: [{ url: "https://fabricadelentes.mx/products/oftalmicos/FKL1-e4cd1228.jpg", width: 1200, height: 630 }],
