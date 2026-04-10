@@ -21,7 +21,7 @@ export default function Contacto() {
         <div className="max-w-[1280px] mx-auto px-4 md:px-10 text-center">
           <h1
             className="text-3xl md:text-4xl text-[#111110] mb-3 font-bold"
-            style={{ fontFamily: "var(--font-sans)" }}
+            style={{ fontFamily: "var(--font-serif)" }}
           >
             Contáctanos
           </h1>
@@ -38,8 +38,8 @@ export default function Contacto() {
             {/* Left — Form */}
             <div className="bg-[#FFFFFF] rounded-[10px] p-8 md:p-10">
               <h2
-                className="text-2xl text-[#111110] mb-6 font-semibold"
-                style={{ fontFamily: "var(--font-sans)" }}
+                className="text-2xl md:text-3xl text-[#111110] mb-6 font-semibold"
+                style={{ fontFamily: "var(--font-serif)" }}
               >
                 Agenda tu examen
               </h2>

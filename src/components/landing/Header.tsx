@@ -39,7 +39,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <span
-            className="text-[22px] font-bold tracking-tight text-fg"
+            className="text-xl font-bold tracking-tight text-fg"
             style={{ lineHeight: 1 }}
           >
             Fábrica de Lentes
@@ -53,7 +53,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-[13px] font-medium uppercase tracking-wider text-fg/70 hover:text-fg transition-colors"
+              className="text-sm font-medium uppercase tracking-wider text-fg/70 hover:text-fg transition-colors"
             >
               {item.label}
             </Link>
@@ -114,7 +114,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
-                className="block py-3 text-[15px] font-medium uppercase tracking-wider text-fg/70 hover:text-fg border-b border-border transition-colors"
+                className="block py-3 text-base font-medium uppercase tracking-wider text-fg/70 hover:text-fg border-b border-border transition-colors"
               >
                 {item.label}
               </Link>

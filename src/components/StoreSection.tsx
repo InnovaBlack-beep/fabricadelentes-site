@@ -13,7 +13,7 @@ export function StoreSection() {
           <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase mb-5 text-accent">
             Nuestra Óptica · Guadalajara
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-6 text-white" style={{ fontFamily: "var(--font-sans)" }}>
+          <h2 className="text-4xl md:text-5xl leading-[1.1] mb-6 text-white" style={{ fontFamily: "var(--font-serif)" }}>
             <span className="font-normal">Hecho en GDL.</span>
             <br />
             <span className="font-bold">Entregado hoy.</span>

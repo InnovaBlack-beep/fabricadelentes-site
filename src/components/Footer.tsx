@@ -28,7 +28,7 @@ export function Footer() {
               <li key={item.label}>
                 <Link
                   href={item.href}
-                  className="transition-colors leading-[2] text-xs"
+                  className="transition-colors leading-[2] text-sm"
                   style={{
                     color: "rgba(245,240,234,0.38)",
                   }}
@@ -68,7 +68,7 @@ export function Footer() {
               <li key={item.label}>
                 <Link
                   href={item.href}
-                  className="transition-colors leading-[2] text-xs"
+                  className="transition-colors leading-[2] text-sm"
                   style={{
                     color: "rgba(245,240,234,0.38)",
                   }}
@@ -109,7 +109,7 @@ export function Footer() {
               <li key={item.label}>
                 <Link
                   href={item.href}
-                  className="transition-colors leading-[2] text-xs"
+                  className="transition-colors leading-[2] text-sm"
                   style={{
                     color: "rgba(245,240,234,0.38)",
                   }}
@@ -160,7 +160,7 @@ export function Footer() {
               </a>
             </li>
             <li
-              className="leading-[2] text-xs"
+              className="leading-[2] text-sm"
               style={{
                 color: "rgba(245,240,234,0.38)",
               }}
@@ -168,7 +168,7 @@ export function Footer() {
               Zona Minerva · GDL
             </li>
             <li
-              className="leading-[2] text-xs"
+              className="leading-[2] text-sm"
               style={{
                 color: "rgba(245,240,234,0.38)",
               }}
@@ -176,7 +176,7 @@ export function Footer() {
               Lun–Sáb · 10:00–20:00
             </li>
             <li
-              className="leading-[2] text-xs"
+              className="leading-[2] text-sm"
               style={{
                 color: "rgba(245,240,234,0.38)",
               }}
@@ -196,7 +196,6 @@ export function Footer() {
           <span
             className="text-sm font-semibold"
             style={{
-              fontFamily: "var(--font-sans)",
               color: "#B5956E",
             }}
           >

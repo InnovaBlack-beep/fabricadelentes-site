@@ -56,23 +56,23 @@ export default function Laboratorio() {
                 Laboratorio
                 <br />&Oacute;ptico Propio
               </h1>
-              <p className="text-[#6A5A4A] text-sm max-w-lg mb-8 leading-relaxed">
+              <p className="text-[#6A5A4A] text-base max-w-lg mb-8 leading-relaxed">
                 No somos intermediarios. Fabricamos tus lentes aqu&iacute; en Guadalajara, con control total de calidad y tiempos de entrega que nadie m&aacute;s puede ofrecer.
               </p>
               <div className="flex items-center gap-8 text-[#111110]">
                 <div>
                   <p className="text-2xl font-semibold" style={{ fontFamily: "var(--font-serif)" }}>&lt; 1h</p>
-                  <p className="text-xs text-[#A09080] mt-0.5 tracking-wide uppercase">Entrega</p>
+                  <p className="text-sm text-[#A09080] mt-0.5 tracking-wide uppercase">Entrega</p>
                 </div>
                 <div className="w-px h-10 bg-[#F0F0F0]" />
                 <div>
                   <p className="text-2xl font-semibold" style={{ fontFamily: "var(--font-serif)" }}>100%</p>
-                  <p className="text-xs text-[#A09080] mt-0.5 tracking-wide uppercase">Calidad</p>
+                  <p className="text-sm text-[#A09080] mt-0.5 tracking-wide uppercase">Calidad</p>
                 </div>
                 <div className="w-px h-10 bg-[#F0F0F0]" />
                 <div>
                   <p className="text-2xl font-semibold" style={{ fontFamily: "var(--font-serif)" }}>+10</p>
-                  <p className="text-xs text-[#A09080] mt-0.5 tracking-wide uppercase">A&ntilde;os</p>
+                  <p className="text-sm text-[#A09080] mt-0.5 tracking-wide uppercase">A&ntilde;os</p>
                 </div>
               </div>
             </div>

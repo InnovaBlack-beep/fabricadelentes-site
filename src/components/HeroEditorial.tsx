@@ -24,11 +24,9 @@ export function HeroEditorial() {
           className="w-full lg:w-[40%] flex flex-col justify-center px-8 lg:pl-12 py-10"
         >
           <h1
+            className="text-4xl md:text-5xl font-bold leading-tight"
             style={{
-              fontFamily: "var(--font-sans)",
-              fontWeight: 700,
-              fontSize: "clamp(42px, 5vw, 60px)",
-              lineHeight: 1.05,
+              fontFamily: "var(--font-serif)",
               color: "#1A1008",
             }}
           >
@@ -37,10 +35,8 @@ export function HeroEditorial() {
             tus lentes.
           </h1>
           <p
-            className="mt-4"
+            className="mt-4 text-base"
             style={{
-              fontFamily: "var(--font-sans)",
-              fontSize: 13,
               color: "rgba(26,16,8,0.65)",
               maxWidth: 280,
               lineHeight: 1.65,

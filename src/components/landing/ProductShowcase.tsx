@@ -74,13 +74,13 @@ export function ProductShowcase() {
                     />
                   )}
                   <span
-                    className={`absolute top-3 left-3 ${badgeColors.bg} ${badgeColors.text} text-[10px] font-semibold px-2.5 py-1 rounded-full border border-border/30`}
+                    className={`absolute top-3 left-3 ${badgeColors.bg} ${badgeColors.text} text-xs font-semibold px-2.5 py-1 rounded-full border border-border/30`}
                   >
                     {product.badge}
                   </span>
                 </div>
                 <div className="p-4">
-                  <p className="text-[10px] uppercase tracking-widest text-muted mb-1">
+                  <p className="text-sm uppercase tracking-widest text-muted mb-1">
                     {product.brand}
                   </p>
                   <p className="text-sm font-semibold text-fg truncate">
@@ -88,7 +88,7 @@ export function ProductShowcase() {
                   </p>
                   <p className="text-sm font-bold text-fg mt-1">
                     {product.price}
-                    <span className="text-[10px] font-normal text-muted ml-1">
+                    <span className="text-xs font-normal text-muted ml-1">
                       MXN
                     </span>
                   </p>

@@ -131,9 +131,9 @@ export function ProductGrid() {
       <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
         <div>
           <h2
-            className="text-2xl font-semibold"
+            className="text-2xl md:text-3xl font-semibold"
             style={{
-              fontFamily: "var(--font-sans)",
+              fontFamily: "var(--font-serif)",
               color: "#111110",
               marginBottom: 16,
             }}
@@ -228,7 +228,6 @@ export function ProductGrid() {
               <p
                 className="text-sm font-semibold"
                 style={{
-                  fontFamily: "var(--font-sans)",
                   color: "#111110",
                 }}
               >
@@ -246,7 +245,7 @@ export function ProductGrid() {
               <p
                 className="mt-2 text-base font-semibold"
                 style={{
-                  fontFamily: "var(--font-sans)",
+                  fontFamily: "var(--font-serif)",
                   color: "#111110",
                 }}
               >

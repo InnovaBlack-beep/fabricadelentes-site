@@ -82,17 +82,17 @@ export function ProductCatalog({ category }: ProductCatalogProps) {
                     />
                   )}
                   <span
-                    className={`absolute top-3 left-3 ${badgeColors.bg} ${badgeColors.text} text-[10px] font-semibold px-2.5 py-1 rounded-full border border-border/30`}
+                    className={`absolute top-3 left-3 ${badgeColors.bg} ${badgeColors.text} text-xs font-semibold px-2.5 py-1 rounded-full border border-border/30`}
                   >
                     {p.badge}
                   </span>
                 </div>
                 <div className="p-3">
-                  <p className="text-[10px] uppercase tracking-widest text-muted">{p.brand}</p>
+                  <p className="text-sm uppercase tracking-widest text-muted">{p.brand}</p>
                   <p className="text-sm font-semibold text-fg truncate">{p.model}</p>
                   <p className="text-sm font-bold text-fg mt-1">
                     {p.price}
-                    <span className="text-[10px] font-normal text-muted ml-1">MXN</span>
+                    <span className="text-xs font-normal text-muted ml-1">MXN</span>
                   </p>
                 </div>
               </Link>

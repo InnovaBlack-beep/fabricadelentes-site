@@ -143,7 +143,7 @@ export default async function ProductPage({ params }: Props) {
       <section className="bg-white min-h-screen">
         <div className="max-w-[1280px] mx-auto px-5 md:px-10 py-8 md:py-14">
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-xs text-[#9CA3AF] mb-8">
+          <nav className="flex items-center gap-2 text-sm text-[#9CA3AF] mb-8">
             <Link href="/" className="hover:text-[#242424] transition-colors">
               Inicio
             </Link>
@@ -166,10 +166,10 @@ export default async function ProductPage({ params }: Props) {
               <p className="text-sm uppercase tracking-[0.2em] text-[#9CA3AF] font-medium mb-2">
                 {product.brand}
               </p>
-              <h1 className="text-3xl md:text-4xl font-bold text-[#242424] mb-4">
+              <h1 className="text-3xl md:text-4xl font-bold text-[#242424] mb-4" style={{ fontFamily: "var(--font-serif)" }}>
                 {product.model}
               </h1>
-              <p className="text-3xl md:text-4xl font-bold text-[#242424] mb-2">
+              <p className="text-3xl md:text-4xl font-bold text-[#242424] mb-2" style={{ fontFamily: "var(--font-serif)" }}>
                 {product.price}
                 <span className="text-base font-normal text-[#9CA3AF] ml-2">
                   MXN
@@ -256,7 +256,7 @@ export default async function ProductPage({ params }: Props) {
         {relatedProducts.length > 0 && (
           <div className="border-t border-[#E5E7EB]">
             <div className="max-w-[1280px] mx-auto px-5 md:px-10 py-14 md:py-20">
-              <h2 className="text-xl md:text-2xl font-bold text-fg mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-fg mb-8" style={{ fontFamily: "var(--font-serif)" }}>
                 También te puede gustar
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
@@ -291,13 +291,13 @@ export default async function ProductPage({ params }: Props) {
                           />
                         )}
                         <span
-                          className={`absolute top-3 left-3 ${badgeColors.bg} ${badgeColors.text} text-[10px] font-semibold px-2.5 py-1 rounded-full border border-border/30`}
+                          className={`absolute top-3 left-3 ${badgeColors.bg} ${badgeColors.text} text-xs font-semibold px-2.5 py-1 rounded-full border border-border/30`}
                         >
                           {rp.badge}
                         </span>
                       </div>
                       <div className="p-3">
-                        <p className="text-[10px] uppercase tracking-widest text-muted">
+                        <p className="text-sm uppercase tracking-widest text-muted">
                           {rp.brand}
                         </p>
                         <p className="text-sm font-semibold text-fg truncate">
@@ -305,7 +305,7 @@ export default async function ProductPage({ params }: Props) {
                         </p>
                         <p className="text-sm font-bold text-fg mt-1">
                           {rp.price}
-                          <span className="text-[10px] font-normal text-muted ml-1">
+                          <span className="text-xs font-normal text-muted ml-1">
                             MXN
                           </span>
                         </p>

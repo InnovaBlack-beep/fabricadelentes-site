@@ -38,7 +38,7 @@ export default function LentesDeContacto() {
     <>
       {/* Breadcrumb */}
       <div className="max-w-[1280px] mx-auto px-4 md:px-10 pt-6 pb-2">
-        <p className="text-xs text-[#A09080]">
+        <p className="text-sm text-[#A09080]">
           <Link href="/" className="hover:text-[#B5956E] transition-colors">Inicio</Link>
           <span className="mx-2">&rsaquo;</span>
           <span className="text-[#6A5A4A]">Lentes de Contacto</span>
@@ -64,8 +64,8 @@ export default function LentesDeContacto() {
                 key={pill}
                 className={
                   i === 0
-                    ? "text-xs font-medium text-[#111110] border border-[#111110] rounded-full px-3.5 py-1.5 whitespace-nowrap"
-                    : "text-xs text-[#6A5A4A] border border-[#E5E5E5] rounded-full px-3.5 py-1.5 whitespace-nowrap hover:border-[#111110] hover:text-[#111110] transition-colors"
+                    ? "text-sm font-medium text-[#111110] border border-[#111110] rounded-full px-3.5 py-1.5 whitespace-nowrap"
+                    : "text-sm text-[#6A5A4A] border border-[#E5E5E5] rounded-full px-3.5 py-1.5 whitespace-nowrap hover:border-[#111110] hover:text-[#111110] transition-colors"
                 }
               >
                 {pill}
@@ -78,21 +78,21 @@ export default function LentesDeContacto() {
       {/* Dark promo banner */}
       <div className="max-w-[1280px] mx-auto px-4 md:px-10 mb-8">
         <div className="bg-[#1A1818] text-center py-6 px-6 rounded-[10px]">
-          <p className="text-xs tracking-[0.12em] uppercase mb-1 text-[rgba(245,240,234,0.50)]">&mdash; En tienda &mdash;</p>
+          <p className="text-sm tracking-[0.12em] uppercase mb-1 text-[rgba(245,240,234,0.50)]">&mdash; En tienda &mdash;</p>
           <h2
             className="text-2xl md:text-3xl mb-2 text-[#F5F0EA] font-semibold"
             style={{ fontFamily: "var(--font-serif)" }}
           >
             Todas las marcas · Entrega inmediata
           </h2>
-          <p className="text-xs text-[rgba(245,240,234,0.60)] max-w-2xl mx-auto mb-2">
+          <p className="text-sm text-[rgba(245,240,234,0.60)] max-w-2xl mx-auto mb-2">
             Consulta disponibilidad en tienda o pide por WhatsApp.
           </p>
           <a
             href="https://wa.me/523314257226?text=Hola%2C%20quiero%20cotizar%20lentes%20de%20contacto"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs text-[#B5956E] hover:text-[#D4C0A0] transition-colors font-medium"
+            className="text-sm text-[#B5956E] hover:text-[#D4C0A0] transition-colors font-medium"
           >
             Cotizar ahora &rarr;
           </a>
@@ -118,13 +118,13 @@ export default function LentesDeContacto() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
                 />
               </div>
-              <p className="text-sm text-[#111110] font-semibold" style={{ fontFamily: "var(--font-serif)" }}>{p.brand}</p>
-              <p className="text-xs text-[#6A5A4A]">{p.model}</p>
+              <p className="text-base text-[#111110] font-semibold" style={{ fontFamily: "var(--font-serif)" }}>{p.brand}</p>
+              <p className="text-sm text-[#6A5A4A]">{p.model}</p>
               {p.description && (
-                <p className="text-xs text-[#A09080] mt-1 line-clamp-2">{p.description}</p>
+                <p className="text-sm text-[#A09080] mt-1 line-clamp-2">{p.description}</p>
               )}
-              <p className="text-base font-semibold text-[#111110] mt-2" style={{ fontFamily: "var(--font-serif)" }}>{p.priceFormatted}</p>
-              <span className="inline-block mt-3 text-xs text-[#B5956E] font-medium group-hover:underline">Ver detalle &rarr;</span>
+              <p className="text-lg font-bold text-[#111110] mt-2" style={{ fontFamily: "var(--font-serif)" }}>{p.priceFormatted}</p>
+              <span className="inline-block mt-3 text-sm text-[#B5956E] font-medium group-hover:underline">Ver detalle &rarr;</span>
             </Link>
           ))}
         </div>

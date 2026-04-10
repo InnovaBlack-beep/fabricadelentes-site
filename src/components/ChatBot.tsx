@@ -553,7 +553,7 @@ export function ChatBot() {
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && send()}
                 placeholder="Escribe tu mensaje..."
-                className="flex-1 text-[13px] text-[#1A1818] placeholder:text-[#9CA3AF]"
+                className="flex-1 text-sm text-[#1A1818] placeholder:text-[#9CA3AF]"
                 style={{ border: "none", background: "none", outline: "none" }}
               />
               <button
