@@ -163,31 +163,36 @@ export default async function ProductPage({ params }: Props) {
 
             {/* RIGHT — Details */}
             <div className="w-full lg:w-[40%]">
-              <p className="text-[11px] uppercase tracking-[0.2em] text-[#9CA3AF] font-medium mb-2">
+              <p className="text-sm uppercase tracking-[0.2em] text-[#9CA3AF] font-medium mb-2">
                 {product.brand}
               </p>
-              <h1 className="text-2xl md:text-3xl font-bold text-[#242424] mb-4">
+              <h1 className="text-3xl md:text-4xl font-bold text-[#242424] mb-4">
                 {product.model}
               </h1>
-              <p className="text-2xl md:text-3xl font-bold text-[#242424] mb-6">
+              <p className="text-3xl md:text-4xl font-bold text-[#242424] mb-2">
                 {product.price}
-                <span className="text-sm font-normal text-[#9CA3AF] ml-2">
+                <span className="text-base font-normal text-[#9CA3AF] ml-2">
                   MXN
                 </span>
               </p>
+              {product.category === "Graduados" && (
+                <p className="text-base text-[#B5956E] font-medium mb-6">
+                  Incluye graduación + antirreflejante + blue cut
+                </p>
+              )}
 
               <div className="border-t border-[#E5E7EB] mb-6" />
 
-              <p className="text-base md:text-lg leading-relaxed text-[#374151] mb-8">
+              <p className="text-lg md:text-xl leading-relaxed text-[#242424] mb-8">
                 {product.description}
               </p>
 
               {/* Incluye */}
-              <div className="mb-8 rounded-lg bg-white p-5">
-                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#242424] mb-3">
+              <div className="mb-8 rounded-lg bg-[#F9F7F4] p-6">
+                <p className="text-sm font-semibold uppercase tracking-[0.15em] text-[#242424] mb-4">
                   Incluye
                 </p>
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   {[
                     ...(product.category === "Graduados" ? [
                       "Graduación incluida",
@@ -200,7 +205,7 @@ export default async function ProductPage({ params }: Props) {
                   ].map((item) => (
                     <li
                       key={item}
-                      className="flex items-center gap-2.5 text-sm text-[#374151]"
+                      className="flex items-center gap-2.5 text-base text-[#242424]"
                     >
                       <svg
                         className="w-4 h-4 text-fg flex-shrink-0"
@@ -227,19 +232,19 @@ export default async function ProductPage({ params }: Props) {
                   href={`https://wa.me/523314257226?text=${whatsappMsg}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center h-12 rounded-full bg-[#B5956E] text-[#242424] text-sm font-semibold uppercase tracking-[0.1em] hover:brightness-95 transition-all"
+                  className="flex items-center justify-center h-14 rounded-full bg-[#B5956E] text-[#242424] text-base font-semibold uppercase tracking-[0.1em] hover:brightness-95 transition-all"
                 >
                   Comprar por WhatsApp
                 </a>
                 <Link
                   href="/contacto"
-                  className="flex items-center justify-center h-12 rounded-full bg-fg text-white text-sm font-medium uppercase tracking-[0.1em] hover:bg-fg/85 transition-colors"
+                  className="flex items-center justify-center h-14 rounded-full bg-fg text-white text-base font-medium uppercase tracking-[0.1em] hover:bg-fg/85 transition-colors"
                 >
                   Agendar Examen Gratis
                 </Link>
               </div>
 
-              <p className="text-xs text-[#9CA3AF] text-center">
+              <p className="text-sm text-[#9CA3AF] text-center">
                 Envío a toda la República Mexicana &middot; Lentes listos en 1
                 hora
               </p>
