@@ -178,7 +178,7 @@ export default async function ProductPage({ params }: Props) {
 
               <div className="border-t border-[#E5E7EB] mb-6" />
 
-              <p className="text-sm leading-relaxed text-[#6B7280] mb-8">
+              <p className="text-base md:text-lg leading-relaxed text-[#374151] mb-8">
                 {product.description}
               </p>
 
@@ -189,6 +189,10 @@ export default async function ProductPage({ params }: Props) {
                 </p>
                 <ul className="space-y-2">
                   {[
+                    ...(product.category === "Graduados" ? [
+                      "Graduación incluida",
+                      "Antirreflejante + Blue Cut",
+                    ] : []),
                     "Examen de la vista gratis",
                     "Garantía de 1 año",
                     "Estuche y paño incluidos",
