@@ -5,6 +5,7 @@ import { EditorialBanner } from "@/components/landing/EditorialBanner";
 import { ProductShowcase } from "@/components/landing/ProductShowcase";
 import { Credentials } from "@/components/landing/Credentials";
 import { Testimonials } from "@/components/landing/Testimonials";
+import { BookingSection } from "@/components/BookingSection";
 import { Newsletter } from "@/components/landing/Newsletter";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <ProductShowcase />
       <Credentials />
       <Testimonials />
+      <BookingSection />
       <Newsletter />
     </>
   );

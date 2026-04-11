@@ -1,3 +1,58 @@
+# Fabrica de Lentes - robots.txt
+# https://fabricadelentes.mx
+
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Sitemap
 Sitemap: https://fabricadelentes.mx/sitemap.xml
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Google Images
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /producto/
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# SEO crawlers
+User-agent: Screaming Frog SEO Spider
+Allow: /
+
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: SemrushBot
+Allow: /
+
+# Block AI training scrapers (keep content for search engines only)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
