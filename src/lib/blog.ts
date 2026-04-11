@@ -638,6 +638,475 @@ export const blogPosts: BlogPost[] = [
 <p>Si estás considerando lentes de contacto, visítanos en Zona Minerva, Guadalajara. Te asesoramos sin compromiso.</p>
 `,
   },
+  {
+    slug: "lentes-progresivos-vs-bifocales",
+    title: "Lentes progresivos vs bifocales: ¿Cuáles te convienen más?",
+    description:
+      "Comparativa real entre lentes progresivos y bifocales. Diferencias, precios, ventajas y para quién es cada uno. Guía para mayores de 40 años.",
+    date: "2026-04-11",
+    author: "Dra. Ana López",
+    readTime: 7,
+    keywords: [
+      "lentes progresivos vs bifocales",
+      "diferencia progresivos bifocales",
+      "lentes progresivos precio guadalajara",
+      "lentes bifocales guadalajara",
+      "presbicia lentes",
+      "vista cansada lentes",
+    ],
+    content: `
+<p>Pasaste los 40 y las letras del celular empezaron a verse borrosas. Estiras el brazo para leer. Te quitas los lentes de lejos para ver de cerca. Bienvenido a la <strong>presbicia</strong> (vista cansada), y ahora necesitas elegir: <strong>¿progresivos o bifocales?</strong></p>
+
+<h2>¿Qué es la presbicia?</h2>
+<p>La presbicia es la pérdida gradual de la capacidad del ojo para enfocar de cerca. Le pasa a <strong>todos</strong> después de los 40 años. No es una enfermedad — es un cambio natural del cristalino.</p>
+
+<h2>Lentes bifocales: lo clásico</h2>
+<p>Los bifocales tienen <strong>dos zonas de visión</strong> separadas por una línea visible:</p>
+<ul>
+<li><strong>Arriba:</strong> graduación para ver de lejos</li>
+<li><strong>Abajo:</strong> graduación para ver de cerca (leer)</li>
+</ul>
+<h3>Ventajas</h3>
+<ul>
+<li>Precio más accesible ($800-1,500 MXN las micas)</li>
+<li>Adaptación rápida — la mayoría se acostumbra en 1-2 días</li>
+<li>Funcionan bien si solo necesitas lejos y cerca</li>
+</ul>
+<h3>Desventajas</h3>
+<ul>
+<li>La línea visible es estética — "se nota que usas bifocales"</li>
+<li><strong>No tienen visión intermedia</strong> — la distancia de la computadora queda fuera</li>
+<li>El "salto" entre zonas puede causar mareo al bajar escaleras</li>
+</ul>
+
+<h2>Lentes progresivos: la evolución</h2>
+<p>Los progresivos corrigen <strong>lejos, intermedio y cerca</strong> en una sola mica, sin línea visible.</p>
+<h3>Ventajas</h3>
+<ul>
+<li>Visión natural a todas las distancias — lejos, computadora, celular</li>
+<li>Sin línea visible — nadie nota que tienes graduación multifocal</li>
+<li>Transición suave entre zonas</li>
+<li>Ideales para quienes trabajan en computadora</li>
+</ul>
+<h3>Desventajas</h3>
+<ul>
+<li>Precio más alto ($1,500-3,000 MXN las micas)</li>
+<li>Adaptación de 7-14 días — las zonas laterales pueden distorsionar al principio</li>
+<li>Requieren un centrado preciso del optometrista</li>
+</ul>
+
+<h2>Comparativa directa</h2>
+<table>
+<thead>
+<tr><th>Característica</th><th>Bifocales</th><th>Progresivos</th></tr>
+</thead>
+<tbody>
+<tr><td>Visión de lejos</td><td>✅ Sí</td><td>✅ Sí</td></tr>
+<tr><td>Visión intermedia</td><td>❌ No</td><td>✅ Sí</td></tr>
+<tr><td>Visión de cerca</td><td>✅ Sí</td><td>✅ Sí</td></tr>
+<tr><td>Línea visible</td><td>Sí</td><td>No</td></tr>
+<tr><td>Precio micas</td><td>$800-1,500</td><td>$1,500-3,000</td></tr>
+<tr><td>Adaptación</td><td>1-2 días</td><td>7-14 días</td></tr>
+<tr><td>Ideal para</td><td>Uso básico lejos/cerca</td><td>Computadora + vida diaria</td></tr>
+</tbody>
+</table>
+
+<h2>¿Cuáles te recomendamos?</h2>
+<p><strong>Elige bifocales si:</strong> tu vida no requiere mucho uso de computadora, buscas el precio más bajo, y no te importa la línea visible.</p>
+<p><strong>Elige progresivos si:</strong> usas computadora a diario, quieres estética sin línea, y valoras la visión fluida a todas las distancias.</p>
+
+<h2>Progresivos y bifocales en Fábrica de Lentes</h2>
+<p>Fabricamos ambos tipos en nuestro <strong>laboratorio propio</strong>:</p>
+<ul>
+<li><strong>Bifocales:</strong> desde $1,549 MXN todo incluido (armazón + micas + AR)</li>
+<li><strong>Progresivos:</strong> desde $2,449 MXN todo incluido</li>
+<li><strong>Listos en 1-2 horas</strong> (no en días como otras ópticas)</li>
+<li><strong>Examen de la vista gratis</strong> para determinar tu graduación exacta</li>
+</ul>
+
+<p>Si tienes más de 40 y las letras se empequeñecen, visítanos en <strong>Zona Minerva, Guadalajara</strong>. Te hacemos el examen sin costo y te asesoramos cuál opción es mejor para tu estilo de vida.</p>
+`,
+  },
+  {
+    slug: "lentes-transitions-vale-la-pena",
+    title: "Lentes Transitions: ¿Valen la pena? Guía honesta con precios",
+    description:
+      "¿Los lentes Transitions realmente funcionan? Analizamos pros, contras, precios reales y alternativas fotocromáticas. Opinión sin filtro.",
+    date: "2026-04-09",
+    author: "Carlos Mendoza",
+    readTime: 6,
+    keywords: [
+      "lentes transitions precio",
+      "lentes transitions vale la pena",
+      "lentes fotocromáticos guadalajara",
+      "transitions vs fotocromáticos",
+      "lentes que se oscurecen",
+      "lentes transitions guadalajara",
+    ],
+    content: `
+<p>Los lentes Transitions son probablemente las micas más conocidas del mercado. Se oscurecen con el sol y se aclaran en interiores. Pero, <strong>¿realmente valen lo que cuestan?</strong> Aquí te damos una opinión honesta.</p>
+
+<h2>¿Qué son los lentes Transitions?</h2>
+<p>Transitions es una <strong>marca</strong> de micas fotocromáticas. "Fotocromático" significa que el material reacciona a la luz ultravioleta (UV): se oscurece afuera y se aclara adentro. Transitions no es el único — hay alternativas genéricas que hacen lo mismo.</p>
+
+<h2>¿Cómo funcionan?</h2>
+<p>Las micas contienen <strong>moléculas fotosensibles</strong> que cambian de estructura cuando reciben rayos UV:</p>
+<ul>
+<li><strong>Exterior con sol:</strong> Se oscurecen en 30-60 segundos (hasta 80% de oscurecimiento)</li>
+<li><strong>Interior sin UV:</strong> Se aclaran en 2-3 minutos</li>
+<li><strong>Dentro del coche:</strong> Se oscurecen parcialmente (el parabrisas bloquea UV). La versión Transitions XTRActive funciona mejor en auto</li>
+</ul>
+
+<h2>Pros reales</h2>
+<ul>
+<li><strong>Comodidad</strong> — Un solo par de lentes para interior y exterior</li>
+<li><strong>Protección UV 100%</strong> — Bloquean los rayos incluso cuando están claros</li>
+<li><strong>Menos fatiga visual</strong> — Reducen el resplandor y el esfuerzo ocular</li>
+<li><strong>Prácticos</strong> — No cargas dos pares de lentes (graduados + sol)</li>
+</ul>
+
+<h2>Contras que nadie te dice</h2>
+<ul>
+<li><strong>No se oscurecen bien en el coche</strong> — El parabrisas filtra UV, así que las Transitions estándar apenas reaccionan</li>
+<li><strong>Tardan en aclararse</strong> — Entras a un lugar cerrado y 2-3 minutos con lentes semi-oscuros puede ser incómodo</li>
+<li><strong>Se degradan con el tiempo</strong> — Después de 2-3 años, la reacción fotocromática pierde eficiencia</li>
+<li><strong>No reemplazan lentes de sol</strong> — Para playa o deporte intenso, necesitas lentes de sol dedicados</li>
+<li><strong>El precio</strong> — Un upgrade que puede costar $1,000-2,500 MXN extra sobre las micas normales</li>
+</ul>
+
+<h2>Transitions vs alternativas fotocromáticas</h2>
+<table>
+<thead>
+<tr><th>Característica</th><th>Transitions Gen 8</th><th>Fotocromático genérico</th></tr>
+</thead>
+<tbody>
+<tr><td>Velocidad de oscurecimiento</td><td>30-60 seg</td><td>60-90 seg</td></tr>
+<tr><td>Velocidad de aclarado</td><td>2-3 min</td><td>3-5 min</td></tr>
+<tr><td>Oscurecimiento máximo</td><td>~85%</td><td>~70-75%</td></tr>
+<tr><td>Vida útil fotocromática</td><td>2-3 años</td><td>1.5-2 años</td></tr>
+<tr><td>Precio extra</td><td>$1,500-2,500 MXN</td><td>$500-800 MXN</td></tr>
+</tbody>
+</table>
+
+<h2>¿Para quién SÍ valen la pena?</h2>
+<ul>
+<li>Personas que <strong>entran y salen constantemente</strong> (vendedores, repartidores, estudiantes)</li>
+<li>Quienes <strong>olvidan cargar sus lentes de sol</strong></li>
+<li>Personas con <strong>alta sensibilidad a la luz</strong></li>
+<li>Quienes viven en ciudades soleadas como <strong>Guadalajara</strong> (300+ días de sol al año)</li>
+</ul>
+
+<h2>¿Para quién NO valen la pena?</h2>
+<ul>
+<li>Si pasas <strong>90% del tiempo en interiores</strong> (oficina/casa)</li>
+<li>Si <strong>manejas mucho</strong> — mejor invierte en lentes de sol polarizados</li>
+<li>Si buscas <strong>el precio más bajo posible</strong></li>
+</ul>
+
+<h2>Opciones en Fábrica de Lentes</h2>
+<p>Ofrecemos ambas opciones:</p>
+<ul>
+<li><strong>Micas fotocromáticas genéricas:</strong> desde $500 MXN adicionales</li>
+<li><strong>Transitions originales:</strong> desde $1,500 MXN adicionales</li>
+<li><strong>Todo fabricado en nuestro laboratorio propio</strong> — listo en 1-2 horas</li>
+</ul>
+
+<p>Ven a nuestra sucursal en <strong>Zona Minerva</strong>, pruébalos en persona, y decide con información. <strong>Examen de la vista gratis.</strong></p>
+`,
+  },
+  {
+    slug: "examen-de-la-vista-gratis-guadalajara",
+    title: "Examen de la vista gratis en Guadalajara: Dónde, cómo y qué esperar",
+    description:
+      "Guía completa de dónde hacerte un examen de la vista gratis en Guadalajara. Qué incluye, cuánto dura, y cómo prepararte. Opciones 2026.",
+    date: "2026-04-07",
+    author: "Dra. Ana López",
+    readTime: 5,
+    keywords: [
+      "examen de la vista gratis guadalajara",
+      "examen visual gratis guadalajara",
+      "revisión de ojos guadalajara",
+      "optometrista guadalajara",
+      "dónde hacen examen de la vista gratis",
+    ],
+    content: `
+<p><strong>44% de los mexicanos</strong> necesita corrección visual, pero muchos no se revisan porque creen que el examen cuesta. La realidad: hay varias opciones gratuitas en Guadalajara. Aquí te decimos dónde, qué incluye y cómo sacarle el máximo provecho.</p>
+
+<h2>¿Qué incluye un examen de la vista?</h2>
+<p>Un examen completo (también llamado revisión optométrica) incluye:</p>
+<ol>
+<li><strong>Agudeza visual</strong> — Lees letras a distintas distancias para medir qué tan bien ves</li>
+<li><strong>Refracción</strong> — Se determina tu graduación exacta (miopía, hipermetropía, astigmatismo)</li>
+<li><strong>Prueba de presbicia</strong> — Si tienes 40+, se mide tu capacidad de enfoque de cerca</li>
+<li><strong>Evaluación de salud ocular</strong> — Se revisa presión intraocular y fondo de ojo básico</li>
+</ol>
+<p>Duración: <strong>15-25 minutos</strong>.</p>
+
+<h2>Dónde hacerte el examen gratis en GDL</h2>
+
+<h3>1. Fábrica de Lentes — Zona Minerva</h3>
+<ul>
+<li><strong>Costo:</strong> 100% gratis, sin compromiso de compra</li>
+<li><strong>Incluye:</strong> Agudeza, refracción, presbicia, evaluación general</li>
+<li><strong>Horario:</strong> Lun-Sáb 10:00-20:00</li>
+<li><strong>Ventaja:</strong> Si necesitas lentes, los fabrican ahí mismo en 1 hora</li>
+<li><strong>Cita:</strong> No necesaria, pero puedes agendar por <a href="https://wa.me/523314257226">WhatsApp</a></li>
+</ul>
+
+<h3>2. Coppel (varias sucursales)</h3>
+<ul>
+<li><strong>Costo:</strong> Gratis en el área de óptica</li>
+<li><strong>Incluye:</strong> Examen básico</li>
+<li><strong>Ventaja:</strong> Muchas sucursales en GDL</li>
+<li><strong>Desventaja:</strong> Enfocado a venta, examen básico</li>
+</ul>
+
+<h3>3. Ópticas LUX</h3>
+<ul>
+<li><strong>Costo:</strong> Gratis</li>
+<li><strong>Incluye:</strong> Examen completo</li>
+<li><strong>Ventaja:</strong> Buena reputación nacional</li>
+<li><strong>Desventaja:</strong> Tiempos de espera largos en fin de semana</li>
+</ul>
+
+<h3>4. Campañas de salud visual (temporales)</h3>
+<ul>
+<li>La <strong>Secretaría de Salud Jalisco</strong> organiza jornadas gratuitas periódicamente</li>
+<li>Universidades como <strong>UdeG</strong> hacen brigadas de optometría abiertas al público</li>
+<li>Revisa redes sociales del gobierno estatal para fechas</li>
+</ul>
+
+<h2>¿Cada cuánto debes revisarte?</h2>
+<ul>
+<li><strong>Niños:</strong> Cada año</li>
+<li><strong>Adultos 18-40:</strong> Cada 2 años (cada año si usas lentes)</li>
+<li><strong>Adultos 40+:</strong> Cada año (la presbicia progresa)</li>
+<li><strong>Diabéticos:</strong> Cada 6 meses a 1 año</li>
+</ul>
+
+<h2>Consejos antes de tu examen</h2>
+<ul>
+<li><strong>No te frotes los ojos</strong> antes del examen</li>
+<li><strong>Lleva tus lentes actuales</strong> si los tienes — ayuda a comparar graduaciones</li>
+<li><strong>Menciona si usas pantallas mucho tiempo</strong> — esto influye en la recomendación de micas</li>
+<li><strong>Si usas lentes de contacto</strong>, retíralos 24 horas antes para una medición más precisa</li>
+</ul>
+
+<h2>¿Y si necesitas lentes?</h2>
+<p>En Fábrica de Lentes, después del examen gratis puedes elegir armazón y tener tus lentes listos <strong>en 1 hora</strong>. Todo incluido (armazón + micas graduadas + antirreflejante + blue cut) desde <strong>$1,064 MXN</strong>. Sin filas, sin esperas, sin sorpresas en el precio.</p>
+
+<p><strong>Agenda tu examen gratis</strong> por <a href="https://wa.me/523314257226?text=Hola%2C%20quiero%20agendar%20un%20examen%20de%20la%20vista">WhatsApp</a> o simplemente llega a nuestra sucursal en Zona Minerva.</p>
+`,
+  },
+  {
+    slug: "cuanto-cuestan-lentes-graduados-guadalajara",
+    title: "¿Cuánto cuestan unos lentes graduados en Guadalajara? Precios reales 2026",
+    description:
+      "Precios reales de lentes graduados en Guadalajara. Comparativa por óptica, tipo de mica y armazón. Desde $599 hasta $8,000. Guía actualizada.",
+    date: "2026-04-05",
+    author: "Carlos Mendoza",
+    readTime: 6,
+    keywords: [
+      "cuánto cuestan lentes graduados",
+      "precio lentes graduados guadalajara",
+      "lentes graduados baratos guadalajara",
+      "lentes graduados precio",
+      "óptica económica guadalajara",
+      "lentes guadalajara precios",
+    ],
+    content: `
+<p>"¿Cuánto me van a costar?" es la primera pregunta que todos hacemos al entrar a una óptica. Y la respuesta suele ser frustrante: <strong>"depende"</strong>. Aquí eliminamos la ambigüedad con <strong>precios reales</strong> de lentes graduados en Guadalajara.</p>
+
+<h2>¿De qué depende el precio?</h2>
+<p>El costo final de unos lentes graduados se compone de:</p>
+<ol>
+<li><strong>Armazón:</strong> $200-5,000+ MXN (genérico vs marca premium)</li>
+<li><strong>Micas graduadas:</strong> $300-3,000 MXN (según material e índice)</li>
+<li><strong>Tratamientos:</strong> AR, blue cut, fotocromático ($0-2,500 MXN extra)</li>
+<li><strong>Tipo de graduación:</strong> Monofocal (simple), bifocal o progresivo</li>
+</ol>
+
+<h2>Precios promedio en Guadalajara (2026)</h2>
+
+<h3>Lentes monofocales (visión sencilla)</h3>
+<table>
+<thead>
+<tr><th>Óptica</th><th>Precio desde</th><th>¿Qué incluye?</th><th>Entrega</th></tr>
+</thead>
+<tbody>
+<tr><td>EconoÓptic</td><td>$599</td><td>Armazón + micas básicas</td><td>1-3 días</td></tr>
+<tr><td><strong>Fábrica de Lentes</strong></td><td><strong>$1,064</strong></td><td><strong>Armazón + micas + AR + blue cut</strong></td><td><strong>1 hora</strong></td></tr>
+<tr><td>Ben & Frank</td><td>$1,698</td><td>Armazón + micas + AR</td><td>5-10 días</td></tr>
+<tr><td>Calpini</td><td>$1,800</td><td>Armazón + micas + AR</td><td>3-5 días</td></tr>
+<tr><td>Devlyn</td><td>$2,500</td><td>Armazón + micas + AR</td><td>3-7 días</td></tr>
+</tbody>
+</table>
+
+<h3>Lentes bifocales</h3>
+<p>Agrega $500-1,000 MXN al precio monofocal en la mayoría de ópticas.</p>
+<ul>
+<li><strong>Fábrica de Lentes:</strong> desde $1,549 MXN todo incluido</li>
+<li><strong>Devlyn:</strong> desde $3,500 MXN</li>
+</ul>
+
+<h3>Lentes progresivos</h3>
+<p>Los más caros por la complejidad del tallado.</p>
+<ul>
+<li><strong>Fábrica de Lentes:</strong> desde $2,449 MXN todo incluido</li>
+<li><strong>Devlyn:</strong> desde $4,500-8,000 MXN</li>
+<li><strong>Ben & Frank:</strong> no manejan progresivos</li>
+</ul>
+
+<h2>Cuidado con los precios "desde"</h2>
+<p>Muchas ópticas anuncian precios bajísimos que <strong>no incluyen lo básico</strong>:</p>
+<ul>
+<li>"Lentes desde $599" → pero sin antirreflejante (+$300), sin blue cut (+$200), con armazón genérico de calidad cuestionable</li>
+<li>"2x1 en lentes" → el primer par a precio inflado, el segundo con micas básicas</li>
+<li>"Examen gratis con compra" → si no compras, te cobran el examen</li>
+</ul>
+<p><strong>Siempre pregunta el precio TODO INCLUIDO</strong> antes de decidir.</p>
+
+<h2>¿Cómo ahorrar sin sacrificar calidad?</h2>
+<ol>
+<li><strong>Elige una óptica con laboratorio propio</strong> — eliminas el margen del laboratorio externo</li>
+<li><strong>Considera marcas propias</strong> — misma calidad de materiales sin el sobreprecio de la licencia de marca</li>
+<li><strong>Pide precio todo incluido</strong> — AR y blue cut son esenciales, no opcionales</li>
+<li><strong>Compara lo que incluye</strong>, no solo el número más bajo</li>
+</ol>
+
+<h2>¿Por qué Fábrica de Lentes es más accesible?</h2>
+<p>Tres razones:</p>
+<ul>
+<li><strong>Laboratorio propio</strong> — no pagamos a un tercero para fabricar tus micas</li>
+<li><strong>Marcas propias</strong> (Brizzant, Frida Kahlo, Nobleman, Massimo) — sin sobreprecio de licencia</li>
+<li><strong>40 años de experiencia</strong> — volumen nos permite negociar mejores precios en materiales</li>
+</ul>
+
+<p>Visítanos en <strong>Zona Minerva, Guadalajara</strong>. Examen gratis, precio transparente, y tus lentes listos en 1 hora.</p>
+`,
+  },
+  {
+    slug: "mejores-opticas-guadalajara-comparativa",
+    title: "Las mejores ópticas en Guadalajara: Comparativa honesta 2026",
+    description:
+      "Comparativa real de las mejores ópticas de Guadalajara. Precios, tiempos de entrega, calidad de examen y servicios. Ranking actualizado 2026.",
+    date: "2026-04-03",
+    author: "Carlos Mendoza",
+    readTime: 8,
+    keywords: [
+      "mejores ópticas guadalajara",
+      "óptica cerca de mí guadalajara",
+      "mejor óptica guadalajara",
+      "ópticas en guadalajara",
+      "comparativa ópticas guadalajara",
+      "dónde comprar lentes guadalajara",
+    ],
+    content: `
+<p>Buscar "óptica cerca de mí" en Google te da decenas de resultados, pero <strong>¿cuál es realmente la mejor opción?</strong> Analizamos las ópticas más populares de Guadalajara con datos reales: precios, tiempos, calidad y servicios.</p>
+
+<h2>Criterios de evaluación</h2>
+<p>Evaluamos cada óptica en 5 factores clave:</p>
+<ol>
+<li><strong>Precio real</strong> — Todo incluido (armazón + micas + tratamientos)</li>
+<li><strong>Tiempo de entrega</strong> — Cuánto tardas en estrenar</li>
+<li><strong>Calidad del examen</strong> — ¿Es gratis? ¿Optometrista certificado?</li>
+<li><strong>Variedad</strong> — Opciones de armazones y micas</li>
+<li><strong>Experiencia del cliente</strong> — Atención, comodidad, postventa</li>
+</ol>
+
+<h2>1. Fábrica de Lentes — Zona Minerva</h2>
+<p><strong>⭐ 4.8/5</strong> (127 reseñas)</p>
+<ul>
+<li><strong>Precio desde:</strong> $1,064 MXN todo incluido</li>
+<li><strong>Entrega:</strong> 1 hora (laboratorio propio)</li>
+<li><strong>Examen:</strong> Gratis, sin compromiso</li>
+<li><strong>Especialidad:</strong> 4 colecciones propias (Brizzant, Frida Kahlo, Nobleman, Massimo)</li>
+<li><strong>Lo mejor:</strong> Precio de fábrica + entrega inmediata + 40 años de experiencia</li>
+<li><strong>Lo mejorable:</strong> Una sola sucursal</li>
+</ul>
+
+<h2>2. Devlyn</h2>
+<p><strong>⭐ 3.8/5</strong></p>
+<ul>
+<li><strong>Precio desde:</strong> $2,500 MXN</li>
+<li><strong>Entrega:</strong> 3-7 días</li>
+<li><strong>Examen:</strong> Gratuito con compra</li>
+<li><strong>Especialidad:</strong> Marcas internacionales (Ray-Ban, Oakley, Prada)</li>
+<li><strong>Lo mejor:</strong> Presencia nacional, variedad de marcas de diseñador</li>
+<li><strong>Lo mejorable:</strong> Precios altos, experiencia impersonal de cadena</li>
+</ul>
+
+<h2>3. EconoÓptic</h2>
+<p><strong>⭐ 3.5/5</strong></p>
+<ul>
+<li><strong>Precio desde:</strong> $599 MXN</li>
+<li><strong>Entrega:</strong> 1-3 días</li>
+<li><strong>Examen:</strong> Gratis</li>
+<li><strong>Especialidad:</strong> Volumen y precio bajo</li>
+<li><strong>Lo mejor:</strong> El precio más accesible del mercado</li>
+<li><strong>Lo mejorable:</strong> Calidad básica de materiales, variedad limitada</li>
+</ul>
+
+<h2>4. Ópticas Calpini</h2>
+<p><strong>⭐ 4.0/5</strong></p>
+<ul>
+<li><strong>Precio desde:</strong> $1,800 MXN</li>
+<li><strong>Entrega:</strong> 3-5 días</li>
+<li><strong>Examen:</strong> Incluido</li>
+<li><strong>Especialidad:</strong> Tradición desde 1848</li>
+<li><strong>Lo mejor:</strong> Confianza generacional, servicio personalizado</li>
+<li><strong>Lo mejorable:</strong> Presencia digital débil, precios intermedios sin lab propio</li>
+</ul>
+
+<h2>5. Ben & Frank</h2>
+<p><strong>⭐ 4.2/5</strong></p>
+<ul>
+<li><strong>Precio desde:</strong> $1,698 MXN</li>
+<li><strong>Entrega:</strong> 5-10 días</li>
+<li><strong>Examen:</strong> En tienda</li>
+<li><strong>Especialidad:</strong> Diseño moderno, marca mexicana</li>
+<li><strong>Lo mejor:</strong> Armazones con diseño, prueba virtual en app</li>
+<li><strong>Lo mejorable:</strong> Envío desde CDMX (tardado), no manejan progresivos ni graduaciones complejas</li>
+</ul>
+
+<h2>6. Ópticas LUX</h2>
+<p><strong>⭐ 3.9/5</strong></p>
+<ul>
+<li><strong>Precio desde:</strong> $1,499 MXN</li>
+<li><strong>Entrega:</strong> 3-7 días</li>
+<li><strong>Examen:</strong> Gratis</li>
+<li><strong>Especialidad:</strong> Cadena nacional con buena cobertura</li>
+<li><strong>Lo mejor:</strong> Muchas sucursales, promociones frecuentes</li>
+<li><strong>Lo mejorable:</strong> Tiempos de espera, calidad variable por sucursal</li>
+</ul>
+
+<h2>Tabla comparativa final</h2>
+<table>
+<thead>
+<tr><th>Óptica</th><th>Precio desde</th><th>Entrega</th><th>Examen gratis</th><th>Lab propio</th><th>Rating</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Fábrica de Lentes</strong></td><td><strong>$1,064</strong></td><td><strong>1 hora</strong></td><td><strong>✅ Sin compromiso</strong></td><td><strong>✅</strong></td><td><strong>4.8</strong></td></tr>
+<tr><td>Devlyn</td><td>$2,500</td><td>3-7 días</td><td>Con compra</td><td>❌</td><td>3.8</td></tr>
+<tr><td>EconoÓptic</td><td>$599</td><td>1-3 días</td><td>✅</td><td>❌</td><td>3.5</td></tr>
+<tr><td>Calpini</td><td>$1,800</td><td>3-5 días</td><td>✅</td><td>❌</td><td>4.0</td></tr>
+<tr><td>Ben & Frank</td><td>$1,698</td><td>5-10 días</td><td>✅</td><td>❌</td><td>4.2</td></tr>
+<tr><td>LUX</td><td>$1,499</td><td>3-7 días</td><td>✅</td><td>❌</td><td>3.9</td></tr>
+</tbody>
+</table>
+
+<h2>Veredicto</h2>
+<p>No hay una "mejor" óptica universal — depende de lo que valores más:</p>
+<ul>
+<li><strong>Mejor precio + velocidad:</strong> Fábrica de Lentes (lab propio, 1 hora, desde $1,064)</li>
+<li><strong>Precio más bajo absoluto:</strong> EconoÓptic (desde $599, calidad básica)</li>
+<li><strong>Marcas de diseñador:</strong> Devlyn (Ray-Ban, Oakley, precio premium)</li>
+<li><strong>Diseño moderno mexicano:</strong> Ben & Frank (estética, sin progresivos)</li>
+</ul>
+
+<p>Si quieres la mejor <strong>relación calidad-precio-velocidad</strong>, te invitamos a visitarnos en <strong>Zona Minerva</strong>. Examen gratis, sin compromiso, y si decides comprar, te vas con tus lentes en 1 hora.</p>
+`,
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
