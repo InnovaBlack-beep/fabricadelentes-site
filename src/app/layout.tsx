@@ -154,8 +154,7 @@ const jsonLd = {
   ],
 };
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
-const GA_ID_2 = process.env.NEXT_PUBLIC_GA_ID_2 || "G-SVC97E0S53";
+const GA_ID = "G-SVC97E0S53";
 
 export default function RootLayout({
   children,
@@ -176,7 +175,7 @@ export default function RootLayout({
             <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
             <script
               dangerouslySetInnerHTML={{
-                __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');${GA_ID_2 ? `gtag('config','${GA_ID_2}');` : ''}`,
+                __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`,
               }}
             />
           </>
