@@ -1,8 +1,31 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 
 export function Footer() {
+  const [email, setEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      await fetch("https://backoffice-inblk.vercel.app/api/public/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      setSubscribed(true);
+      setEmail("");
+    } catch {
+      // Fallback silencioso
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <footer style={{ background: "#1A1818", padding: "52px 20px 28px" }}>
       <div className="max-w-[1440px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -188,9 +211,65 @@ export function Footer() {
         </div>
       </div>
 
+      {/* Newsletter — sutil, integrado en footer */}
+      <div
+        className="max-w-[1440px] mx-auto pt-8 mt-10"
+        style={{ borderTop: "1px solid rgba(245,240,234,0.07)" }}
+      >
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex-shrink-0">
+            <p
+              className="text-sm font-medium"
+              style={{ color: "rgba(245,240,234,0.6)" }}
+            >
+              Promociones y novedades en tu correo
+            </p>
+          </div>
+          {subscribed ? (
+            <p
+              className="text-sm font-medium"
+              style={{ color: "#B5956E" }}
+            >
+              ¡Gracias! Te mantendremos al tanto.
+            </p>
+          ) : (
+            <form
+              onSubmit={handleNewsletterSubmit}
+              className="flex gap-2 w-full md:w-auto"
+            >
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="tu@email.com"
+                className="h-9 px-4 rounded-full text-xs flex-1 md:w-56 focus:outline-none transition-colors"
+                style={{
+                  background: "rgba(245,240,234,0.05)",
+                  border: "1px solid rgba(245,240,234,0.1)",
+                  color: "#F5F0EA",
+                }}
+              />
+              <button
+                type="submit"
+                disabled={loading}
+                className="h-9 px-5 rounded-full text-xs font-medium uppercase tracking-wider transition-opacity hover:opacity-80 cursor-pointer whitespace-nowrap"
+                style={{
+                  background: "#B5956E",
+                  color: "#1A1818",
+                  opacity: loading ? 0.6 : 1,
+                }}
+              >
+                {loading ? "..." : "Suscribirme"}
+              </button>
+            </form>
+          )}
+        </div>
+      </div>
+
       {/* Bottom bar */}
       <div
-        className="max-w-[1440px] mx-auto pt-6 mt-10"
+        className="max-w-[1440px] mx-auto pt-6 mt-6"
         style={{ borderTop: "1px solid rgba(245,240,234,0.07)" }}
       >
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">

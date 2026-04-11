@@ -6,8 +6,6 @@ import { ProductShowcase } from "@/components/landing/ProductShowcase";
 import { Credentials } from "@/components/landing/Credentials";
 import { Testimonials } from "@/components/landing/Testimonials";
 import { BookingSection } from "@/components/BookingSection";
-import { Newsletter } from "@/components/landing/Newsletter";
-
 export default function Home() {
   return (
     <>
@@ -19,7 +17,6 @@ export default function Home() {
       <Credentials />
       <Testimonials />
       <BookingSection />
-      <Newsletter />
     </>
   );
 }
