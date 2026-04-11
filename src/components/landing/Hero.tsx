@@ -92,7 +92,7 @@ export function Hero() {
           <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-white/60 mb-4">
             {slide.tagline}
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold text-white leading-[1.05] mb-5 whitespace-pre-line" style={{ fontFamily: "var(--font-serif)" }}>
+          <h1 className="text-4xl md:text-5xl font-bold text-white leading-[1.05] mb-5 whitespace-pre-line">
             {slide.headline}
           </h1>
           <p className="text-sm md:text-base text-white/70 max-w-md mb-8 leading-relaxed">

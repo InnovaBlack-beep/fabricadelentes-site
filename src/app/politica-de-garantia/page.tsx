@@ -21,7 +21,6 @@ export default function PoliticaDeGarantia() {
     >
       <h1
         className="text-3xl md:text-4xl font-semibold mb-2"
-        style={{ fontFamily: "var(--font-serif)" }}
       >
         Política de Garantía y Cancelación
       </h1>

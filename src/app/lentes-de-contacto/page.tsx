@@ -49,7 +49,6 @@ export default function LentesDeContacto() {
       <div className="max-w-[1280px] mx-auto px-4 md:px-10 pb-4">
         <h1
           className="text-3xl md:text-4xl text-[#111110]"
-          style={{ fontFamily: "var(--font-serif)" }}
         >
           Lentes de Contacto
         </h1>
@@ -81,7 +80,6 @@ export default function LentesDeContacto() {
           <p className="text-sm tracking-[0.12em] uppercase mb-1 text-[rgba(245,240,234,0.50)]">&mdash; En tienda &mdash;</p>
           <h2
             className="text-2xl md:text-3xl mb-2 text-[#F5F0EA] font-semibold"
-            style={{ fontFamily: "var(--font-serif)" }}
           >
             Todas las marcas · Entrega inmediata
           </h2>
@@ -118,12 +116,12 @@ export default function LentesDeContacto() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
                 />
               </div>
-              <p className="text-base text-[#111110] font-semibold" style={{ fontFamily: "var(--font-serif)" }}>{p.brand}</p>
+              <p className="text-base text-[#111110] font-semibold">{p.brand}</p>
               <p className="text-sm text-[#6A5A4A]">{p.model}</p>
               {p.description && (
                 <p className="text-sm text-[#A09080] mt-1 line-clamp-2">{p.description}</p>
               )}
-              <p className="text-lg font-bold text-[#111110] mt-2" style={{ fontFamily: "var(--font-serif)" }}>{p.priceFormatted}</p>
+              <p className="text-lg font-bold text-[#111110] mt-2">{p.priceFormatted}</p>
               <span className="inline-block mt-3 text-sm text-[#B5956E] font-medium group-hover:underline">Ver detalle &rarr;</span>
             </Link>
           ))}

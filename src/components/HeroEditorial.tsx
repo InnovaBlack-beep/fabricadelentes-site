@@ -26,7 +26,6 @@ export function HeroEditorial() {
           <h1
             className="text-4xl md:text-5xl font-bold leading-tight"
             style={{
-              fontFamily: "var(--font-serif)",
               color: "#1A1008",
             }}
           >

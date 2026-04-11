@@ -25,7 +25,7 @@ export function BookingSection() {
             <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase mb-5 text-accent">
               Examen Gratuito
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-5 text-white" style={{ fontFamily: "var(--font-serif)" }}>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-5 text-white">
               Tu visión merece
               <br />lo mejor.
             </h2>

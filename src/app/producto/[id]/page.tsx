@@ -166,10 +166,10 @@ export default async function ProductPage({ params }: Props) {
               <p className="text-sm uppercase tracking-[0.2em] text-[#9CA3AF] font-medium mb-2">
                 {product.brand}
               </p>
-              <h1 className="text-3xl md:text-4xl font-bold text-[#242424] mb-4" style={{ fontFamily: "var(--font-serif)" }}>
+              <h1 className="text-3xl md:text-4xl font-bold text-[#242424] mb-4">
                 {product.model}
               </h1>
-              <p className="text-3xl md:text-4xl font-bold text-[#242424] mb-2" style={{ fontFamily: "var(--font-serif)" }}>
+              <p className="text-3xl md:text-4xl font-bold text-[#242424] mb-2">
                 {product.price}
                 <span className="text-base font-normal text-[#9CA3AF] ml-2">
                   MXN
@@ -256,7 +256,7 @@ export default async function ProductPage({ params }: Props) {
         {relatedProducts.length > 0 && (
           <div className="border-t border-[#E5E7EB]">
             <div className="max-w-[1280px] mx-auto px-5 md:px-10 py-14 md:py-20">
-              <h2 className="text-2xl md:text-3xl font-bold text-fg mb-8" style={{ fontFamily: "var(--font-serif)" }}>
+              <h2 className="text-2xl md:text-3xl font-bold text-fg mb-8">
                 También te puede gustar
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">

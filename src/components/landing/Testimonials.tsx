@@ -58,7 +58,7 @@ export function Testimonials() {
               key={t.name}
               className="p-6 md:p-8 rounded-lg border border-border"
             >
-              <div className="text-border text-3xl font-serif leading-none mb-2">
+              <div className="text-border text-3xl font-bold leading-none mb-2">
                 &ldquo;
               </div>
               <Stars />

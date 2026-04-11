@@ -40,7 +40,7 @@ export default function Empresas() {
           <p className="text-xs text-muted tracking-[0.16em] uppercase mb-4 font-semibold">
             Canal Empresarial
           </p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl text-fg leading-tight mb-5 max-w-3xl mx-auto font-bold" style={{ fontFamily: "var(--font-serif)" }}>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl text-fg leading-tight mb-5 max-w-3xl mx-auto font-bold">
             Lleva Fábrica de Lentes
             <br />a tu empresa
           </h1>
@@ -64,7 +64,7 @@ export default function Empresas() {
       {/* Benefits */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-[1280px] mx-auto px-4 md:px-10">
-          <h2 className="text-2xl md:text-3xl text-fg mb-3 font-semibold" style={{ fontFamily: "var(--font-serif)" }}>
+          <h2 className="text-2xl md:text-3xl text-fg mb-3 font-semibold">
             Beneficios para tu empresa
           </h2>
           <p className="text-muted text-sm max-w-xl mb-10">
@@ -90,7 +90,7 @@ export default function Empresas() {
       {/* How it works */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 md:px-10">
-          <h2 className="text-2xl md:text-3xl text-fg mb-10 font-semibold" style={{ fontFamily: "var(--font-serif)" }}>
+          <h2 className="text-2xl md:text-3xl text-fg mb-10 font-semibold">
             ¿Cómo funciona?
           </h2>
 
@@ -123,7 +123,7 @@ export default function Empresas() {
       {/* CTA */}
       <section className="py-16 md:py-20 bg-dark">
         <div className="max-w-3xl mx-auto px-4 md:px-10 text-center">
-          <h2 className="text-2xl md:text-3xl text-white mb-4 font-semibold" style={{ fontFamily: "var(--font-serif)" }}>
+          <h2 className="text-2xl md:text-3xl text-white mb-4 font-semibold">
             ¿Interesado en un convenio?
           </h2>
           <p className="text-white/60 text-sm max-w-lg mx-auto mb-8">

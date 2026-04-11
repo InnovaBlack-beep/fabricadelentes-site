@@ -27,7 +27,7 @@ export function BrandShowcase() {
       <div className="max-w-[1440px] mx-auto px-4">
         <div className="flex items-end justify-between mb-10">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-3 text-text-primary" style={{ fontFamily: "var(--font-serif)" }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-3 text-text-primary">
               Nuestras Marcas
             </h2>
             <p className="text-base text-warm-stone">

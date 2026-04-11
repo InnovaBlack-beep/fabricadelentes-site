@@ -56,7 +56,7 @@ export function Services() {
     <section className="py-16 md:py-24">
       <div className="max-w-[1440px] mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-3 text-fg" style={{ fontFamily: "var(--font-serif)" }}>
+          <h2 className="text-2xl md:text-3xl font-bold mb-3 text-fg">
             Nuestros Servicios
           </h2>
           <p className="text-base text-muted max-w-2xl mx-auto">

@@ -15,7 +15,7 @@ export function HowItWorks() {
           <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase mb-4 text-accent">
             Proceso
           </span>
-          <h2 className="text-2xl md:text-3xl font-bold text-fg" style={{ fontFamily: "var(--font-serif)" }}>
+          <h2 className="text-2xl md:text-3xl font-bold text-fg">
             Así de fácil es pedir tus lentes
           </h2>
         </div>

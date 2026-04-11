@@ -117,7 +117,6 @@ export function HeroCarousel() {
             aria-level={2}
             className="text-4xl md:text-5xl font-bold leading-tight whitespace-pre-line mb-5"
             style={{
-              fontFamily: "var(--font-serif)",
               color: "var(--color-text-on-dark)",
             }}
           >
