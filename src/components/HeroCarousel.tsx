@@ -7,11 +7,11 @@ const slides = [
   {
     video: "/images/hero-video.mp4",
     image: "/images/hero-1.jpg",
-    alt: "Laboratorio óptico Fábrica de Lentes Guadalajara",
-    tagline: "Laboratorio Propio",
-    headline: "Aquí se fabrican\ntus lentes.",
+    alt: "Lentes que definen tu estilo en Fábrica de Lentes Guadalajara",
+    tagline: "Diseño que habla por ti",
+    headline: "Encuentra los lentes\nque te definen.",
     description:
-      "Óptica con laboratorio propio en Guadalajara. Lentes listos en 1 hora. Examen de la vista gratis.",
+      "Fabricación propia en Guadalajara. Tus lentes listos en una hora.",
     cta: "Agendar Examen Gratis",
     ctaSecondary: "Ver Armazones",
     ctaSecondaryHref: "/lentes-graduados",
@@ -20,11 +20,11 @@ const slides = [
   {
     video: "/images/hero-video-2.mp4",
     image: "/images/hero-2.jpg",
-    alt: "Armazones de moda en Fábrica de Lentes",
-    tagline: "Nueva Colección",
-    headline: "Armazones\ncon Estilo",
+    alt: "Colección de armazones exclusivos en Fábrica de Lentes",
+    tagline: "Más de 500 modelos",
+    headline: "Tu estilo.\nNuestra artesanía.",
     description:
-      "Encuentra el armazón perfecto. Brizzant, Frida Kahlo, Nobleman, Massimo y más.",
+      "Brizzant, Frida Kahlo, Nobleman, Massimo y André Badi. Exclusivos en GDL.",
     cta: "Explorar Colección",
     ctaSecondary: "Lentes de Sol",
     ctaSecondaryHref: "/lentes-de-sol",
@@ -32,11 +32,11 @@ const slides = [
   },
   {
     image: "/images/hero-3.jpg",
-    alt: "Entrega express de lentes en 1 hora",
-    tagline: "Entrega Express",
-    headline: "Lentes listos\nen 1 hora.",
+    alt: "Examen de la vista gratuito en Fábrica de Lentes",
+    tagline: "Examen gratuito",
+    headline: "Tu visión merece\nlo mejor.",
     description:
-      "Fabricamos tus lentes el mismo día. Sin esperas, sin intermediarios.",
+      "Optometristas certificados. Revisión completa sin costo ni compromiso.",
     cta: "Cotizar por WhatsApp",
     ctaSecondary: "Conoce el Lab",
     ctaSecondaryHref: "/laboratorio",

@@ -11,9 +11,17 @@ export type Product = {
   badge: BadgeType;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function getBadgeColors(_badge: BadgeType): { bg: string; text: string } {
-  return { bg: "bg-fg", text: "text-white" };
+export function getBadgeColors(badge: BadgeType): { bg: string; text: string } {
+  switch (badge) {
+    case "Más vendido": return { bg: "bg-[#1A1818]", text: "text-white" };
+    case "Exclusivo": return { bg: "bg-[#B5956E]", text: "text-white" };
+    case "Nuevo": return { bg: "bg-[#2D5A3D]", text: "text-white" };
+    case "Premium": return { bg: "bg-[#4A3728]", text: "text-white" };
+    case "Clásico": return { bg: "bg-[#6B7280]", text: "text-white" };
+    case "Trending": return { bg: "bg-[#7C3AED]", text: "text-white" };
+    case "Más pedido": return { bg: "bg-[#DC2626]", text: "text-white" };
+    default: return { bg: "bg-[#1A1818]", text: "text-white" };
+  }
 }
 
 const brizzantDesc =
@@ -50,7 +58,7 @@ export const products: Product[] = [
     price: "$1,949",
     description: brizzantDesc,
     category: "Graduados",
-    badge: "Nuevo",
+    badge: "Clásico",
     images: [
       "/products/oftalmicos/bl2-b52145f3.jpg",
       "/products/oftalmicos/b2-48c880d5.jpg",
@@ -76,7 +84,7 @@ export const products: Product[] = [
     price: "$1,949",
     description: brizzantDesc,
     category: "Graduados",
-    badge: "Nuevo",
+    badge: "Clásico",
     images: [
       "/products/oftalmicos/bl1-80666f1f.jpg",
       "/products/oftalmicos/b1-1c21a102.jpg",
@@ -89,7 +97,7 @@ export const products: Product[] = [
     price: "$1,949",
     description: brizzantDesc,
     category: "Graduados",
-    badge: "Nuevo",
+    badge: "Trending",
     images: [
       "/products/oftalmicos/bl4-29f105d4.jpg",
       "/products/oftalmicos/b4-7cb6be2f.jpg",
@@ -204,7 +212,7 @@ export const products: Product[] = [
     model: "FK 101 C08 — Inés",
     brand: "Frida Kahlo",
     price: "$1,949",
-    description: "Modelo Inés de la nueva colección Frida Kahlo. Armazón metálico semi-cat-eye en acabado Silver Lilac. Diseño elegante y femenino con detalles de color en las puntas. Incluye graduación + antirreflejante + blue cut.",
+    description: "Modelo Inés de la nueva colección Frida Kahlo. Semi-cat-eye metálico en acabado Silver Lilac, con detalles de color en las puntas para un look femenino y sofisticado. Incluye graduación + antirreflejante + blue cut.",
     category: "Graduados",
     badge: "Nuevo",
     images: ["/products/oftalmicos/FK101-C08.jpg"],
@@ -214,7 +222,7 @@ export const products: Product[] = [
     model: "FK 101 C20 — Inés",
     brand: "Frida Kahlo",
     price: "$1,949",
-    description: "Modelo Inés de la nueva colección Frida Kahlo. Armazón metálico semi-cat-eye en acabado Gold Red. Diseño elegante y femenino. Incluye graduación + antirreflejante + blue cut.",
+    description: "Modelo Inés de la nueva colección Frida Kahlo. Semi-cat-eye metálico en acabado Gold Red, detalles de color en las puntas para un look femenino y sofisticado. Incluye graduación + antirreflejante + blue cut.",
     category: "Graduados",
     badge: "Nuevo",
     images: ["/products/oftalmicos/FK101-C20.jpg"],
@@ -224,7 +232,7 @@ export const products: Product[] = [
     model: "FK 102 C01 — Bonito",
     brand: "Frida Kahlo",
     price: "$1,949",
-    description: "Modelo Bonito de la nueva colección Frida Kahlo. Armazón metálico redondo con detalle ondulado en la parte superior. Acabado Silver Aqua. Incluye graduación + antirreflejante + blue cut.",
+    description: "Modelo Bonito de la nueva colección Frida Kahlo. Redondo mixto metal-acetato con detalle ondulado superior, acabado Silver Aqua. Personalidad artística en cada trazo. Incluye graduación + antirreflejante + blue cut.",
     category: "Graduados",
     badge: "Nuevo",
     images: ["/products/oftalmicos/FK102-C01.jpg"],
@@ -234,7 +242,7 @@ export const products: Product[] = [
     model: "FK 102 C13 — Bonito",
     brand: "Frida Kahlo",
     price: "$1,949",
-    description: "Modelo Bonito de la nueva colección Frida Kahlo. Armazón metálico redondo con detalle ondulado. Acabado Silver Black. Incluye graduación + antirreflejante + blue cut.",
+    description: "Modelo Bonito de la nueva colección Frida Kahlo. Redondo mixto metal-acetato con detalle ondulado superior, acabado Silver Black. Personalidad artística y sofisticación. Incluye graduación + antirreflejante + blue cut.",
     category: "Graduados",
     badge: "Nuevo",
     images: ["/products/oftalmicos/FK102-C13.jpg"],
@@ -244,7 +252,7 @@ export const products: Product[] = [
     model: "FK 102 C20 — Bonito",
     brand: "Frida Kahlo",
     price: "$1,949",
-    description: "Modelo Bonito de la nueva colección Frida Kahlo. Armazón metálico redondo con detalle ondulado. Acabado Gold Magenta. Incluye graduación + antirreflejante + blue cut.",
+    description: "Modelo Bonito de la nueva colección Frida Kahlo. Redondo mixto metal-acetato con detalle ondulado superior, acabado Gold Magenta. Personalidad artística con un toque vibrante. Incluye graduación + antirreflejante + blue cut.",
     category: "Graduados",
     badge: "Nuevo",
     images: ["/products/oftalmicos/FK102-C20.jpg"],
@@ -254,7 +262,7 @@ export const products: Product[] = [
     model: "FK 104 C09 — María",
     brand: "Frida Kahlo",
     price: "$1,949",
-    description: "Modelo María de la nueva colección Frida Kahlo. Armazón acetato redondo oversize en acabado Silver Black. Estilo audaz inspirado en la artista. Incluye graduación + antirreflejante + blue cut.",
+    description: "Modelo María de la nueva colección Frida Kahlo. Acetato oversize redondo en acabado Silver Black, un look audaz que se convierte en statement piece. Incluye graduación + antirreflejante + blue cut.",
     category: "Graduados",
     badge: "Nuevo",
     images: ["/products/oftalmicos/FK104-C09.jpg"],
@@ -264,7 +272,7 @@ export const products: Product[] = [
     model: "FK 106 C16 — Picasso",
     brand: "Frida Kahlo",
     price: "$1,949",
-    description: "Modelo Picasso de la nueva colección Frida Kahlo. Armazón acetato redondo cat-eye en acabado Pink Blue Purple. Diseño artístico con colores vibrantes. Incluye graduación + antirreflejante + blue cut.",
+    description: "Modelo Picasso de la nueva colección Frida Kahlo. Cat-eye en acetato con colores vibrantes Pink Blue Purple, pura inspiración artística. Incluye graduación + antirreflejante + blue cut.",
     category: "Graduados",
     badge: "Nuevo",
     images: ["/products/oftalmicos/FK106-C16.jpg"],
@@ -274,7 +282,7 @@ export const products: Product[] = [
     model: "FK 106 C21 — Picasso",
     brand: "Frida Kahlo",
     price: "$1,949",
-    description: "Modelo Picasso de la nueva colección Frida Kahlo. Armazón acetato redondo cat-eye en acabado Orange Purple Black. Incluye graduación + antirreflejante + blue cut.",
+    description: "Modelo Picasso de la nueva colección Frida Kahlo. Cat-eye en acetato con paleta Orange Purple Black, inspiración artística en cada detalle. Incluye graduación + antirreflejante + blue cut.",
     category: "Graduados",
     badge: "Nuevo",
     images: ["/products/oftalmicos/FK106-C21.jpg"],
@@ -284,7 +292,7 @@ export const products: Product[] = [
     model: "FK 107 C09 — Casa Azul",
     brand: "Frida Kahlo",
     price: "$1,949",
-    description: "Modelo Casa Azul de la nueva colección Frida Kahlo. Armazón acetato cat-eye en acabado Black. Inspirado en la icónica casa de Coyoacán. Incluye graduación + antirreflejante + blue cut.",
+    description: "Modelo Casa Azul de la nueva colección Frida Kahlo. Cat-eye en acetato negro, inspirado en la icónica casa de Coyoacán donde nació el arte de Frida. Incluye graduación + antirreflejante + blue cut.",
     category: "Graduados",
     badge: "Nuevo",
     images: ["/products/oftalmicos/FK107-C09.jpg"],
@@ -294,7 +302,7 @@ export const products: Product[] = [
     model: "FK 108 C01 — Matilde",
     brand: "Frida Kahlo",
     price: "$1,949",
-    description: "Modelo Matilde de la nueva colección Frida Kahlo. Armazón acetato cat-eye en acabado Black Blue. Diseño sofisticado con detalles de color. Incluye graduación + antirreflejante + blue cut.",
+    description: "Modelo Matilde de la nueva colección Frida Kahlo. Cat-eye en acetato con degradado Black Blue, sofisticación y personalidad en una sola pieza. Incluye graduación + antirreflejante + blue cut.",
     category: "Graduados",
     badge: "Nuevo",
     images: ["/products/oftalmicos/FK108-C01.jpg"],
@@ -337,7 +345,7 @@ export const products: Product[] = [
     description:
       "Estilo retro y atemporal. Diseño inconfundible que ha sido históricamente la elección de los referentes intelectuales y culturales.",
     category: "Sol",
-    badge: "Nuevo",
+    badge: "Exclusivo",
     images: [
       "/products/solares/FKSL3-12125544.jpg",
       "/products/solares/FKS3-68ebaac2.jpg",
@@ -351,7 +359,7 @@ export const products: Product[] = [
     description:
       "Modelo icónico con lentes planas de cristal. La evolución de la forma redonda con cristal plano, manteniendo su esencia.",
     category: "Sol",
-    badge: "Nuevo",
+    badge: "Exclusivo",
     images: [
       "/products/solares/FKSL4-ce07cd8f.jpg",
       "/products/solares/FKS4-ea86d1ad.jpg",
@@ -365,7 +373,7 @@ export const products: Product[] = [
     description:
       "Lentes de sol con diseño novedoso y vanguardista de la colección Frida Kahlo.",
     category: "Sol",
-    badge: "Nuevo",
+    badge: "Exclusivo",
     images: [
       "/products/solares/FKSL5-9e669b02.jpg",
       "/products/solares/FKS5-819fa39c.jpg",
@@ -379,7 +387,7 @@ export const products: Product[] = [
     description:
       "Lentes de sol con diseño novedoso y vanguardista de la colección Frida Kahlo.",
     category: "Sol",
-    badge: "Nuevo",
+    badge: "Exclusivo",
     images: [
       "/products/solares/FKSL6-b1e0f8cb.jpg",
       "/products/solares/FKS6-f3f295e7.jpg",
@@ -392,7 +400,7 @@ export const products: Product[] = [
     model: "AB-004 C29",
     brand: "André Badi",
     price: "$1,649",
-    description: "Lentes de sol André Badi con armazón TR90 ultraligero y micas polarizadas. Diseño redondo clásico con lentes espejo naranja. Protección UV400.",
+    description: "Diseño cosmopolita con silueta redonda clásica y lentes espejo naranja. Ultraligeros con protección UV400 polarizada para el día a día.",
     category: "Sol",
     badge: "Nuevo",
     images: ["/products/solares/AB004-C29.jpg"],
@@ -402,7 +410,7 @@ export const products: Product[] = [
     model: "AB-005 C13",
     brand: "André Badi",
     price: "$1,649",
-    description: "Lentes de sol André Badi estilo clubmaster con armazón TR90 negro mate y micas UV400 espejo azul.",
+    description: "Inspiración urbana con línea clubmaster en negro mate y lentes espejo azul. Actitud contemporánea con protección UV400.",
     category: "Sol",
     badge: "Nuevo",
     images: ["/products/solares/AB005-C13.jpg"],
@@ -412,7 +420,7 @@ export const products: Product[] = [
     model: "AB-006 C10",
     brand: "André Badi",
     price: "$1,649",
-    description: "Lentes de sol André Badi redondos cat-eye con armazón TR90 negro y micas Revo UV400 púrpura.",
+    description: "Diseño vanguardista cat-eye redondo en negro con lentes Revo púrpura. Estilo que destaca con protección UV400.",
     category: "Sol",
     badge: "Nuevo",
     images: ["/products/solares/AB006-C10.jpg"],
@@ -422,9 +430,9 @@ export const products: Product[] = [
     model: "AB-007 C29",
     brand: "André Badi",
     price: "$1,649",
-    description: "Lentes de sol André Badi clubmaster con armazón TR90 y micas polarizadas azul. Protección total.",
+    description: "Elegancia urbana en línea clubmaster con lentes polarizadas azul. Para quienes viven la ciudad con estilo y protección total.",
     category: "Sol",
-    badge: "Nuevo",
+    badge: "Trending",
     images: ["/products/solares/AB007-C29.jpg"],
   },
   {
@@ -432,9 +440,9 @@ export const products: Product[] = [
     model: "AB-008 C04",
     brand: "André Badi",
     price: "$1,649",
-    description: "Lentes de sol André Badi oversize con armazón TR90 tortuga/beige y micas polarizadas. Estilo femenino sofisticado.",
+    description: "Silueta oversize en tortuga y beige con lentes polarizadas. Sofisticación femenina para cada momento del día.",
     category: "Sol",
-    badge: "Nuevo",
+    badge: "Trending",
     images: ["/products/solares/AB008-C04.jpg"],
   },
   {
@@ -442,9 +450,9 @@ export const products: Product[] = [
     model: "AB-011 C03",
     brand: "André Badi",
     price: "$1,649",
-    description: "Lentes de sol André Badi cat-eye con armazón TR90 café/rose gold y micas UV400. Diseño elegante.",
+    description: "Inspiración parisina en cat-eye café con acentos rose gold. Elegancia atemporal con protección UV400.",
     category: "Sol",
-    badge: "Nuevo",
+    badge: "Trending",
     images: ["/products/solares/AB011-C03.jpg"],
   },
   {
@@ -452,9 +460,9 @@ export const products: Product[] = [
     model: "AB-012 C04",
     brand: "André Badi",
     price: "$1,649",
-    description: "Lentes de sol André Badi cat-eye oversize con armazón TR90 tortuga y micas UV400 degradadas.",
+    description: "Cat-eye oversize en tortuga con lentes degradadas. Presencia audaz y cosmopolita con protección UV400.",
     category: "Sol",
-    badge: "Nuevo",
+    badge: "Exclusivo",
     images: ["/products/solares/AB012-C04.jpg"],
   },
   {
@@ -462,9 +470,9 @@ export const products: Product[] = [
     model: "AB-013 C05",
     brand: "André Badi",
     price: "$1,649",
-    description: "Lentes de sol André Badi wayfarer con armazón TR90 cristal transparente y micas UV400 espejo azul.",
+    description: "Wayfarer en cristal transparente con lentes espejo azul. Frescura y actitud moderna con protección UV400.",
     category: "Sol",
-    badge: "Nuevo",
+    badge: "Clásico",
     images: ["/products/solares/AB013-C05.jpg"],
   },
 
@@ -488,7 +496,7 @@ export const products: Product[] = [
     description:
       "Lentes de contacto de uso frecuente con tecnología avanzada para máxima comodidad durante todo el día.",
     category: "Contacto",
-    badge: "Nuevo",
+    badge: "Clásico",
     images: ["/products/contacto/lentes11-9434f124.webp"],
   },
   {
@@ -499,7 +507,7 @@ export const products: Product[] = [
     description:
       "Lentes de contacto de última generación con tecnología de gradiente acuoso para una comodidad excepcional.",
     category: "Contacto",
-    badge: "Nuevo",
+    badge: "Premium",
     images: ["/products/contacto/lentes12-7a23fd3e.webp"],
   },
 ];
