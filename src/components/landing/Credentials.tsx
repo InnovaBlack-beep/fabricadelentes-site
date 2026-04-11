@@ -1,10 +1,10 @@
 export function Credentials() {
   return (
-    <section className="py-16 md:py-24 bg-[#FAFAF8]">
+    <section className="py-20 md:py-28 bg-[#1A1818]">
       <div className="max-w-[1280px] mx-auto px-4 md:px-10">
-        <div className="text-center mb-12">
-          <p className="text-sm uppercase tracking-[0.2em] text-[#B5956E] mb-3">Por qué elegirnos</p>
-          <h2 className="text-2xl md:text-3xl font-bold text-[#1A1818]">
+        <div className="text-center mb-16">
+          <p className="text-xs uppercase tracking-[0.3em] text-[#B5956E] mb-4">Por qué elegirnos</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white">
             40 años cuidando tu visión
           </h2>
         </div>
@@ -16,14 +16,14 @@ export function Credentials() {
             { number: "100%", label: "Garantía real", sub: "en graduación y armazón" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-[#1A1818] mb-2">{stat.number}</p>
-              <p className="text-sm font-semibold text-[#1A1818] mb-1">{stat.label}</p>
-              <p className="text-sm text-[#9CA3AF]">{stat.sub}</p>
+              <p className="text-4xl md:text-5xl font-bold text-[#B5956E] mb-3">{stat.number}</p>
+              <p className="text-sm font-semibold text-white mb-1">{stat.label}</p>
+              <p className="text-sm text-white/40">{stat.sub}</p>
             </div>
           ))}
         </div>
-        <div className="mt-12 pt-8 border-t border-[#E5E7EB]">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-sm text-[#6B7280]">
+        <div className="mt-14 pt-8 border-t border-white/10">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-sm text-white/40">
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5 text-[#B5956E]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
               <span>Optometristas certificados</span>

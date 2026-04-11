@@ -54,7 +54,7 @@ export function Hero() {
   const slide = slides[current];
 
   return (
-    <section className="relative h-[320px] sm:h-[380px] md:h-[480px] overflow-hidden bg-dark">
+    <section className="relative h-[420px] sm:h-[500px] md:h-[600px] overflow-hidden bg-dark">
       {/* Background */}
       {slides.map((s, i) => (
         <div
@@ -83,20 +83,20 @@ export function Hero() {
               priority={i === 0}
             />
           )}
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
         </div>
       ))}
 
       {/* Content - positioned at bottom-left */}
       <div className="relative z-10 h-full max-w-[1440px] mx-auto px-6 md:px-10 flex items-end pb-8 md:pb-12">
         <div className="max-w-xl animate-fade-in-up">
-          <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-white/60 mb-4">
+          <span className="inline-block text-xs font-semibold uppercase tracking-[0.25em] text-accent/80 mb-5 border border-accent/30 px-3 py-1 rounded-full">
             {slide.tagline}
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold text-white leading-[1.05] mb-5 whitespace-pre-line">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.02] mb-6 whitespace-pre-line">
             {slide.headline}
           </h1>
-          <p className="text-sm md:text-base text-white/70 max-w-md mb-8 leading-relaxed">
+          <p className="text-sm md:text-base text-white/70 max-w-md mb-10 leading-relaxed">
             {slide.description}
           </p>
           <div className="flex gap-3 flex-wrap">
