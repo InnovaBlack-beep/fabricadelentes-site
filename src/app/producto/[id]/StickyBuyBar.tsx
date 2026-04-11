@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { trackWhatsApp, trackProductView } from "@/lib/analytics";
+import { buildLeadMetadata } from "@/lib/utm";
 
 const BACKOFFICE_URL = process.env.NEXT_PUBLIC_BACKOFFICE_URL || "";
 
@@ -14,6 +16,9 @@ export function StickyBuyBar({ model, price, whatsappUrl }: StickyBuyBarProps) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    // Track product view on mount
+    trackProductView(model, "producto", parseFloat(price.replace(/[^0-9.]/g, "")));
+
     const handleScroll = () => {
       const ctaEl = document.getElementById("product-cta");
       if (!ctaEl) return;
@@ -23,9 +28,10 @@ export function StickyBuyBar({ model, price, whatsappUrl }: StickyBuyBarProps) {
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [model, price]);
 
   const handleClick = () => {
+    trackWhatsApp("product_buy", window.location.pathname);
     if (BACKOFFICE_URL) {
       fetch(`${BACKOFFICE_URL}/api/public/lead`, {
         method: "POST",
@@ -33,7 +39,7 @@ export function StickyBuyBar({ model, price, whatsappUrl }: StickyBuyBarProps) {
         body: JSON.stringify({
           source: "producto",
           messages: [`Interesado en: ${model} (${price})`],
-          metadata: { event: "product_buy_click", product: model, price, page: window.location.pathname },
+          metadata: buildLeadMetadata({ event: "product_buy_click", product: model, price, page: window.location.pathname }),
         }),
       }).catch(() => {});
     }

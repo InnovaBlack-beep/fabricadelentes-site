@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { trackFormSubmit } from "@/lib/analytics";
+import { buildLeadMetadata } from "@/lib/utm";
 
 const BACKOFFICE_URL = process.env.NEXT_PUBLIC_BACKOFFICE_URL || "";
 
@@ -10,7 +12,10 @@ export default function Contacto() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Guardar lead en backoffice
+    // Track conversion
+    trackFormSubmit("contacto_form", "/contacto");
+
+    // Guardar lead en backoffice con UTMs
     if (BACKOFFICE_URL) {
       fetch(`${BACKOFFICE_URL}/api/public/lead`, {
         method: "POST",
@@ -23,7 +28,7 @@ export default function Contacto() {
             `Servicio: ${form.service || "No especificado"}`,
             form.message || "Sin mensaje adicional",
           ],
-          metadata: { event: "contacto_form", service: form.service, page: "/contacto" },
+          metadata: buildLeadMetadata({ event: "contacto_form", service: form.service, page: "/contacto" }),
         }),
       }).catch(() => {});
     }

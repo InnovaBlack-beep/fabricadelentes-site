@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { trackFormSubmit } from "@/lib/analytics";
+import { buildLeadMetadata } from "@/lib/utm";
 
 const BACKOFFICE_URL = process.env.NEXT_PUBLIC_BACKOFFICE_URL || "";
 
@@ -10,7 +12,10 @@ export function BookingSection() {
   const handleSubmit = () => {
     const name = value.trim();
 
-    // Guardar lead en backoffice
+    // Track conversion
+    trackFormSubmit("booking_section", window.location.pathname);
+
+    // Guardar lead en backoffice con UTMs
     if (BACKOFFICE_URL) {
       fetch(`${BACKOFFICE_URL}/api/public/lead`, {
         method: "POST",
@@ -19,7 +24,7 @@ export function BookingSection() {
           name: name || "Visitante",
           source: "booking_section",
           messages: ["Quiero agendar un examen de la vista"],
-          metadata: { event: "booking_whatsapp", page: window.location.pathname },
+          metadata: buildLeadMetadata({ event: "booking_whatsapp", page: window.location.pathname }),
         }),
       }).catch(() => {});
     }

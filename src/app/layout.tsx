@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ChatBot } from "@/components/ChatBot";
+import { TrackingProvider } from "@/components/TrackingProvider";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -116,6 +117,36 @@ const jsonLd = {
     longitude: -103.3988,
   },
   openingHours: "Mo-Sa 10:00-20:00",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    reviewCount: "127",
+    bestRating: "5",
+    worstRating: "1",
+  },
+  review: [
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Laura Martínez" },
+      datePublished: "2026-03-15",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: "Llegué sin cita, me hicieron el examen y en una hora ya tenía mis lentes. Excelente servicio y muy buena atención.",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Miguel Torres" },
+      datePublished: "2026-02-28",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: "Tengo 3 años yendo y siempre es rápido y profesional. Los armazones Brizzant son de muy buena calidad.",
+    },
+    {
+      "@type": "Review",
+      author: { "@type": "Person", name: "Alejandra Reyes" },
+      datePublished: "2026-01-20",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody: "Los armazones Frida Kahlo me encantan. Calidad premium a buen precio. La atención en zona Minerva es increíble.",
+    },
+  ],
   sameAs: [
     "https://instagram.com/fabricadelentesmex",
     "https://tiktok.com/@fabricadelentes",
@@ -151,6 +182,7 @@ export default function RootLayout({
         )}
       </head>
       <body className="antialiased">
+        <TrackingProvider />
         <Navbar />
         <main>{children}</main>
         <Footer />

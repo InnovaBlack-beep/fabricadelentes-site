@@ -1,16 +1,19 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import { trackFormSubmit } from "@/lib/analytics";
+import { buildLeadMetadata } from "@/lib/utm";
 
 const BACKOFFICE_URL = process.env.NEXT_PUBLIC_BACKOFFICE_URL || "";
 
 async function sendLead(data: { name?: string; phone?: string; messages?: object[]; metadata?: object }) {
   if (!BACKOFFICE_URL) return;
+  trackFormSubmit("chatbot", window.location.pathname);
   try {
     await fetch(`${BACKOFFICE_URL}/api/public/lead`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ...data, source: "chatbot" }),
+      body: JSON.stringify({ ...data, source: "chatbot", metadata: { ...data.metadata, ...buildLeadMetadata() } }),
     });
   } catch {}
 }
