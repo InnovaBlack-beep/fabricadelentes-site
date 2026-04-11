@@ -1,7 +1,19 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
-import { addLead } from "@/lib/admin-store";
+
+const BACKOFFICE_URL = process.env.NEXT_PUBLIC_BACKOFFICE_URL || "";
+
+async function sendLead(data: { name?: string; phone?: string; messages?: object[]; metadata?: object }) {
+  if (!BACKOFFICE_URL) return;
+  try {
+    await fetch(`${BACKOFFICE_URL}/api/public/lead`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ...data, source: "chatbot" }),
+    });
+  } catch {}
+}
 
 // ═══════════════════════════════════════════════════════════════
 // ASESOR OPTICO v3 — FABRICA DE LENTES
@@ -440,11 +452,23 @@ export function ChatBot() {
   }, [resolveText]);
 
   const handleFlow = useCallback((flowId: string, userText?: string) => {
-    // Special actions
-    if (flowId === "__whatsapp__") { window.open(`${WA}?text=Hola%2C%20quiero%20información%20sobre%20lentes`, "_blank"); return; }
-    if (flowId === "__whatsapp_rx__") { window.open(`${WA}?text=Hola%2C%20te%20envío%20mi%20receta%20para%20cotizar`, "_blank"); return; }
-    if (flowId === "__whatsapp_book__") { window.open(`${WA}?text=Hola%2C%20quiero%20agendar%20mi%20examen%20de%20la%20vista%20gratis`, "_blank"); return; }
-    if (flowId === "__whatsapp_location__") { window.open(`${WA}?text=Hola%2C%20me%20pueden%20enviar%20su%20ubicación`, "_blank"); return; }
+    // Special actions — track conversion events
+    if (flowId === "__whatsapp__") {
+      sendLead({ name: userName || undefined, messages: [{ text: "Abrió WhatsApp: info general", from: "system", timestamp: new Date().toISOString() }] });
+      window.open(`${WA}?text=Hola%2C%20quiero%20información%20sobre%20lentes`, "_blank"); return;
+    }
+    if (flowId === "__whatsapp_rx__") {
+      sendLead({ name: userName || undefined, messages: [{ text: "Abrió WhatsApp: enviar receta", from: "system", timestamp: new Date().toISOString() }] });
+      window.open(`${WA}?text=Hola%2C%20te%20envío%20mi%20receta%20para%20cotizar`, "_blank"); return;
+    }
+    if (flowId === "__whatsapp_book__") {
+      sendLead({ name: userName || undefined, messages: [{ text: "Abrió WhatsApp: agendar examen", from: "system", timestamp: new Date().toISOString() }] });
+      window.open(`${WA}?text=Hola%2C%20quiero%20agendar%20mi%20examen%20de%20la%20vista%20gratis`, "_blank"); return;
+    }
+    if (flowId === "__whatsapp_location__") {
+      sendLead({ name: userName || undefined, messages: [{ text: "Abrió WhatsApp: ubicación", from: "system", timestamp: new Date().toISOString() }] });
+      window.open(`${WA}?text=Hola%2C%20me%20pueden%20enviar%20su%20ubicación`, "_blank"); return;
+    }
     if (flowId === "__link_graduados__") { window.open("/lentes-graduados", "_self"); return; }
     if (flowId === "__link_sol__") { window.open("/lentes-de-sol", "_self"); return; }
     if (flowId === "__link_contacto__") { window.open("/lentes-de-contacto", "_self"); return; }
@@ -478,6 +502,7 @@ export function ChatBot() {
       if (nameGuess && nameGuess.length >= 2 && !/\d/.test(nameGuess)) {
         const cap = nameGuess.charAt(0).toUpperCase() + nameGuess.slice(1).toLowerCase();
         setUserName(cap);
+        sendLead({ name: cap, messages: [{ text: `Nombre capturado: ${cap}`, from: "system", timestamp: new Date().toISOString() }] });
         addBotMsg(`Mucho gusto, ${cap}. En que te puedo ayudar?`, FLOWS.welcome.options);
         return;
       }
@@ -536,8 +561,8 @@ export function ChatBot() {
     setHasOpened(true);
     const hint = document.getElementById("chat-hint");
     if (hint) hint.style.opacity = "0";
-    // Save lead on open
-    try { addLead({ name: "", phone: "", messages: [], source: "chatbot" }); } catch {}
+    // Send lead event to backoffice
+    sendLead({ metadata: { event: "chat_opened", page: window.location.pathname } });
   };
 
   return (
