@@ -46,7 +46,7 @@ export function TrustStrip() {
             className="flex flex-col items-center text-center py-5 md:py-6 px-4"
           >
             <div className="text-fg mb-2">{item.icon}</div>
-            <h3 className="text-sm font-semibold text-fg">{item.title}</h3>
+            <h2 className="text-sm font-semibold text-fg">{item.title}</h2>
           </div>
         ))}
       </div>

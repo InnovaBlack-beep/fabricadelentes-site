@@ -69,6 +69,7 @@ export function Hero() {
               loop
               playsInline
               poster={s.image}
+              aria-label={`${s.headline.replace("\n", " ")} — ${s.tagline}`}
               className="absolute inset-0 w-full h-full object-cover"
             >
               <source src={s.video} type="video/mp4" />

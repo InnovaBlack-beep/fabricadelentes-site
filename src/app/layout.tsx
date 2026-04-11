@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ChatBot } from "@/components/ChatBot";
 import { TrackingProvider } from "@/components/TrackingProvider";
+import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -13,9 +14,9 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Fábrica de Lentes® — Óptica con Laboratorio Propio en Guadalajara | Lentes Graduados, Sol y Contacto",
+  title: "Fábrica de Lentes® — Óptica con Laboratorio Propio en GDL",
   description:
-    "Óptica con laboratorio propio en Guadalajara. Lentes graduados listos en 1 hora. Examen de la vista gratis. Lentes de contacto, lentes de sol, armazones Brizzant, Frida Kahlo, Nobleman y Massimo desde $1,949 MXN. Sucursal Zona Minerva. La mejor óptica de GDL.",
+    "Óptica con laboratorio propio en Guadalajara. Lentes graduados en 1 hora. Examen de la vista gratis. Armazones desde $1,949. Zona Minerva.",
   keywords: [
     "óptica guadalajara", "lentes guadalajara", "fábrica de lentes", "lentes graduados guadalajara",
     "lentes de contacto guadalajara", "lentes de sol guadalajara", "examen de la vista guadalajara",
@@ -183,6 +184,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <TrackingProvider />
+        <BreadcrumbSchema />
         <Navbar />
         <main>{children}</main>
         <Footer />
