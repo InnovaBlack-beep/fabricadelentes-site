@@ -4,12 +4,18 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { addLead } from "@/lib/admin-store";
 
 // ═══════════════════════════════════════════════════════════════
-// ASESOR ÓPTICO v2 — FÁBRICA DE LENTES
-// Flujo guiado con botones. El usuario NO necesita saber qué
-// preguntar — Ana lo guía paso a paso.
+// ASESOR OPTICO v3 — FABRICA DE LENTES
+// Flujo guiado con botones. Asesores rotativos, tono premium.
 // ═══════════════════════════════════════════════════════════════
 
-type Option = { label: string; value: string; emoji?: string };
+const ADVISORS = [
+  { name: "Ana", initial: "A", role: "Asesora Optica" },
+  { name: "Carlos", initial: "C", role: "Especialista en Graduacion" },
+  { name: "Sofia", initial: "S", role: "Asesora de Imagen" },
+  { name: "Diego", initial: "D", role: "Asesor de Lentes de Contacto" },
+];
+
+type Option = { label: string; value: string };
 type Msg = { role: "user" | "bot"; text: string; options?: Option[] };
 
 // ── FLUJOS GUIADOS ──────────────────────────────────────
@@ -17,322 +23,322 @@ type Msg = { role: "user" | "bot"; text: string; options?: Option[] };
 const FLOWS: Record<string, { text: string; options?: Option[]; next?: string }> = {
   // ─── INICIO ───
   welcome: {
-    text: "¡Hola! Soy Ana, tu asesora óptica en Fábrica de Lentes. ¿Qué te gustaría hacer hoy?",
+    text: "__GREETING__",
     options: [
-      { label: "Necesito lentes nuevos", value: "need_glasses", emoji: "👓" },
-      { label: "Quiero agendar examen gratis", value: "book_exam", emoji: "📅" },
-      { label: "Tengo una receta y quiero cotizar", value: "quote_rx", emoji: "📋" },
-      { label: "Ya tengo lentes y necesito ayuda", value: "existing", emoji: "🔧" },
-      { label: "Quiero saber precios", value: "prices", emoji: "💰" },
+      { label: "Necesito lentes nuevos", value: "need_glasses" },
+      { label: "Quiero agendar examen gratis", value: "book_exam" },
+      { label: "Tengo una receta y quiero cotizar", value: "quote_rx" },
+      { label: "Ya tengo lentes y necesito ayuda", value: "existing" },
+      { label: "Quiero saber precios", value: "prices" },
     ],
   },
 
   // ─── NECESITO LENTES NUEVOS ───
   need_glasses: {
-    text: "¡Perfecto! Primero lo primero: ¿ya sabes tu graduación?",
+    text: "Perfecto, vamos paso a paso. Lo primero es saber tu graduacion. Ya la tienes?",
     options: [
-      { label: "Sí, tengo mi receta", value: "has_rx", emoji: "✅" },
-      { label: "No, necesito que me revisen", value: "book_exam", emoji: "👁" },
-      { label: "No estoy seguro/a", value: "symptoms", emoji: "🤔" },
+      { label: "Si, tengo mi receta", value: "has_rx" },
+      { label: "No, necesito que me revisen", value: "book_exam" },
+      { label: "No estoy seguro", value: "symptoms" },
     ],
   },
 
   symptoms: {
-    text: "No te preocupes, vamos a descubrirlo juntos. ¿Cuál de estos te pasa?",
+    text: "No te preocupes, vamos a descubrirlo juntos. Cual de estos te describe mejor?",
     options: [
-      { label: "Veo borroso de lejos", value: "symptom_far", emoji: "🔭" },
-      { label: "Me cuesta leer de cerca", value: "symptom_near", emoji: "📖" },
-      { label: "Me duele la cabeza al usar pantallas", value: "symptom_screen", emoji: "💻" },
-      { label: "Veo borroso de lejos Y de cerca", value: "symptom_both", emoji: "😵" },
-      { label: "Solo quiero protección para pantallas", value: "symptom_bluecut", emoji: "🛡" },
+      { label: "Veo borroso de lejos", value: "symptom_far" },
+      { label: "Me cuesta leer de cerca", value: "symptom_near" },
+      { label: "Me duele la cabeza al usar pantallas", value: "symptom_screen" },
+      { label: "Veo borroso de lejos y de cerca", value: "symptom_both" },
+      { label: "Solo quiero proteccion para pantallas", value: "symptom_bluecut" },
     ],
   },
 
   symptom_far: {
-    text: "Eso suena a miopía — es muy común y se corrige fácil con lentes graduados. Lo mejor es hacerte un examen para saber tu graduación exacta.\n\nEl examen es gratis, tarda 15 min y sales con tu receta. ¿Te agendo?",
+    text: "Eso suena a miopia, es muy comun y se corrige facilmente con lentes graduados. Lo ideal es hacer un examen para conocer tu graduacion exacta.\n\nEl examen es completamente gratuito y sin compromiso. Tarda unos 15 minutos y sales con tu receta en la mano. Te agendo?",
     options: [
-      { label: "Sí, quiero agendar", value: "book_exam", emoji: "📅" },
-      { label: "¿Puedo ir sin cita?", value: "walkin", emoji: "🚶" },
+      { label: "Si, quiero agendar", value: "book_exam" },
+      { label: "Puedo ir sin cita?", value: "walkin" },
     ],
   },
 
   symptom_near: {
-    text: "Si te cuesta enfocar de cerca (celular, libros, etiquetas), puede ser presbicia o vista cansada. Es muy normal después de los 40.\n\nLa solución son lentes progresivos — corrigen lejos y cerca sin la línea fea de los bifocales.\n\n¿Quieres que te revisen gratis?",
+    text: "Si te cuesta enfocar de cerca (celular, libros, etiquetas), puede ser presbicia o vista cansada. Es algo muy normal despues de los 40.\n\nLa solucion son lentes progresivos: corrigen lejos y cerca sin la linea visible de los bifocales.\n\nQuieres que te revisemos sin costo?",
     options: [
-      { label: "Sí, quiero agendar examen", value: "book_exam", emoji: "📅" },
-      { label: "¿Cuánto cuestan los progresivos?", value: "price_progressive", emoji: "💰" },
+      { label: "Si, quiero agendar examen", value: "book_exam" },
+      { label: "Cuanto cuestan los progresivos?", value: "price_progressive" },
     ],
   },
 
   symptom_screen: {
-    text: "Los dolores de cabeza frente a pantallas pueden ser por fatiga visual digital. Lentes con blue cut (protección de luz azul) ayudan mucho.\n\nTe recomiendo un examen para descartar que necesites graduación. Es gratis y rápido.",
+    text: "Los dolores de cabeza frente a pantallas pueden ser por fatiga visual digital. Lentes con blue cut (proteccion de luz azul) ayudan mucho.\n\nTe recomiendo un examen para descartar que necesites graduacion. Es gratuito y rapido.",
     options: [
-      { label: "Quiero agendar examen", value: "book_exam", emoji: "📅" },
-      { label: "Solo quiero lentes con blue cut", value: "symptom_bluecut", emoji: "🛡" },
+      { label: "Quiero agendar examen", value: "book_exam" },
+      { label: "Solo quiero lentes con blue cut", value: "symptom_bluecut" },
     ],
   },
 
   symptom_both: {
-    text: "Si ves borroso tanto de lejos como de cerca, puede ser astigmatismo o una combinación con presbicia. Se corrige con lentes graduados — te necesitamos hacer un examen para determinar exactamente qué necesitas.\n\nEl examen es gratis y tarda 15 minutos.",
+    text: "Si ves borroso tanto de lejos como de cerca, puede ser astigmatismo o una combinacion con presbicia. Se corrige con lentes graduados, pero necesitamos hacer un examen para determinar exactamente que necesitas.\n\nEl examen es gratuito y tarda 15 minutos.",
     options: [
-      { label: "Agendar mi examen gratis", value: "book_exam", emoji: "📅" },
-      { label: "¿Puedo ir sin cita?", value: "walkin", emoji: "🚶" },
+      { label: "Agendar mi examen gratis", value: "book_exam" },
+      { label: "Puedo ir sin cita?", value: "walkin" },
     ],
   },
 
   symptom_bluecut: {
-    text: "¡Buena decisión! Los lentes con blue cut protegen tus ojos de la luz azul de pantallas.\n\nTenemos lentes graduados a $1,949 que ya incluyen antirreflejante + blue cut. Si no necesitas graduación, también podemos ponerle micas planas con blue cut.\n\n¿Qué prefieres?",
+    text: "Buena decision. Los lentes con blue cut protegen tus ojos de la luz azul de pantallas.\n\nTenemos lentes graduados a $1,949 que ya incluyen antirreflejante y blue cut. Si no necesitas graduacion, tambien podemos colocar micas planas con blue cut.\n\nQue prefieres?",
     options: [
-      { label: "Quiero con graduación (examen gratis)", value: "book_exam", emoji: "📅" },
-      { label: "Solo blue cut sin graduación", value: "choose_frame", emoji: "🕶" },
-      { label: "Ver armazones disponibles", value: "choose_frame", emoji: "👓" },
+      { label: "Quiero con graduacion (examen gratis)", value: "book_exam" },
+      { label: "Solo blue cut sin graduacion", value: "choose_frame" },
+      { label: "Ver armazones disponibles", value: "choose_frame" },
     ],
   },
 
   // ─── TENGO RECETA ───
   has_rx: {
-    text: "¡Genial! Para cotizarte necesito tu receta. ¿Cómo me la quieres compartir?",
+    text: "Muy bien. Para cotizarte necesito tu receta. Como me la quieres compartir?",
     options: [
-      { label: "Enviar foto por WhatsApp", value: "whatsapp_rx", emoji: "📱" },
-      { label: "La escribo aquí", value: "type_rx", emoji: "⌨️" },
-      { label: "La llevo directo a sucursal", value: "walkin", emoji: "🏪" },
+      { label: "Enviar foto por WhatsApp", value: "whatsapp_rx" },
+      { label: "La escribo aqui", value: "type_rx" },
+      { label: "La llevo directo a sucursal", value: "walkin" },
     ],
   },
 
   whatsapp_rx: {
-    text: "¡Perfecto! Mándame foto de tu receta al WhatsApp y te respondo en minutos con:\n\n• Opciones de armazón\n• Tipo de micas recomendadas\n• Precio exacto\n• Tiempo de entrega\n\nDa click aquí abajo para abrir WhatsApp:",
+    text: "Perfecto. Mandame foto de tu receta al WhatsApp y te respondo en minutos con:\n\n- Opciones de armazon\n- Tipo de micas recomendadas\n- Precio exacto\n- Tiempo de entrega\n\nDa click aqui abajo para abrir WhatsApp:",
     options: [
-      { label: "Abrir WhatsApp", value: "__whatsapp_rx__", emoji: "💬" },
-      { label: "Prefiero ir a sucursal", value: "walkin", emoji: "🏪" },
+      { label: "Abrir WhatsApp", value: "__whatsapp_rx__" },
+      { label: "Prefiero ir a sucursal", value: "walkin" },
     ],
   },
 
   type_rx: {
-    text: "Escríbeme los datos de tu receta. Necesito:\n\n• OD (ojo derecho): esfera, cilindro, eje\n• OI (ojo izquierdo): esfera, cilindro, eje\n• ADD (si aparece)\n• DIP (distancia pupilar)\n\nSi no entiendes tu receta, no te preocupes — mándame foto por WhatsApp y yo la interpreto.",
+    text: "Escribeme los datos de tu receta. Necesito:\n\n- OD (ojo derecho): esfera, cilindro, eje\n- OI (ojo izquierdo): esfera, cilindro, eje\n- ADD (si aparece)\n- DIP (distancia pupilar)\n\nSi no entiendes tu receta, no te preocupes. Mandame una foto por WhatsApp y yo la interpreto.",
     options: [
-      { label: "Mejor la envío por WhatsApp", value: "whatsapp_rx", emoji: "📱" },
-      { label: "No entiendo mi receta", value: "explain_rx", emoji: "🤔" },
+      { label: "Mejor la envio por WhatsApp", value: "whatsapp_rx" },
+      { label: "No entiendo mi receta", value: "explain_rx" },
     ],
   },
 
   explain_rx: {
-    text: "¡Te explico!\n\n👁 OD = ojo derecho, OI = ojo izquierdo\n\n• ESF (Esfera): negativo (-) = miopía, positivo (+) = hipermetropía\n• CIL (Cilindro): astigmatismo. Si está vacío, no tienes\n• EJE: dirección del astigmatismo (0-180)\n• ADD: si aparece, necesitas progresivos\n• DIP: distancia entre pupilas\n\nLo más fácil: mándame foto y yo la leo por ti.",
+    text: "Te explico:\n\nOD = ojo derecho, OI = ojo izquierdo\n\n- ESF (Esfera): negativo (-) = miopia, positivo (+) = hipermetropia\n- CIL (Cilindro): astigmatismo. Si esta vacio, no tienes\n- EJE: direccion del astigmatismo (0-180)\n- ADD: si aparece, necesitas progresivos\n- DIP: distancia entre pupilas\n\nLo mas facil: mandame una foto y yo la leo por ti.",
     options: [
-      { label: "Enviar foto por WhatsApp", value: "whatsapp_rx", emoji: "📱" },
-      { label: "Ir a sucursal con mi receta", value: "walkin", emoji: "🏪" },
+      { label: "Enviar foto por WhatsApp", value: "whatsapp_rx" },
+      { label: "Ir a sucursal con mi receta", value: "walkin" },
     ],
   },
 
-  // ─── ELEGIR ARMAZÓN ───
+  // ─── ELEGIR ARMAZON ───
   choose_frame: {
-    text: "¡Mi parte favorita! Tenemos 5 marcas. ¿Qué estilo te va más?",
+    text: "Tenemos 5 marcas con estilos muy distintos. Que estilo te va mas?",
     options: [
-      { label: "Moderno y ligero", value: "brand_brizzant", emoji: "✨" },
-      { label: "Elegante y artístico", value: "brand_fk", emoji: "🎨" },
-      { label: "Clásico y sobrio", value: "brand_nobleman", emoji: "👔" },
-      { label: "Contemporáneo italiano", value: "brand_massimo", emoji: "🇮🇹" },
-      { label: "No sé, ayúdame a elegir", value: "face_shape", emoji: "🤷" },
+      { label: "Moderno y ligero", value: "brand_brizzant" },
+      { label: "Elegante y artistico", value: "brand_fk" },
+      { label: "Clasico y sobrio", value: "brand_nobleman" },
+      { label: "Contemporaneo italiano", value: "brand_massimo" },
+      { label: "No se, ayudame a elegir", value: "face_shape" },
     ],
   },
 
   brand_brizzant: {
-    text: "Brizzant es nuestra línea moderna — armazones metálicos ultraligeros con diseño minimalista. Perfectos para uso diario.\n\nA $1,949 incluye armazón + graduación + antirreflejante + blue cut.\n\n¿Quieres verlos en el sitio o prefieres probártelos en sucursal?",
+    text: "Brizzant es nuestra linea moderna: armazones metalicos ultraligeros con diseno minimalista. Perfectos para uso diario.\n\nA $1,949 incluye armazon + graduacion + antirreflejante + blue cut.\n\nQuieres verlos en el sitio o prefieres probartelos en sucursal?",
     options: [
-      { label: "Ver colección en el sitio", value: "__link_graduados__", emoji: "🔗" },
-      { label: "Ir a probármelos", value: "walkin", emoji: "🏪" },
-      { label: "Ver otras marcas", value: "choose_frame", emoji: "👓" },
+      { label: "Ver coleccion en el sitio", value: "__link_graduados__" },
+      { label: "Ir a probarmelos", value: "walkin" },
+      { label: "Ver otras marcas", value: "choose_frame" },
     ],
   },
 
   brand_fk: {
-    text: "Frida Kahlo es nuestra joya — diseño mexicano, elegante, artístico. Es la más pedida por nuestras clientas.\n\nNueva colección: Inés, Bonito, María, Picasso, Casa Azul y Matilde. A $1,949 incluye todo (graduación + AR + blue cut).\n\n¿Quieres verlos?",
+    text: "Frida Kahlo es nuestra joya: diseno mexicano, elegante y artistico. Es la mas pedida por nuestras clientas.\n\nNueva coleccion: Ines, Bonito, Maria, Picasso, Casa Azul y Matilde. A $1,949 incluye todo (graduacion + AR + blue cut).\n\nQuieres verlos?",
     options: [
-      { label: "Ver colección en el sitio", value: "__link_graduados__", emoji: "🔗" },
-      { label: "Ir a probármelos", value: "walkin", emoji: "🏪" },
-      { label: "Ver otras marcas", value: "choose_frame", emoji: "👓" },
+      { label: "Ver coleccion en el sitio", value: "__link_graduados__" },
+      { label: "Ir a probarmelos", value: "walkin" },
+      { label: "Ver otras marcas", value: "choose_frame" },
     ],
   },
 
   brand_nobleman: {
-    text: "Nobleman es para quien busca un look clásico y profesional. Armazones de alta calidad con acabados premium.\n\nA $1,949 incluye todo: armazón + graduación + antirreflejante + blue cut.\n\n¿Te gustaría verlos?",
+    text: "Nobleman es para quien busca un look clasico y profesional. Armazones de alta calidad con acabados premium.\n\nA $1,949 incluye todo: armazon + graduacion + antirreflejante + blue cut.\n\nTe gustaria verlos?",
     options: [
-      { label: "Ver colección en el sitio", value: "__link_graduados__", emoji: "🔗" },
-      { label: "Ir a probármelos", value: "walkin", emoji: "🏪" },
-      { label: "Ver otras marcas", value: "choose_frame", emoji: "👓" },
+      { label: "Ver coleccion en el sitio", value: "__link_graduados__" },
+      { label: "Ir a probarmelos", value: "walkin" },
+      { label: "Ver otras marcas", value: "choose_frame" },
     ],
   },
 
   brand_massimo: {
-    text: "Massimo tiene inspiración italiana — líneas contemporáneas y materiales de primera. Para quien busca estilo y comodidad.\n\nA $1,949 incluye armazón + graduación + antirreflejante + blue cut.\n\n¿Quieres verlos?",
+    text: "Massimo tiene inspiracion italiana: lineas contemporaneas y materiales de primera. Para quien busca estilo y comodidad.\n\nA $1,949 incluye armazon + graduacion + antirreflejante + blue cut.\n\nQuieres verlos?",
     options: [
-      { label: "Ver colección en el sitio", value: "__link_graduados__", emoji: "🔗" },
-      { label: "Ir a probármelos", value: "walkin", emoji: "🏪" },
-      { label: "Ver otras marcas", value: "choose_frame", emoji: "👓" },
+      { label: "Ver coleccion en el sitio", value: "__link_graduados__" },
+      { label: "Ir a probarmelos", value: "walkin" },
+      { label: "Ver otras marcas", value: "choose_frame" },
     ],
   },
 
   face_shape: {
-    text: "¡Te ayudo! La forma de tu cara es clave para elegir el armazón perfecto. ¿Cómo describirías tu rostro?",
+    text: "Te ayudo. La forma de tu cara es clave para elegir el armazon perfecto. Como describirias tu rostro?",
     options: [
-      { label: "Redondo", value: "face_round", emoji: "🔵" },
-      { label: "Cuadrado", value: "face_square", emoji: "🔲" },
-      { label: "Ovalado", value: "face_oval", emoji: "🔷" },
-      { label: "Corazón", value: "face_heart", emoji: "❤️" },
-      { label: "No sé, quiero asesoría en persona", value: "walkin", emoji: "🏪" },
+      { label: "Redondo", value: "face_round" },
+      { label: "Cuadrado", value: "face_square" },
+      { label: "Ovalado", value: "face_oval" },
+      { label: "Corazon", value: "face_heart" },
+      { label: "No se, quiero asesoria en persona", value: "walkin" },
     ],
   },
 
   face_round: {
-    text: "Para cara redonda te van increíble los armazones rectangulares o angulares — dan estructura y alargan el rostro.\n\nTe recomiendo Brizzant (moderno, metálico) o Nobleman (clásico, angular).\n\nPero lo mejor es que te los pruebes. ¿Vienes a sucursal?",
+    text: "Para cara redonda te van muy bien los armazones rectangulares o angulares. Dan estructura y alargan el rostro.\n\nTe recomiendo Brizzant (moderno, metalico) o Nobleman (clasico, angular).\n\nPero lo mejor es que te los pruebes. Vienes a sucursal?",
     options: [
-      { label: "Sí, quiero ir", value: "walkin", emoji: "🏪" },
-      { label: "Ver Brizzant", value: "brand_brizzant", emoji: "✨" },
-      { label: "Ver Nobleman", value: "brand_nobleman", emoji: "👔" },
+      { label: "Si, quiero ir", value: "walkin" },
+      { label: "Ver Brizzant", value: "brand_brizzant" },
+      { label: "Ver Nobleman", value: "brand_nobleman" },
     ],
   },
 
   face_square: {
-    text: "Para cara cuadrada los armazones redondos u ovalados suavizan los rasgos. ¡Se ven muy bien!\n\nTe recomiendo Frida Kahlo (redondos artísticos) o Massimo (ovalados contemporáneos).",
+    text: "Para cara cuadrada los armazones redondos u ovalados suavizan los rasgos. Se ven muy bien.\n\nTe recomiendo Frida Kahlo (redondos artisticos) o Massimo (ovalados contemporaneos).",
     options: [
-      { label: "Ir a probármelos", value: "walkin", emoji: "🏪" },
-      { label: "Ver Frida Kahlo", value: "brand_fk", emoji: "🎨" },
-      { label: "Ver Massimo", value: "brand_massimo", emoji: "🇮🇹" },
+      { label: "Ir a probarmelos", value: "walkin" },
+      { label: "Ver Frida Kahlo", value: "brand_fk" },
+      { label: "Ver Massimo", value: "brand_massimo" },
     ],
   },
 
   face_oval: {
-    text: "¡La cara ovalada es la más versátil! Prácticamente cualquier forma de armazón te queda bien. Puedes elegir por estilo.\n\n¿Qué prefieres?",
+    text: "La cara ovalada es la mas versatil. Practicamente cualquier forma de armazon te queda bien. Puedes elegir por estilo.\n\nQue prefieres?",
     options: [
-      { label: "Algo discreto y clásico", value: "brand_nobleman", emoji: "👔" },
-      { label: "Algo moderno y ligero", value: "brand_brizzant", emoji: "✨" },
-      { label: "Algo llamativo y artístico", value: "brand_fk", emoji: "🎨" },
-      { label: "Quiero probármelos todos", value: "walkin", emoji: "🏪" },
+      { label: "Algo discreto y clasico", value: "brand_nobleman" },
+      { label: "Algo moderno y ligero", value: "brand_brizzant" },
+      { label: "Algo llamativo y artistico", value: "brand_fk" },
+      { label: "Quiero probarmelos todos", value: "walkin" },
     ],
   },
 
   face_heart: {
-    text: "Para cara de corazón (frente ancha, mentón angosto), los armazones con parte inferior más ancha equilibran el rostro.\n\nTe recomiendo Massimo (cat-eye suave) o Frida Kahlo nueva colección (Bonito, Inés).",
+    text: "Para cara de corazon (frente ancha, menton angosto), los armazones con parte inferior mas ancha equilibran el rostro.\n\nTe recomiendo Massimo (cat-eye suave) o Frida Kahlo nueva coleccion (Bonito, Ines).",
     options: [
-      { label: "Ir a probármelos", value: "walkin", emoji: "🏪" },
-      { label: "Ver Frida Kahlo", value: "brand_fk", emoji: "🎨" },
-      { label: "Ver Massimo", value: "brand_massimo", emoji: "🇮🇹" },
+      { label: "Ir a probarmelos", value: "walkin" },
+      { label: "Ver Frida Kahlo", value: "brand_fk" },
+      { label: "Ver Massimo", value: "brand_massimo" },
     ],
   },
 
   // ─── AGENDAR EXAMEN ───
   book_exam: {
-    text: "¡El examen de la vista es gratis, sin compromiso y tarda solo 15 minutos!\n\nPuedes venir sin cita, pero si quieres asegurar tu horario, ¿cómo prefieres agendar?",
+    text: "El examen de la vista es completamente gratuito y sin compromiso. Tarda unos 15 minutos y sales con tu receta en la mano.\n\nPuedes venir sin cita, pero si quieres asegurar tu horario, como prefieres agendar?",
     options: [
-      { label: "Agendar por WhatsApp", value: "__whatsapp_book__", emoji: "📱" },
-      { label: "Ir sin cita (walk-in)", value: "walkin", emoji: "🚶" },
-      { label: "¿Cuáles son los horarios?", value: "schedule", emoji: "🕐" },
+      { label: "Agendar por WhatsApp", value: "__whatsapp_book__" },
+      { label: "Ir sin cita (walk-in)", value: "walkin" },
+      { label: "Cuales son los horarios?", value: "schedule" },
     ],
   },
 
   schedule: {
-    text: "Nuestro horario:\n\n📍 Zona Minerva, Guadalajara\n🕐 Lunes a Sábado: 10:00 - 20:00\n🚫 Domingos: cerrado\n\nLos mejores horarios para que no esperes: martes a jueves, entre 10:00 y 12:00.\n\n¿Te animas a venir?",
+    text: "Nuestro horario:\n\nZona Minerva, Guadalajara\nLunes a Sabado: 10:00 - 20:00\nDomingos: cerrado\n\nLos mejores horarios para que no esperes: martes a jueves, entre 10:00 y 12:00.\n\nTe animas a venir?",
     options: [
-      { label: "Agendar por WhatsApp", value: "__whatsapp_book__", emoji: "📱" },
-      { label: "Voy sin cita", value: "walkin", emoji: "🚶" },
-      { label: "¿Cómo llego?", value: "location", emoji: "📍" },
+      { label: "Agendar por WhatsApp", value: "__whatsapp_book__" },
+      { label: "Voy sin cita", value: "walkin" },
+      { label: "Como llego?", value: "location" },
     ],
   },
 
   walkin: {
-    text: "¡Claro, puedes venir sin cita! Te esperamos:\n\n📍 Zona Minerva, Guadalajara, Jalisco\n🕐 Lun-Sáb 10:00 a 20:00\n📞 WhatsApp: 33 1425 7226\n\nHay estacionamiento en la zona. Si vienes en Uber, pon \"Fábrica de Lentes Minerva\".\n\n¿Algo más en lo que te pueda ayudar?",
+    text: "Claro, puedes venir sin cita. Te esperamos:\n\nZona Minerva, Guadalajara, Jalisco\nLun-Sab 10:00 a 20:00\nWhatsApp: 33 1425 7226\n\nHay estacionamiento en la zona. Si vienes en Uber, pon \"Fabrica de Lentes Minerva\".\n\nAlgo mas en lo que te pueda ayudar?",
     options: [
-      { label: "¿Cómo llego?", value: "location", emoji: "📍" },
-      { label: "Ver precios antes de ir", value: "prices", emoji: "💰" },
-      { label: "Listo, gracias", value: "bye", emoji: "👋" },
+      { label: "Como llego?", value: "location" },
+      { label: "Ver precios antes de ir", value: "prices" },
+      { label: "Listo, gracias", value: "bye" },
     ],
   },
 
   location: {
-    text: "Estamos en Zona Minerva, Guadalajara, Jalisco.\n\nPuedes buscarnos en Google Maps como \"Fábrica de Lentes Minerva\" o te comparto la ubicación por WhatsApp.",
+    text: "Estamos en Zona Minerva, Guadalajara, Jalisco.\n\nPuedes buscarnos en Google Maps como \"Fabrica de Lentes Minerva\" o te comparto la ubicacion por WhatsApp.",
     options: [
-      { label: "Envíame la ubicación por WhatsApp", value: "__whatsapp_location__", emoji: "📱" },
-      { label: "Ya sé dónde es, gracias", value: "bye", emoji: "👋" },
+      { label: "Enviame la ubicacion por WhatsApp", value: "__whatsapp_location__" },
+      { label: "Ya se donde es, gracias", value: "bye" },
     ],
   },
 
   // ─── PRECIOS ───
   prices: {
-    text: "¡Aquí van nuestros precios!\n\n👓 Lentes graduados: $1,949\nIncluye: armazón + graduación + antirreflejante + blue cut + examen gratis + estuche + garantía\n\n🕶 Lentes de sol: $1,649\nFrida Kahlo y André Badi. Protección UV 400.\n\n📦 Upgrades:\n• Fotocromáticas: +$500\n• Progresivos: desde $2,500\n\n👁 Lentes de contacto: desde $1,064\n\n¿Qué te interesa?",
+    text: "Aqui van nuestros precios:\n\nLentes graduados: $1,949\nIncluye: armazon + graduacion + antirreflejante + blue cut + examen gratis + estuche + garantia\n\nLentes de sol: $1,649\nFrida Kahlo y Andre Badi. Proteccion UV 400.\n\nUpgrades:\n- Fotocromaticas: +$500\n- Progresivos: desde $2,500\n\nLentes de contacto: desde $1,064\n\nQue te interesa?",
     options: [
-      { label: "Quiero graduados", value: "need_glasses", emoji: "👓" },
-      { label: "Quiero lentes de sol", value: "sunglasses", emoji: "🕶" },
-      { label: "Quiero lentes de contacto", value: "contacts", emoji: "👁" },
-      { label: "¿Cuánto cuestan los progresivos?", value: "price_progressive", emoji: "💰" },
+      { label: "Quiero graduados", value: "need_glasses" },
+      { label: "Quiero lentes de sol", value: "sunglasses" },
+      { label: "Quiero lentes de contacto", value: "contacts" },
+      { label: "Cuanto cuestan los progresivos?", value: "price_progressive" },
     ],
   },
 
   price_progressive: {
-    text: "Los lentes progresivos empiezan desde $2,500 con armazón incluido. Corrigen lejos y cerca — como bifocales pero sin la línea.\n\nEl precio varía según el rango de visión y calidad de la mica. Lo mejor es que vengas a que te revisemos gratis y te cotizamos exacto.\n\n¿Te agendo?",
+    text: "Los lentes progresivos empiezan desde $2,500 con armazon incluido. Corrigen lejos y cerca, como bifocales pero sin la linea visible.\n\nEl precio varia segun el rango de vision y calidad de la mica. Lo mejor es que vengas a que te revisemos gratis y te cotizamos exacto.\n\nTe agendo?",
     options: [
-      { label: "Sí, agendar examen gratis", value: "book_exam", emoji: "📅" },
-      { label: "Ver armazones primero", value: "choose_frame", emoji: "👓" },
+      { label: "Si, agendar examen gratis", value: "book_exam" },
+      { label: "Ver armazones primero", value: "choose_frame" },
     ],
   },
 
   sunglasses: {
-    text: "Nuestra colección de sol:\n\n🎨 Frida Kahlo — 21 modelos, diseño mexicano\n👔 André Badi — 16 modelos, estilo cosmopolita\n\nTodos a $1,649 con protección UV 400. También los podemos graduar.\n\n¿Quieres verlos?",
+    text: "Nuestra coleccion de sol:\n\nFrida Kahlo — 21 modelos, diseno mexicano\nAndre Badi — 16 modelos, estilo cosmopolita\n\nTodos a $1,649 con proteccion UV 400. Tambien los podemos graduar.\n\nQuieres verlos?",
     options: [
-      { label: "Ver colección en el sitio", value: "__link_sol__", emoji: "🔗" },
-      { label: "Quiero sol + graduación", value: "has_rx", emoji: "📋" },
-      { label: "Ir a probármelos", value: "walkin", emoji: "🏪" },
+      { label: "Ver coleccion en el sitio", value: "__link_sol__" },
+      { label: "Quiero sol + graduacion", value: "has_rx" },
+      { label: "Ir a probarmelos", value: "walkin" },
     ],
   },
 
   contacts: {
-    text: "Manejamos 3 opciones:\n\n🔹 Air Optix HydraGlyde — $1,120 (mensuales, los más cómodos)\n🔹 Alcon Frecuent — $1,064 (buena relación calidad-precio)\n🔹 Alcon Total 1 — $1,200 (lo más premium)\n\nNecesitas receta con parámetros de contacto. Si nunca has usado, te hacemos la adaptación aquí.\n\n¿Ya has usado lentes de contacto?",
+    text: "Manejamos 3 opciones:\n\nAir Optix HydraGlyde — $1,120 (mensuales, los mas comodos)\nAlcon Frecuent — $1,064 (buena relacion calidad-precio)\nAlcon Total 1 — $1,200 (lo mas premium)\n\nNecesitas receta con parametros de contacto. Si nunca has usado, te hacemos la adaptacion aqui.\n\nYa has usado lentes de contacto?",
     options: [
-      { label: "Sí, ya uso y tengo receta", value: "whatsapp_rx", emoji: "✅" },
-      { label: "No, quiero empezar", value: "book_exam", emoji: "👁" },
-      { label: "Ver más info en el sitio", value: "__link_contacto__", emoji: "🔗" },
+      { label: "Si, ya uso y tengo receta", value: "whatsapp_rx" },
+      { label: "No, quiero empezar", value: "book_exam" },
+      { label: "Ver mas info en el sitio", value: "__link_contacto__" },
     ],
   },
 
   // ─── YA TENGO LENTES ───
   existing: {
-    text: "¿Qué necesitas?",
+    text: "Que necesitas?",
     options: [
-      { label: "Renovar graduación", value: "book_exam", emoji: "🔄" },
-      { label: "Reparar o ajustar mis lentes", value: "repair", emoji: "🔧" },
-      { label: "Problema con garantía", value: "warranty", emoji: "🛡" },
-      { label: "Tips de cuidado y limpieza", value: "care", emoji: "✨" },
+      { label: "Renovar graduacion", value: "book_exam" },
+      { label: "Reparar o ajustar mis lentes", value: "repair" },
+      { label: "Problema con garantia", value: "warranty" },
+      { label: "Tips de cuidado y limpieza", value: "care" },
     ],
   },
 
   repair: {
-    text: "¡Tráelos a sucursal! Ajustes y reparaciones menores son gratis y en el momento.\n\nSi necesitan un arreglo mayor, lo evaluamos y te damos precio. Generalmente es mismo día.\n\n📍 Zona Minerva, Lun-Sáb 10-20h",
+    text: "Traelos a sucursal. Ajustes y reparaciones menores son gratis y en el momento.\n\nSi necesitan un arreglo mayor, lo evaluamos y te damos precio. Generalmente es mismo dia.\n\nZona Minerva, Lun-Sab 10-20h",
     options: [
-      { label: "¿Cómo llego?", value: "location", emoji: "📍" },
-      { label: "Escribir por WhatsApp", value: "__whatsapp__", emoji: "📱" },
+      { label: "Como llego?", value: "location" },
+      { label: "Escribir por WhatsApp", value: "__whatsapp__" },
     ],
   },
 
   warranty: {
-    text: "Nuestra garantía:\n\n🛡 Armazón: 1 año contra defectos de fabricación\n🛡 Graduación: 60 días — si no ves bien, cambiamos micas gratis\n🛡 Tratamiento AR: 6 meses\n\nSolo necesitas tu comprobante de compra. Ven a sucursal y lo resolvemos.\n\n¿Tienes tu ticket?",
+    text: "Nuestra garantia:\n\nArmazon: 1 ano contra defectos de fabricacion\nGraduacion: 60 dias — si no ves bien, cambiamos micas gratis\nTratamiento AR: 6 meses\n\nSolo necesitas tu comprobante de compra. Ven a sucursal y lo resolvemos.\n\nTienes tu ticket?",
     options: [
-      { label: "Sí, voy a sucursal", value: "walkin", emoji: "🏪" },
-      { label: "No lo encuentro", value: "__whatsapp__", emoji: "📱" },
+      { label: "Si, voy a sucursal", value: "walkin" },
+      { label: "No lo encuentro", value: "__whatsapp__" },
     ],
   },
 
   care: {
-    text: "Tips para que tus lentes duren más:\n\n✅ Correcto:\n• Agua tibia + jabón neutro (sin fragancia)\n• Secar con paño de microfibra\n• Guardarlos siempre en su estuche\n\n❌ Evita:\n• Limpiar con la playera (raya las micas)\n• Dejarlos boca abajo\n• El tablero del carro (el calor deforma el armazón)\n\nSi se te chuecaron o aflojaron, tráelos a sucursal — te los ajustamos gratis.",
+    text: "Tips para que tus lentes duren mas:\n\nCorrecto:\n- Agua tibia + jabon neutro (sin fragancia)\n- Secar con pano de microfibra\n- Guardarlos siempre en su estuche\n\nEvita:\n- Limpiar con la playera (raya las micas)\n- Dejarlos boca abajo\n- El tablero del carro (el calor deforma el armazon)\n\nSi se te chuecaron o aflojaron, traelos a sucursal y te los ajustamos gratis.",
     options: [
-      { label: "Gracias, todo claro", value: "bye", emoji: "👋" },
-      { label: "Necesito otra cosa", value: "welcome", emoji: "🔄" },
+      { label: "Gracias, todo claro", value: "bye" },
+      { label: "Necesito otra cosa", value: "welcome" },
     ],
   },
 
   // ─── DESPEDIDA ───
   bye: {
-    text: "¡Fue un gusto ayudarte! Recuerda:\n\n📍 Zona Minerva, Guadalajara\n🕐 Lun-Sáb 10:00-20:00\n📞 WhatsApp: 33 1425 7226\n\n¡Te esperamos! 👋",
+    text: "Fue un gusto ayudarte. Recuerda:\n\nZona Minerva, Guadalajara\nLun-Sab 10:00-20:00\nWhatsApp: 33 1425 7226\n\nTe esperamos.",
     options: [
-      { label: "Tengo otra duda", value: "welcome", emoji: "🔄" },
-      { label: "Escribir por WhatsApp", value: "__whatsapp__", emoji: "📱" },
+      { label: "Tengo otra duda", value: "welcome" },
+      { label: "Escribir por WhatsApp", value: "__whatsapp__" },
     ],
   },
 };
@@ -351,18 +357,18 @@ const KB: KBEntry[] = [
   { keys: ["miopia","astigmatismo","hipermetropia","presbicia","vista cansada","progresivo","bifocal"], reply: "", next: "symptoms" },
   { keys: ["contacto","lentes de contacto","pupilente","air optix","alcon"], reply: "", next: "contacts" },
   { keys: ["sol","solar","solares","polarizado","uv"], reply: "", next: "sunglasses" },
-  { keys: ["laboratorio","fabrican","cuanto tardan","entrega","rapido","urgente","mismo dia","1 hora"], reply: "¡Tenemos laboratorio propio! Lentes monofocales desde 1 hora. Con blue o AR especial: 24-48 hrs. Progresivos: 2-3 días.", next: "prices" },
+  { keys: ["laboratorio","fabrican","cuanto tardan","entrega","rapido","urgente","mismo dia","1 hora"], reply: "Tenemos laboratorio propio. Lentes monofocales desde 1 hora. Con blue o AR especial: 24-48 hrs. Progresivos: 2-3 dias.", next: "prices" },
   { keys: ["sucursal","ubicacion","direccion","donde estan","como llego","mapa","minerva","horario"], reply: "", next: "walkin" },
   { keys: ["garantia","devolucion","cambio","defecto","rompió"], reply: "", next: "warranty" },
-  { keys: ["empresa","convenio","corporativo","empleados","rh"], reply: "¡Sí hacemos convenios empresariales! Examen gratis para empleados + descuentos por volumen. Escríbenos al WhatsApp para armar tu propuesta.", next: "__whatsapp__" },
-  { keys: ["niño","niños","hijo","hija","infantil"], reply: "¡Atendemos niños desde los 3 años! Recomendamos armazones flexibles + micas de policarbonato. Examen gratis para ellos también.", next: "book_exam" },
-  { keys: ["pago","tarjeta","efectivo","transferencia","meses sin intereses"], reply: "Aceptamos efectivo, tarjeta (débito/crédito), y transferencia. Pregunta en sucursal por meses sin intereses.", next: "walkin" },
+  { keys: ["empresa","convenio","corporativo","empleados","rh"], reply: "Si hacemos convenios empresariales. Examen gratis para empleados y descuentos por volumen. Escribenos al WhatsApp para armar tu propuesta.", next: "__whatsapp__" },
+  { keys: ["niño","niños","hijo","hija","infantil"], reply: "Atendemos ninos desde los 3 anos. Recomendamos armazones flexibles y micas de policarbonato. Examen gratis para ellos tambien.", next: "book_exam" },
+  { keys: ["pago","tarjeta","efectivo","transferencia","meses sin intereses"], reply: "Aceptamos efectivo, tarjeta (debito/credito) y transferencia. Pregunta en sucursal por meses sin intereses.", next: "walkin" },
   { keys: ["limpiar","cuidar","cuidado","mantenimiento","rayan"], reply: "", next: "care" },
   { keys: ["gracias","perfecto","ok","vale","listo","adios","bye","chido"], reply: "", next: "bye" },
   { keys: ["comprar","quiero comprar","proceso","quiero unos"], reply: "", next: "need_glasses" },
   { keys: ["andre badi"], reply: "", next: "sunglasses" },
   { keys: ["blue","luz azul","pantalla","computadora"], reply: "", next: "symptom_bluecut" },
-  { keys: ["mica","micas","antirreflejante","fotocromatico","transitions","tratamiento"], reply: "Todas nuestras micas ya incluyen antirreflejante + blue cut. Upgrades: fotocromáticas (+$500), progresivos (desde $2,500).", next: "prices" },
+  { keys: ["mica","micas","antirreflejante","fotocromatico","transitions","tratamiento"], reply: "Todas nuestras micas ya incluyen antirreflejante y blue cut. Upgrades: fotocromaticas (+$500), progresivos (desde $2,500).", next: "prices" },
 ];
 
 function normalize(s: string): string {
@@ -389,6 +395,7 @@ function matchKB(input: string): KBEntry | null {
 const WA = "https://wa.me/523314257226";
 
 export function ChatBot() {
+  const [advisor] = useState(() => ADVISORS[Math.floor(Math.random() * ADVISORS.length)]);
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Msg[]>([]);
   const [input, setInput] = useState("");
@@ -417,13 +424,20 @@ export function ChatBot() {
     return () => clearTimeout(t);
   }, [hasOpened]);
 
+  const resolveText = useCallback((text: string): string => {
+    if (text === "__GREETING__") {
+      return `Hola, soy ${advisor.name}, tu ${advisor.role.toLowerCase()} en Fabrica de Lentes. En que te puedo ayudar hoy?`;
+    }
+    return text;
+  }, [advisor]);
+
   const addBotMsg = useCallback((text: string, options?: Option[], delay = 800) => {
     setTyping(true);
     setTimeout(() => {
-      setMessages(prev => [...prev, { role: "bot", text, options }]);
+      setMessages(prev => [...prev, { role: "bot", text: resolveText(text), options }]);
       setTyping(false);
     }, delay + Math.random() * 600);
-  }, []);
+  }, [resolveText]);
 
   const handleFlow = useCallback((flowId: string, userText?: string) => {
     // Special actions
@@ -442,12 +456,13 @@ export function ChatBot() {
       setMessages(prev => [...prev, { role: "user", text: userText }]);
     }
 
-    const text = userName && !flow.text.startsWith("¡Hola!")
-      ? flow.text.replace(/^(¡)/, `¡${userName}, `)
-      : flow.text;
+    const resolved = resolveText(flow.text);
+    const text = userName && !resolved.startsWith("Hola, soy")
+      ? resolved.replace(/^/, `${userName}, `)
+      : resolved;
 
     addBotMsg(text, flow.options);
-  }, [userName, addBotMsg]);
+  }, [userName, addBotMsg, resolveText]);
 
   const handleOption = useCallback((opt: Option) => {
     handleFlow(opt.value, opt.label);
@@ -463,7 +478,7 @@ export function ChatBot() {
       if (nameGuess && nameGuess.length >= 2 && !/\d/.test(nameGuess)) {
         const cap = nameGuess.charAt(0).toUpperCase() + nameGuess.slice(1).toLowerCase();
         setUserName(cap);
-        addBotMsg(`¡Mucho gusto, ${cap}! ¿En qué te puedo ayudar?`, FLOWS.welcome.options);
+        addBotMsg(`Mucho gusto, ${cap}. En que te puedo ayudar?`, FLOWS.welcome.options);
         return;
       }
     }
@@ -475,11 +490,11 @@ export function ChatBot() {
         const flow = FLOWS[match.next];
         if (match.reply) addBotMsg(match.reply);
         if (flow) {
-          setTimeout(() => addBotMsg(flow.text, flow.options), match.reply ? 2000 : 0);
+          setTimeout(() => addBotMsg(resolveText(flow.text), flow.options), match.reply ? 2000 : 0);
         }
       }
       setTimeout(() => {
-        addBotMsg("Por cierto, ¿cómo te llamas? Para darte atención más personal 😊");
+        addBotMsg("Por cierto, como te llamas? Asi te doy una atencion mas personal.");
         setAskedName(true);
       }, 2500);
       return;
@@ -491,23 +506,23 @@ export function ChatBot() {
       const flow = FLOWS[match.next];
       if (match.reply) {
         addBotMsg(match.reply);
-        if (flow) setTimeout(() => addBotMsg(flow.text, flow.options), 2000);
+        if (flow) setTimeout(() => addBotMsg(resolveText(flow.text), flow.options), 2000);
       } else if (flow) {
-        addBotMsg(flow.text, flow.options);
+        addBotMsg(resolveText(flow.text), flow.options);
       }
     } else {
       // Fallback — show main menu + WhatsApp
       addBotMsg(
         userName
-          ? `${userName}, no estoy segura de entender. Pero puedo ayudarte con esto:`
-          : "No estoy segura de entender, pero puedo ayudarte con esto:",
+          ? `${userName}, no estoy seguro de entender tu pregunta. Pero puedo ayudarte con esto:`
+          : "No estoy seguro de entender tu pregunta, pero puedo ayudarte con esto:",
         [
           ...FLOWS.welcome.options!,
-          { label: "Hablar con alguien por WhatsApp", value: "__whatsapp__", emoji: "📱" },
+          { label: "Hablar con alguien por WhatsApp", value: "__whatsapp__" },
         ]
       );
     }
-  }, [askedName, userName, msgCount, addBotMsg]);
+  }, [askedName, userName, msgCount, addBotMsg, resolveText]);
 
   const send = () => {
     const t = input.trim();
@@ -535,8 +550,8 @@ export function ChatBot() {
           className="fixed z-50 cursor-pointer transition-opacity duration-500"
           style={{ bottom: 76, right: 24, opacity: 0, background: "#fff", borderRadius: 12, padding: "10px 16px", boxShadow: "0 4px 20px rgba(0,0,0,0.1)", maxWidth: 220 }}
         >
-          <p className="text-sm font-semibold text-[#1A1818]">Ana <span className="font-normal text-[#9CA3AF]">de Fábrica de Lentes</span></p>
-          <p className="text-sm text-[#4B5563] mt-0.5">¿Te ayudo a encontrar tus lentes ideales?</p>
+          <p className="text-sm font-semibold text-[#1A1818]">{advisor.name} <span className="font-normal text-[#9CA3AF]">de Fabrica de Lentes</span></p>
+          <p className="text-sm text-[#4B5563] mt-0.5">Te ayudo a encontrar tus lentes?</p>
           <div style={{ position: "absolute", bottom: -6, right: 32, width: 12, height: 12, background: "#fff", transform: "rotate(45deg)", boxShadow: "2px 2px 4px rgba(0,0,0,0.05)" }} />
         </div>
       )}
@@ -547,7 +562,7 @@ export function ChatBot() {
           onClick={() => { if (open) setOpen(false); else handleOpen(); }}
           className={`fixed bottom-6 right-6 z-50 flex items-center justify-center transition-all duration-300 hover:scale-105 ${open ? "hidden md:flex" : "flex"}`}
           style={{ width: 56, height: 56, borderRadius: "50%", background: "#1A1818", boxShadow: "0 4px 20px rgba(0,0,0,0.15)" }}
-          aria-label={open ? "Cerrar chat" : "Hablar con Ana, asesora óptica"}
+          aria-label={open ? "Cerrar chat" : `Hablar con ${advisor.name}, ${advisor.role.toLowerCase()}`}
         >
           {open ? (
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
@@ -572,12 +587,12 @@ export function ChatBot() {
           {/* Header */}
           <div className="flex items-center gap-3 flex-shrink-0" style={{ padding: "calc(16px + env(safe-area-inset-top, 0px)) 20px 16px", borderBottom: "1px solid #F0F0F0" }}>
             <div className="relative flex-shrink-0">
-              <div className="flex items-center justify-center text-sm font-semibold" style={{ width: 40, height: 40, borderRadius: "50%", background: "#1A1818", color: "#fff" }}>A</div>
+              <div className="flex items-center justify-center text-sm font-semibold" style={{ width: 40, height: 40, borderRadius: "50%", background: "linear-gradient(135deg, #B5956E 0%, #8B7355 100%)", color: "#fff" }}>{advisor.initial}</div>
               <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-500 rounded-full border-2 border-white" />
             </div>
             <div className="min-w-0 flex-1">
-              <p className="text-sm font-semibold text-[#1A1818]">Ana — Asesora Óptica</p>
-              <p className="text-xs text-green-500">En línea ahora</p>
+              <p className="text-sm font-semibold text-[#1A1818]">{advisor.name} — {advisor.role}</p>
+              <p className="text-xs text-green-500">Disponible</p>
             </div>
             <button onClick={() => setOpen(false)} className="p-2 -mr-1 rounded-full hover:bg-gray-100 transition-colors" aria-label="Cerrar chat">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B7280" strokeWidth="2" strokeLinecap="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
@@ -589,16 +604,16 @@ export function ChatBot() {
             {messages.length === 0 && (
               <div>
                 <div className="flex gap-2.5 mb-3">
-                  <div className="flex-shrink-0 flex items-center justify-center text-xs font-semibold" style={{ width: 28, height: 28, borderRadius: "50%", background: "#1A1818", color: "#fff" }}>A</div>
+                  <div className="flex-shrink-0 flex items-center justify-center text-xs font-semibold" style={{ width: 28, height: 28, borderRadius: "50%", background: "linear-gradient(135deg, #B5956E 0%, #8B7355 100%)", color: "#fff" }}>{advisor.initial}</div>
                   <div className="text-sm" style={{ background: "#F3F4F6", borderRadius: "4px 14px 14px 14px", padding: "10px 14px", maxWidth: "82%", lineHeight: 1.6, color: "#374151" }}>
-                    <p>¡Hola! Soy <strong>Ana</strong>, tu asesora óptica.</p>
-                    <p className="mt-1.5">¿Qué te gustaría hacer hoy?</p>
+                    <p>Hola, soy <strong>{advisor.name}</strong>, tu {advisor.role.toLowerCase()}.</p>
+                    <p className="mt-1.5">En que te puedo ayudar hoy?</p>
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-1.5 ml-9 mb-2">
                   {FLOWS.welcome.options!.map((opt) => (
                     <button key={opt.value} onClick={() => handleOption(opt)} className="text-sm transition-all duration-150 hover:border-[#1A1818] hover:text-[#1A1818]" style={{ padding: "8px 14px", borderRadius: 20, border: "1px solid #E5E7EB", background: "#fff", color: "#4B5563", cursor: "pointer" }}>
-                      {opt.emoji} {opt.label}
+                      {opt.label}
                     </button>
                   ))}
                 </div>
@@ -619,7 +634,7 @@ export function ChatBot() {
                 <div key={i}>
                   <div className="flex gap-2.5 mb-1.5">
                     {(i === 0 || messages[i - 1]?.role !== "bot") ? (
-                      <div className="flex-shrink-0 flex items-center justify-center text-xs font-semibold" style={{ width: 28, height: 28, borderRadius: "50%", background: "#1A1818", color: "#fff" }}>A</div>
+                      <div className="flex-shrink-0 flex items-center justify-center text-xs font-semibold" style={{ width: 28, height: 28, borderRadius: "50%", background: "linear-gradient(135deg, #B5956E 0%, #8B7355 100%)", color: "#fff" }}>{advisor.initial}</div>
                     ) : (
                       <div className="flex-shrink-0" style={{ width: 28 }} />
                     )}
@@ -633,7 +648,7 @@ export function ChatBot() {
                     <div className="flex flex-wrap gap-1.5 ml-9 mb-3">
                       {msg.options.map((opt) => (
                         <button key={opt.value} onClick={() => handleOption(opt)} className="text-sm transition-all duration-150 hover:border-[#1A1818] hover:text-[#1A1818]" style={{ padding: "8px 14px", borderRadius: 20, border: "1px solid #E5E7EB", background: "#fff", color: "#4B5563", cursor: "pointer" }}>
-                          {opt.emoji} {opt.label}
+                          {opt.label}
                         </button>
                       ))}
                     </div>
@@ -644,7 +659,7 @@ export function ChatBot() {
 
             {typing && (
               <div className="flex gap-2.5 mb-3">
-                <div className="flex-shrink-0 flex items-center justify-center text-xs font-semibold" style={{ width: 28, height: 28, borderRadius: "50%", background: "#1A1818", color: "#fff" }}>A</div>
+                <div className="flex-shrink-0 flex items-center justify-center text-xs font-semibold" style={{ width: 28, height: 28, borderRadius: "50%", background: "linear-gradient(135deg, #B5956E 0%, #8B7355 100%)", color: "#fff" }}>{advisor.initial}</div>
                 <div style={{ background: "#F3F4F6", borderRadius: "4px 14px 14px 14px", padding: "14px 18px", display: "flex", gap: 5 }}>
                   {[0, 1, 2].map((d) => (
                     <span key={d} style={{ width: 7, height: 7, borderRadius: "50%", background: "#9CA3AF", display: "inline-block", animation: "typingDot 1.4s ease-in-out infinite", animationDelay: `${d * 0.2}s` }} />
