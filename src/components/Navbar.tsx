@@ -12,6 +12,7 @@ const navItems = [
   { label: "Sol", href: "/lentes-de-sol" },
   { label: "Laboratorio", href: "/laboratorio" },
   { label: "Empresas", href: "/empresas" },
+  { label: "Blog", href: "/blog" },
   { label: "Contacto", href: "/contacto" },
 ];
 

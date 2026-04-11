@@ -103,6 +103,7 @@ export function Footer() {
               { label: "Nosotros", href: "/laboratorio" },
               { label: "Sucursales GDL", href: "/contacto" },
               { label: "Laboratorio", href: "/laboratorio" },
+              { label: "Blog", href: "/blog" },
               { label: "Aviso de privacidad", href: "/aviso-de-privacidad" },
               { label: "Garantías y cancelaciones", href: "/politica-de-garantia" },
             ].map((item) => (
