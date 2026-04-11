@@ -7,9 +7,9 @@ const slides = [
   {
     image: "/images/hero.jpg",
     video: "/images/hero-video.mp4",
-    tagline: "Laboratorio Propio",
-    headline: "Aquí se fabrican\ntus lentes.",
-    description: "Óptica con laboratorio propio en Guadalajara.",
+    tagline: "40 Años de Experiencia",
+    headline: "Tu solución visual,\nen una hora.",
+    description: "Laboratorio propio, optometristas certificados y la confianza de 40 años en el ramo óptico.",
     cta: "Agendar Examen Gratis",
     ctaHref:
       "https://wa.me/523314257226?text=Hola%2C%20quiero%20agendar%20un%20examen%20de%20la%20vista",
@@ -20,8 +20,8 @@ const slides = [
     image: "/images/hero-2.png",
     video: "/images/hero-video-2.mp4",
     tagline: "Nueva Colección",
-    headline: "Armazones\ncon Estilo",
-    description: "Más de 500 modelos con garantía.",
+    headline: "Diseño que\nhabla por ti.",
+    description: "Frida Kahlo, Brizzant, Nobleman y más. Armazones premium para quienes cuidan cada detalle.",
     cta: "Explorar Colección",
     ctaHref: "/lentes-graduados",
     secondary: "Lentes de Sol",
@@ -30,8 +30,8 @@ const slides = [
   {
     image: "/images/hero-3.png",
     tagline: "Entrega Express",
-    headline: "Lentes listos\nen 1 hora.",
-    description: "Fabricamos tus lentes el mismo día.",
+    headline: "Llegas, eliges\ny estrenas.",
+    description: "Sin filas, sin esperas. Examen gratis y tus lentes listos el mismo día.",
     cta: "Cotizar por WhatsApp",
     ctaHref:
       "https://wa.me/523314257226?text=Hola%2C%20quiero%20cotizar%20mis%20lentes",

@@ -71,8 +71,9 @@ const jsonLd = {
   name: "Fábrica de Lentes",
   alternateName: "Fábrica de Lentes Guadalajara",
   description:
-    "Óptica con laboratorio propio en Guadalajara, Jalisco. Fabricamos lentes graduados en 1 hora. Examen de la vista gratis. Lentes de contacto Air Optix, Alcon. Armazones Brizzant, Frida Kahlo, Nobleman, Massimo desde $1,949 MXN. Lentes de sol. Sucursal Zona Minerva.",
+    "Óptica premium con 40 años de experiencia y laboratorio propio en Guadalajara, Jalisco. Fabricamos lentes graduados en 1 hora. Examen de la vista gratis. Lentes de contacto Air Optix, Alcon. Armazones Brizzant, Frida Kahlo, Nobleman, Massimo desde $1,949 MXN. Lentes de sol. Sucursal Zona Minerva.",
   url: "https://fabricadelentes.mx",
+  foundingDate: "1986",
   telephone: "+523314257226",
   priceRange: "$1,064 - $1,949 MXN",
   currenciesAccepted: "MXN",
@@ -122,7 +123,7 @@ const jsonLd = {
 };
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
-const GA_ID_2 = "G-SVC97E0S53";
+const GA_ID_2 = process.env.NEXT_PUBLIC_GA_ID_2 || "G-SVC97E0S53";
 
 export default function RootLayout({
   children,
@@ -132,6 +133,8 @@ export default function RootLayout({
   return (
     <html lang="es" className={geist.variable}>
       <head>
+        <meta name="theme-color" content="#242424" />
+        <meta name="msapplication-TileColor" content="#242424" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

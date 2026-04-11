@@ -44,12 +44,12 @@ export function BookingSection() {
               Examen Gratuito
             </span>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-5 text-white">
-              Tu visión merece
-              <br />lo mejor.
+              Agenda. Llega.
+              <br />Estrena.
             </h2>
             <p className="text-base leading-relaxed max-w-lg" style={{ color: "rgba(245,240,234,0.55)" }}>
-              Agenda tu examen de la vista sin costo. Optometristas certificados,
-              equipo de última generación, y resultados inmediatos.
+              Examen de la vista sin costo, asesoría personalizada y tus lentes listos en una hora.
+              Sin complicaciones, sin vueltas.
             </p>
           </div>
 

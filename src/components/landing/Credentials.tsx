@@ -5,13 +5,13 @@ export function Credentials() {
         <div className="text-center mb-12">
           <p className="text-sm uppercase tracking-[0.2em] text-[#B5956E] mb-3">Por qué elegirnos</p>
           <h2 className="text-2xl md:text-3xl font-bold text-[#1A1818]">
-            La óptica de confianza en Guadalajara
+            40 años cuidando tu visión
           </h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {[
-            { number: "+8", label: "Años de experiencia", sub: "en el mercado óptico" },
-            { number: "+12,000", label: "Clientes satisfechos", sub: "y creciendo cada mes" },
+            { number: "+40", label: "Años de experiencia", sub: "en el ramo óptico" },
+            { number: "+12,000", label: "Clientes satisfechos", sub: "confían en nosotros" },
             { number: "1 hora", label: "Entrega express", sub: "con laboratorio propio" },
             { number: "100%", label: "Garantía real", sub: "en graduación y armazón" },
           ].map((stat) => (

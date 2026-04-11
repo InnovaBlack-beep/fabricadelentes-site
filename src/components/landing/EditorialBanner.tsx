@@ -15,14 +15,13 @@ export function EditorialBanner() {
         <span className="text-xs uppercase tracking-[0.2em] text-white/50 mb-6">
           LA EXPERIENCIA
         </span>
-        <h2 className="text-3xl md:text-5xl font-light text-white leading-tight">
-          Elige. Espera.
+        <h2 className="text-3xl md:text-5xl text-white leading-tight">
+          <span className="font-light">Elige. Prueba.</span>
+          <br />
+          <span className="font-bold">Estrena.</span>
         </h2>
-        <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
-          Estrena.
-        </h2>
-        <p className="text-sm text-white/60 max-w-lg mx-auto leading-relaxed mb-8">
-          Visítanos en nuestra sucursal. Elige tu armazón, te hacemos el examen gratis, y en menos de una hora te llevas tus lentes nuevos.
+        <p className="text-sm text-white/60 max-w-lg mx-auto leading-relaxed mt-6 mb-8">
+          Visítanos, elige tu armazón favorito, te hacemos el examen sin costo y en menos de una hora estrenas tus lentes nuevos. Así de simple.
         </p>
         <a
           href="https://wa.me/523314257226?text=Hola%2C%20quiero%20agendar%20una%20visita"
