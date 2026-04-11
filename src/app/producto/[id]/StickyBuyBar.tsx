@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 
+const BACKOFFICE_URL = process.env.NEXT_PUBLIC_BACKOFFICE_URL || "";
+
 type StickyBuyBarProps = {
   model: string;
   price: string;
@@ -23,6 +25,20 @@ export function StickyBuyBar({ model, price, whatsappUrl }: StickyBuyBarProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleClick = () => {
+    if (BACKOFFICE_URL) {
+      fetch(`${BACKOFFICE_URL}/api/public/lead`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          source: "producto",
+          messages: [`Interesado en: ${model} (${price})`],
+          metadata: { event: "product_buy_click", product: model, price, page: window.location.pathname },
+        }),
+      }).catch(() => {});
+    }
+  };
+
   return (
     <div
       className={`fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-[#E5E7EB] px-4 py-3 lg:hidden transition-transform duration-300 ${
@@ -38,6 +54,7 @@ export function StickyBuyBar({ model, price, whatsappUrl }: StickyBuyBarProps) {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={handleClick}
           className="flex-shrink-0 flex items-center justify-center h-10 px-6 rounded-full bg-[#B5956E] text-[#242424] text-sm font-semibold hover:brightness-95 transition-all"
         >
           Comprar

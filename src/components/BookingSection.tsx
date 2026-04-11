@@ -2,12 +2,30 @@
 
 import { useState } from "react";
 
+const BACKOFFICE_URL = process.env.NEXT_PUBLIC_BACKOFFICE_URL || "";
+
 export function BookingSection() {
   const [value, setValue] = useState("");
 
   const handleSubmit = () => {
-    const msg = value.trim()
-      ? `Hola, soy ${value}. Quiero agendar un examen de la vista.`
+    const name = value.trim();
+
+    // Guardar lead en backoffice
+    if (BACKOFFICE_URL) {
+      fetch(`${BACKOFFICE_URL}/api/public/lead`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: name || "Visitante",
+          source: "booking_section",
+          messages: ["Quiero agendar un examen de la vista"],
+          metadata: { event: "booking_whatsapp", page: window.location.pathname },
+        }),
+      }).catch(() => {});
+    }
+
+    const msg = name
+      ? `Hola, soy ${name}. Quiero agendar un examen de la vista.`
       : "Hola, quiero agendar un examen de la vista.";
     window.open(
       `https://wa.me/523314257226?text=${encodeURIComponent(msg)}`,

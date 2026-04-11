@@ -2,11 +2,33 @@
 
 import { useState } from "react";
 
+const BACKOFFICE_URL = process.env.NEXT_PUBLIC_BACKOFFICE_URL || "";
+
 export default function Contacto() {
   const [form, setForm] = useState({ name: "", phone: "", service: "", message: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Guardar lead en backoffice
+    if (BACKOFFICE_URL) {
+      fetch(`${BACKOFFICE_URL}/api/public/lead`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          phone: form.phone,
+          source: "contacto",
+          messages: [
+            `Servicio: ${form.service || "No especificado"}`,
+            form.message || "Sin mensaje adicional",
+          ],
+          metadata: { event: "contacto_form", service: form.service, page: "/contacto" },
+        }),
+      }).catch(() => {});
+    }
+
+    // Abrir WhatsApp
     const text = `Hola, soy ${form.name}.${form.service ? ` Me interesa: ${form.service}.` : ""}${form.message ? ` ${form.message}` : ""} Mi teléfono: ${form.phone}`;
     window.open(
       `https://wa.me/523314257226?text=${encodeURIComponent(text)}`,
