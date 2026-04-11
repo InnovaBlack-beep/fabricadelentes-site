@@ -76,7 +76,7 @@ export function Hero() {
           ) : (
             <Image
               src={s.image}
-              alt=""
+              alt={`${s.headline.replace("\n", " ")} — ${s.tagline} | Fábrica de Lentes Guadalajara`}
               fill
               className="object-cover"
               priority={i === 0}

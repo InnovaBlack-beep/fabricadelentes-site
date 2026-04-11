@@ -5,7 +5,7 @@ export function EditorialBanner() {
     <section className="relative h-[400px] md:h-[520px] overflow-hidden">
       <Image
         src="/images/editorial.jpg"
-        alt=""
+        alt="Elige, prueba y estrena tus lentes nuevos en Fábrica de Lentes Guadalajara — óptica con laboratorio propio"
         fill
         className="object-cover"
       />
