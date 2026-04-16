@@ -6,7 +6,7 @@ import { buildLeadMetadata } from "@/lib/utm";
 
 const BACKOFFICE_URL = process.env.NEXT_PUBLIC_BACKOFFICE_URL || "";
 
-async function sendLead(data: { name?: string; phone?: string; messages?: object[]; metadata?: object }) {
+async function sendLead(data: { name?: string; phone?: string; email?: string; messages?: object[]; metadata?: object }) {
   if (!BACKOFFICE_URL) return;
   trackFormSubmit("chatbot", window.location.pathname);
   try {
@@ -417,7 +417,9 @@ export function ChatBot() {
   const [typing, setTyping] = useState(false);
   const [hasOpened, setHasOpened] = useState(false);
   const [userName, setUserName] = useState("");
-  const [askedName, setAskedName] = useState(false);
+  const [userPhone, setUserPhone] = useState("");
+  const [captureStep, setCaptureStep] = useState<"none" | "ask_name" | "ask_phone" | "done">("none");
+  const [pendingFlow, setPendingFlow] = useState<string | null>(null);
   const [msgCount, setMsgCount] = useState(0);
   const msgsRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -457,20 +459,20 @@ export function ChatBot() {
   const handleFlow = useCallback((flowId: string, userText?: string) => {
     // Special actions — track conversion events
     if (flowId === "__whatsapp__") {
-      sendLead({ name: userName || undefined, messages: [{ text: "Abrió WhatsApp: info general", from: "system", timestamp: new Date().toISOString() }] });
-      window.open(`${WA}?text=Hola%2C%20quiero%20información%20sobre%20lentes`, "_blank"); return;
+      sendLead({ name: userName || undefined, phone: userPhone || undefined, messages: [{ text: "Abrió WhatsApp: info general", from: "system", timestamp: new Date().toISOString() }] });
+      window.open(`${WA}?text=${encodeURIComponent(`Hola, soy ${userName || ""}. Quiero información sobre lentes`.trim())}`, "_blank"); return;
     }
     if (flowId === "__whatsapp_rx__") {
-      sendLead({ name: userName || undefined, messages: [{ text: "Abrió WhatsApp: enviar receta", from: "system", timestamp: new Date().toISOString() }] });
-      window.open(`${WA}?text=Hola%2C%20te%20envío%20mi%20receta%20para%20cotizar`, "_blank"); return;
+      sendLead({ name: userName || undefined, phone: userPhone || undefined, messages: [{ text: "Abrió WhatsApp: enviar receta", from: "system", timestamp: new Date().toISOString() }] });
+      window.open(`${WA}?text=${encodeURIComponent(`Hola, soy ${userName || ""}. Te envío mi receta para cotizar`.trim())}`, "_blank"); return;
     }
     if (flowId === "__whatsapp_book__") {
-      sendLead({ name: userName || undefined, messages: [{ text: "Abrió WhatsApp: agendar examen", from: "system", timestamp: new Date().toISOString() }] });
-      window.open(`${WA}?text=Hola%2C%20quiero%20agendar%20mi%20examen%20de%20la%20vista%20gratis`, "_blank"); return;
+      sendLead({ name: userName || undefined, phone: userPhone || undefined, messages: [{ text: "Abrió WhatsApp: agendar examen", from: "system", timestamp: new Date().toISOString() }] });
+      window.open(`${WA}?text=${encodeURIComponent(`Hola, soy ${userName || ""}. Quiero agendar mi examen de la vista gratis`.trim())}`, "_blank"); return;
     }
     if (flowId === "__whatsapp_location__") {
-      sendLead({ name: userName || undefined, messages: [{ text: "Abrió WhatsApp: ubicación", from: "system", timestamp: new Date().toISOString() }] });
-      window.open(`${WA}?text=Hola%2C%20me%20pueden%20enviar%20su%20ubicación`, "_blank"); return;
+      sendLead({ name: userName || undefined, phone: userPhone || undefined, messages: [{ text: "Abrió WhatsApp: ubicación", from: "system", timestamp: new Date().toISOString() }] });
+      window.open(`${WA}?text=${encodeURIComponent(`Hola, soy ${userName || ""}. Me pueden enviar su ubicación?`.trim())}`, "_blank"); return;
     }
     if (flowId === "__link_graduados__") { window.open("/lentes-graduados", "_self"); return; }
     if (flowId === "__link_sol__") { window.open("/lentes-de-sol", "_self"); return; }
@@ -489,68 +491,99 @@ export function ChatBot() {
       : resolved;
 
     addBotMsg(text, flow.options);
-  }, [userName, addBotMsg, resolveText]);
+  }, [userName, userPhone, addBotMsg, resolveText]);
 
   const handleOption = useCallback((opt: Option) => {
+    // First interaction: capture name + phone before proceeding
+    if (captureStep === "none") {
+      setMessages(prev => [...prev, { role: "user", text: opt.label }]);
+      setPendingFlow(opt.value);
+      setCaptureStep("ask_name");
+      addBotMsg("Con gusto te ayudo. Para darte una atencion personalizada, como te llamas?");
+      return;
+    }
     handleFlow(opt.value, opt.label);
-  }, [handleFlow]);
+  }, [handleFlow, captureStep, addBotMsg]);
 
   const handleFreeText = useCallback((text: string) => {
     setMessages(prev => [...prev, { role: "user", text }]);
     setMsgCount(c => c + 1);
 
-    // Detect name if asked
-    if (askedName && !userName) {
+    // ── CAPTURE STEP: NAME ──
+    if (captureStep === "ask_name") {
       const nameGuess = text.trim().replace(/^(me llamo|soy|mi nombre es)\s*/i, "").split(" ")[0];
       if (nameGuess && nameGuess.length >= 2 && !/\d/.test(nameGuess)) {
         const cap = nameGuess.charAt(0).toUpperCase() + nameGuess.slice(1).toLowerCase();
         setUserName(cap);
-        sendLead({ name: cap, messages: [{ text: `Nombre capturado: ${cap}`, from: "system", timestamp: new Date().toISOString() }] });
-        addBotMsg(`Mucho gusto, ${cap}. En que te puedo ayudar?`, FLOWS.welcome.options);
+        setCaptureStep("ask_phone");
+        addBotMsg(`Mucho gusto, ${cap}. Me compartes tu numero de celular? Asi te puedo enviar tu cotizacion o recordatorio de cita por WhatsApp.`);
         return;
       }
-    }
-
-    // Ask name after 2nd message
-    if (msgCount + 1 === 2 && !userName && !askedName) {
-      const match = matchKB(text);
-      if (match) {
-        const flow = FLOWS[match.next];
-        if (match.reply) addBotMsg(match.reply);
-        if (flow) {
-          setTimeout(() => addBotMsg(resolveText(flow.text), flow.options), match.reply ? 2000 : 0);
-        }
-      }
-      setTimeout(() => {
-        addBotMsg("Por cierto, como te llamas? Asi te doy una atencion mas personal.");
-        setAskedName(true);
-      }, 2500);
+      // Didn't catch a name, ask again gently
+      addBotMsg("Solo necesito tu nombre para darte mejor atencion. Como te llamas?");
       return;
     }
 
-    // Match KB
+    // ── CAPTURE STEP: PHONE ──
+    if (captureStep === "ask_phone") {
+      const digits = text.replace(/\D/g, "");
+      if (digits.length >= 10) {
+        const phone = digits.slice(-10); // last 10 digits
+        setUserPhone(phone);
+        setCaptureStep("done");
+        // Send complete lead to backoffice
+        sendLead({
+          name: userName,
+          phone,
+          messages: [{ text: `Lead capturado: ${userName} — ${phone}`, from: "system", timestamp: new Date().toISOString() }],
+        });
+        // Now proceed to the flow the user originally selected
+        const flowId = pendingFlow || "welcome";
+        setPendingFlow(null);
+        const flow = FLOWS[flowId];
+        if (flow) {
+          const resolved = resolveText(flow.text);
+          const personalized = resolved.startsWith("Hola, soy") ? resolved : `${userName}, ${resolved.charAt(0).toLowerCase()}${resolved.slice(1)}`;
+          addBotMsg(`Perfecto, ${userName}. Ya quedo tu numero guardado.`, undefined, 600);
+          setTimeout(() => addBotMsg(personalized, flow.options), 1800);
+        }
+        return;
+      }
+      // Not enough digits
+      addBotMsg("Necesito tu numero a 10 digitos para contactarte. Por ejemplo: 33 1234 5678");
+      return;
+    }
+
+    // ── FIRST MESSAGE (free text, no option clicked): start capture ──
+    if (captureStep === "none") {
+      const match = matchKB(text);
+      if (match) setPendingFlow(match.next);
+      else setPendingFlow("welcome");
+      setCaptureStep("ask_name");
+      addBotMsg("Con gusto te ayudo. Para darte una atencion personalizada, como te llamas?");
+      return;
+    }
+
+    // ── NORMAL FLOW (capture done) ──
     const match = matchKB(text);
     if (match) {
       const flow = FLOWS[match.next];
       if (match.reply) {
-        addBotMsg(match.reply);
+        addBotMsg(userName ? `${userName}, ${match.reply.charAt(0).toLowerCase()}${match.reply.slice(1)}` : match.reply);
         if (flow) setTimeout(() => addBotMsg(resolveText(flow.text), flow.options), 2000);
       } else if (flow) {
         addBotMsg(resolveText(flow.text), flow.options);
       }
     } else {
-      // Fallback — show main menu + WhatsApp
       addBotMsg(
-        userName
-          ? `${userName}, no estoy seguro de entender tu pregunta. Pero puedo ayudarte con esto:`
-          : "No estoy seguro de entender tu pregunta, pero puedo ayudarte con esto:",
+        `${userName}, no estoy seguro de entender tu pregunta. Pero puedo ayudarte con esto:`,
         [
           ...FLOWS.welcome.options!,
           { label: "Hablar con alguien por WhatsApp", value: "__whatsapp__" },
         ]
       );
     }
-  }, [askedName, userName, msgCount, addBotMsg, resolveText]);
+  }, [captureStep, userName, pendingFlow, addBotMsg, resolveText]);
 
   const send = () => {
     const t = input.trim();
@@ -564,8 +597,7 @@ export function ChatBot() {
     setHasOpened(true);
     const hint = document.getElementById("chat-hint");
     if (hint) hint.style.opacity = "0";
-    // Send lead event to backoffice
-    sendLead({ metadata: { event: "chat_opened", page: window.location.pathname } });
+    // Don't create a lead on open — wait until we capture name + phone
   };
 
   return (
