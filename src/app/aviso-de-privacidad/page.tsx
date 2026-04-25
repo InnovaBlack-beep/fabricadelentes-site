@@ -32,7 +32,7 @@ export default function AvisoDePrivacidad() {
         <p>
           <strong style={{ color: "#1A1818" }}>Fábrica de Lentes</strong>, con domicilio en
           Av. López Mateos #73, Esq. Vallarta, Col. Vallarta Poniente, Guadalajara, Jalisco,
-          C.P. 44690, México, es responsable del tratamiento de los
+          C.P. 44690, Frente a la Minerva, México, es responsable del tratamiento de los
           datos personales que nos proporcione, los cuales serán protegidos conforme a lo
           dispuesto por la Ley Federal de Protección de Datos Personales en Posesión de los
           Particulares (LFPDPPP) y demás normatividad aplicable.
@@ -127,7 +127,7 @@ export default function AvisoDePrivacidad() {
             <strong>WhatsApp:</strong> 33 1425 7226
           </li>
           <li>
-            <strong>Dirección:</strong> Av. López Mateos #73, Esq. Vallarta, Col. Vallarta Poniente, Guadalajara, Jalisco, C.P. 44690, México
+            <strong>Dirección:</strong> Av. López Mateos #73, Esq. Vallarta, Col. Vallarta Poniente, Guadalajara, Jalisco, C.P. 44690, Frente a la Minerva, México
           </li>
         </ul>
       </div>

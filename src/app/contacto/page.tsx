@@ -169,7 +169,7 @@ export default function Contacto() {
                       <p className="text-sm text-[#111110] font-medium leading-relaxed">
                         Av. López Mateos #73, Esq. Vallarta<br />
                         Col. Vallarta Poniente, Guadalajara<br />
-                        C.P. 44690
+                        C.P. 44690 · Frente a la Minerva
                       </p>
                     </div>
                   </div>

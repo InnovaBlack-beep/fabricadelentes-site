@@ -106,7 +106,7 @@ const jsonLd = {
   ],
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Av. López Mateos #73, Esq. Vallarta, Col. Vallarta Poniente",
+    streetAddress: "Av. López Mateos #73, Esq. Vallarta, Col. Vallarta Poniente, Frente a la Minerva",
     addressLocality: "Guadalajara",
     addressRegion: "Jalisco",
     postalCode: "44690",

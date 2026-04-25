@@ -172,7 +172,8 @@ export function Footer() {
               }}
             >
               Av. López Mateos #73, Esq. Vallarta<br />
-              Col. Vallarta Poniente, GDL · C.P. 44690
+              Col. Vallarta Poniente, GDL · C.P. 44690<br />
+              Frente a la Minerva
             </li>
             <li>
               <a

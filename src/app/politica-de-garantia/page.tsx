@@ -153,7 +153,7 @@ export default function PoliticaDeGarantia() {
             <strong>Email:</strong> contacto@fabricadelentes.mx
           </li>
           <li>
-            <strong>Sucursal Minerva:</strong> Av. López Mateos #73, Esq. Vallarta, Col. Vallarta Poniente, Guadalajara, C.P. 44690
+            <strong>Sucursal Minerva:</strong> Av. López Mateos #73, Esq. Vallarta, Col. Vallarta Poniente, Guadalajara, C.P. 44690, Frente a la Minerva
           </li>
           <li>
             <strong>Horario:</strong> Lunes a Sábado, 10:00 a 20:00
