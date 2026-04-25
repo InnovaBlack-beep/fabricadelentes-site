@@ -76,7 +76,7 @@ const jsonLd = {
     "Óptica premium con 40 años de experiencia y laboratorio propio en Guadalajara, Jalisco. Fabricamos lentes graduados en 1 hora. Examen de la vista gratis. Lentes de contacto Air Optix, Alcon. Armazones Brizzant, Frida Kahlo, Nobleman, Massimo desde $1,949 MXN. Lentes de sol. Sucursal Zona Minerva.",
   url: "https://fabricadelentes.mx",
   foundingDate: "1986",
-  telephone: "+523314257226",
+  telephone: "+523336166603",
   priceRange: "$1,064 - $1,949 MXN",
   currenciesAccepted: "MXN",
   paymentAccepted: "Cash, Credit Card, Debit Card, Bank Transfer",
@@ -106,10 +106,10 @@ const jsonLd = {
   ],
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Zona Minerva",
+    streetAddress: "Av. López Mateos #73, Esq. Vallarta, Col. Vallarta Poniente",
     addressLocality: "Guadalajara",
     addressRegion: "Jalisco",
-    postalCode: "44100",
+    postalCode: "44690",
     addressCountry: "MX",
   },
   geo: {

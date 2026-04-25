@@ -144,13 +144,16 @@ export default function PoliticaDeGarantia() {
         <p>Para cualquier duda sobre garantías o devoluciones:</p>
         <ul className="list-none space-y-1">
           <li>
+            <strong>Teléfono:</strong> 33 3616 6603
+          </li>
+          <li>
             <strong>WhatsApp:</strong> 33 1425 7226
           </li>
           <li>
             <strong>Email:</strong> contacto@fabricadelentes.mx
           </li>
           <li>
-            <strong>Sucursal:</strong> Zona Minerva, Guadalajara, Jalisco
+            <strong>Sucursal Minerva:</strong> Av. López Mateos #73, Esq. Vallarta, Col. Vallarta Poniente, Guadalajara, C.P. 44690
           </li>
           <li>
             <strong>Horario:</strong> Lunes a Sábado, 10:00 a 20:00

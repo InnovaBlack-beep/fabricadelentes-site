@@ -161,15 +161,42 @@ export function Footer() {
               marginBottom: 16,
             }}
           >
-            Contacto
+            Sucursal Minerva
           </h4>
           <ul className="space-y-0">
+            <li
+              className="leading-[1.6] text-sm"
+              style={{
+                color: "rgba(245,240,234,0.38)",
+                marginBottom: 8,
+              }}
+            >
+              Av. López Mateos #73, Esq. Vallarta<br />
+              Col. Vallarta Poniente, GDL · C.P. 44690
+            </li>
+            <li>
+              <a
+                href="tel:+523336166603"
+                className="transition-colors leading-[2] text-sm"
+                style={{
+                  color: "rgba(245,240,234,0.38)",
+                }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.color = "#B5956E")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.color = "rgba(245,240,234,0.38)")
+                }
+              >
+                Tel. 33 3616 6603
+              </a>
+            </li>
             <li>
               <a
                 href="https://wa.me/523314257226"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors leading-[2] text-xs"
+                className="transition-colors leading-[2] text-sm"
                 style={{
                   color: "rgba(245,240,234,0.38)",
                 }}
@@ -189,23 +216,7 @@ export function Footer() {
                 color: "rgba(245,240,234,0.38)",
               }}
             >
-              Zona Minerva · GDL
-            </li>
-            <li
-              className="leading-[2] text-sm"
-              style={{
-                color: "rgba(245,240,234,0.38)",
-              }}
-            >
               Lun–Sáb · 10:00–20:00
-            </li>
-            <li
-              className="leading-[2] text-sm"
-              style={{
-                color: "rgba(245,240,234,0.38)",
-              }}
-            >
-              fabricadelentes.mx
             </li>
           </ul>
         </div>

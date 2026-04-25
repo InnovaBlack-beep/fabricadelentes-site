@@ -157,7 +157,7 @@ export default function Contacto() {
                 <h3
                   className="text-xs uppercase tracking-[0.14em] font-semibold text-[#6A5A4A] mb-5"
                 >
-                  Información
+                  Sucursal Minerva
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
@@ -166,8 +166,10 @@ export default function Contacto() {
                       <path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                     </svg>
                     <div>
-                      <p className="text-sm text-[#111110] font-medium">
-                        Zona Minerva, Guadalajara, Jalisco
+                      <p className="text-sm text-[#111110] font-medium leading-relaxed">
+                        Av. López Mateos #73, Esq. Vallarta<br />
+                        Col. Vallarta Poniente, Guadalajara<br />
+                        C.P. 44690
                       </p>
                     </div>
                   </div>
@@ -180,14 +182,27 @@ export default function Contacto() {
                     </p>
                   </div>
                   <a
-                    href="tel:+523314257226"
+                    href="tel:+523336166603"
                     className="flex items-start gap-3 hover:opacity-80 transition-opacity"
                   >
                     <svg viewBox="0 0 24 24" fill="none" stroke="#111110" strokeWidth={1.5} className="w-5 h-5 mt-0.5 shrink-0">
                       <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                     </svg>
                     <p className="text-sm text-[#111110] font-medium">
-                      33 1425 7226
+                      33 3616 6603
+                    </p>
+                  </a>
+                  <a
+                    href="https://wa.me/523314257226"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-3 hover:opacity-80 transition-opacity"
+                  >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#111110" strokeWidth={1.5} className="w-5 h-5 mt-0.5 shrink-0">
+                      <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+                    </svg>
+                    <p className="text-sm text-[#111110] font-medium">
+                      WhatsApp 33 1425 7226
                     </p>
                   </a>
                 </div>
@@ -248,14 +263,14 @@ export default function Contacto() {
               {/* Map */}
               <div className="rounded-[10px] overflow-hidden border border-[#F0F0F0]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14930.927851384893!2d-103.39876!3d20.67149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ae0369aeee39%3A0x20c5eeb24a87a4d0!2sGlorieta%20La%20Minerva!5e0!3m2!1ses!2smx!4v1710000000000!5m2!1ses!2smx"
+                  src="https://www.google.com/maps?q=Av.%20L%C3%B3pez%20Mateos%2073%2C%20Vallarta%20Poniente%2C%2044690%20Guadalajara%2C%20Jal.&output=embed"
                   width="100%"
                   height="220"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Ubicación Fábrica de Lentes — Zona Minerva, Guadalajara"
+                  title="Ubicación Fábrica de Lentes — Sucursal Minerva, Av. López Mateos 73, Guadalajara"
                 />
               </div>
             </div>
